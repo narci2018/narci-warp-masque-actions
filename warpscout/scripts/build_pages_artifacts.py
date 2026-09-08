@@ -15,6 +15,8 @@ import json
 import time
 import socket
 import urllib.request
+import urllib.parse
+import base64
 import concurrent.futures
 import re
 from datetime import datetime, timezone
@@ -188,6 +190,7 @@ def main():
     endpoint_id = 1
     region_stats = []
     best_latency = 9999
+    vless_uris = []
     
     for c in sorted_countries:
         meta = country_info[c]
@@ -204,6 +207,22 @@ def main():
             lat = p['latency']
             if lat < best_latency:
                 best_latency = lat
+                
+            p_name = f"{meta['flag']} [{c}-{p['colo']}] {p['server']}:{p['port']} ({lat}ms)"
+            # Standard VLESS URI format for v2rayN / Shadowrocket / Sing-box / etc.
+            vless_params = {
+                'security': 'tls',
+                'sni': 'l8.ccwu.cc',
+                'type': 'ws',
+                'path': '/?ed=2560',
+                'host': 'l8.ccwu.cc',
+                'fp': 'chrome'
+            }
+            query_str = urllib.parse.urlencode(vless_params)
+            name_encoded = urllib.parse.quote(p_name)
+            vless_uri = f"vless://{p['uuid']}@{p['server']}:{p['port']}?{query_str}#{name_encoded}"
+            vless_uris.append(vless_uri)
+
             all_endpoints.append({
                 "id": endpoint_id,
                 "endpoint": f"{p['server']}:{p['port']}",
@@ -220,6 +239,7 @@ def main():
                 "colo": p['colo'],
                 "colo_city": meta['name'],
                 "location": f"{meta['flag']} {meta['name']}, {c}",
+                "vless_uri": vless_uri,
                 "working": True,
                 "torn": False
             })
@@ -392,6 +412,27 @@ def main():
     with open(clash_provider_path, 'w', encoding='utf-8') as f:
         f.write("\n".join(provider_lines))
     print(f"[+] Generated {clash_provider_path}")
+
+    # Build v2rayN / Shadowrocket / Sing-box Base64 Subscription
+    v2ray_raw = "\n".join(vless_uris)
+    v2ray_b64 = base64.b64encode(v2ray_raw.encode('utf-8')).decode('utf-8')
+    
+    v2ray_sub_path = os.path.join(data_dir, "v2ray-sub.txt")
+    with open(v2ray_sub_path, 'w', encoding='utf-8') as f:
+        f.write(v2ray_b64)
+    print(f"[+] Generated {v2ray_sub_path} (Base64 for v2rayN / Shadowrocket / v2rayNG / Sing-box)")
+
+    # Provide sub.txt alias
+    v2ray_alias_path = os.path.join(data_dir, "sub.txt")
+    with open(v2ray_alias_path, 'w', encoding='utf-8') as f:
+        f.write(v2ray_b64)
+    print(f"[+] Generated {v2ray_alias_path} (General Base64 sub alias)")
+
+    # Provide raw plaintext VLESS links
+    v2ray_raw_path = os.path.join(data_dir, "v2ray-raw.txt")
+    with open(v2ray_raw_path, 'w', encoding='utf-8') as f:
+        f.write(v2ray_raw)
+    print(f"[+] Generated {v2ray_raw_path} (Plaintext VLESS URLs)")
 
     print("\n✅ All dynamic multi-country static artifacts successfully generated!")
 

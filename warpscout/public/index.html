@@ -691,41 +691,76 @@
       </div>
     </div>
 
-    <!-- Subscription & Direct Import Box -->
-    <div class="sub-card">
-      <div class="sub-card-header">
-        <div class="sub-title-group">
-          <span style="font-size: 1.3rem;">📡</span>
-          <div>
-            <div class="sub-title">Clash Meta / Mihomo 远程订阅链接</div>
-            <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 2px;">
-              一键导入 Clash Verge Rev、Clash Nyanpasu、Mihomo Party、Flclash，支持 URL-Test 自动测速选择最优海外出口
+    <!-- Multi-Client Subscription Hub -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+      <!-- v2rayN / Shadowrocket / Universal Subscription -->
+      <div class="sub-card" style="margin-bottom: 0; border-color: rgba(52, 211, 153, 0.35); background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(6, 78, 59, 0.25));">
+        <div class="sub-card-header">
+          <div class="sub-title-group">
+            <span style="font-size: 1.4rem;">⚡</span>
+            <div>
+              <div class="sub-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>v2rayN / 通用客户端订阅 (Base64)</span>
+                <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); font-size: 0.72rem;">全平台通用</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 3px;">
+                支持 <strong>v2rayN (Win)</strong>、<strong>v2rayNG (Android)</strong>、<strong>Shadowrocket (小火箭/iOS)</strong>、Sing-box、NekoBox、Karing、Quantumult X 等全部主流客户端
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="sub-url-box">
+          <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
+          <div class="sub-url-text" id="v2ray-sub-url-display">https://.../data/v2ray-sub.txt</div>
+        </div>
+
+        <div class="sub-actions">
+          <button class="btn btn-primary" style="background: #059669;" onclick="copyV2raySubUrl()">
+            📋 复制 v2rayN 订阅链接
+          </button>
+          <a href="data/v2ray-sub.txt" download="v2ray-sub.txt" class="btn btn-secondary">
+            📥 下载 Base64 订阅
+          </a>
+          <a href="data/v2ray-raw.txt" download="v2ray-raw.txt" class="btn btn-secondary">
+            📥 下载明文 VLESS 列表
+          </a>
+        </div>
       </div>
 
-      <div class="sub-url-box">
-        <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
-        <div class="sub-url-text" id="sub-url-display">https://.../data/clash-sub.yaml</div>
-      </div>
+      <!-- Clash Meta / Mihomo Subscription -->
+      <div class="sub-card" style="margin-bottom: 0;">
+        <div class="sub-card-header">
+          <div class="sub-title-group">
+            <span style="font-size: 1.4rem;">📡</span>
+            <div>
+              <div class="sub-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>Clash Meta / Mihomo 远程订阅</span>
+                <span class="badge badge-pages" style="font-size: 0.72rem;">智能分流策略组</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 3px;">
+                支持 <strong>Clash Verge Rev</strong>、<strong>Clash Nyanpasu</strong>、<strong>Mihomo Party</strong>、Flclash，内置 47 国分流与自动测速优选
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="sub-actions">
-        <button class="btn btn-primary" onclick="copySubUrl()">
-          📋 复制 Clash 订阅链接
-        </button>
-        <a href="#" id="btn-import-clash" class="btn btn-secondary">
-          🚀 一键导入到 Clash
-        </a>
-        <a href="data/clash-sub.yaml" download="warpscout-clash.yaml" class="btn btn-secondary">
-          📥 下载 clash-sub.yaml
-        </a>
-        <a href="data/wireguard.conf" download="warpscout-wireguard.conf" class="btn btn-secondary">
-          📥 下载 wireguard.conf
-        </a>
-        <a href="data/endpoints.txt" download="endpoints.txt" class="btn btn-secondary">
-          📥 纯 IP 列表
-        </a>
+        <div class="sub-url-box">
+          <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
+          <div class="sub-url-text" id="sub-url-display">https://.../data/clash-sub.yaml</div>
+        </div>
+
+        <div class="sub-actions">
+          <button class="btn btn-primary" onclick="copySubUrl()">
+            📋 复制 Clash 订阅链接
+          </button>
+          <a href="#" id="btn-import-clash" class="btn btn-secondary">
+            🚀 一键导入 Clash
+          </a>
+          <a href="data/clash-sub.yaml" download="warpscout-clash.yaml" class="btn btn-secondary">
+            📥 下载 clash-sub.yaml
+          </a>
+        </div>
       </div>
     </div>
 
@@ -914,10 +949,19 @@
 
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
-      // Set subscription URL
-      const subUrl = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') + '/data/clash-sub.yaml';
-      document.getElementById('sub-url-display').textContent = subUrl;
-      document.getElementById('btn-import-clash').href = `clash://install-config?url=${encodeURIComponent(subUrl)}&name=WARPSCOUT`;
+      // Set subscription URLs
+      const baseUrl = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+      const clashSubUrl = baseUrl + '/data/clash-sub.yaml';
+      const v2raySubUrl = baseUrl + '/data/v2ray-sub.txt';
+      
+      const subUrlElem = document.getElementById('sub-url-display');
+      if (subUrlElem) subUrlElem.textContent = clashSubUrl;
+      
+      const v2rayElem = document.getElementById('v2ray-sub-url-display');
+      if (v2rayElem) v2rayElem.textContent = v2raySubUrl;
+
+      const btnImport = document.getElementById('btn-import-clash');
+      if (btnImport) btnImport.href = `clash://install-config?url=${encodeURIComponent(clashSubUrl)}&name=WARPSCOUT`;
 
       loadData();
     });
@@ -1079,9 +1123,10 @@
             </td>
             <td style="text-align: right;">
               <div class="action-btn-group" style="justify-content: flex-end;">
+                ${ep.vless_uri ? `<button class="btn-action-sm" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);" onclick="copyVlessByIndex(${index})" title="复制单个 v2rayN / VLESS 节点链接">v2rayN</button>` : ''}
                 <button class="btn-action-sm" onclick="exportSingleClash('${ep.endpoint}')">Clash</button>
                 <button class="btn-action-sm" onclick="exportSingleWG('${ep.endpoint}')">WG</button>
-                <button class="btn-action-sm" onclick="copyText('${ep.endpoint}')">复制</button>
+                <button class="btn-action-sm" onclick="copyText('${ep.endpoint}')">复制IP</button>
               </div>
             </td>
           </tr>
@@ -1302,6 +1347,21 @@
     function copySubUrl() {
       const url = document.getElementById('sub-url-display').textContent;
       copyText(url, 'Clash 订阅链接已复制');
+    }
+
+    function copyV2raySubUrl() {
+      const url = document.getElementById('v2ray-sub-url-display').textContent;
+      copyText(url, 'v2rayN / 通用订阅链接已复制');
+    }
+
+    function copyVlessByIndex(idx) {
+      if (!globalData || !globalData.endpoints) return;
+      const ep = globalData.endpoints[idx];
+      if (ep && ep.vless_uri) {
+        copyText(ep.vless_uri, '已复制该节点的 v2rayN / VLESS 链接');
+      } else if (ep) {
+        copyText(ep.endpoint, '已复制端点地址');
+      }
     }
 
     function copyText(text, msg = '已复制到剪贴板') {
