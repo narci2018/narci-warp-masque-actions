@@ -436,61 +436,11 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 		proxyBlocks = append(proxyBlocks, strings.Join(cleanLines, "\n"))
 	}
 
-	// Build Global Dialer-Proxy Landing Nodes (Chained WARP for native multi-country exits)
-	type chainDef struct {
-		flag    string
-		country string
-		name    string
-		front   string
-	}
-	chains := []chainDef{
-		{"🇭🇰", "HK", "香港", "🇭🇰 香港前置"},
-		{"🇯🇵", "JP", "日本", "🇯🇵 日本前置"},
-		{"🇸🇬", "SG", "新加坡", "🇸🇬 新加坡前置"},
-		{"🇺🇸", "US", "美国", "🇺🇸 美国前置"},
-		{"🇩🇪", "DE", "德国", "🇩🇪 德国前置"},
-		{"🇬🇧", "GB", "英国", "🇬🇧 英国前置"},
-	}
-
-	var chainProxyNames []string
-	var chainProxyBlocks []string
-	if len(endpoints) > 0 {
-		bestEp := endpoints[0]
-		confBytes, err := renderConfFor(opts, bestEp.Endpoint, run)
-		if err == nil {
-			confStr := strings.TrimSpace(string(confBytes))
-			lines := strings.Split(confStr, "\n")
-			for _, ch := range chains {
-				landingName := fmt.Sprintf("%s [%s-落地] WARP %s纯净出口", ch.flag, ch.country, ch.name)
-				chainProxyNames = append(chainProxyNames, landingName)
-				var cleanLines []string
-				for _, line := range lines {
-					trimmed := strings.TrimSpace(line)
-					if strings.HasPrefix(trimmed, "proxies:") {
-						continue
-					}
-					if strings.Contains(line, "name:") {
-						line = fmt.Sprintf("  - name: \"%s\"", landingName)
-					} else if strings.HasPrefix(line, "- ") {
-						line = "  " + line
-					}
-					cleanLines = append(cleanLines, line)
-				}
-				cleanLines = append(cleanLines, fmt.Sprintf("    dialer-proxy: \"%s\"", ch.front))
-				chainProxyBlocks = append(chainProxyBlocks, strings.Join(cleanLines, "\n"))
-			}
-		}
-	}
-
 	// 1. Provider file (data/clash-provider.yaml)
 	var provSb strings.Builder
 	provSb.WriteString("# WARPSCOUT Cloudflare Pages Proxy Provider\n")
 	provSb.WriteString(fmt.Sprintf("# Updated: %s | Total: %d\n", time.Now().UTC().Format(time.RFC3339), len(endpoints)))
 	provSb.WriteString("proxies:\n")
-	for _, block := range chainProxyBlocks {
-		provSb.WriteString(block)
-		provSb.WriteString("\n")
-	}
 	for _, block := range proxyBlocks {
 		provSb.WriteString(block)
 		provSb.WriteString("\n")
@@ -503,7 +453,6 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 	subSb.WriteString("# WARPSCOUT Cloudflare Pages Full Subscription\n")
 	subSb.WriteString(fmt.Sprintf("# Generated: %s | Working Endpoints: %d\n", time.Now().UTC().Format(time.RFC3339), len(endpoints)))
 	subSb.WriteString("# Compatible with: Clash Verge Rev, Clash Nyanpasu, Mihomo, Flclash\n")
-	subSb.WriteString("# 支持直连优选 + 全球多国 Dialer-Proxy 纯净落地 (解锁 ChatGPT/Netflix/Google)\n")
 	subSb.WriteString("# ==========================================================\n\n")
 	subSb.WriteString("port: 7890\n")
 	subSb.WriteString("socks-port: 7891\n")
@@ -523,10 +472,6 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 	subSb.WriteString("    - https://dns.google/dns-query\n\n")
 
 	subSb.WriteString("proxies:\n")
-	for _, block := range chainProxyBlocks {
-		subSb.WriteString(block)
-		subSb.WriteString("\n")
-	}
 	for _, block := range proxyBlocks {
 		subSb.WriteString(block)
 		subSb.WriteString("\n")
@@ -540,30 +485,17 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 	subSb.WriteString("  - name: \"🚀 节点选择\"\n")
 	subSb.WriteString("    type: select\n")
 	subSb.WriteString("    proxies:\n")
-	subSb.WriteString("      - \"🌐 全球WARP纯净落地\"\n")
-	subSb.WriteString("      - \"⚡ 自动优选直连\"\n")
-	for _, name := range chainProxyNames {
-		subSb.WriteString(fmt.Sprintf("      - \"%s\"\n", name))
-	}
+	subSb.WriteString("      - \"⚡ 自动优选\"\n")
 	for cCode := range regionProxyMap {
-		subSb.WriteString(fmt.Sprintf("      - \"%s %s直连节点\"\n", flagEmoji(cCode), countryChineseName(cCode)))
+		subSb.WriteString(fmt.Sprintf("      - \"%s %s节点\"\n", flagEmoji(cCode), countryChineseName(cCode)))
 	}
 	for _, name := range proxyNames {
 		subSb.WriteString(fmt.Sprintf("      - \"%s\"\n", name))
 	}
 	subSb.WriteString("      - DIRECT\n\n")
 
-	// Global Landing Selector
-	subSb.WriteString("  - name: \"🌐 全球WARP纯净落地\"\n")
-	subSb.WriteString("    type: select\n")
-	subSb.WriteString("    proxies:\n")
-	for _, name := range chainProxyNames {
-		subSb.WriteString(fmt.Sprintf("      - \"%s\"\n", name))
-	}
-	subSb.WriteString("\n")
-
-	// Auto Test Direct
-	subSb.WriteString("  - name: \"⚡ 自动优选直连\"\n")
+	// Auto Test
+	subSb.WriteString("  - name: \"⚡ 自动优选\"\n")
 	subSb.WriteString("    type: url-test\n")
 	subSb.WriteString("    url: http://www.gstatic.com/generate_204\n")
 	subSb.WriteString("    interval: 300\n")
@@ -574,9 +506,9 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 	}
 	subSb.WriteString("\n")
 
-	// Per-Region Direct Groups
+	// Per-Region Groups
 	for cCode, pList := range regionProxyMap {
-		subSb.WriteString(fmt.Sprintf("  - name: \"%s %s直连节点\"\n", flagEmoji(cCode), countryChineseName(cCode)))
+		subSb.WriteString(fmt.Sprintf("  - name: \"%s %s节点\"\n", flagEmoji(cCode), countryChineseName(cCode)))
 		subSb.WriteString("    type: url-test\n")
 		subSb.WriteString("    url: http://www.gstatic.com/generate_204\n")
 		subSb.WriteString("    interval: 300\n")
@@ -586,14 +518,6 @@ func generateClashSubscriptions(dataDir string, opts options, run protoRun, endp
 			subSb.WriteString(fmt.Sprintf("      - \"%s\"\n", name))
 		}
 		subSb.WriteString("\n")
-	}
-
-	// Front-proxy select groups (default to DIRECT, user can select their airport node in client UI)
-	for _, ch := range chains {
-		subSb.WriteString(fmt.Sprintf("  - name: \"%s\"\n", ch.front))
-		subSb.WriteString("    type: select\n")
-		subSb.WriteString("    proxies:\n")
-		subSb.WriteString("      - DIRECT\n\n")
 	}
 
 	// Rules
