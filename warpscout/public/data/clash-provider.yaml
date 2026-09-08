@@ -1,1725 +1,2115 @@
-# WARPSCOUT 47国 WARP 代理提供者 (Proxy Provider)
-# 生成时间: 2026-09-08 17:09:06 UTC | 节点数: 246
+# WARPSCOUT 全球多国 Cloudflare WARP 代理提供者 (Proxy Provider)
+# 生成时间: 2026-09-08 17:56:58 UTC | 端点总数: 96
 proxies:
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 193.134.209.123:443", server: 193.134.209.123, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 103.97.201.65:443", server: 103.97.201.65, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 91.213.189.4:2087", server: 91.213.189.4, port: 2087, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 103.101.0.73:443", server: 103.101.0.73, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 217.60.38.113:443", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇰 HK-HKG 138.124.111.115:443", server: 138.124.111.115, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 45.202.255.219:443", server: 45.202.255.219, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-KIX 15.168.27.230:443", server: 15.168.27.230, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 104.238.161.103:443", server: 104.238.161.103, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 108.61.183.45:443", server: 108.61.183.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 202.182.108.246:8443", server: 202.182.108.246, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 103.27.187.162:8443", server: 103.27.187.162, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇯🇵 JP-NRT 198.13.32.250:443", server: 198.13.32.250, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 209.97.171.87:443", server: 209.97.171.87, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 139.59.225.43:443", server: 139.59.225.43, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 152.69.213.60:2053", server: 152.69.213.60, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 165.245.181.72:443", server: 165.245.181.72, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 143.198.211.180:443", server: 143.198.211.180, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 206.189.82.255:443", server: 206.189.82.255, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 109.176.19.174:443", server: 109.176.19.174, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 172.93.186.166:443", server: 172.93.186.166, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 5.223.70.20:8443", server: 5.223.70.20, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇸🇬 SG-SIN 5.34.177.232:443", server: 5.34.177.232, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 140.235.38.206:443", server: 140.235.38.206, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 83.147.12.20:443", server: 83.147.12.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 142.249.60.24:443", server: 142.249.60.24, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 23.146.248.149:443", server: 23.146.248.149, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 220.135.105.32:2087", server: 220.135.105.32, port: 2087, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 151.242.188.249:443", server: 151.242.188.249, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 213.210.4.48:443", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 78.105.183.11:8443", server: 78.105.183.11, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 43.213.230.249:443", server: 43.213.230.249, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇼 TW-TPE 85.237.207.72:443", server: 85.237.207.72, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-LAS 182.255.91.36:443", server: 182.255.91.36, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-LAS 203.24.89.169:443", server: 203.24.89.169, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-DFW 142.248.218.139:2053", server: 142.248.218.139, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-IAD 152.53.171.252:2053", server: 152.53.171.252, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-EWR 45.77.155.111:443", server: 45.77.155.111, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-DFW 97.64.27.251:2053", server: 97.64.27.251, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇺🇸 US-ORD 162.230.251.4:443", server: 162.230.251.4, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-LHR 159.65.82.25:443", server: 159.65.82.25, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 46.226.162.89:2053", server: 46.226.162.89, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 45.80.229.48:443", server: 45.80.229.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 185.125.102.10:443", server: 185.125.102.10, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 138.124.25.51:443", server: 138.124.25.51, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 89.169.33.161:8443", server: 89.169.33.161, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-LHR 167.99.93.13:443", server: 167.99.93.13, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-FRA 77.221.136.206:443", server: 77.221.136.206, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-LHR 167.99.81.112:443", server: 167.99.81.112, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇬🇧 GB-LHR 51.241.130.35:443", server: 51.241.130.35, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 45.134.38.102:8443", server: 45.134.38.102, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 89.40.117.130:443", server: 89.40.117.130, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 209.38.192.198:443", server: 209.38.192.198, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 141.95.67.247:8443", server: 141.95.67.247, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-CDG 91.107.158.211:443", server: 91.107.158.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-TXL 31.70.106.190:443", server: 31.70.106.190, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 144.31.94.105:8443", server: 144.31.94.105, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 150.241.100.46:8443", server: 150.241.100.46, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇩🇪 DE-FRA 46.21.247.126:443", server: 46.21.247.126, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-CDG 147.90.26.65:443", server: 147.90.26.65, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-FRA 147.45.68.177:2053", server: 147.45.68.177, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-CDG 217.60.5.223:8443", server: 217.60.5.223, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-BRU 151.243.217.243:8443", server: 151.243.217.243, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-CDG 179.255.188.48:443", server: 179.255.188.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-FRA 207.180.241.216:443", server: 207.180.241.216, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-CDG 147.90.26.10:443", server: 147.90.26.10, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-FRA 168.93.208.116:2083", server: 168.93.208.116, port: 2083, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇫🇷 FR-CDG 51.83.98.78:8443", server: 51.83.98.78, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YVR 24.84.0.55:443", server: 24.84.0.55, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YYZ 45.133.17.106:443", server: 45.133.17.106, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-EWR 68.233.122.42:443", server: 68.233.122.42, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YYZ 216.128.176.190:443", server: 216.128.176.190, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YUL 99.79.123.86:443", server: 99.79.123.86, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YYZ 158.69.220.24:443", server: 158.69.220.24, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YYZ 167.114.67.25:443", server: 167.114.67.25, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YUL 103.214.69.199:443", server: 103.214.69.199, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YUL 207.90.192.164:8443", server: 207.90.192.164, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇨🇦 CA-YYZ 172.105.27.172:443", server: 172.105.27.172, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 38.213.228.141:443", server: 38.213.228.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 38.213.228.91:443", server: 38.213.228.91, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 216.238.79.83:8443", server: 216.238.79.83, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 216.238.86.91:443", server: 216.238.86.91, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 216.238.80.148:8443", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 131.196.254.151:443", server: 131.196.254.151, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 131.196.254.212:443", server: 131.196.254.212, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 131.196.252.97:443", server: 131.196.252.97, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 131.196.252.66:443", server: 131.196.252.66, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇽 MX-QRO 131.196.253.141:443", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 194.87.129.221:443", server: 194.87.129.221, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 38.60.208.92:2087", server: 38.60.208.92, port: 2087, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-SOF 194.36.85.113:443", server: 194.36.85.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 167.104.219.197:2083", server: 167.104.219.197, port: 2083, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 104.239.87.51:443", server: 104.239.87.51, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 188.132.192.190:2053", server: 188.132.192.190, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-DUS 188.132.183.17:443", server: 188.132.183.17, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-SOF 31.57.225.181:2053", server: 31.57.225.181, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 193.187.132.11:2053", server: 193.187.132.11, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇷 TR-IST 130.94.0.228:443", server: 130.94.0.228, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.22.74.117:443", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-SIN 160.191.50.99:443", server: 160.191.50.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-SIN 160.30.50.48:443", server: 160.30.50.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 103.186.64.182:443", server: 103.186.64.182, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.30.54.63:443", server: 160.30.54.63, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.25.74.124:443", server: 160.25.74.124, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 103.197.185.178:443", server: 103.197.185.178, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.25.75.40:443", server: 160.25.75.40, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.25.74.227:443", server: 160.25.74.227, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇻🇳 VN-HKG 160.187.1.101:443", server: 160.187.1.101, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-HKG 149.118.144.163:443", server: 149.118.144.163, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 23.27.113.20:8443", server: 23.27.113.20, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 160.30.5.102:443", server: 160.30.5.102, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.59:443", server: 216.173.67.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 45.194.27.181:443", server: 45.194.27.181, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.144:443", server: 216.173.67.144, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 45.194.27.99:443", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.119:443", server: 216.173.67.119, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇭 TH-BKK 103.224.84.70:443", server: 103.224.84.70, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇭 TH-BKK 45.150.131.246:443", server: 45.150.131.246, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇭 TH-BKK 45.150.128.159:443", server: 45.150.128.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇹🇭 TH-BKK 101.108.49.121:443", server: 101.108.49.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇵🇭 PH-MNL 61.245.11.45:443", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇵🇭 PH-MNL 61.245.10.8:443", server: 61.245.10.8, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [中继] 🇭🇷 HR-ZAG 5.181.2.41:443", server: 5.181.2.41, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - name: "🛡️ [WARP] 🇭🇰 香港 01 (HKG落地 - 21ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 193.134.209.123:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇰 香港 02 (HKG落地 - 34ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 103.97.201.65:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇰 香港 03 (HKG落地 - 50ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 91.213.189.4:2087"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇰 香港 04 (HKG落地 - 79ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 103.101.0.73:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇰 香港 05 (HKG落地 - 333ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 217.60.38.113:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇰 香港 06 (HKG落地 - 334ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇰 HK-HKG 138.124.111.115:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 01 (NRT落地 - 69ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 45.202.255.219:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 02 (KIX落地 - 76ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-KIX 15.168.27.230:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 03 (NRT落地 - 77ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 104.238.161.103:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 04 (NRT落地 - 77ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 108.61.183.45:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 05 (NRT落地 - 77ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 202.182.108.246:8443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 06 (NRT落地 - 78ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 103.27.187.162:8443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇯🇵 日本 07 (NRT落地 - 93ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇯🇵 JP-NRT 198.13.32.250:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 01 (SIN落地 - 48ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 209.97.171.87:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 02 (SIN落地 - 50ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 139.59.225.43:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 03 (SIN落地 - 53ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 152.69.213.60:2053"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 04 (SIN落地 - 54ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 165.245.181.72:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 05 (SIN落地 - 69ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 143.198.211.180:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 06 (SIN落地 - 69ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 206.189.82.255:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 07 (SIN落地 - 86ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 109.176.19.174:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 08 (SIN落地 - 93ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 172.93.186.166:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 09 (SIN落地 - 133ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 5.223.70.20:8443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇸🇬 新加坡 10 (SIN落地 - 386ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇸🇬 SG-SIN 5.34.177.232:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 01 (TPE落地 - 26ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 140.235.38.206:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 02 (TPE落地 - 26ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 83.147.12.20:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 03 (TPE落地 - 29ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 142.249.60.24:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 04 (TPE落地 - 33ms)"
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 23.146.248.149:443"
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 05 (TPE落地 - 33ms)"
+  - name: "🇭🇰 [HK-HKG] WARP 01 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.192.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 220.135.105.32:2087"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 06 (TPE落地 - 37ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇭🇰 [HK-HKG] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 151.242.188.249:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 07 (TPE落地 - 46ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇭🇰 [HK-HKG] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.192.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 213.210.4.48:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 08 (TPE落地 - 55ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇭🇰 [HK-HKG] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 78.105.183.11:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 09 (TPE落地 - 104ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇯🇵 [JP-NRT] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.193.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 43.213.230.249:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇼 台湾 10 (TPE落地 - 186ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇯🇵 [JP-NRT] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇼 TW-TPE 85.237.207.72:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 01 (LAS落地 - 172ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇯🇵 [JP-NRT] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.193.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-LAS 182.255.91.36:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 02 (LAS落地 - 173ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇯🇵 [JP-NRT] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-LAS 203.24.89.169:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 03 (DFW落地 - 230ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇬 [SG-SIN] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.195.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-DFW 142.248.218.139:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 04 (IAD落地 - 261ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇬 [SG-SIN] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-IAD 152.53.171.252:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 05 (EWR落地 - 268ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇬 [SG-SIN] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 162.159.195.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-EWR 45.77.155.111:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 06 (DFW落地 - 1219ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇬 [SG-SIN] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-DFW 97.64.27.251:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇺🇸 美国 07 (ORD落地 - 1284ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇼 [TW-TPE] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.96.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇺🇸 US-ORD 162.230.251.4:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 01 (LHR落地 - 223ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇼 [TW-TPE] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-LHR 159.65.82.25:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 02 (FRA落地 - 228ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇼 [TW-TPE] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.96.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 46.226.162.89:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 03 (FRA落地 - 231ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇼 [TW-TPE] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 45.80.229.48:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 04 (FRA落地 - 243ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇰🇷 [KR-ICN] WARP 01 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.97.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 185.125.102.10:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 05 (FRA落地 - 243ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇰🇷 [KR-ICN] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 138.124.25.51:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 06 (FRA落地 - 258ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇰🇷 [KR-ICN] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.97.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 89.169.33.161:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 07 (LHR落地 - 266ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇰🇷 [KR-ICN] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-LHR 167.99.93.13:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 08 (FRA落地 - 288ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇺🇸 [US-LAX] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-FRA 77.221.136.206:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 09 (LHR落地 - 288ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇺🇸 [US-LAX] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-LHR 167.99.81.112:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇬🇧 英国 10 (LHR落地 - 348ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇺🇸 [US-LAX] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇬🇧 GB-LHR 51.241.130.35:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 01 (FRA落地 - 207ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇺🇸 [US-LAX] WARP 04 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 45.134.38.102:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 02 (FRA落地 - 211ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇬🇧 [GB-LHR] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.98.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 89.40.117.130:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 03 (FRA落地 - 211ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇬🇧 [GB-LHR] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 209.38.192.198:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 04 (FRA落地 - 218ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇬🇧 [GB-LHR] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.98.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 141.95.67.247:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 05 (CDG落地 - 219ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇬🇧 [GB-LHR] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-CDG 91.107.158.211:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 06 (TXL落地 - 227ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇩🇪 [DE-FRA] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.99.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-TXL 31.70.106.190:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 07 (FRA落地 - 244ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇩🇪 [DE-FRA] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 144.31.94.105:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 08 (FRA落地 - 286ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇩🇪 [DE-FRA] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 188.114.99.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 150.241.100.46:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇩🇪 德国 09 (FRA落地 - 332ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇩🇪 [DE-FRA] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇩🇪 DE-FRA 46.21.247.126:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 01 (CDG落地 - 209ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇫🇷 [FR-CDG] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.11
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-CDG 147.90.26.65:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 02 (FRA落地 - 210ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇫🇷 [FR-CDG] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-FRA 147.45.68.177:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 03 (CDG落地 - 211ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇫🇷 [FR-CDG] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.31
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-CDG 217.60.5.223:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 04 (BRU落地 - 219ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇫🇷 [FR-CDG] WARP 04 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-BRU 151.243.217.243:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 05 (CDG落地 - 220ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 8.35.211.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-CDG 179.255.188.48:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 06 (FRA落地 - 234ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇦 [CA-YYZ] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-FRA 207.180.241.216:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 07 (CDG落地 - 234ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 8.35.211.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-CDG 147.90.26.10:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 08 (FRA落地 - 243ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇦 [CA-YYZ] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-FRA 168.93.208.116:2083"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇫🇷 法国 09 (CDG落地 - 251ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇦🇺 [AU-SYD] WARP 01 (2ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 8.47.69.11
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇫🇷 FR-CDG 51.83.98.78:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 01 (YVR落地 - 199ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇦🇺 [AU-SYD] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YVR 24.84.0.55:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 02 (YYZ落地 - 217ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇦🇺 [AU-SYD] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
+    server: 8.47.69.31
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YYZ 45.133.17.106:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 03 (EWR落地 - 233ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇦🇺 [AU-SYD] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-EWR 68.233.122.42:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 04 (YYZ落地 - 241ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇱 [NL-AMS] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YYZ 216.128.176.190:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 05 (YUL落地 - 264ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇱 [NL-AMS] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YUL 99.79.123.86:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 06 (YYZ落地 - 266ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇱 [NL-AMS] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YYZ 158.69.220.24:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 07 (YYZ落地 - 268ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇱 [NL-AMS] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YYZ 167.114.67.25:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 08 (YUL落地 - 270ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇳 [IN-BOM] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YUL 103.214.69.199:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 09 (YUL落地 - 285ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇳 [IN-BOM] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YUL 207.90.192.164:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇨🇦 加拿大 10 (YYZ落地 - 306ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇳 [IN-BOM] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇨🇦 CA-YYZ 172.105.27.172:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 01 (QRO落地 - 236ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇳 [IN-BOM] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.192.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 38.213.228.141:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 02 (QRO落地 - 241ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇲🇾 [MY-KUL] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.11
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 38.213.228.91:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 03 (QRO落地 - 279ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇲🇾 [MY-KUL] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 216.238.79.83:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 04 (QRO落地 - 303ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇲🇾 [MY-KUL] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.31
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 216.238.86.91:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 05 (QRO落地 - 307ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇲🇾 [MY-KUL] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.193.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 216.238.80.148:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 06 (QRO落地 - 309ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇭 [TH-BKK] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 131.196.254.151:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 07 (QRO落地 - 330ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇭 [TH-BKK] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 131.196.254.212:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 08 (QRO落地 - 381ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇭 [TH-BKK] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 131.196.252.97:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 09 (QRO落地 - 393ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇹🇭 [TH-BKK] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 162.159.195.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 131.196.252.66:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇽 墨西哥 10 (QRO落地 - 1305ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇵🇭 [PH-MNL] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.11
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇽 MX-QRO 131.196.253.141:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 01 (IST落地 - 242ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇵🇭 [PH-MNL] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 194.87.129.221:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 02 (IST落地 - 243ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇵🇭 [PH-MNL] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.31
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 38.60.208.92:2087"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 03 (SOF落地 - 247ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇵🇭 [PH-MNL] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.96.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-SOF 194.36.85.113:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 04 (IST落地 - 247ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇻🇳 [VN-SGN] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 167.104.219.197:2083"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 05 (IST落地 - 247ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇻🇳 [VN-SGN] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 104.239.87.51:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 06 (IST落地 - 248ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇻🇳 [VN-SGN] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 188.132.192.190:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 07 (DUS落地 - 254ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇻🇳 [VN-SGN] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.97.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-DUS 188.132.183.17:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 08 (SOF落地 - 255ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇩 [ID-CGK] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-SOF 31.57.225.181:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 09 (IST落地 - 257ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇩 [ID-CGK] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 193.187.132.11:2053"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇷 土耳其 10 (IST落地 - 257ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇩 [ID-CGK] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇷 TR-IST 130.94.0.228:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 01 (HKG落地 - 31ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇩 [ID-CGK] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.98.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.22.74.117:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 02 (SIN落地 - 53ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇧🇷 [BR-GRU] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-SIN 160.191.50.99:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 03 (SIN落地 - 73ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇧🇷 [BR-GRU] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-SIN 160.30.50.48:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 04 (HKG落地 - 105ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇧🇷 [BR-GRU] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 103.186.64.182:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 05 (HKG落地 - 113ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇧🇷 [BR-GRU] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 188.114.99.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.30.54.63:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 06 (HKG落地 - 114ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇪🇸 [ES-MAD] WARP 01 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.11
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.25.74.124:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 07 (HKG落地 - 114ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇪🇸 [ES-MAD] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 103.197.185.178:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 08 (HKG落地 - 117ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇪🇸 [ES-MAD] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.31
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.25.75.40:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 09 (HKG落地 - 119ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇪🇸 [ES-MAD] WARP 04 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.214.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.25.74.227:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇻🇳 越南 10 (HKG落地 - 122ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇹 [IT-MXP] WARP 01 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇻🇳 VN-HKG 160.187.1.101:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 01 (HKG落地 - 48ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇹 [IT-MXP] WARP 02 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-HKG 149.118.144.163:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 02 (SIN落地 - 73ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇹 [IT-MXP] WARP 03 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 23.27.113.20:8443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 03 (SIN落地 - 109ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇮🇹 [IT-MXP] WARP 04 (2ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.39.125.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 160.30.5.102:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 04 (SIN落地 - 355ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇭 [CH-ZRH] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.59:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 05 (SIN落地 - 355ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇭 [CH-ZRH] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 45.194.27.181:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 06 (SIN落地 - 364ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇭 [CH-ZRH] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.144:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 07 (SIN落地 - 365ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇨🇭 [CH-ZRH] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.35.211.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 45.194.27.99:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇲🇾 马来西亚 08 (SIN落地 - 386ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇪 [SE-ARN] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.11
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇲🇾 MY-SIN 216.173.67.119:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇭 泰国 01 (BKK落地 - 68ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇪 [SE-ARN] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇭 TH-BKK 103.224.84.70:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇭 泰国 02 (BKK落地 - 69ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇪 [SE-ARN] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.31
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇭 TH-BKK 45.150.131.246:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇭 泰国 03 (BKK落地 - 75ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇸🇪 [SE-ARN] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.47.69.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇭 TH-BKK 45.150.128.159:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇹🇭 泰国 04 (BKK落地 - 247ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇴 [NO-OSL] WARP 01 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.11
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇹🇭 TH-BKK 101.108.49.121:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇵🇭 菲律宾 01 (MNL落地 - 52ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇴 [NO-OSL] WARP 02 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.21
+    port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇵🇭 PH-MNL 61.245.11.45:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇵🇭 菲律宾 02 (MNL落地 - 71ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇴 [NO-OSL] WARP 03 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.31
+    port: 1701
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇵🇭 PH-MNL 61.245.10.8:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
-  - name: "🛡️ [WARP] 🇭🇷 克罗地亚 01 (ZAG落地 - 223ms)"
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+  - name: "🇳🇴 [NO-OSL] WARP 04 (1ms)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
+    server: 8.6.112.41
+    port: 4500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
     public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    dialer-proxy: "⚡ [中继] 🇭🇷 HR-ZAG 5.181.2.41:443"
     remote-dns-resolve: true
     dns: [1.1.1.1, 1.0.0.1]
     udp: true
     mtu: 1280
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
