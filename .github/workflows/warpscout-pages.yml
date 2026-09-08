@@ -26,9 +26,8 @@ on:
     branches:
       - main
     paths:
-      - 'public/**'
-      - '*.go'
-      - '.github/workflows/warpscout-pages.yml'
+      - 'warpscout/**'
+      - '.github/workflows/**'
 
 # 防止多个并发运行冲突
 concurrency:
@@ -44,6 +43,9 @@ jobs:
   scan-and-deploy:
     name: Headless Scan & Pages Deploy
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./warpscout
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -62,7 +64,7 @@ jobs:
           path: |
             ~/.cache/go-build
             ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-go-${{ hashFiles('warpscout/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
 
@@ -97,7 +99,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./warpscout/public
           publish_branch: gh-pages
           commit_message: "Automated scan & update WARPSCOUT endpoints [skip ci]"
 
@@ -111,12 +113,12 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: 'warpscout'
-          directory: 'public'
+          directory: './warpscout/public'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: warpscout-pages-dist
-          path: public/
+          path: ./warpscout/public/
           retention-days: 7
