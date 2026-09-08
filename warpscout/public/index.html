@@ -741,9 +741,11 @@
         <button class="region-tab active" onclick="switchChainCountry('HK')">🇭🇰 香港 HK</button>
         <button class="region-tab" onclick="switchChainCountry('JP')">🇯🇵 日本 JP</button>
         <button class="region-tab" onclick="switchChainCountry('SG')">🇸🇬 新加坡 SG</button>
+        <button class="region-tab" onclick="switchChainCountry('TW')">🇹🇼 台湾 TW</button>
         <button class="region-tab" onclick="switchChainCountry('US')">🇺🇸 美国 US</button>
-        <button class="region-tab" onclick="switchChainCountry('DE')">🇩🇪 德国 DE</button>
         <button class="region-tab" onclick="switchChainCountry('GB')">🇬🇧 英国 GB</button>
+        <button class="region-tab" onclick="switchChainCountry('DE')">🇩🇪 德国 DE</button>
+        <button class="region-tab" onclick="switchChainCountry('FR')">🇫🇷 法国 FR</button>
       </div>
 
       <!-- Chain Config Generator Box -->
@@ -758,7 +760,7 @@
               📋 复制当前国家配置
             </button>
             <button class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" onclick="copyAllChains()">
-              📦 复制全区 (6国) 落地配置
+              📦 复制全区 (8国) 落地配置
             </button>
           </div>
         </div>
@@ -1323,9 +1325,11 @@
       'HK': { flag: '🇭🇰', country: 'HK', name: '香港', colo: 'HKG', defaultFront: '香港 01', desc: '解锁 Netflix HK / Viu / ChatGPT' },
       'JP': { flag: '🇯🇵', country: 'JP', name: '日本', colo: 'NRT', defaultFront: '日本 01', desc: '解锁 Netflix JP / DMM / Abema / ChatGPT' },
       'SG': { flag: '🇸🇬', country: 'SG', name: '新加坡', colo: 'SIN', defaultFront: '新加坡 01', desc: '解锁 Netflix SG / Disney+ / ChatGPT' },
+      'TW': { flag: '🇹🇼', country: 'TW', name: '台湾', colo: 'TPE', defaultFront: '台湾 01', desc: '解锁动画疯 / Netflix TW / ChatGPT' },
       'US': { flag: '🇺🇸', country: 'US', name: '美国', colo: 'ORD', defaultFront: '美国 01', desc: '解锁 Netflix US / Hulu / ChatGPT' },
+      'GB': { flag: '🇬🇧', country: 'GB', name: '英国', colo: 'LHR', defaultFront: '英国 01', desc: '解锁 BBC iPlayer / 英国纯净出口' },
       'DE': { flag: '🇩🇪', country: 'DE', name: '德国', colo: 'FRA', defaultFront: '德国 01', desc: '欧洲本土合规与纯净出口' },
-      'GB': { flag: '🇬🇧', country: 'GB', name: '英国', colo: 'LHR', defaultFront: '英国 01', desc: '解锁 BBC iPlayer / 英国纯净出口' }
+      'FR': { flag: '🇫🇷', country: 'FR', name: '法国', colo: 'CDG', defaultFront: '法国 01', desc: '法国本土纯净出口 / 欧洲流媒体' }
     };
 
     function switchChainCountry(code) {
@@ -1445,7 +1449,7 @@ proxy-groups:
         frontGroups += `  - name: "${front}"\n    type: select\n    proxies:\n      - DIRECT\n\n`;
       });
 
-      const fullYaml = `# ==========================================================\n# WARPSCOUT 全球 6 国 WARP 纯净落地链式代理配置\n# 适用于: Clash Verge Rev / Mihomo Party / Sing-box / Flclash\n# ==========================================================\n\n` +
+      const fullYaml = `# ==========================================================\n# WARPSCOUT 全球 8 国 WARP 纯净落地链式代理配置\n# 适用于: Clash Verge Rev / Mihomo Party / Sing-box / Flclash\n# ==========================================================\n\n` +
         proxiesYaml +
         `proxy-groups:\n  - name: "🌐 全球WARP纯净落地"\n    type: select\n    proxies:\n` +
         groupProxies +
@@ -1453,7 +1457,7 @@ proxy-groups:
         `  # 前置节点定义（在客户端策略组中选中您的机场对应地区节点即可）\n` +
         frontGroups;
 
-      copyText(fullYaml, '✓ 已复制全球全区 (6国) 链式落地配置');
+      copyText(fullYaml, '✓ 已复制全球全区 (8国) 链式落地配置');
     }
 
     function toggleChainGuide() {
