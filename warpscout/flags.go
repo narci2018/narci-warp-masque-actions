@@ -370,6 +370,7 @@ func setupPagesFlags(fs *flag.FlagSet, o *options) {
 	fs.StringVar(&o.country, "country", "", "")
 	fs.StringVar(&o.excludeNode, "exclude-node", "", "")
 	fs.StringVar(&o.excludeCountry, "exclude-country", "", "")
+	fs.StringVar(&o.relay, "relay", defaultRelay, "")
 	fs.BoolVar(&o.autoRegister, "auto-register", true, "")
 	fs.BoolVar(&o.plain, "plain", true, "")
 	fs.BoolVar(&o.emoji, "emoji", true, "")

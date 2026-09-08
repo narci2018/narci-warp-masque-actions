@@ -129,6 +129,12 @@ func checkOrRegisterAccount(ctx context.Context, opts *options) error {
 		return loadScanAccount(opts.accountPath)
 	}
 
+	fallbackPath := filepath.Join("data", filepath.Base(opts.accountPath))
+	if _, err := os.Stat(fallbackPath); err == nil {
+		opts.accountPath = fallbackPath
+		return loadScanAccount(opts.accountPath)
+	}
+
 	if !opts.autoRegister {
 		return fmt.Errorf("no WARP account at %s: run \"warpscout register\" first", opts.accountPath)
 	}
@@ -138,6 +144,9 @@ func checkOrRegisterAccount(ctx context.Context, opts *options) error {
 	regOpts.proto = protoAWG
 	regOpts.perSubnet = 2
 	regOpts.timeoutSec = 5
+	if regOpts.relay == "" {
+		regOpts.relay = defaultRelay
+	}
 	if err := runRegisterCmd(ctx, regOpts); err != nil {
 		return fmt.Errorf("automatic account registration failed: %w", err)
 	}
