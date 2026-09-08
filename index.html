@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARPSCOUT Pages | 全球优选端点面板</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --header-bg: rgba(13, 18, 30, 0.85);
+      --text: #f3f4f6;
+      --text-dim: #9ca3af;
+      --text-muted: #6b7280;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --primary-dim: rgba(56, 189, 248, 0.12);
+      --accent: #818cf8;
+      --accent-dim: rgba(129, 140, 248, 0.12);
+      --cf-orange: #f38020;
+      --cf-orange-dim: rgba(243, 128, 32, 0.15);
+      --success: #10b981;
+      --success-dim: rgba(16, 185, 129, 0.15);
+      --warn: #f59e0b;
+      --warn-dim: rgba(245, 158, 11, 0.15);
+      --danger: #ef4444;
+      --danger-dim: rgba(239, 68, 68, 0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.06) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--header-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.85rem 1.5rem;
+    }
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f38020, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+    }
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      background: linear-gradient(to right, #ffffff, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-badges {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .badge-cf {
+      background: var(--cf-orange-dim);
+      color: #fb923c;
+      border-color: rgba(251, 146, 60, 0.3);
+    }
+    .badge-pages {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .btn-refresh:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+    }
+
+    main {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+    }
+    .stat-card.orange::after {
+      background: linear-gradient(90deg, var(--cf-orange), transparent);
+    }
+    .stat-card.green::after {
+      background: linear-gradient(90deg, var(--success), transparent);
+    }
+    .stat-card.purple::after {
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .stat-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .stat-sub {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* Subscription Card */
+    .sub-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(30, 41, 59, 0.85));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .sub-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .sub-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .sub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sub-url-box {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 0.6rem 0.85rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .sub-url-text {
+      flex: 1;
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      color: #38bdf8;
+      word-break: break-all;
+      user-select: all;
+    }
+    .sub-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #090d16;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-outline-orange {
+      background: transparent;
+      color: #fb923c;
+      border: 1px solid rgba(251, 146, 60, 0.4);
+    }
+    .btn-outline-orange:hover {
+      background: var(--cf-orange-dim);
+    }
+
+    /* Filters & Controls */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .region-tabs {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .region-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .region-tab:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+    }
+    .region-tab.active {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.4);
+      font-weight: 700;
+    }
+    .tab-badge {
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.85rem;
+      min-width: 240px;
+    }
+    .search-input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 100%;
+      outline: none;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+
+    /* Endpoints Table */
+    .table-container {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(13, 18, 30, 0.95);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+      user-select: none;
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    tr.selected td {
+      background: rgba(56, 189, 248, 0.06);
+    }
+
+    .endpoint-cell {
+      font-family: var(--mono);
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-icon-copy {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .btn-icon-copy:hover {
+      color: var(--primary);
+      background: var(--primary-dim);
+    }
+
+    .country-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .flag-icon { font-size: 1.1rem; }
+    .colo-badge {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ping-badge {
+      font-family: var(--mono);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .ping-fast { background: var(--success-dim); color: #34d399; }
+    .ping-medium { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .ping-slow { background: var(--warn-dim); color: #fbbf24; }
+    .ping-high { background: var(--danger-dim); color: #f87171; }
+
+    .loss-zero { color: #34d399; font-weight: 600; }
+    .loss-bad { color: #f87171; font-weight: 700; }
+
+    .action-btn-group {
+      display: flex;
+      gap: 0.35rem;
+    }
+    .btn-action-sm {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-action-sm:hover {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* Floating Batch Action Bar */
+    .floating-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 999px;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.2);
+      z-index: 100;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .floating-bar.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    .floating-count {
+      font-size: 0.85rem;
+      color: #fff;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .floating-count span {
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .floating-btns {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-backdrop.show { display: flex; }
+    .modal {
+      background: #111827;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 800px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      animation: modalIn 0.2s ease-out;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-header {
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .btn-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .code-preview {
+      width: 100%;
+      height: 380px;
+      background: #090d16;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      color: #a5f3fc;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      padding: 1rem;
+      outline: none;
+      resize: none;
+      line-height: 1.45;
+    }
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 300;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    footer a { color: var(--text-dim); text-decoration: none; }
+    footer a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <div class="brand-title">WARPSCOUT Pages</div>
+          <div class="brand-badges">
+            <span class="badge badge-cf">Cloudflare Anycast</span>
+            <span class="badge badge-pages">Pages CDN</span>
+          </div>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button class="btn-refresh" onclick="loadData(true)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+          刷新数据
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Stats Banner -->
+    <div class="stats-grid">
+      <div class="stat-card green">
+        <div class="stat-label">
+          <span>🚀 优选端点总数</span>
+        </div>
+        <div class="stat-val" id="stat-total">--</div>
+        <div class="stat-sub" id="stat-total-sub">正在拉取探测数据...</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">
+          <span>⚡ 最低隧道延迟</span>
+        </div>
+        <div class="stat-val" id="stat-best-ping">--</div>
+        <div class="stat-sub" id="stat-proto">协议: --</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">
+          <span>🌐 覆盖出口地区</span>
+        </div>
+        <div class="stat-val" id="stat-regions">--</div>
+        <div class="stat-sub" id="stat-regions-sub">--</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">
+          <span>🕒 最后更新时间</span>
+        </div>
+        <div class="stat-val" style="font-size: 1.15rem; line-height: 1.8;" id="stat-updated">--</div>
+        <div class="stat-sub">定时自动化探测刷新</div>
+      </div>
+    </div>
+
+    <!-- Subscription & Direct Import Box -->
+    <div class="sub-card">
+      <div class="sub-card-header">
+        <div class="sub-title-group">
+          <span style="font-size: 1.3rem;">📡</span>
+          <div>
+            <div class="sub-title">Clash Meta / Mihomo 远程订阅链接</div>
+            <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 2px;">
+              一键导入 Clash Verge Rev、Clash Nyanpasu、Mihomo Party、Flclash，支持 URL-Test 自动测速选择最优海外出口
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-url-box">
+        <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
+        <div class="sub-url-text" id="sub-url-display">https://.../data/clash-sub.yaml</div>
+      </div>
+
+      <div class="sub-actions">
+        <button class="btn btn-primary" onclick="copySubUrl()">
+          📋 复制 Clash 订阅链接
+        </button>
+        <a href="#" id="btn-import-clash" class="btn btn-secondary">
+          🚀 一键导入到 Clash
+        </a>
+        <a href="data/clash-sub.yaml" download="warpscout-clash.yaml" class="btn btn-secondary">
+          📥 下载 clash-sub.yaml
+        </a>
+        <a href="data/wireguard.conf" download="warpscout-wireguard.conf" class="btn btn-secondary">
+          📥 下载 wireguard.conf
+        </a>
+        <a href="data/endpoints.txt" download="endpoints.txt" class="btn btn-secondary">
+          📥 纯 IP 列表
+        </a>
+      </div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="region-tabs" id="region-tabs">
+        <button class="region-tab active" onclick="setRegionFilter('ALL')">
+          🌐 全部 <span class="tab-badge" id="tab-badge-all">0</span>
+        </button>
+      </div>
+
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" class="search-input" placeholder="搜索 IP、端口、Colo 机房..." oninput="handleSearch(this.value)">
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 40px; text-align: center;">
+              <input type="checkbox" id="check-all" onchange="toggleSelectAll(this.checked)">
+            </th>
+            <th style="width: 50px;">#</th>
+            <th>端点地址 (IP:Port)</th>
+            <th>出口国家/地区</th>
+            <th>边缘机房 (Colo)</th>
+            <th>隧道延迟 (Tun Ping)</th>
+            <th>丢包率</th>
+            <th>状态</th>
+            <th style="text-align: right;">快捷操作</th>
+          </tr>
+        </thead>
+        <tbody id="endpoints-tbody">
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+              正在加载优选端点列表...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Floating Batch Action Bar -->
+  <div class="floating-bar" id="floating-bar">
+    <div class="floating-count">
+      已勾选 <span id="selected-count">0</span> 个端点
+    </div>
+    <div class="floating-btns">
+      <button class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchExportClash()">
+        📦 批量导出 Clash 配置
+      </button>
+      <button class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchExportWireGuard()">
+        📦 批量导出 WireGuard
+      </button>
+      <button class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchCopyIPs()">
+        📋 复制 IP 列表
+      </button>
+      <button class="btn btn-outline-orange" style="padding: 0.4rem 0.75rem; font-size: 0.8rem;" onclick="clearSelection()">
+        ✖ 取消
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal for Code / Config Output -->
+  <div class="modal-backdrop" id="export-modal" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">导出配置</div>
+        <button class="btn-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <textarea id="modal-code" class="code-preview" readonly></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="downloadModalContent()">
+          💾 保存为文件
+        </button>
+        <button class="btn btn-primary" onclick="copyModalContent()">
+          📋 复制全部内容
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span id="toast-icon">✓</span>
+    <span id="toast-text">已成功复制</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem;">
+      <div>WARPSCOUT Pages &copy; 2026 Powered by Cloudflare Pages &amp; GitHub Actions</div>
+      <div>
+        <a href="https://github.com/vernette/warpscout" target="_blank" rel="noopener">GitHub 项目主页</a>
+        &bull;
+        <a href="data/results.json" target="_blank">查看原始 JSON</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let globalData = null;
+    let selectedEndpoints = new Set();
+    let currentRegion = 'ALL';
+    let currentSearch = '';
+    let modalFilename = 'config.txt';
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set subscription URL
+      const subUrl = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') + '/data/clash-sub.yaml';
+      document.getElementById('sub-url-display').textContent = subUrl;
+      document.getElementById('btn-import-clash').href = `clash://install-config?url=${encodeURIComponent(subUrl)}&name=WARPSCOUT`;
+
+      loadData();
+    });
+
+    async function loadData(showToastMsg = false) {
+      try {
+        const res = await fetch('data/results.json?t=' + Date.now());
+        if (!res.ok) throw new Error('无法拉取 data/results.json');
+        globalData = await res.json();
+        renderDashboard();
+        if (showToastMsg) showToast('✓ 数据刷新成功');
+      } catch (err) {
+        console.error(err);
+        document.getElementById('endpoints-tbody').innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 3rem; color: var(--danger);">
+              拉取数据失败: ${err.message}<br>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; display: inline-block;">
+                请确认 GitHub Actions 扫描任务已运行完毕并生成了 data/results.json
+              </span>
+            </td>
+          </tr>
+        `;
+      }
+    }
+
+    function renderDashboard() {
+      if (!globalData) return;
+
+      // Stats
+      const total = globalData.working_count || globalData.endpoints.length;
+      document.getElementById('stat-total').textContent = total + ' 个';
+      document.getElementById('stat-total-sub').textContent = `共扫描 ${globalData.total_scanned || total} 个端点`;
+
+      document.getElementById('stat-best-ping').textContent = (globalData.best_latency_ms || 0) + ' ms';
+      document.getElementById('stat-proto').textContent = `协议: ${globalData.protocol || 'awg'}`;
+
+      document.getElementById('stat-updated').textContent = globalData.updated_at || '--';
+
+      const regions = globalData.regions || [];
+      document.getElementById('stat-regions').textContent = regions.length + ' 个地区';
+      document.getElementById('stat-regions-sub').textContent = regions.map(r => `${r.flag} ${r.name} (${r.count})`).slice(0, 3).join(' ') + (regions.length > 3 ? ' ...' : '');
+
+      // Region tabs
+      renderRegionTabs(regions, total);
+
+      // Render table
+      renderTable();
+    }
+
+    function renderRegionTabs(regions, total) {
+      const container = document.getElementById('region-tabs');
+      let html = `
+        <button class="region-tab ${currentRegion === 'ALL' ? 'active' : ''}" onclick="setRegionFilter('ALL')">
+          🌐 全部 <span class="tab-badge">${total}</span>
+        </button>
+      `;
+
+      regions.forEach(r => {
+        html += `
+          <button class="region-tab ${currentRegion === r.code ? 'active' : ''}" onclick="setRegionFilter('${r.code}')">
+            ${r.flag || '🌐'} ${r.name || r.code} <span class="tab-badge">${r.count}</span>
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function setRegionFilter(code) {
+      currentRegion = code;
+      const tabs = document.querySelectorAll('.region-tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      renderTable();
+    }
+
+    function handleSearch(val) {
+      currentSearch = val.trim().toLowerCase();
+      renderTable();
+    }
+
+    function renderTable() {
+      if (!globalData || !globalData.endpoints) return;
+
+      const tbody = document.getElementById('endpoints-tbody');
+      const filtered = globalData.endpoints.filter(ep => {
+        // Region filter
+        if (currentRegion !== 'ALL' && ep.country !== currentRegion) {
+          return false;
+        }
+        // Search filter
+        if (currentSearch) {
+          const text = `${ep.endpoint} ${ep.ip} ${ep.colo} ${ep.colo_city} ${ep.country} ${ep.country_name}`.toLowerCase();
+          if (!text.includes(currentSearch)) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+              没有符合当前筛选条件的优选端点
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      let rows = '';
+      filtered.forEach((ep, index) => {
+        const isChecked = selectedEndpoints.has(ep.endpoint);
+        const ping = ep.tun_ping_ms || ep.ep_ping_ms || 0;
+        let pingClass = 'ping-fast';
+        if (ping > 180) pingClass = 'ping-high';
+        else if (ping > 130) pingClass = 'ping-slow';
+        else if (ping > 80) pingClass = 'ping-medium';
+
+        const loss = ep.loss_pct || 0;
+        const lossHtml = loss === 0 
+          ? `<span class="loss-zero">0%</span>` 
+          : `<span class="loss-bad">${loss.toFixed(0)}%</span>`;
+
+        rows += `
+          <tr class="${isChecked ? 'selected' : ''}">
+            <td style="text-align: center;">
+              <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelect('${ep.endpoint}', this.checked)">
+            </td>
+            <td style="color: var(--text-muted); font-family: var(--mono);">${index + 1}</td>
+            <td>
+              <div class="endpoint-cell">
+                <span>${ep.endpoint}</span>
+                <button class="btn-icon-copy" title="复制端点" onclick="copyText('${ep.endpoint}')">📋</button>
+              </div>
+            </td>
+            <td>
+              <div class="country-cell">
+                <span class="flag-icon">${ep.flag || '🌐'}</span>
+                <span>${ep.country_name || ep.country || 'Anycast'}</span>
+              </div>
+            </td>
+            <td>
+              <span class="colo-badge">${ep.colo || 'WARP'}</span>
+              <span style="font-size: 0.78rem; color: var(--text-dim); margin-left: 4px;">${ep.colo_city || ''}</span>
+            </td>
+            <td>
+              <span class="ping-badge ${pingClass}">${ping} ms</span>
+            </td>
+            <td>${lossHtml}</td>
+            <td>
+              <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; color: ${ep.torn ? 'var(--danger)' : 'var(--success)'};">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: ${ep.torn ? 'var(--danger)' : 'var(--success)'};"></span>
+                ${ep.torn ? '阻断' : '正常'}
+              </span>
+            </td>
+            <td style="text-align: right;">
+              <div class="action-btn-group" style="justify-content: flex-end;">
+                <button class="btn-action-sm" onclick="exportSingleClash('${ep.endpoint}')">Clash</button>
+                <button class="btn-action-sm" onclick="exportSingleWG('${ep.endpoint}')">WG</button>
+                <button class="btn-action-sm" onclick="copyText('${ep.endpoint}')">复制</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = rows;
+      updateFloatingBar();
+    }
+
+    // Selection Handlers
+    function toggleSelect(endpoint, checked) {
+      if (checked) {
+        selectedEndpoints.add(endpoint);
+      } else {
+        selectedEndpoints.delete(endpoint);
+      }
+      renderTable();
+    }
+
+    function toggleSelectAll(checked) {
+      if (!globalData || !globalData.endpoints) return;
+      if (checked) {
+        globalData.endpoints.forEach(ep => selectedEndpoints.add(ep.endpoint));
+      } else {
+        selectedEndpoints.clear();
+      }
+      renderTable();
+    }
+
+    function clearSelection() {
+      selectedEndpoints.clear();
+      document.getElementById('check-all').checked = false;
+      renderTable();
+    }
+
+    function updateFloatingBar() {
+      const bar = document.getElementById('floating-bar');
+      const count = selectedEndpoints.size;
+      document.getElementById('selected-count').textContent = count;
+      if (count > 0) {
+        bar.classList.add('show');
+      } else {
+        bar.classList.remove('show');
+      }
+    }
+
+    // Client-side Config Generation
+    function buildClashProxy(ep) {
+      const acct = globalData.account || {};
+      const flag = ep.flag || '🌐';
+      const cCode = ep.country || 'WARP';
+      const colo = ep.colo || 'ANY';
+      const name = `${flag} [${cCode}-${colo}] WARP ${ep.endpoint}`;
+
+      let lines = [
+        `  - name: "${name}"`,
+        `    type: wireguard`,
+        `    server: ${ep.ip}`,
+        `    port: ${ep.port}`,
+        `    ip: ${acct.ipv4 || '172.16.0.2'}`,
+        `    ipv6: ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}`,
+        `    public-key: ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`,
+        `    private-key: ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`,
+        `    remote-dns-resolve: true`,
+        `    dns: [1.1.1.1, 1.0.0.1]`,
+        `    udp: true`,
+        `    mtu: 1280`
+      ];
+
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        lines.push(`    amnezia-wg:`);
+        lines.push(`      jc: ${awg.jc || 6}`);
+        lines.push(`      jmin: ${awg.jmin || 40}`);
+        lines.push(`      jmax: ${awg.jmax || 70}`);
+        lines.push(`      s1: ${awg.s1 || 0}`);
+        lines.push(`      s2: ${awg.s2 || 0}`);
+        lines.push(`      h1: ${awg.h1 || 1}`);
+        lines.push(`      h2: ${awg.h2 || 2}`);
+        lines.push(`      h3: ${awg.h3 || 3}`);
+        lines.push(`      h4: ${awg.h4 || 4}`);
+      }
+      return lines.join('\n');
+    }
+
+    function buildWireGuardConf(ep) {
+      const acct = globalData.account || {};
+      let conf = [
+        `[Interface]`,
+        `PrivateKey = ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`,
+        `Address = ${acct.ipv4 || '172.16.0.2'}/32, ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}/128`,
+        `DNS = 1.1.1.1, 1.0.0.1`,
+        `MTU = 1280`
+      ];
+
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        conf.push(`Jc = ${awg.jc || 6}`);
+        conf.push(`Jmin = ${awg.jmin || 40}`);
+        conf.push(`Jmax = ${awg.jmax || 70}`);
+        conf.push(`S1 = ${awg.s1 || 0}`);
+        conf.push(`S2 = ${awg.s2 || 0}`);
+        conf.push(`H1 = ${awg.h1 || 1}`);
+        conf.push(`H2 = ${awg.h2 || 2}`);
+        conf.push(`H3 = ${awg.h3 || 3}`);
+        conf.push(`H4 = ${awg.h4 || 4}`);
+      }
+
+      conf.push(``);
+      conf.push(`[Peer]`);
+      conf.push(`PublicKey = ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`);
+      conf.push(`Endpoint = ${ep.endpoint}`);
+      conf.push(`AllowedIPs = 0.0.0.0/0, ::/0`);
+      return conf.join('\n');
+    }
+
+    // Export Actions
+    function exportSingleClash(endpoint) {
+      const ep = globalData.endpoints.find(e => e.endpoint === endpoint);
+      if (!ep) return;
+      const yaml = `proxies:\n${buildClashProxy(ep)}\n`;
+      showModal(`Clash Meta 配置 (${ep.endpoint})`, yaml, `clash-${ep.colo}-${ep.port}.yaml`);
+    }
+
+    function exportSingleWG(endpoint) {
+      const ep = globalData.endpoints.find(e => e.endpoint === endpoint);
+      if (!ep) return;
+      const conf = buildWireGuardConf(ep);
+      showModal(`WireGuard 配置 (${ep.endpoint})`, conf, `warp-${ep.colo}-${ep.port}.conf`);
+    }
+
+    function batchExportClash() {
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.endpoint));
+      if (selected.length === 0) return;
+
+      let proxyBlocks = selected.map(e => buildClashProxy(e)).join('\n');
+      let proxyNames = selected.map(e => `      - "${e.flag || '🌐'} [${e.country || 'WARP'}-${e.colo || 'ANY'}] WARP ${e.endpoint}"`).join('\n');
+
+      let yaml = [
+        `# WARPSCOUT 批量优选节点配置 (已选 ${selected.length} 个节点)`,
+        `# 生成时间: ${new Date().toISOString()}`,
+        `port: 7890`,
+        `socks-port: 7891`,
+        `mode: rule`,
+        `log-level: info`,
+        ``,
+        `proxies:`,
+        proxyBlocks,
+        ``,
+        `proxy-groups:`,
+        `  - name: "⚡ 自动优选"`,
+        `    type: url-test`,
+        `    url: http://www.gstatic.com/generate_204`,
+        `    interval: 300`,
+        `    tolerance: 50`,
+        `    proxies:`,
+        proxyNames,
+        ``,
+        `  - name: "🚀 节点选择"`,
+        `    type: select`,
+        `    proxies:`,
+        `      - "⚡ 自动优选"`,
+        proxyNames,
+        ``,
+        `rules:`,
+        `  - MATCH,🚀 节点选择`
+      ].join('\n');
+
+      showModal(`批量导出 Clash 配置 (${selected.length} 个端点)`, yaml, `warpscout-batch-${selected.length}.yaml`);
+    }
+
+    function batchExportWireGuard() {
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.endpoint));
+      if (selected.length === 0) return;
+
+      let confs = selected.map((e, idx) => {
+        return `### -----------------------------------------------------\n### [${idx + 1}] ${e.endpoint} | ${e.flag} ${e.country_name} (${e.colo})\n### -----------------------------------------------------\n${buildWireGuardConf(e)}`;
+      }).join('\n\n');
+
+      showModal(`批量导出 WireGuard 配置 (${selected.length} 个端点)`, confs, `warpscout-batch-${selected.length}.conf`);
+    }
+
+    function batchCopyIPs() {
+      const list = Array.from(selectedEndpoints).join('\n');
+      copyText(list, `已复制 ${selectedEndpoints.size} 个端点 IP 地址`);
+    }
+
+    // Modal Helpers
+    function showModal(title, code, filename) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-code').value = code;
+      modalFilename = filename;
+      document.getElementById('export-modal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('export-modal').classList.remove('show');
+    }
+
+    function copyModalContent() {
+      const code = document.getElementById('modal-code').value;
+      copyText(code, '配置内容已成功复制到剪贴板');
+    }
+
+    function downloadModalContent() {
+      const code = document.getElementById('modal-code').value;
+      const blob = new Blob([code], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = modalFilename;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast(`已开始下载 ${modalFilename}`);
+    }
+
+    function copySubUrl() {
+      const url = document.getElementById('sub-url-display').textContent;
+      copyText(url, 'Clash 订阅链接已复制');
+    }
+
+    function copyText(text, msg = '已复制到剪贴板') {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(msg)).catch(() => fallbackCopy(text, msg));
+      } else {
+        fallbackCopy(text, msg);
+      }
+    }
+
+    function fallbackCopy(text, msg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(msg);
+      } catch (e) {
+        prompt('请手动复制内容:', text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+  </script>
+</body>
+</html>
