@@ -309,6 +309,16 @@
       display: flex;
       gap: 0.4rem;
       flex-wrap: wrap;
+      max-height: 140px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .region-tabs::-webkit-scrollbar {
+      width: 4px;
+    }
+    .region-tabs::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
     }
     .region-tab {
       background: rgba(255, 255, 255, 0.05);
