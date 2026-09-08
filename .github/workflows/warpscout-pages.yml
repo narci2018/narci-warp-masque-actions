@@ -115,7 +115,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./warpscout/public
           publish_branch: gh-pages
-          commit_message: "Automated scan & update WARPSCOUT endpoints [skip ci]"
+          commit_message: "Automated scan & update WARPSCOUT endpoints"
 
       - name: Deploy Directly to Cloudflare Pages (Optional Direct API)
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
