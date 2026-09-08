@@ -1,6 +1,6 @@
 # ==========================================================
 # WARPSCOUT 全球多国 Cloudflare WARP (WireGuard / AWG) 纯净订阅
-# 生成时间: 2026-09-08 17:56:58 UTC | 覆盖国家: 24 | 端点总数: 96
+# 生成时间: 2026-09-08 18:00:15 UTC | 覆盖国家: 24 | 端点总数: 96
 # 协议类型: 100% WireGuard / AmneziaWG (绝无任何普通 VLESS/VPN 杂质)
 # 客户端兼容: Clash Verge Rev, Clash Nyanpasu, Mihomo, Flclash
 # ==========================================================
@@ -26,7 +26,7 @@ dns:
     - 8.8.8.8
 
 proxies:
-  - name: "🇭🇰 [HK-HKG] WARP 01 (2ms)"
+  - name: "🇭🇰 [HK-HKG] WARP 01 (1ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -378,7 +378,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇰🇷 [KR-ICN] WARP 01 (2ms)"
+  - name: "🇰🇷 [KR-ICN] WARP 01 (1ms)"
     type: wireguard
     server: 188.114.97.11
     port: 2408
@@ -422,7 +422,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇰🇷 [KR-ICN] WARP 03 (2ms)"
+  - name: "🇰🇷 [KR-ICN] WARP 03 (1ms)"
     type: wireguard
     server: 188.114.97.31
     port: 2408
@@ -488,7 +488,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇺🇸 [US-LAX] WARP 02 (2ms)"
+  - name: "🇺🇸 [US-LAX] WARP 02 (1ms)"
     type: wireguard
     server: 8.39.214.21
     port: 500
@@ -532,7 +532,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇺🇸 [US-LAX] WARP 04 (2ms)"
+  - name: "🇺🇸 [US-LAX] WARP 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 4500
@@ -554,7 +554,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇬🇧 [GB-LHR] WARP 01 (1ms)"
+  - name: "🇬🇧 [GB-LHR] WARP 01 (4ms)"
     type: wireguard
     server: 188.114.98.11
     port: 2408
@@ -576,7 +576,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇬🇧 [GB-LHR] WARP 02 (2ms)"
+  - name: "🇬🇧 [GB-LHR] WARP 02 (1ms)"
     type: wireguard
     server: 188.114.98.21
     port: 500
@@ -598,7 +598,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇬🇧 [GB-LHR] WARP 03 (1ms)"
+  - name: "🇬🇧 [GB-LHR] WARP 03 (3ms)"
     type: wireguard
     server: 188.114.98.31
     port: 2408
@@ -642,7 +642,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇩🇪 [DE-FRA] WARP 01 (1ms)"
+  - name: "🇩🇪 [DE-FRA] WARP 01 (2ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -774,7 +774,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇫🇷 [FR-CDG] WARP 03 (2ms)"
+  - name: "🇫🇷 [FR-CDG] WARP 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 1701
@@ -796,7 +796,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇫🇷 [FR-CDG] WARP 04 (2ms)"
+  - name: "🇫🇷 [FR-CDG] WARP 04 (1ms)"
     type: wireguard
     server: 8.39.125.41
     port: 4500
@@ -862,7 +862,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
+  - name: "🇨🇦 [CA-YYZ] WARP 03 (1ms)"
     type: wireguard
     server: 8.35.211.31
     port: 2408
@@ -906,7 +906,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇦🇺 [AU-SYD] WARP 01 (2ms)"
+  - name: "🇦🇺 [AU-SYD] WARP 01 (1ms)"
     type: wireguard
     server: 8.47.69.11
     port: 2408
@@ -1126,7 +1126,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇳 [IN-BOM] WARP 03 (1ms)"
+  - name: "🇮🇳 [IN-BOM] WARP 03 (2ms)"
     type: wireguard
     server: 162.159.192.31
     port: 500
@@ -1214,7 +1214,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇲🇾 [MY-KUL] WARP 03 (1ms)"
+  - name: "🇲🇾 [MY-KUL] WARP 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 1701
@@ -1390,7 +1390,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇵🇭 [PH-MNL] WARP 03 (2ms)"
+  - name: "🇵🇭 [PH-MNL] WARP 03 (1ms)"
     type: wireguard
     server: 188.114.96.31
     port: 1701
@@ -1434,7 +1434,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇻🇳 [VN-SGN] WARP 01 (1ms)"
+  - name: "🇻🇳 [VN-SGN] WARP 01 (2ms)"
     type: wireguard
     server: 188.114.97.11
     port: 500
@@ -1478,7 +1478,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇻🇳 [VN-SGN] WARP 03 (1ms)"
+  - name: "🇻🇳 [VN-SGN] WARP 03 (2ms)"
     type: wireguard
     server: 188.114.97.31
     port: 500
@@ -1544,7 +1544,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇩 [ID-CGK] WARP 02 (2ms)"
+  - name: "🇮🇩 [ID-CGK] WARP 02 (1ms)"
     type: wireguard
     server: 188.114.98.21
     port: 500
@@ -1566,7 +1566,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇩 [ID-CGK] WARP 03 (1ms)"
+  - name: "🇮🇩 [ID-CGK] WARP 03 (2ms)"
     type: wireguard
     server: 188.114.98.31
     port: 500
@@ -1698,7 +1698,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇪🇸 [ES-MAD] WARP 01 (2ms)"
+  - name: "🇪🇸 [ES-MAD] WARP 01 (1ms)"
     type: wireguard
     server: 8.39.214.11
     port: 1701
@@ -1720,7 +1720,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇪🇸 [ES-MAD] WARP 02 (2ms)"
+  - name: "🇪🇸 [ES-MAD] WARP 02 (1ms)"
     type: wireguard
     server: 8.39.214.21
     port: 500
@@ -1742,7 +1742,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇪🇸 [ES-MAD] WARP 03 (2ms)"
+  - name: "🇪🇸 [ES-MAD] WARP 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 1701
@@ -1764,7 +1764,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇪🇸 [ES-MAD] WARP 04 (2ms)"
+  - name: "🇪🇸 [ES-MAD] WARP 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 4500
@@ -1786,7 +1786,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 01 (2ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 01 (1ms)"
     type: wireguard
     server: 8.39.125.11
     port: 500
@@ -1830,7 +1830,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 03 (2ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 500
@@ -1852,7 +1852,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 04 (2ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 04 (1ms)"
     type: wireguard
     server: 8.39.125.41
     port: 4500
@@ -2168,7 +2168,7 @@ proxy-groups:
       - "🇨🇭 瑞士 WARP"
       - "🇸🇪 瑞典 WARP"
       - "🇳🇴 挪威 WARP"
-      - "🇭🇰 [HK-HKG] WARP 01 (2ms)"
+      - "🇭🇰 [HK-HKG] WARP 01 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 02 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 03 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 04 (1ms)"
@@ -2184,31 +2184,31 @@ proxy-groups:
       - "🇹🇼 [TW-TPE] WARP 02 (1ms)"
       - "🇹🇼 [TW-TPE] WARP 03 (2ms)"
       - "🇹🇼 [TW-TPE] WARP 04 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 01 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 01 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 02 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 03 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 03 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 04 (1ms)"
       - "🇺🇸 [US-LAX] WARP 01 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 02 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 02 (1ms)"
       - "🇺🇸 [US-LAX] WARP 03 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 04 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 01 (1ms)"
-      - "🇬🇧 [GB-LHR] WARP 02 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 03 (1ms)"
+      - "🇺🇸 [US-LAX] WARP 04 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 01 (4ms)"
+      - "🇬🇧 [GB-LHR] WARP 02 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 03 (3ms)"
       - "🇬🇧 [GB-LHR] WARP 04 (1ms)"
-      - "🇩🇪 [DE-FRA] WARP 01 (1ms)"
+      - "🇩🇪 [DE-FRA] WARP 01 (2ms)"
       - "🇩🇪 [DE-FRA] WARP 02 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 03 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 04 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 01 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 02 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 03 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 04 (2ms)"
+      - "🇫🇷 [FR-CDG] WARP 03 (1ms)"
+      - "🇫🇷 [FR-CDG] WARP 04 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 02 (1ms)"
-      - "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
+      - "🇨🇦 [CA-YYZ] WARP 03 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 04 (1ms)"
-      - "🇦🇺 [AU-SYD] WARP 01 (2ms)"
+      - "🇦🇺 [AU-SYD] WARP 01 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 02 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 03 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 04 (1ms)"
@@ -2218,11 +2218,11 @@ proxy-groups:
       - "🇳🇱 [NL-AMS] WARP 04 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 01 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 02 (1ms)"
-      - "🇮🇳 [IN-BOM] WARP 03 (1ms)"
+      - "🇮🇳 [IN-BOM] WARP 03 (2ms)"
       - "🇮🇳 [IN-BOM] WARP 04 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 01 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 02 (1ms)"
-      - "🇲🇾 [MY-KUL] WARP 03 (1ms)"
+      - "🇲🇾 [MY-KUL] WARP 03 (2ms)"
       - "🇲🇾 [MY-KUL] WARP 04 (1ms)"
       - "🇹🇭 [TH-BKK] WARP 01 (1ms)"
       - "🇹🇭 [TH-BKK] WARP 02 (1ms)"
@@ -2230,28 +2230,28 @@ proxy-groups:
       - "🇹🇭 [TH-BKK] WARP 04 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 01 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 02 (1ms)"
-      - "🇵🇭 [PH-MNL] WARP 03 (2ms)"
+      - "🇵🇭 [PH-MNL] WARP 03 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 04 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 01 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 01 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 02 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 03 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 03 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 04 (1ms)"
       - "🇮🇩 [ID-CGK] WARP 01 (1ms)"
-      - "🇮🇩 [ID-CGK] WARP 02 (2ms)"
-      - "🇮🇩 [ID-CGK] WARP 03 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 02 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 03 (2ms)"
       - "🇮🇩 [ID-CGK] WARP 04 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 01 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 02 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 03 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 04 (1ms)"
-      - "🇪🇸 [ES-MAD] WARP 01 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 02 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 03 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 04 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 01 (2ms)"
+      - "🇪🇸 [ES-MAD] WARP 01 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 02 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 03 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 04 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 01 (1ms)"
       - "🇮🇹 [IT-MXP] WARP 02 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 03 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 04 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 03 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 04 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 01 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 02 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 03 (1ms)"
@@ -2272,7 +2272,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇭🇰 [HK-HKG] WARP 01 (2ms)"
+      - "🇭🇰 [HK-HKG] WARP 01 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 02 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 03 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 04 (1ms)"
@@ -2288,31 +2288,31 @@ proxy-groups:
       - "🇹🇼 [TW-TPE] WARP 02 (1ms)"
       - "🇹🇼 [TW-TPE] WARP 03 (2ms)"
       - "🇹🇼 [TW-TPE] WARP 04 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 01 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 01 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 02 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 03 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 03 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 04 (1ms)"
       - "🇺🇸 [US-LAX] WARP 01 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 02 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 02 (1ms)"
       - "🇺🇸 [US-LAX] WARP 03 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 04 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 01 (1ms)"
-      - "🇬🇧 [GB-LHR] WARP 02 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 03 (1ms)"
+      - "🇺🇸 [US-LAX] WARP 04 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 01 (4ms)"
+      - "🇬🇧 [GB-LHR] WARP 02 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 03 (3ms)"
       - "🇬🇧 [GB-LHR] WARP 04 (1ms)"
-      - "🇩🇪 [DE-FRA] WARP 01 (1ms)"
+      - "🇩🇪 [DE-FRA] WARP 01 (2ms)"
       - "🇩🇪 [DE-FRA] WARP 02 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 03 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 04 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 01 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 02 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 03 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 04 (2ms)"
+      - "🇫🇷 [FR-CDG] WARP 03 (1ms)"
+      - "🇫🇷 [FR-CDG] WARP 04 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 02 (1ms)"
-      - "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
+      - "🇨🇦 [CA-YYZ] WARP 03 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 04 (1ms)"
-      - "🇦🇺 [AU-SYD] WARP 01 (2ms)"
+      - "🇦🇺 [AU-SYD] WARP 01 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 02 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 03 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 04 (1ms)"
@@ -2322,11 +2322,11 @@ proxy-groups:
       - "🇳🇱 [NL-AMS] WARP 04 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 01 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 02 (1ms)"
-      - "🇮🇳 [IN-BOM] WARP 03 (1ms)"
+      - "🇮🇳 [IN-BOM] WARP 03 (2ms)"
       - "🇮🇳 [IN-BOM] WARP 04 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 01 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 02 (1ms)"
-      - "🇲🇾 [MY-KUL] WARP 03 (1ms)"
+      - "🇲🇾 [MY-KUL] WARP 03 (2ms)"
       - "🇲🇾 [MY-KUL] WARP 04 (1ms)"
       - "🇹🇭 [TH-BKK] WARP 01 (1ms)"
       - "🇹🇭 [TH-BKK] WARP 02 (1ms)"
@@ -2334,28 +2334,28 @@ proxy-groups:
       - "🇹🇭 [TH-BKK] WARP 04 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 01 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 02 (1ms)"
-      - "🇵🇭 [PH-MNL] WARP 03 (2ms)"
+      - "🇵🇭 [PH-MNL] WARP 03 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 04 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 01 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 01 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 02 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 03 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 03 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 04 (1ms)"
       - "🇮🇩 [ID-CGK] WARP 01 (1ms)"
-      - "🇮🇩 [ID-CGK] WARP 02 (2ms)"
-      - "🇮🇩 [ID-CGK] WARP 03 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 02 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 03 (2ms)"
       - "🇮🇩 [ID-CGK] WARP 04 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 01 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 02 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 03 (1ms)"
       - "🇧🇷 [BR-GRU] WARP 04 (1ms)"
-      - "🇪🇸 [ES-MAD] WARP 01 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 02 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 03 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 04 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 01 (2ms)"
+      - "🇪🇸 [ES-MAD] WARP 01 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 02 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 03 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 04 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 01 (1ms)"
       - "🇮🇹 [IT-MXP] WARP 02 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 03 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 04 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 03 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 04 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 01 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 02 (1ms)"
       - "🇨🇭 [CH-ZRH] WARP 03 (1ms)"
@@ -2373,7 +2373,7 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇭🇰 香港 自动优选"
-      - "🇭🇰 [HK-HKG] WARP 01 (2ms)"
+      - "🇭🇰 [HK-HKG] WARP 01 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 02 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 03 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 04 (1ms)"
@@ -2384,7 +2384,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇭🇰 [HK-HKG] WARP 01 (2ms)"
+      - "🇭🇰 [HK-HKG] WARP 01 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 02 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 03 (1ms)"
       - "🇭🇰 [HK-HKG] WARP 04 (1ms)"
@@ -2453,9 +2453,9 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇰🇷 韩国 自动优选"
-      - "🇰🇷 [KR-ICN] WARP 01 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 01 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 02 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 03 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 03 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 04 (1ms)"
 
   - name: "⚡ 🇰🇷 韩国 自动优选"
@@ -2464,9 +2464,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇰🇷 [KR-ICN] WARP 01 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 01 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 02 (1ms)"
-      - "🇰🇷 [KR-ICN] WARP 03 (2ms)"
+      - "🇰🇷 [KR-ICN] WARP 03 (1ms)"
       - "🇰🇷 [KR-ICN] WARP 04 (1ms)"
 
   - name: "🇺🇸 美国 WARP"
@@ -2474,9 +2474,9 @@ proxy-groups:
     proxies:
       - "⚡ 🇺🇸 美国 自动优选"
       - "🇺🇸 [US-LAX] WARP 01 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 02 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 02 (1ms)"
       - "🇺🇸 [US-LAX] WARP 03 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 04 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 04 (1ms)"
 
   - name: "⚡ 🇺🇸 美国 自动优选"
     type: url-test
@@ -2485,17 +2485,17 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "🇺🇸 [US-LAX] WARP 01 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 02 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 02 (1ms)"
       - "🇺🇸 [US-LAX] WARP 03 (1ms)"
-      - "🇺🇸 [US-LAX] WARP 04 (2ms)"
+      - "🇺🇸 [US-LAX] WARP 04 (1ms)"
 
   - name: "🇬🇧 英国 WARP"
     type: select
     proxies:
       - "⚡ 🇬🇧 英国 自动优选"
-      - "🇬🇧 [GB-LHR] WARP 01 (1ms)"
-      - "🇬🇧 [GB-LHR] WARP 02 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 03 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 01 (4ms)"
+      - "🇬🇧 [GB-LHR] WARP 02 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 03 (3ms)"
       - "🇬🇧 [GB-LHR] WARP 04 (1ms)"
 
   - name: "⚡ 🇬🇧 英国 自动优选"
@@ -2504,16 +2504,16 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇬🇧 [GB-LHR] WARP 01 (1ms)"
-      - "🇬🇧 [GB-LHR] WARP 02 (2ms)"
-      - "🇬🇧 [GB-LHR] WARP 03 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 01 (4ms)"
+      - "🇬🇧 [GB-LHR] WARP 02 (1ms)"
+      - "🇬🇧 [GB-LHR] WARP 03 (3ms)"
       - "🇬🇧 [GB-LHR] WARP 04 (1ms)"
 
   - name: "🇩🇪 德国 WARP"
     type: select
     proxies:
       - "⚡ 🇩🇪 德国 自动优选"
-      - "🇩🇪 [DE-FRA] WARP 01 (1ms)"
+      - "🇩🇪 [DE-FRA] WARP 01 (2ms)"
       - "🇩🇪 [DE-FRA] WARP 02 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 03 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 04 (1ms)"
@@ -2524,7 +2524,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇩🇪 [DE-FRA] WARP 01 (1ms)"
+      - "🇩🇪 [DE-FRA] WARP 01 (2ms)"
       - "🇩🇪 [DE-FRA] WARP 02 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 03 (1ms)"
       - "🇩🇪 [DE-FRA] WARP 04 (1ms)"
@@ -2535,8 +2535,8 @@ proxy-groups:
       - "⚡ 🇫🇷 法国 自动优选"
       - "🇫🇷 [FR-CDG] WARP 01 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 02 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 03 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 04 (2ms)"
+      - "🇫🇷 [FR-CDG] WARP 03 (1ms)"
+      - "🇫🇷 [FR-CDG] WARP 04 (1ms)"
 
   - name: "⚡ 🇫🇷 法国 自动优选"
     type: url-test
@@ -2546,8 +2546,8 @@ proxy-groups:
     proxies:
       - "🇫🇷 [FR-CDG] WARP 01 (1ms)"
       - "🇫🇷 [FR-CDG] WARP 02 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 03 (2ms)"
-      - "🇫🇷 [FR-CDG] WARP 04 (2ms)"
+      - "🇫🇷 [FR-CDG] WARP 03 (1ms)"
+      - "🇫🇷 [FR-CDG] WARP 04 (1ms)"
 
   - name: "🇨🇦 加拿大 WARP"
     type: select
@@ -2555,7 +2555,7 @@ proxy-groups:
       - "⚡ 🇨🇦 加拿大 自动优选"
       - "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 02 (1ms)"
-      - "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
+      - "🇨🇦 [CA-YYZ] WARP 03 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 04 (1ms)"
 
   - name: "⚡ 🇨🇦 加拿大 自动优选"
@@ -2566,14 +2566,14 @@ proxy-groups:
     proxies:
       - "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 02 (1ms)"
-      - "🇨🇦 [CA-YYZ] WARP 03 (2ms)"
+      - "🇨🇦 [CA-YYZ] WARP 03 (1ms)"
       - "🇨🇦 [CA-YYZ] WARP 04 (1ms)"
 
   - name: "🇦🇺 澳大利亚 WARP"
     type: select
     proxies:
       - "⚡ 🇦🇺 澳大利亚 自动优选"
-      - "🇦🇺 [AU-SYD] WARP 01 (2ms)"
+      - "🇦🇺 [AU-SYD] WARP 01 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 02 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 03 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 04 (1ms)"
@@ -2584,7 +2584,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇦🇺 [AU-SYD] WARP 01 (2ms)"
+      - "🇦🇺 [AU-SYD] WARP 01 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 02 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 03 (1ms)"
       - "🇦🇺 [AU-SYD] WARP 04 (1ms)"
@@ -2615,7 +2615,7 @@ proxy-groups:
       - "⚡ 🇮🇳 印度 自动优选"
       - "🇮🇳 [IN-BOM] WARP 01 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 02 (1ms)"
-      - "🇮🇳 [IN-BOM] WARP 03 (1ms)"
+      - "🇮🇳 [IN-BOM] WARP 03 (2ms)"
       - "🇮🇳 [IN-BOM] WARP 04 (1ms)"
 
   - name: "⚡ 🇮🇳 印度 自动优选"
@@ -2626,7 +2626,7 @@ proxy-groups:
     proxies:
       - "🇮🇳 [IN-BOM] WARP 01 (1ms)"
       - "🇮🇳 [IN-BOM] WARP 02 (1ms)"
-      - "🇮🇳 [IN-BOM] WARP 03 (1ms)"
+      - "🇮🇳 [IN-BOM] WARP 03 (2ms)"
       - "🇮🇳 [IN-BOM] WARP 04 (1ms)"
 
   - name: "🇲🇾 马来西亚 WARP"
@@ -2635,7 +2635,7 @@ proxy-groups:
       - "⚡ 🇲🇾 马来西亚 自动优选"
       - "🇲🇾 [MY-KUL] WARP 01 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 02 (1ms)"
-      - "🇲🇾 [MY-KUL] WARP 03 (1ms)"
+      - "🇲🇾 [MY-KUL] WARP 03 (2ms)"
       - "🇲🇾 [MY-KUL] WARP 04 (1ms)"
 
   - name: "⚡ 🇲🇾 马来西亚 自动优选"
@@ -2646,7 +2646,7 @@ proxy-groups:
     proxies:
       - "🇲🇾 [MY-KUL] WARP 01 (1ms)"
       - "🇲🇾 [MY-KUL] WARP 02 (1ms)"
-      - "🇲🇾 [MY-KUL] WARP 03 (1ms)"
+      - "🇲🇾 [MY-KUL] WARP 03 (2ms)"
       - "🇲🇾 [MY-KUL] WARP 04 (1ms)"
 
   - name: "🇹🇭 泰国 WARP"
@@ -2675,7 +2675,7 @@ proxy-groups:
       - "⚡ 🇵🇭 菲律宾 自动优选"
       - "🇵🇭 [PH-MNL] WARP 01 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 02 (1ms)"
-      - "🇵🇭 [PH-MNL] WARP 03 (2ms)"
+      - "🇵🇭 [PH-MNL] WARP 03 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 04 (1ms)"
 
   - name: "⚡ 🇵🇭 菲律宾 自动优选"
@@ -2686,16 +2686,16 @@ proxy-groups:
     proxies:
       - "🇵🇭 [PH-MNL] WARP 01 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 02 (1ms)"
-      - "🇵🇭 [PH-MNL] WARP 03 (2ms)"
+      - "🇵🇭 [PH-MNL] WARP 03 (1ms)"
       - "🇵🇭 [PH-MNL] WARP 04 (1ms)"
 
   - name: "🇻🇳 越南 WARP"
     type: select
     proxies:
       - "⚡ 🇻🇳 越南 自动优选"
-      - "🇻🇳 [VN-SGN] WARP 01 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 01 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 02 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 03 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 03 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 04 (1ms)"
 
   - name: "⚡ 🇻🇳 越南 自动优选"
@@ -2704,9 +2704,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇻🇳 [VN-SGN] WARP 01 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 01 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 02 (1ms)"
-      - "🇻🇳 [VN-SGN] WARP 03 (1ms)"
+      - "🇻🇳 [VN-SGN] WARP 03 (2ms)"
       - "🇻🇳 [VN-SGN] WARP 04 (1ms)"
 
   - name: "🇮🇩 印度尼西亚 WARP"
@@ -2714,8 +2714,8 @@ proxy-groups:
     proxies:
       - "⚡ 🇮🇩 印度尼西亚 自动优选"
       - "🇮🇩 [ID-CGK] WARP 01 (1ms)"
-      - "🇮🇩 [ID-CGK] WARP 02 (2ms)"
-      - "🇮🇩 [ID-CGK] WARP 03 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 02 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 03 (2ms)"
       - "🇮🇩 [ID-CGK] WARP 04 (1ms)"
 
   - name: "⚡ 🇮🇩 印度尼西亚 自动优选"
@@ -2725,8 +2725,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "🇮🇩 [ID-CGK] WARP 01 (1ms)"
-      - "🇮🇩 [ID-CGK] WARP 02 (2ms)"
-      - "🇮🇩 [ID-CGK] WARP 03 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 02 (1ms)"
+      - "🇮🇩 [ID-CGK] WARP 03 (2ms)"
       - "🇮🇩 [ID-CGK] WARP 04 (1ms)"
 
   - name: "🇧🇷 巴西 WARP"
@@ -2753,10 +2753,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇪🇸 西班牙 自动优选"
-      - "🇪🇸 [ES-MAD] WARP 01 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 02 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 03 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 04 (2ms)"
+      - "🇪🇸 [ES-MAD] WARP 01 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 02 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 03 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 04 (1ms)"
 
   - name: "⚡ 🇪🇸 西班牙 自动优选"
     type: url-test
@@ -2764,19 +2764,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇪🇸 [ES-MAD] WARP 01 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 02 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 03 (2ms)"
-      - "🇪🇸 [ES-MAD] WARP 04 (2ms)"
+      - "🇪🇸 [ES-MAD] WARP 01 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 02 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 03 (1ms)"
+      - "🇪🇸 [ES-MAD] WARP 04 (1ms)"
 
   - name: "🇮🇹 意大利 WARP"
     type: select
     proxies:
       - "⚡ 🇮🇹 意大利 自动优选"
-      - "🇮🇹 [IT-MXP] WARP 01 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 01 (1ms)"
       - "🇮🇹 [IT-MXP] WARP 02 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 03 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 04 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 03 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 04 (1ms)"
 
   - name: "⚡ 🇮🇹 意大利 自动优选"
     type: url-test
@@ -2784,10 +2784,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇮🇹 [IT-MXP] WARP 01 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 01 (1ms)"
       - "🇮🇹 [IT-MXP] WARP 02 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 03 (2ms)"
-      - "🇮🇹 [IT-MXP] WARP 04 (2ms)"
+      - "🇮🇹 [IT-MXP] WARP 03 (1ms)"
+      - "🇮🇹 [IT-MXP] WARP 04 (1ms)"
 
   - name: "🇨🇭 瑞士 WARP"
     type: select
