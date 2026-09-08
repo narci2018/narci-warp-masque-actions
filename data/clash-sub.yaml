@@ -1,0 +1,321 @@
+# ==========================================================
+# WARPSCOUT Cloudflare Pages Full Subscription
+# Generated: 2026-09-08T09:00:37Z | Working Endpoints: 10
+# Compatible with: Clash Verge Rev, Clash Nyanpasu, Mihomo, Flclash
+# ==========================================================
+
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  nameserver:
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
+
+proxies:
+  - name: "🇺🇸 [US-LAX] WARP 8.35.211.116:4500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.35.211.116
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 8.47.69.130:500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.47.69.130
+        port: 500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 8.39.125.194:4500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.125.194
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 188.114.96.128:2408"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.96.128
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 8.39.214.75:500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.214.75
+        port: 500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 8.34.146.152:500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.34.146.152
+        port: 500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 162.159.192.241:2408"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.192.241
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 8.6.112.142:4500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.6.112.142
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 188.114.99.167:4500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.99.167
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🇺🇸 [US-LAX] WARP 162.159.195.250:4500"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.195.250
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "⚡ 自动优选"
+      - "🇺🇸 美国节点"
+      - "🇺🇸 [US-LAX] WARP 8.35.211.116:4500"
+      - "🇺🇸 [US-LAX] WARP 8.47.69.130:500"
+      - "🇺🇸 [US-LAX] WARP 8.39.125.194:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.96.128:2408"
+      - "🇺🇸 [US-LAX] WARP 8.39.214.75:500"
+      - "🇺🇸 [US-LAX] WARP 8.34.146.152:500"
+      - "🇺🇸 [US-LAX] WARP 162.159.192.241:2408"
+      - "🇺🇸 [US-LAX] WARP 8.6.112.142:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.99.167:4500"
+      - "🇺🇸 [US-LAX] WARP 162.159.195.250:4500"
+      - DIRECT
+
+  - name: "⚡ 自动优选"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇺🇸 [US-LAX] WARP 8.35.211.116:4500"
+      - "🇺🇸 [US-LAX] WARP 8.47.69.130:500"
+      - "🇺🇸 [US-LAX] WARP 8.39.125.194:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.96.128:2408"
+      - "🇺🇸 [US-LAX] WARP 8.39.214.75:500"
+      - "🇺🇸 [US-LAX] WARP 8.34.146.152:500"
+      - "🇺🇸 [US-LAX] WARP 162.159.192.241:2408"
+      - "🇺🇸 [US-LAX] WARP 8.6.112.142:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.99.167:4500"
+      - "🇺🇸 [US-LAX] WARP 162.159.195.250:4500"
+
+  - name: "🇺🇸 美国节点"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇺🇸 [US-LAX] WARP 8.35.211.116:4500"
+      - "🇺🇸 [US-LAX] WARP 8.47.69.130:500"
+      - "🇺🇸 [US-LAX] WARP 8.39.125.194:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.96.128:2408"
+      - "🇺🇸 [US-LAX] WARP 8.39.214.75:500"
+      - "🇺🇸 [US-LAX] WARP 8.34.146.152:500"
+      - "🇺🇸 [US-LAX] WARP 162.159.192.241:2408"
+      - "🇺🇸 [US-LAX] WARP 8.6.112.142:4500"
+      - "🇺🇸 [US-LAX] WARP 188.114.99.167:4500"
+      - "🇺🇸 [US-LAX] WARP 162.159.195.250:4500"
+
+rules:
+  - GEOIP,lan,DIRECT,no-resolve
+  - MATCH,🚀 节点选择
