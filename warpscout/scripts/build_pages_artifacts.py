@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-WARPSCOUT Multi-Region Artifacts Generator
-Fetches subscription proxies across 7 countries (HK, JP, SG, TW, US, DE, GB),
-tests TCP latency concurrently, pairs with Cloudflare WARP endpoints,
-and produces:
+WARPSCOUT Dynamic Multi-Country Artifacts Generator
+Automatically detects and supports ALL countries present in the subscription.
+Performs concurrent latency probing and generates:
   - public/data/results.json
   - public/data/clash-sub.yaml
   - public/data/clash-provider.yaml
-  - public/data/wireguard.conf
 """
 
 import os
@@ -18,6 +16,7 @@ import time
 import socket
 import urllib.request
 import concurrent.futures
+import re
 from datetime import datetime, timezone
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -29,15 +28,13 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 DEFAULT_SUB_URL = "https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f"
 
-COUNTRY_META = {
-    'HK': {'name': '香港', 'flag': '🇭🇰', 'colo': 'HKG', 'city': 'Hong Kong'},
-    'JP': {'name': '日本', 'flag': '🇯🇵', 'colo': 'NRT', 'city': 'Tokyo'},
-    'SG': {'name': '新加坡', 'flag': '🇸🇬', 'colo': 'SIN', 'city': 'Singapore'},
-    'TW': {'name': '台湾', 'flag': '🇹🇼', 'colo': 'TPE', 'city': 'Taipei'},
-    'US': {'name': '美国', 'flag': '🇺🇸', 'colo': 'SJC', 'city': 'San Jose'},
-    'DE': {'name': '德国', 'flag': '🇩🇪', 'colo': 'FRA', 'city': 'Frankfurt'},
-    'GB': {'name': '英国', 'flag': '🇬🇧', 'colo': 'LHR', 'city': 'London'},
-}
+# Priority order for display tabs and groups
+PRIORITY_COUNTRIES = ['HK', 'JP', 'SG', 'TW', 'US', 'KR', 'GB', 'DE', 'FR', 'CA', 'AU']
+
+def get_flag_emoji(code):
+    if len(code) == 2 and code.isalpha():
+        return chr(127397 + ord(code[0].upper())) + chr(127397 + ord(code[1].upper()))
+    return "🌐"
 
 def fetch_subscription(url, local_fallback):
     content = None
@@ -47,7 +44,6 @@ def fetch_subscription(url, local_fallback):
         with urllib.request.urlopen(req, timeout=15) as resp:
             content = resp.read().decode('utf-8', errors='ignore')
         print(f"[+] Successfully fetched {len(content)} bytes from remote subscription.")
-        # Save cache
         with open(local_fallback, 'w', encoding='utf-8') as f:
             f.write(content)
     except Exception as e:
@@ -74,7 +70,6 @@ def parse_proxies(raw_yaml):
         if not in_proxies:
             continue
         if sline.startswith('- {') and 'server:' in sline:
-            import re
             name_m = re.search(r'name:\s*([^,]+)', sline)
             server_m = re.search(r'server:\s*([^,]+)', sline)
             port_m = re.search(r'port:\s*([^,]+)', sline)
@@ -85,22 +80,39 @@ def parse_proxies(raw_yaml):
                 port = int(port_m.group(1).strip())
                 uuid = uuid_m.group(1).strip() if uuid_m else ""
                 
-                # Determine country
-                country = None
-                for c_code, meta in COUNTRY_META.items():
-                    if meta['name'] in name or f" {c_code} " in name or f"| {c_code} |" in name:
-                        country = c_code
-                        break
+                # Extract country, code, and colo
+                cname = "未知地区"
+                ccode = "UN"
+                colo = "CF"
                 
-                if country:
-                    proxies.append({
-                        'name': name,
-                        'server': server,
-                        'port': port,
-                        'uuid': uuid,
-                        'country': country,
-                        'raw_line': sline,
-                    })
+                # Match format: 地区随机 | <ChineseName> <Code> | <Colo> | <Host>:<Port>
+                cm = re.search(r'\|\s*([^\|]+?)\s+([A-Z]{2})\s*\|\s*([A-Za-z0-9]+)\s*\|', name)
+                if cm:
+                    cname = cm.group(1).strip()
+                    ccode = cm.group(2).strip()
+                    colo = cm.group(3).strip()
+                else:
+                    # Fallback pattern: [A-Z]{2}
+                    code_match = re.search(r'\b([A-Z]{2})\b', name)
+                    if code_match:
+                        ccode = code_match.group(1)
+                    cname_match = re.search(r'[\u4e00-\u9fa5]+', name)
+                    if cname_match:
+                        cname = cname_match.group(0)
+
+                flag = get_flag_emoji(ccode)
+                
+                proxies.append({
+                    'name': name,
+                    'cname': cname,
+                    'ccode': ccode,
+                    'colo': colo,
+                    'flag': flag,
+                    'server': server,
+                    'port': port,
+                    'uuid': uuid,
+                    'raw_line': sline,
+                })
     return proxies
 
 def ping_target(p):
@@ -132,7 +144,8 @@ def main():
     raw_sub = fetch_subscription(sub_url, sub_cache)
     
     proxies = parse_proxies(raw_sub)
-    print(f"[*] Parsed {len(proxies)} candidate proxies across target regions.")
+    all_codes = set(p['ccode'] for p in proxies)
+    print(f"[*] Parsed {len(proxies)} candidate proxies across {len(all_codes)} countries.")
     
     print("[*] Probing candidate proxies concurrently (timeout 1.5s)...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=60) as executor:
@@ -141,16 +154,33 @@ def main():
     alive_proxies = [p for p in tested if p['alive']]
     print(f"[+] {len(alive_proxies)} proxies are active and reachable!")
     
-    # Group by country and sort by latency
-    by_country = {c: [] for c in COUNTRY_META}
+    # Group by country
+    by_country = {}
+    country_info = {}
     for p in alive_proxies:
-        by_country[p['country']].append(p)
+        c = p['ccode']
+        if c not in by_country:
+            by_country[c] = []
+            country_info[c] = {'name': p['cname'], 'flag': p['flag'], 'colo': p['colo']}
+        by_country[c].append(p)
         
+    # Sort nodes in each country by latency
     for c in by_country:
         by_country[c].sort(key=lambda x: x['latency'])
-        print(f"    - {COUNTRY_META[c]['flag']} {COUNTRY_META[c]['name']} ({c}): {len(by_country[c])} alive | Best: {by_country[c][0]['latency'] if by_country[c] else 'N/A'}ms")
+        
+    # Sort country list: Priority countries first, then by count descending
+    def country_sort_key(c):
+        prio = PRIORITY_COUNTRIES.index(c) if c in PRIORITY_COUNTRIES else 999
+        return (prio, -len(by_country[c]), c)
+        
+    sorted_countries = sorted(by_country.keys(), key=country_sort_key)
+    
+    print(f"\n[+] Detected {len(sorted_countries)} working country regions:")
+    for c in sorted_countries:
+        meta = country_info[c]
+        best_lat = by_country[c][0]['latency'] if by_country[c] else 'N/A'
+        print(f"    - {meta['flag']} {meta['name']} ({c}): {len(by_country[c])} alive | Best: {best_lat}ms")
 
-    # Build results.json endpoints
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     timestamp = int(time.time())
     
@@ -159,12 +189,13 @@ def main():
     region_stats = []
     best_latency = 9999
     
-    for c_code, meta in COUNTRY_META.items():
-        node_list = by_country[c_code]
+    for c in sorted_countries:
+        meta = country_info[c]
+        node_list = by_country[c]
         if not node_list:
             continue
         region_stats.append({
-            "code": c_code,
+            "code": c,
             "name": meta['name'],
             "flag": meta['flag'],
             "count": len(node_list)
@@ -183,18 +214,18 @@ def main():
                 "ep_ping_ms": max(1, lat - 5),
                 "loss_pct": 0,
                 "speed_mbps": 100.0,
-                "country": c_code,
+                "country": c,
                 "country_name": meta['name'],
                 "flag": meta['flag'],
-                "colo": meta['colo'],
-                "colo_city": meta['city'],
-                "location": f"{meta['flag']} {meta['city']}, {c_code}",
+                "colo": p['colo'],
+                "colo_city": meta['name'],
+                "location": f"{meta['flag']} {meta['name']}, {c}",
                 "working": True,
                 "torn": False
             })
             endpoint_id += 1
 
-    # Default AWG / Wireguard account params
+    # Write results.json
     results_json = {
         "updated_at": now_utc,
         "timestamp": timestamp,
@@ -227,28 +258,29 @@ def main():
     results_path = os.path.join(data_dir, "results.json")
     with open(results_path, 'w', encoding='utf-8') as f:
         json.dump(results_json, f, ensure_ascii=False, indent=2)
-    print(f"[+] Generated {results_path} ({len(all_endpoints)} endpoints, {len(region_stats)} regions)")
+    print(f"\n[+] Generated {results_path} ({len(all_endpoints)} endpoints, {len(region_stats)} regions)")
 
+    # Build clash-sub.yaml
     named_proxies = []
     proxy_definitions = []
-    country_proxy_map = {c: [] for c in COUNTRY_META}
-    import re
+    country_proxy_map = {c: [] for c in sorted_countries}
     
-    for c_code, meta in COUNTRY_META.items():
-        for i, p in enumerate(by_country[c_code]):
-            p_name = f"{meta['flag']} [{c_code}-{meta['colo']}] {p['server']}:{p['port']} ({p['latency']}ms)"
+    for c in sorted_countries:
+        meta = country_info[c]
+        for p in by_country[c]:
+            p_name = f"{meta['flag']} [{c}-{p['colo']}] {p['server']}:{p['port']} ({p['latency']}ms)"
             named_proxies.append(p_name)
-            country_proxy_map[c_code].append(p_name)
+            country_proxy_map[c].append(p_name)
             # CRITICAL FIX: Only replace 'name:' and NEVER touch 'servername:'
             p_clean = re.sub(r'(?<!\w)name:\s*[^,]+', f'name: "{p_name}"', p['raw_line'])
             proxy_definitions.append(f"  {p_clean}")
 
     sub_yaml_lines = [
         "# ==========================================================",
-        "# WARPSCOUT Multi-Region Full Subscription",
-        f"# Generated: {now_utc} | Total Active Proxies: {len(all_endpoints)}",
+        "# WARPSCOUT Global Multi-Country Full Subscription",
+        f"# Generated: {now_utc} | Total Active Proxies: {len(all_endpoints)} | Regions: {len(sorted_countries)}",
         "# Supported: Clash Verge Rev, Clash Nyanpasu, Mihomo, Flclash",
-        "# 包含: 7 大国家真实优选节点 (全部实测存活，无任何伪造/失效节点)",
+        "# 包含: 全球各大国家真实优选节点 (全部实测存活，无任何伪造/失效节点)",
         "# ==========================================================",
         "",
         "port: 7890",
@@ -294,8 +326,9 @@ def main():
     sub_yaml_lines.append("    type: select")
     sub_yaml_lines.append("    proxies:")
     sub_yaml_lines.append("      - \"⚡ 全球自动优选\"")
-    for c_code, meta in COUNTRY_META.items():
-        if country_proxy_map[c_code]:
+    for c in sorted_countries:
+        meta = country_info[c]
+        if country_proxy_map[c]:
             sub_yaml_lines.append(f"      - \"{meta['flag']} {meta['name']}节点\"")
     for name in named_proxies:
         sub_yaml_lines.append(f"      - \"{name}\"")
@@ -314,8 +347,9 @@ def main():
     sub_yaml_lines.append("")
 
     # 3. Regional Groups (Selector + Auto-test)
-    for c_code, meta in COUNTRY_META.items():
-        c_proxies = country_proxy_map[c_code]
+    for c in sorted_countries:
+        meta = country_info[c]
+        c_proxies = country_proxy_map[c]
         if not c_proxies:
             continue
         sub_yaml_lines.append(f"  - name: \"{meta['flag']} {meta['name']}节点\"")
@@ -347,8 +381,9 @@ def main():
         f.write("\n".join(sub_yaml_lines))
     print(f"[+] Generated {clash_sub_path}")
 
+    # Build clash-provider.yaml
     provider_lines = [
-        "# WARPSCOUT Multi-Region Proxy Provider",
+        "# WARPSCOUT Global Proxy Provider",
         f"# Updated: {now_utc} | Total: {len(named_proxies)}",
         "proxies:"
     ]
@@ -358,7 +393,7 @@ def main():
         f.write("\n".join(provider_lines))
     print(f"[+] Generated {clash_provider_path}")
 
-    print("\n✅ All multi-region static artifacts successfully generated!")
+    print("\n✅ All dynamic multi-country static artifacts successfully generated!")
 
 if __name__ == "__main__":
     main()
