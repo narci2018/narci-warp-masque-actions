@@ -1077,7 +1077,7 @@
 
       let rows = '';
       filtered.forEach((ep, index) => {
-        const isChecked = selectedEndpoints.has(ep.endpoint);
+        const isChecked = selectedEndpoints.has(ep.id);
         const ping = ep.tun_ping_ms || ep.ep_ping_ms || 0;
         let pingClass = 'ping-fast';
         if (ping > 180) pingClass = 'ping-high';
@@ -1092,12 +1092,13 @@
         rows += `
           <tr class="${isChecked ? 'selected' : ''}">
             <td style="text-align: center;">
-              <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelect('${ep.endpoint}', this.checked)">
+              <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelect(${ep.id}, this.checked)">
             </td>
             <td style="color: var(--text-muted); font-family: var(--mono);">${index + 1}</td>
             <td>
               <div class="endpoint-cell">
-                <span>${ep.endpoint}</span>
+                <span style="font-weight: 600;">${ep.endpoint}</span>
+                ${ep.transit_server ? `<span style="font-size: 0.72rem; color: var(--text-dim); display: block;">via ${ep.transit_server}</span>` : ''}
                 <button class="btn-icon-copy" title="复制端点" onclick="copyText('${ep.endpoint}')">📋</button>
               </div>
             </td>
@@ -1124,8 +1125,8 @@
             <td style="text-align: right;">
               <div class="action-btn-group" style="justify-content: flex-end;">
                 ${ep.vless_uri ? `<button class="btn-action-sm" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);" onclick="copyVlessByIndex(${index})" title="复制单个 v2rayN / VLESS 节点链接">v2rayN</button>` : ''}
-                <button class="btn-action-sm" onclick="exportSingleClash('${ep.endpoint}')">Clash</button>
-                <button class="btn-action-sm" onclick="exportSingleWG('${ep.endpoint}')">WG</button>
+                <button class="btn-action-sm" onclick="exportSingleClash(${ep.id})">Clash</button>
+                <button class="btn-action-sm" onclick="exportSingleWG(${ep.id})">WG</button>
                 <button class="btn-action-sm" onclick="copyText('${ep.endpoint}')">复制IP</button>
               </div>
             </td>
@@ -1138,11 +1139,11 @@
     }
 
     // Selection Handlers
-    function toggleSelect(endpoint, checked) {
+    function toggleSelect(id, checked) {
       if (checked) {
-        selectedEndpoints.add(endpoint);
+        selectedEndpoints.add(id);
       } else {
-        selectedEndpoints.delete(endpoint);
+        selectedEndpoints.delete(id);
       }
       renderTable();
     }
@@ -1150,7 +1151,7 @@
     function toggleSelectAll(checked) {
       if (!globalData || !globalData.endpoints) return;
       if (checked) {
-        globalData.endpoints.forEach(ep => selectedEndpoints.add(ep.endpoint));
+        globalData.endpoints.forEach(ep => selectedEndpoints.add(ep.id));
       } else {
         selectedEndpoints.clear();
       }
@@ -1180,22 +1181,27 @@
       const flag = ep.flag || '🌐';
       const cCode = ep.country || 'WARP';
       const colo = ep.colo || 'ANY';
-      const name = `${flag} [${cCode}-${colo}] WARP ${ep.endpoint}`;
+      const warpName = ep.warp_name || `${flag} [${cCode}-${colo}] WARP 纯净出口`;
 
-      let lines = [
-        `  - name: "${name}"`,
-        `    type: wireguard`,
-        `    server: ${ep.ip}`,
-        `    port: ${ep.port}`,
-        `    ip: ${acct.ipv4 || '172.16.0.2'}`,
-        `    ipv6: ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}`,
-        `    public-key: ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`,
-        `    private-key: ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`,
-        `    remote-dns-resolve: true`,
-        `    dns: [1.1.1.1, 1.0.0.1]`,
-        `    udp: true`,
-        `    mtu: 1280`
-      ];
+      let lines = [];
+      if (ep.transit_raw) {
+        lines.push(ep.transit_raw);
+      }
+      lines.push(`  - name: "${warpName}"`);
+      lines.push(`    type: wireguard`);
+      lines.push(`    server: ${ep.ip || '162.159.192.1'}`);
+      lines.push(`    port: ${ep.port || 2408}`);
+      lines.push(`    ip: ${acct.ipv4 || '172.16.0.2'}`);
+      lines.push(`    ipv6: ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}`);
+      lines.push(`    public-key: ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`);
+      lines.push(`    private-key: ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`);
+      if (ep.transit_name) {
+        lines.push(`    dialer-proxy: "${ep.transit_name}"`);
+      }
+      lines.push(`    remote-dns-resolve: true`);
+      lines.push(`    dns: [1.1.1.1, 1.0.0.1]`);
+      lines.push(`    udp: true`);
+      lines.push(`    mtu: 1280`);
 
       if (acct.amnezia_wg) {
         const awg = acct.amnezia_wg;
@@ -1245,26 +1251,26 @@
     }
 
     // Export Actions
-    function exportSingleClash(endpoint) {
-      const ep = globalData.endpoints.find(e => e.endpoint === endpoint);
+    function exportSingleClash(id) {
+      const ep = globalData.endpoints.find(e => e.id === id);
       if (!ep) return;
       const yaml = `proxies:\n${buildClashProxy(ep)}\n`;
-      showModal(`Clash Meta 配置 (${ep.endpoint})`, yaml, `clash-${ep.colo}-${ep.port}.yaml`);
+      showModal(`Clash 47国 WARP 纯净落地配置 (${ep.country_name} ${ep.colo})`, yaml, `warp-${ep.country}-${ep.colo}.yaml`);
     }
 
-    function exportSingleWG(endpoint) {
-      const ep = globalData.endpoints.find(e => e.endpoint === endpoint);
+    function exportSingleWG(id) {
+      const ep = globalData.endpoints.find(e => e.id === id);
       if (!ep) return;
       const conf = buildWireGuardConf(ep);
       showModal(`WireGuard 配置 (${ep.endpoint})`, conf, `warp-${ep.colo}-${ep.port}.conf`);
     }
 
     function batchExportClash() {
-      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.endpoint));
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.id));
       if (selected.length === 0) return;
 
       let proxyBlocks = selected.map(e => buildClashProxy(e)).join('\n');
-      let proxyNames = selected.map(e => `      - "${e.flag || '🌐'} [${e.country || 'WARP'}-${e.colo || 'ANY'}] WARP ${e.endpoint}"`).join('\n');
+      let proxyNames = selected.map(e => `      - "${e.warp_name || `${e.flag || '🌐'} [${e.country || 'WARP'}-${e.colo || 'ANY'}] WARP ${e.endpoint}`}"`).join('\n');
 
       let yaml = [
         `# WARPSCOUT 批量优选节点配置 (已选 ${selected.length} 个节点)`,
@@ -1300,7 +1306,7 @@
     }
 
     function batchExportWireGuard() {
-      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.endpoint));
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.id));
       if (selected.length === 0) return;
 
       let confs = selected.map((e, idx) => {
