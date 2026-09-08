@@ -1,5 +1,5 @@
 # WARPSCOUT 全球多国 Cloudflare WARP 代理提供者 (Proxy Provider)
-# 生成时间: 2026-09-08 18:00:15 UTC | 端点总数: 96
+# 生成时间: 2026-09-08 20:54:08 UTC | 端点总数: 96
 proxies:
   - name: "🇭🇰 [HK-HKG] WARP 01 (1ms)"
     type: wireguard
@@ -111,7 +111,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇯🇵 [JP-NRT] WARP 02 (1ms)"
+  - name: "🇯🇵 [JP-NRT] WARP 02 (2ms)"
     type: wireguard
     server: 162.159.193.21
     port: 500
@@ -155,7 +155,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇯🇵 [JP-NRT] WARP 04 (1ms)"
+  - name: "🇯🇵 [JP-NRT] WARP 04 (3ms)"
     type: wireguard
     server: 162.159.193.41
     port: 4500
@@ -309,7 +309,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇹🇼 [TW-TPE] WARP 03 (2ms)"
+  - name: "🇹🇼 [TW-TPE] WARP 03 (1ms)"
     type: wireguard
     server: 188.114.96.31
     port: 2408
@@ -463,7 +463,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇺🇸 [US-LAX] WARP 02 (1ms)"
+  - name: "🇺🇸 [US-LAX] WARP 02 (2ms)"
     type: wireguard
     server: 8.39.214.21
     port: 500
@@ -529,7 +529,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇬🇧 [GB-LHR] WARP 01 (4ms)"
+  - name: "🇬🇧 [GB-LHR] WARP 01 (2ms)"
     type: wireguard
     server: 188.114.98.11
     port: 2408
@@ -573,7 +573,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇬🇧 [GB-LHR] WARP 03 (3ms)"
+  - name: "🇬🇧 [GB-LHR] WARP 03 (1ms)"
     type: wireguard
     server: 188.114.98.31
     port: 2408
@@ -617,7 +617,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇩🇪 [DE-FRA] WARP 01 (2ms)"
+  - name: "🇩🇪 [DE-FRA] WARP 01 (1ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -639,7 +639,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇩🇪 [DE-FRA] WARP 02 (1ms)"
+  - name: "🇩🇪 [DE-FRA] WARP 02 (2ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -661,7 +661,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇩🇪 [DE-FRA] WARP 03 (1ms)"
+  - name: "🇩🇪 [DE-FRA] WARP 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 2408
@@ -727,7 +727,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇫🇷 [FR-CDG] WARP 02 (2ms)"
+  - name: "🇫🇷 [FR-CDG] WARP 02 (1ms)"
     type: wireguard
     server: 8.39.125.21
     port: 500
@@ -771,7 +771,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇫🇷 [FR-CDG] WARP 04 (1ms)"
+  - name: "🇫🇷 [FR-CDG] WARP 04 (2ms)"
     type: wireguard
     server: 8.39.125.41
     port: 4500
@@ -793,7 +793,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇨🇦 [CA-YYZ] WARP 01 (1ms)"
+  - name: "🇨🇦 [CA-YYZ] WARP 01 (3ms)"
     type: wireguard
     server: 8.35.211.11
     port: 2408
@@ -925,7 +925,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇦🇺 [AU-SYD] WARP 03 (1ms)"
+  - name: "🇦🇺 [AU-SYD] WARP 03 (2ms)"
     type: wireguard
     server: 8.47.69.31
     port: 2408
@@ -1013,7 +1013,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇳🇱 [NL-AMS] WARP 03 (1ms)"
+  - name: "🇳🇱 [NL-AMS] WARP 03 (2ms)"
     type: wireguard
     server: 8.6.112.31
     port: 500
@@ -1101,7 +1101,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇳 [IN-BOM] WARP 03 (2ms)"
+  - name: "🇮🇳 [IN-BOM] WARP 03 (1ms)"
     type: wireguard
     server: 162.159.192.31
     port: 500
@@ -1145,7 +1145,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇲🇾 [MY-KUL] WARP 01 (1ms)"
+  - name: "🇲🇾 [MY-KUL] WARP 01 (2ms)"
     type: wireguard
     server: 162.159.193.11
     port: 1701
@@ -1167,7 +1167,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇲🇾 [MY-KUL] WARP 02 (1ms)"
+  - name: "🇲🇾 [MY-KUL] WARP 02 (2ms)"
     type: wireguard
     server: 162.159.193.21
     port: 500
@@ -1189,7 +1189,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇲🇾 [MY-KUL] WARP 03 (2ms)"
+  - name: "🇲🇾 [MY-KUL] WARP 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 1701
@@ -1211,7 +1211,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇲🇾 [MY-KUL] WARP 04 (1ms)"
+  - name: "🇲🇾 [MY-KUL] WARP 04 (3ms)"
     type: wireguard
     server: 162.159.193.41
     port: 4500
@@ -1409,7 +1409,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇻🇳 [VN-SGN] WARP 01 (2ms)"
+  - name: "🇻🇳 [VN-SGN] WARP 01 (1ms)"
     type: wireguard
     server: 188.114.97.11
     port: 500
@@ -1541,7 +1541,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇩 [ID-CGK] WARP 03 (2ms)"
+  - name: "🇮🇩 [ID-CGK] WARP 03 (1ms)"
     type: wireguard
     server: 188.114.98.31
     port: 500
@@ -1607,7 +1607,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇧🇷 [BR-GRU] WARP 02 (1ms)"
+  - name: "🇧🇷 [BR-GRU] WARP 02 (2ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -1629,7 +1629,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇧🇷 [BR-GRU] WARP 03 (1ms)"
+  - name: "🇧🇷 [BR-GRU] WARP 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 500
@@ -1695,7 +1695,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇪🇸 [ES-MAD] WARP 02 (1ms)"
+  - name: "🇪🇸 [ES-MAD] WARP 02 (2ms)"
     type: wireguard
     server: 8.39.214.21
     port: 500
@@ -1761,7 +1761,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 01 (1ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 01 (2ms)"
     type: wireguard
     server: 8.39.125.11
     port: 500
@@ -1783,7 +1783,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 02 (2ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 02 (1ms)"
     type: wireguard
     server: 8.39.125.21
     port: 500
@@ -1827,7 +1827,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇮🇹 [IT-MXP] WARP 04 (1ms)"
+  - name: "🇮🇹 [IT-MXP] WARP 04 (2ms)"
     type: wireguard
     server: 8.39.125.41
     port: 4500
@@ -1849,7 +1849,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🇨🇭 [CH-ZRH] WARP 01 (1ms)"
+  - name: "🇨🇭 [CH-ZRH] WARP 01 (2ms)"
     type: wireguard
     server: 8.35.211.11
     port: 500
