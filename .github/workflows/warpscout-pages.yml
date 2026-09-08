@@ -22,6 +22,10 @@ on:
         description: '自定义 IP 或 CIDR 目标池 (留空使用默认 WARP 官方池)'
         required: false
         default: ''
+      sub_url:
+        description: '多国节点订阅源地址 (用于提取与测速 7 大国家地区节点)'
+        required: false
+        default: 'https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f'
   push:
     branches:
       - main
@@ -58,6 +62,11 @@ jobs:
           go-version: '1.23'
           check-latest: true
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       - name: Cache Go Dependencies
         uses: actions/cache@v4
         with:
@@ -76,6 +85,8 @@ jobs:
           ./warpscout version
 
       - name: Run Headless Scan & Generate Pages
+        env:
+          SUBSCRIPTION_URL: ${{ inputs.sub_url || secrets.SUBSCRIPTION_URL || 'https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f' }}
         run: |
           TARGET_ARG=""
           if [ -n "${{ inputs.target }}" ]; then
@@ -90,6 +101,9 @@ jobs:
             -p ${{ inputs.proto || 'awg' }} \
             $TARGET_ARG \
             -jt 16
+
+          echo "🚀 Generating multi-region endpoints and Clash subscriptions for all 7 countries..."
+          python3 scripts/build_pages_artifacts.py
 
           echo "✅ Scan completed! Checking generated static artifacts:"
           ls -la public/
