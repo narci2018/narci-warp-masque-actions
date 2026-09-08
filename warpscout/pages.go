@@ -242,9 +242,9 @@ func runPagesCmd(ctx context.Context, opts options) error {
 			bestLatency = epMs
 		}
 
-		cCode := r.exit.loc
+		cCode := r.exit.coloISO
 		if cCode == "" {
-			cCode = r.exit.coloISO
+			cCode = r.exit.loc
 		}
 		cCode = strings.ToUpper(strings.TrimSpace(cCode))
 		if cCode != "" {
