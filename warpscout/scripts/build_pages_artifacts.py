@@ -232,61 +232,56 @@ def main():
     named_proxies = []
     proxy_definitions = []
     country_proxy_map = {c: [] for c in COUNTRY_META}
+    import re
     
     for c_code, meta in COUNTRY_META.items():
         for i, p in enumerate(by_country[c_code]):
             p_name = f"{meta['flag']} [{c_code}-{meta['colo']}] {p['server']}:{p['port']} ({p['latency']}ms)"
             named_proxies.append(p_name)
             country_proxy_map[c_code].append(p_name)
-            p_clean = p['raw_line']
-            import re
-            p_clean = re.sub(r'name:\s*[^,]+', f'name: "{p_name}"', p_clean)
+            # CRITICAL FIX: Only replace 'name:' and NEVER touch 'servername:'
+            p_clean = re.sub(r'(?<!\w)name:\s*[^,]+', f'name: "{p_name}"', p['raw_line'])
             proxy_definitions.append(f"  {p_clean}")
-
-    warp_ep = "162.159.195.197:2408"
-    warp_chain_names = []
-    for c_code, meta in COUNTRY_META.items():
-        ch_name = f"🌐 [{c_code}-落地] WARP {meta['name']}原生解锁"
-        warp_chain_names.append(ch_name)
-        warp_block = f"""  - name: "{ch_name}"
-    type: wireguard
-    server: {warp_ep.split(':')[0]}
-    port: {warp_ep.split(':')[1]}
-    ip: 172.16.0.2
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    udp: true
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 8.8.8.8]
-    dialer-proxy: "{meta['flag']} {meta['name']}前置"
-"""
-        proxy_definitions.append(warp_block)
 
     sub_yaml_lines = [
         "# ==========================================================",
         "# WARPSCOUT Multi-Region Full Subscription",
         f"# Generated: {now_utc} | Total Active Proxies: {len(all_endpoints)}",
         "# Supported: Clash Verge Rev, Clash Nyanpasu, Mihomo, Flclash",
-        "# 包含: 7 大国家真实优选节点 + WARP 纯净双重落地 (解锁 Netflix/ChatGPT/Google)",
+        "# 包含: 7 大国家真实优选节点 (全部实测存活，无任何伪造/失效节点)",
         "# ==========================================================",
         "",
         "port: 7890",
         "socks-port: 7891",
-        "allow-lan: false",
+        "allow-lan: true",
         "mode: rule",
         "log-level: info",
-        "ipv6: true",
+        "external-controller: 127.0.0.1:9090",
         "",
         "dns:",
         "  enable: true",
-        "  listen: 0.0.0.0:1053",
-        "  ipv6: false",
         "  default-nameserver:",
-        "    - 1.1.1.1",
-        "    - 8.8.8.8",
+        "    - 223.5.5.5",
+        "    - 119.29.29.29",
+        "    - 114.114.114.114",
+        "  use-hosts: true",
         "  nameserver:",
-        "    - https://dns.cloudflare.com/dns-query",
-        "    - https://dns.google/dns-query",
+        "    - https://sm2.doh.pub/dns-query",
+        "    - https://dns.alidns.com/dns-query",
+        "  fallback:",
+        "    - 8.8.4.4",
+        "    - 208.67.220.220",
+        "  fallback-filter:",
+        "    geoip: true",
+        "    geoip-code: CN",
+        "    ipcidr:",
+        "      - 240.0.0.0/4",
+        "      - 127.0.0.1/32",
+        "      - 0.0.0.0/32",
+        "    domain:",
+        "      - '+.google.com'",
+        "      - '+.facebook.com'",
+        "      - '+.youtube.com'",
         "",
         "proxies:"
     ]
@@ -299,10 +294,10 @@ def main():
     sub_yaml_lines.append("    type: select")
     sub_yaml_lines.append("    proxies:")
     sub_yaml_lines.append("      - \"⚡ 全球自动优选\"")
-    sub_yaml_lines.append("      - \"🌐 全球WARP纯净出口\"")
     for c_code, meta in COUNTRY_META.items():
-        sub_yaml_lines.append(f"      - \"{meta['flag']} {meta['name']}节点\"")
-    for name in warp_chain_names:
+        if country_proxy_map[c_code]:
+            sub_yaml_lines.append(f"      - \"{meta['flag']} {meta['name']}节点\"")
+    for name in named_proxies:
         sub_yaml_lines.append(f"      - \"{name}\"")
     sub_yaml_lines.append("      - DIRECT")
     sub_yaml_lines.append("")
@@ -318,15 +313,7 @@ def main():
         sub_yaml_lines.append(f"      - \"{name}\"")
     sub_yaml_lines.append("")
 
-    # 3. WARP Landing Selector
-    sub_yaml_lines.append("  - name: \"🌐 全球WARP纯净出口\"")
-    sub_yaml_lines.append("    type: select")
-    sub_yaml_lines.append("    proxies:")
-    for name in warp_chain_names:
-        sub_yaml_lines.append(f"      - \"{name}\"")
-    sub_yaml_lines.append("")
-
-    # 4. Regional Groups (Front + Regional Selector)
+    # 3. Regional Groups (Selector + Auto-test)
     for c_code, meta in COUNTRY_META.items():
         c_proxies = country_proxy_map[c_code]
         if not c_proxies:
@@ -335,17 +322,6 @@ def main():
         sub_yaml_lines.append("    type: select")
         sub_yaml_lines.append("    proxies:")
         sub_yaml_lines.append(f"      - \"⚡ {meta['flag']} {meta['name']}自动优选\"")
-        sub_yaml_lines.append(f"      - \"🌐 [{c_code}-落地] WARP {meta['name']}原生解锁\"")
-        for p_name in c_proxies:
-            sub_yaml_lines.append(f"      - \"{p_name}\"")
-        sub_yaml_lines.append("")
-
-        sub_yaml_lines.append(f"  - name: \"{meta['flag']} {meta['name']}前置\"")
-        sub_yaml_lines.append("    type: url-test")
-        sub_yaml_lines.append("    url: http://www.gstatic.com/generate_204")
-        sub_yaml_lines.append("    interval: 300")
-        sub_yaml_lines.append("    tolerance: 50")
-        sub_yaml_lines.append("    proxies:")
         for p_name in c_proxies:
             sub_yaml_lines.append(f"      - \"{p_name}\"")
         sub_yaml_lines.append("")
