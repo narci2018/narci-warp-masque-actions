@@ -22,15 +22,19 @@
 
 ## 💡 核心原理与解决痛点
 
-### 1. 为什么本地运行优选永远只有美西（US）出口？
-- **Anycast 广播路由机制**：Cloudflare WARP 使用 Anycast 全球广播 IP。国内三大运营商（电信/联通/移动）直连该广播 IP 时，底层国际物理路由会直接走跨太平洋海缆直达美西（洛杉矶 LAX / 圣何塞 SJC）。因此在境内直连无论如何优选，出口地区永远是美国。
-- **GitHub Actions 的优势**：GitHub Actions 运行在微软 Azure 的海外全球公网数据中心。向 Cloudflare Anycast 发起原始 UDP 握手时，会就近命中香港（HKG）、东京（NRT）、新加坡（SIN）、法兰克福（FRA）等机房，从而获取真实的非美西低延迟亚太及欧洲出口。
+### 1. 为什么无论本地还是 GitHub Actions 直连扫描默认都是美国出口？
+- **Anycast 全球任播机制**：Cloudflare WARP 使用 Anycast 全球广播 IP。任播的原则是**“距离发包源最近的机房接客”**。
+  - **在本地直连时**：国内运营商的国际出口路由，通常走太平洋海底光缆直奔美西（洛杉矶 LAX / 圣何塞 SJC），因此分配到的也是美国出口。
+  - **在 GitHub Actions 上直连时**：GitHub 官方的 `ubuntu-latest` 虚拟机默认托管在微软 Azure 的**美国中部（芝加哥机房）**。因此直接发包必然命中芝加哥机房（**ORD**），分配到的出口也是 100% 美国。
 
-### 2. 为什么需要与 Cloudflare Pages 配合？
-- **无服务器（Serverless）限制**：Cloudflare Pages / Workers 属于轻量 V8 引擎沙箱，不支持底层 Raw UDP 套接字与高并发 WireGuard 协议栈，无法在 Worker 内直接运行 Go 测速引擎。
-- **动静解耦架构**：
-  - **计算端（GitHub Actions）**：定时在海外公网环境执行底层 UDP 探测、丢包率测试与出口元数据解析；
-  - **展示端（Cloudflare Pages）**：将生成的 `results.json`、`clash-sub.yaml`、`wireguard.conf` 和现代极简暗黑 Web 面板推送到 Cloudflare 全球边缘 CDN，享受 0 冷启动、100% 高可用与免费无限流量。
+### 2. GitHub 社区的最优解：Dialer-Proxy 链式落地（全区纯净解锁）
+想要获得日本（JP）、香港（HK）、新加坡（SG）、欧洲（DE/GB）等非美出口，GitHub 代理社区（Mihomo / Clash Meta / Sing-box）公认的最佳实践是 **Dialer-Proxy 链式代理**：
+$$\text{本地客户端} \longrightarrow \text{现有前置节点 (如机场香港/日本)} \xrightarrow{\text{dialer-proxy}} \text{WARP 优选端点} \longrightarrow \text{目标网站 (呈现 100\% 目标国原生 IP)}$$
+
+- **100% 获得对应国家原生 IP**：前置是香港，出口就是香港；前置是日本，出口就是日本！
+- **流媒体与 AI 全解锁**：彻底解决机场公用 IP 脏、被 Netflix/Disney+/ChatGPT 频繁拦截或疯狂弹出谷歌验证码的问题；
+- **利用专线大幅降低延迟**：国内到前置节点走机场的高速 IPLC/IEPL 专线，稳定性远高于直连 WARP；
+- **开箱即用**：本项目生成的 `clash-sub.yaml` 已经内置了全套全球落地策略组，Web 面板亦提供一键定制与复制！
 
 ---
 

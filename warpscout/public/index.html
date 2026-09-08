@@ -719,6 +719,77 @@
       </div>
     </div>
 
+    <!-- Global Dialer-Proxy Landing Section -->
+    <div class="sub-card" style="border-color: rgba(129, 140, 248, 0.4); background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(30, 27, 75, 0.45)); box-shadow: 0 8px 32px rgba(129, 140, 248, 0.1);">
+      <div class="sub-card-header">
+        <div class="sub-title-group">
+          <span style="font-size: 1.5rem;">🌍</span>
+          <div>
+            <div class="sub-title" style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <span>全球多国纯净出口 (Dialer-Proxy 链式代理)</span>
+              <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; font-weight: 600;">100% 原生多国 IP · 解锁 ChatGPT / Netflix</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 5px; line-height: 1.55;">
+              由于 Cloudflare WARP 采用 Anycast 任播，直连会自动分配到最近机房（国内常到美西，GitHub Actions 到芝加哥）。借助 <strong>Dialer-Proxy 链式代理</strong>，将您的现有节点（如机场香港、日本、新加坡）作为前置跳板，WARP 优选端点作为落地机：<strong>前置是香港 → 出口 100% 呈现为 Cloudflare 香港原生 IP</strong>！彻底消除机场脏 IP 带来的封号与人机验证困扰。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chain Country Tabs -->
+      <div style="margin-top: 1.1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;" id="chain-country-tabs">
+        <button class="region-tab active" onclick="switchChainCountry('HK')">🇭🇰 香港 HK</button>
+        <button class="region-tab" onclick="switchChainCountry('JP')">🇯🇵 日本 JP</button>
+        <button class="region-tab" onclick="switchChainCountry('SG')">🇸🇬 新加坡 SG</button>
+        <button class="region-tab" onclick="switchChainCountry('US')">🇺🇸 美国 US</button>
+        <button class="region-tab" onclick="switchChainCountry('DE')">🇩🇪 德国 DE</button>
+        <button class="region-tab" onclick="switchChainCountry('GB')">🇬🇧 英国 GB</button>
+      </div>
+
+      <!-- Chain Config Generator Box -->
+      <div style="margin-top: 1rem; background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); padding: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 280px;">
+            <span style="font-size: 0.82rem; color: var(--text-dim); white-space: nowrap;">您的前置节点名/关键词:</span>
+            <input type="text" id="chain-front-input" class="search-input" style="flex: 1; padding: 0.35rem 0.75rem; font-size: 0.82rem;" value="香港 01" oninput="updateChainPreview()">
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" onclick="copyCurrentChain()">
+              📋 复制当前国家配置
+            </button>
+            <button class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" onclick="copyAllChains()">
+              📦 复制全区 (6国) 落地配置
+            </button>
+          </div>
+        </div>
+
+        <textarea id="chain-preview-yaml" class="code-preview" style="height: 180px; font-size: 0.78rem;" readonly></textarea>
+      </div>
+
+      <!-- Quick Usage Tip -->
+      <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: var(--text-dim);">
+        <div>
+          💡 <strong>极简用法</strong>：直接复制上方订阅链接导入 Clash Verge Rev / Mihomo Party，在策略组中将 <code>🇭🇰 香港前置</code> 等选中您的机场节点，即可一键享受全区落地！
+        </div>
+        <button class="btn-action-sm" onclick="toggleChainGuide()">
+          📖 查看详细教程
+        </button>
+      </div>
+
+      <!-- Collapsible Guide -->
+      <div id="chain-guide-box" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.35); border-radius: var(--radius-sm); border: 1px solid var(--card-border); font-size: 0.82rem; line-height: 1.65;">
+        <h4 style="color: var(--primary); margin-bottom: 0.6rem;">📖 Clash Verge Rev / Mihomo Party 链式代理食用指南</h4>
+        <ol style="margin-left: 1.25rem; color: var(--text-dim);">
+          <li><strong style="color: #fff;">方式一（最推荐）：直接使用订阅内置策略组</strong><br>
+            导入本项目提供的 <code>clash-sub.yaml</code> 订阅后，客户端中会自动出现 <code>🌐 全球WARP纯净落地</code> 和 <code>🇭🇰 香港前置</code>、<code>🇯🇵 日本前置</code> 等策略组。您只需将前置组选择为您现有的机场节点，落地组即刻生效！</li>
+          <li><strong style="color: #fff;">方式二：将配置合并到现有机场订阅中</strong><br>
+            在 Clash Verge 中新建一个 Merge（合并扩展配置），将上方复制的 YAML 代理节点粘贴到 <code>prepend-proxies</code>，并将节点名称添加到您现有的 <code>PROXY</code> 代理组中即可。</li>
+          <li><strong style="color: #fff;">核心优势</strong><br>
+            不仅保证 100% 得到目标国家的原生出口，而且由于国内段流量走的是您机场的优质专线，<strong>延迟和连接稳定性大幅优于直连 WARP</strong>！</li>
+        </ol>
+      </div>
+    </div>
+
     <!-- Controls Bar -->
     <div class="controls-bar">
       <div class="region-tabs" id="region-tabs">
@@ -883,6 +954,9 @@
 
       // Render table
       renderTable();
+
+      // Render chain preview
+      updateChainPreview();
     }
 
     function renderRegionTabs(regions, total) {
@@ -1241,6 +1315,150 @@
         prompt('请手动复制内容:', text);
       }
       document.body.removeChild(ta);
+    }
+
+    // Global Dialer-Proxy Landing Logic
+    let currentChainCountry = 'HK';
+    const chainDefs = {
+      'HK': { flag: '🇭🇰', country: 'HK', name: '香港', colo: 'HKG', defaultFront: '香港 01', desc: '解锁 Netflix HK / Viu / ChatGPT' },
+      'JP': { flag: '🇯🇵', country: 'JP', name: '日本', colo: 'NRT', defaultFront: '日本 01', desc: '解锁 Netflix JP / DMM / Abema / ChatGPT' },
+      'SG': { flag: '🇸🇬', country: 'SG', name: '新加坡', colo: 'SIN', defaultFront: '新加坡 01', desc: '解锁 Netflix SG / Disney+ / ChatGPT' },
+      'US': { flag: '🇺🇸', country: 'US', name: '美国', colo: 'ORD', defaultFront: '美国 01', desc: '解锁 Netflix US / Hulu / ChatGPT' },
+      'DE': { flag: '🇩🇪', country: 'DE', name: '德国', colo: 'FRA', defaultFront: '德国 01', desc: '欧洲本土合规与纯净出口' },
+      'GB': { flag: '🇬🇧', country: 'GB', name: '英国', colo: 'LHR', defaultFront: '英国 01', desc: '解锁 BBC iPlayer / 英国纯净出口' }
+    };
+
+    function switchChainCountry(code) {
+      currentChainCountry = code;
+      const tabs = document.querySelectorAll('#chain-country-tabs .region-tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.textContent.includes(code));
+      });
+      document.getElementById('chain-front-input').value = chainDefs[code].defaultFront;
+      updateChainPreview();
+    }
+
+    function updateChainPreview() {
+      if (!globalData || !globalData.endpoints || globalData.endpoints.length === 0) return;
+      const best = globalData.endpoints[0];
+      const acct = globalData.account || {};
+      const def = chainDefs[currentChainCountry] || chainDefs['HK'];
+      const frontName = (document.getElementById('chain-front-input').value || '').trim() || def.defaultFront;
+
+      let awgBlock = '';
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        awgBlock = `
+    reserved: [0, 0, 0]
+    remote-dns-resolve: true
+    amnezia-wg:
+      jc: ${awg.jc || 6}
+      jmin: ${awg.jmin || 10}
+      jmax: ${awg.jmax || 50}
+      s1: ${awg.s1 || 0}
+      s2: ${awg.s2 || 0}
+      h1: ${awg.h1 || 1}
+      h2: ${awg.h2 || 2}
+      h3: ${awg.h3 || 3}
+      h4: ${awg.h4 || 4}
+      i1: "${awg.i1 || ''}"`;
+      }
+
+      const yaml = `# ${def.flag} [${def.name}] WARP 链式纯净落地配置 (${def.desc})
+# 原理: 本地 -> 您的前置[${frontName}] -> Cloudflare WARP -> 目标网站 (呈现 100% ${def.name} 原生 IP)
+proxies:
+  - name: "${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口"
+    type: wireguard
+    server: ${best.ip}
+    port: ${best.port}
+    ip: ${acct.ipv4 || '172.16.0.2'}
+    ipv6: ${acct.ipv6 || ''}
+    public-key: ${acct.peer_public_key || ''}
+    private-key: ${acct.private_key || ''}
+    udp: true
+    remote-dns-resolve: true
+    dialer-proxy: "${frontName}"${awgBlock}
+
+# 搭配策略组示例
+proxy-groups:
+  - name: "🌐 ${def.name}纯净解锁"
+    type: select
+    proxies:
+      - "${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口"
+      - "${frontName}"
+      - DIRECT`;
+
+      const previewElem = document.getElementById('chain-preview-yaml');
+      if (previewElem) previewElem.value = yaml;
+    }
+
+    function copyCurrentChain() {
+      const yaml = document.getElementById('chain-preview-yaml').value;
+      copyText(yaml, `✓ 已复制 ${chainDefs[currentChainCountry].name} 链式代理配置`);
+    }
+
+    function copyAllChains() {
+      if (!globalData || !globalData.endpoints || globalData.endpoints.length === 0) return;
+      const best = globalData.endpoints[0];
+      const acct = globalData.account || {};
+
+      let awgBlock = '';
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        awgBlock = `
+    reserved: [0, 0, 0]
+    remote-dns-resolve: true
+    amnezia-wg:
+      jc: ${awg.jc || 6}
+      jmin: ${awg.jmin || 10}
+      jmax: ${awg.jmax || 50}
+      s1: ${awg.s1 || 0}
+      s2: ${awg.s2 || 0}
+      h1: ${awg.h1 || 1}
+      h2: ${awg.h2 || 2}
+      h3: ${awg.h3 || 3}
+      h4: ${awg.h4 || 4}
+      i1: "${awg.i1 || ''}"`;
+      }
+
+      let proxiesYaml = 'proxies:\n';
+      let groupProxies = '';
+      let frontGroups = '';
+
+      Object.keys(chainDefs).forEach(code => {
+        const def = chainDefs[code];
+        const pName = `${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口`;
+        const front = `${def.flag} ${def.name}-前置节点`;
+        proxiesYaml += `  - name: "${pName}"
+    type: wireguard
+    server: ${best.ip}
+    port: ${best.port}
+    ip: ${acct.ipv4 || '172.16.0.2'}
+    ipv6: ${acct.ipv6 || ''}
+    public-key: ${acct.peer_public_key || ''}
+    private-key: ${acct.private_key || ''}
+    udp: true
+    remote-dns-resolve: true
+    dialer-proxy: "${front}"${awgBlock}\n\n`;
+
+        groupProxies += `      - "${pName}"\n`;
+        frontGroups += `  - name: "${front}"\n    type: select\n    proxies:\n      - DIRECT\n\n`;
+      });
+
+      const fullYaml = `# ==========================================================\n# WARPSCOUT 全球 6 国 WARP 纯净落地链式代理配置\n# 适用于: Clash Verge Rev / Mihomo Party / Sing-box / Flclash\n# ==========================================================\n\n` +
+        proxiesYaml +
+        `proxy-groups:\n  - name: "🌐 全球WARP纯净落地"\n    type: select\n    proxies:\n` +
+        groupProxies +
+        `      - DIRECT\n\n` +
+        `  # 前置节点定义（在客户端策略组中选中您的机场对应地区节点即可）\n` +
+        frontGroups;
+
+      copyText(fullYaml, '✓ 已复制全球全区 (6国) 链式落地配置');
+    }
+
+    function toggleChainGuide() {
+      const box = document.getElementById('chain-guide-box');
+      if (box) box.style.display = box.style.display === 'none' ? 'block' : 'none';
     }
 
     function showToast(msg) {
