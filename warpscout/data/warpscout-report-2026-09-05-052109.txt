@@ -1,0 +1,21 @@
+# WARP endpoints: 3 working / 14 probed
+# sorted by in-tunnel loss, then in-tunnel ping
+# ENDPOINT PING = ICMP ping to the endpoint address from this host, no tunnel involved
+# TUN PING / LOSS = RTT and packet loss measured inside the tunnel, to 1.1.1.1
+# SEEN AS = region external services see through the tunnel
+# NODE / NODE LOCATION = Cloudflare WARP edge node the tunnel landed on, and where it sits
+# One /24 pool can land on several different nodes - NODE is per endpoint, not per subnet
+
+ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE   NODE LOCATION
+8.6.112.156:500        194ms         167ms     0%     CN         LAX    Los Angeles, US
+8.39.214.63:500        196ms         174ms     20%    CN         LAX    Los Angeles, US
+188.114.97.236:2408    201ms         206ms     30%    CN         LAX    Los Angeles, US
+
+# 2 torn down (handshake ok, data flowed, then cut and never recovered)
+ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE   NODE LOCATION
+8.35.211.92:4500       162ms         199ms     80%    CN         LAX    Los Angeles, US
+8.34.146.28:4500       174ms         201ms     90%    CN         LAX    Los Angeles, US
+
+# Best endpoint per node (lowest in-tunnel loss, then in-tunnel ping)
+NODE   ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE LOCATION
+LAX    8.6.112.156:500        194ms         167ms     0%     CN         Los Angeles, US

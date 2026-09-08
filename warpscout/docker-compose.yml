@@ -1,0 +1,21 @@
+services:
+  warpscout:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: warpscout-web:latest
+    container_name: warpscout-web
+    restart: unless-stopped
+    ports:
+      # 宿主机端口:容器端口 (采用冷门高位端口)
+      - "${PORT_WEB:-29880}:29880"
+      - "${PORT_SOCKS:-29881}:29881"
+    volumes:
+      # 持久化数据目录：保存 warpscout-account.json 和导出的配置
+      - ./data:/data
+    environment:
+      - PORT_WEB=29880
+      - PORT_SOCKS=29881
+    # 允许容器内无需 root 执行 ICMP ping 测活
+    sysctls:
+      - net.ipv4.ping_group_range=0 2147483647

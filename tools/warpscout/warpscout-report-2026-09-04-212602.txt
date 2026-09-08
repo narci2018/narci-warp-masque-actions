@@ -1,0 +1,57 @@
+# WARP endpoints: 44 working / 70 probed
+# sorted by in-tunnel loss, then in-tunnel ping
+# ENDPOINT PING = ICMP ping to the endpoint address from this host, no tunnel involved
+# TUN PING / LOSS = RTT and packet loss measured inside the tunnel, to 1.1.1.1
+# SEEN AS = region external services see through the tunnel
+# NODE / NODE LOCATION = Cloudflare WARP edge node the tunnel landed on, and where it sits
+# One /24 pool can land on several different nodes - NODE is per endpoint, not per subnet
+
+ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE   NODE LOCATION
+188.114.98.16:500      180ms         183ms     0%     CN         LAX    Los Angeles, US
+162.159.192.82:4500    187ms         187ms     0%     CN         LAX    Los Angeles, US
+8.39.125.179:2408      186ms         188ms     0%     CN         LAX    Los Angeles, US
+8.35.211.180:500       187ms         191ms     0%     CN         LAX    Los Angeles, US
+8.39.204.208:2408      179ms         194ms     0%     CN         LAX    Los Angeles, US
+188.114.99.198:500     190ms         194ms     0%     CN         LAX    Los Angeles, US
+8.39.214.59:2408       180ms         183ms     10%    CN         LAX    Los Angeles, US
+188.114.97.68:2408     187ms         186ms     10%    CN         LAX    Los Angeles, US
+188.114.96.108:2408    188ms         188ms     10%    CN         LAX    Los Angeles, US
+188.114.96.16:2408     188ms         189ms     10%    CN         LAX    Los Angeles, US
+188.114.98.207:500     180ms         190ms     10%    CN         LAX    Los Angeles, US
+188.114.97.137:4500    178ms         194ms     10%    CN         LAX    Los Angeles, US
+162.159.195.220:2408   187ms         183ms     20%    CN         LAX    Los Angeles, US
+8.35.211.47:4500       181ms         183ms     20%    CN         LAX    Los Angeles, US
+8.39.214.252:500       ?             184ms     20%    CN         LAX    Los Angeles, US
+188.114.99.123:4500    188ms         184ms     20%    CN         LAX    Los Angeles, US
+8.39.125.207:2408      189ms         184ms     20%    CN         LAX    Los Angeles, US
+8.34.146.89:4500       179ms         185ms     20%    CN         LAX    Los Angeles, US
+188.114.97.213:2408    181ms         186ms     20%    CN         LAX    Los Angeles, US
+8.39.204.163:2408      217ms         187ms     20%    CN         LAX    Los Angeles, US
+188.114.96.232:500     186ms         187ms     20%    CN         LAX    Los Angeles, US
+8.39.125.211:2408      187ms         188ms     20%    CN         LAX    Los Angeles, US
+8.47.69.81:4500        181ms         189ms     20%    CN         LAX    Los Angeles, US
+162.159.195.158:4500   186ms         189ms     20%    CN         LAX    Los Angeles, US
+188.114.98.229:4500    202ms         189ms     20%    CN         LAX    Los Angeles, US
+8.6.112.235:4500       186ms         190ms     20%    CN         LAX    Los Angeles, US
+8.39.214.15:4500       209ms         190ms     20%    CN         LAX    Los Angeles, US
+8.39.204.126:4500      188ms         191ms     20%    CN         LAX    Los Angeles, US
+8.35.211.222:2408      180ms         182ms     30%    CN         LAX    Los Angeles, US
+8.35.211.8:500         206ms         183ms     30%    CN         LAX    Los Angeles, US
+8.47.69.186:2408       212ms         186ms     30%    CN         LAX    Los Angeles, US
+8.6.112.172:4500       194ms         189ms     30%    CN         LAX    Los Angeles, US
+8.6.112.199:4500       181ms         189ms     30%    CN         LAX    Los Angeles, US
+162.159.192.147:2408   190ms         190ms     30%    CN         LAX    Los Angeles, US
+8.39.204.228:2408      182ms         203ms     30%    CN         LAX    Los Angeles, US
+188.114.96.37:2408     188ms         188ms     40%    CN         LAX    Los Angeles, US
+188.114.99.22:500      184ms         188ms     40%    CN         LAX    Los Angeles, US
+8.34.146.14:2408       218ms         190ms     40%    CN         LAX    Los Angeles, US
+8.34.70.167:500        197ms         191ms     40%    CN         LAX    Los Angeles, US
+8.47.69.164:500        183ms         195ms     40%    CN         LAX    Los Angeles, US
+8.34.146.39:2408       181ms         196ms     40%    CN         LAX    Los Angeles, US
+188.114.96.14:500      172ms         199ms     40%    CN         LAX    Los Angeles, US
+188.114.98.248:500     196ms         203ms     40%    CN         LAX    Los Angeles, US
+188.114.97.233:4500    181ms         200ms     50%    CN         LAX    Los Angeles, US
+
+# Best endpoint per node (lowest in-tunnel loss, then in-tunnel ping)
+NODE   ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE LOCATION
+LAX    188.114.98.16:500      180ms         183ms     0%     CN         Los Angeles, US

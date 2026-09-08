@@ -1,0 +1,122 @@
+name: WARPSCOUT Pages - Scan & Deploy
+
+on:
+  schedule:
+    # 每 6 小时自动执行一次全球海外机房探测与更新
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: '每个子网采样的端点数量 (Addresses per subnet)'
+        required: false
+        default: '12'
+      proto:
+        description: '探测协议 (awg 或 wg)'
+        required: false
+        default: 'awg'
+      timeout:
+        description: '探测超时时间/秒 (Timeout in seconds)'
+        required: false
+        default: '3'
+      target:
+        description: '自定义 IP 或 CIDR 目标池 (留空使用默认 WARP 官方池)'
+        required: false
+        default: ''
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/**'
+      - '*.go'
+      - '.github/workflows/warpscout-pages.yml'
+
+# 防止多个并发运行冲突
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scan-and-deploy:
+    name: Headless Scan & Pages Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+          check-latest: true
+
+      - name: Cache Go Dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: Build WARPSCOUT Binary
+        run: |
+          go mod download
+          CGO_ENABLED=0 go build -trimpath -ldflags="-s -w -X main.version=pages" -o warpscout .
+          chmod +x warpscout
+          ./warpscout version
+
+      - name: Run Headless Scan & Generate Pages
+        run: |
+          TARGET_ARG=""
+          if [ -n "${{ inputs.target }}" ]; then
+            TARGET_ARG="-target ${{ inputs.target }}"
+          fi
+
+          echo "🚀 Starting WARPSCOUT headless scan on Azure/GitHub runner network..."
+          ./warpscout pages \
+            -o public \
+            -n ${{ inputs.sample || '12' }} \
+            -t ${{ inputs.timeout || '3' }} \
+            -p ${{ inputs.proto || 'awg' }} \
+            $TARGET_ARG \
+            -jt 16
+
+          echo "✅ Scan completed! Checking generated static artifacts:"
+          ls -la public/
+          ls -la public/data/
+
+      - name: Deploy to gh-pages Branch (Cloudflare Pages Git Integration)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: "Automated scan & update WARPSCOUT endpoints [skip ci]"
+
+      - name: Deploy Directly to Cloudflare Pages (Optional Direct API)
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        uses: cloudflare/pages-action@v1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'warpscout'
+          directory: 'public'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: warpscout-pages-dist
+          path: public/
+          retention-days: 7

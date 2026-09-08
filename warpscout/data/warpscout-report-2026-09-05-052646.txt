@@ -1,0 +1,28 @@
+# WARP endpoints: 14 working / 14 probed
+# sorted by in-tunnel loss, then in-tunnel ping
+# Scanned from inside a tunnel to 8.6.112.156:500 (awg) - every endpoint here exits through that node's region
+# ENDPOINT PING = ICMP from inside that tunnel to the endpoint, so it carries the outer hop too
+# TUN PING / LOSS = RTT and packet loss measured inside the tunnel, to 1.1.1.1
+# SEEN AS = region external services see through the tunnel
+# NODE / NODE LOCATION = Cloudflare WARP edge node the tunnel landed on, and where it sits
+# One /24 pool can land on several different nodes - NODE is per endpoint, not per subnet
+
+ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE   NODE LOCATION
+188.114.98.250:500     186ms         168ms     0%     US         LAX    Los Angeles, US
+8.39.204.34:2408       170ms         170ms     0%     US         LAX    Los Angeles, US
+8.39.125.232:4500      182ms         188ms     0%     US         LAX    Los Angeles, US
+8.39.214.161:2408      160ms         170ms     10%    US         LAX    Los Angeles, US
+188.114.97.198:500     170ms         183ms     10%    US         LAX    Los Angeles, US
+188.114.99.0:4500      193ms         170ms     20%    US         LAX    Los Angeles, US
+8.34.70.159:500        169ms         170ms     20%    US         LAX    Los Angeles, US
+8.35.211.45:2408       177ms         170ms     20%    US         LAX    Los Angeles, US
+162.159.192.252:2408   170ms         173ms     20%    US         LAX    Los Angeles, US
+188.114.96.15:500      170ms         183ms     20%    US         LAX    Los Angeles, US
+8.47.69.229:2408       170ms         170ms     30%    US         LAX    Los Angeles, US
+162.159.195.137:2408   173ms         172ms     30%    US         LAX    Los Angeles, US
+8.34.146.235:2408      170ms         177ms     30%    US         LAX    Los Angeles, US
+8.6.112.61:2408        169ms         186ms     30%    US         LAX    Los Angeles, US
+
+# Best endpoint per node (lowest in-tunnel loss, then in-tunnel ping)
+NODE   ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE LOCATION
+LAX    188.114.98.250:500     186ms         168ms     0%     US         Los Angeles, US
