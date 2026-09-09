@@ -22,8 +22,12 @@ on:
         description: '自定义 IP 或 CIDR 目标池 (留空使用默认 WARP 官方池)'
         required: false
         default: ''
+      endpoints_per_country:
+        description: '每个国家/地区的 WARP 端点数量 (默认 4，可填 6、8、10 等)'
+        required: false
+        default: '4'
       sub_url:
-        description: '多国节点订阅源地址 (用于提取与测速 7 大国家地区节点)'
+        description: '多国节点订阅源地址'
         required: false
         default: 'https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f'
   push:
@@ -86,6 +90,7 @@ jobs:
 
       - name: Run Headless Scan & Generate Pages
         env:
+          ENDPOINTS_PER_COUNTRY: ${{ inputs.endpoints_per_country || '4' }}
           SUBSCRIPTION_URL: ${{ inputs.sub_url || secrets.SUBSCRIPTION_URL || 'https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f' }}
         run: |
           TARGET_ARG=""
