@@ -1,6 +1,6 @@
 # ==========================================================
 # WARPSCOUT 全球多国 Cloudflare WARP 顶级防封订阅
-# 生成时间: 2026-09-09 05:32:00 UTC | 覆盖国家: 56 | 端点总数: 224
+# 生成时间: 2026-09-09 05:28:38 UTC | 覆盖国家: 56 | 端点总数: 224
 # 协议构成: 100% MASQUE (HTTP/3 QUIC + HTTP/2 TCP) & AmneziaWG
 # 绝无任何普通 VLESS/VPN 杂质，专为突破 GFW/DPI 严苛阻断设计
 # 客户端兼容: Clash Verge Rev, Clash Nyanpasu, Mihomo Party, Flclash
@@ -27,7 +27,7 @@ dns:
     - 8.8.8.8
 
 proxies:
-  - name: "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)"
+  - name: "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -93,7 +93,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -147,7 +147,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
+  - name: "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 4500
@@ -255,7 +255,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)"
+  - name: "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.96.11
     port: 2408
@@ -299,7 +299,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)"
+  - name: "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.96.31
     port: 4500
@@ -321,7 +321,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -331,7 +331,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)"
+  - name: "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.97.11
     port: 2408
@@ -353,7 +353,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)"
+  - name: "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
     type: wireguard
     server: 188.114.97.21
     port: 500
@@ -483,7 +483,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)"
+  - name: "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -505,7 +505,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)"
+  - name: "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -527,7 +527,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
+  - name: "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 4500
@@ -549,7 +549,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -559,7 +559,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)"
+  - name: "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -625,7 +625,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -679,7 +679,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
+  - name: "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 4500
@@ -787,7 +787,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)"
+  - name: "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.96.11
     port: 2408
@@ -831,7 +831,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)"
+  - name: "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.96.31
     port: 4500
@@ -853,7 +853,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -863,7 +863,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)"
+  - name: "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.97.11
     port: 2408
@@ -885,7 +885,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)"
+  - name: "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
     type: wireguard
     server: 188.114.97.21
     port: 500
@@ -1015,7 +1015,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)"
+  - name: "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -1037,7 +1037,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)"
+  - name: "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -1059,7 +1059,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
+  - name: "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 4500
@@ -1081,7 +1081,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1091,7 +1091,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)"
+  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
     type: wireguard
     server: 8.39.214.11
     port: 2408
@@ -1135,7 +1135,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
+  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.214.31
     port: 4500
@@ -1167,7 +1167,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)"
+  - name: "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
     type: wireguard
     server: 8.39.214.11
     port: 2408
@@ -1211,7 +1211,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
+  - name: "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.214.31
     port: 4500
@@ -1287,7 +1287,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
+  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
     type: wireguard
     server: 8.35.211.31
     port: 4500
@@ -1309,7 +1309,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1319,7 +1319,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)"
+  - name: "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
     type: wireguard
     server: 8.47.69.11
     port: 2408
@@ -1341,7 +1341,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)"
+  - name: "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
     type: wireguard
     server: 8.47.69.21
     port: 500
@@ -1363,7 +1363,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
+  - name: "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
     type: wireguard
     server: 8.47.69.31
     port: 4500
@@ -1385,7 +1385,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1395,7 +1395,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)"
+  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
     type: wireguard
     server: 8.6.112.11
     port: 2408
@@ -1417,7 +1417,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)"
+  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
     type: wireguard
     server: 8.6.112.21
     port: 500
@@ -1439,7 +1439,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)"
+  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
     type: wireguard
     server: 8.6.112.31
     port: 4500
@@ -1461,7 +1461,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1515,7 +1515,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)"
+  - name: "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.125.31
     port: 4500
@@ -1537,7 +1537,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1623,7 +1623,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)"
+  - name: "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -1645,7 +1645,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)"
+  - name: "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -1667,7 +1667,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
+  - name: "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 4500
@@ -1689,7 +1689,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1743,7 +1743,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)"
+  - name: "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.125.31
     port: 4500
@@ -1765,7 +1765,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1775,7 +1775,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)"
+  - name: "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
     type: wireguard
     server: 8.6.112.11
     port: 2408
@@ -1797,7 +1797,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)"
+  - name: "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
     type: wireguard
     server: 8.6.112.21
     port: 500
@@ -1819,7 +1819,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)"
+  - name: "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
     type: wireguard
     server: 8.6.112.31
     port: 4500
@@ -1841,7 +1841,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1895,7 +1895,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
+  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
     type: wireguard
     server: 8.35.211.31
     port: 4500
@@ -1917,7 +1917,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1927,7 +1927,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)"
+  - name: "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
     type: wireguard
     server: 8.47.69.11
     port: 2408
@@ -1949,7 +1949,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)"
+  - name: "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
     type: wireguard
     server: 8.47.69.21
     port: 500
@@ -1971,7 +1971,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
+  - name: "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
     type: wireguard
     server: 8.47.69.31
     port: 4500
@@ -1993,7 +1993,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2003,7 +2003,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)"
+  - name: "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
     type: wireguard
     server: 8.6.112.11
     port: 2408
@@ -2025,7 +2025,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)"
+  - name: "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
     type: wireguard
     server: 8.6.112.21
     port: 500
@@ -2047,7 +2047,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)"
+  - name: "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
     type: wireguard
     server: 8.6.112.31
     port: 4500
@@ -2069,7 +2069,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2079,7 +2079,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)"
+  - name: "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -2145,7 +2145,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2199,7 +2199,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
+  - name: "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 4500
@@ -2307,7 +2307,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)"
+  - name: "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
     type: wireguard
     server: 8.39.214.11
     port: 2408
@@ -2351,7 +2351,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
+  - name: "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.214.31
     port: 4500
@@ -2427,7 +2427,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)"
+  - name: "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.125.31
     port: 4500
@@ -2449,7 +2449,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2459,7 +2459,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)"
+  - name: "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.96.11
     port: 2408
@@ -2503,7 +2503,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)"
+  - name: "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.96.31
     port: 4500
@@ -2525,7 +2525,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2535,7 +2535,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)"
+  - name: "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.97.11
     port: 2408
@@ -2557,7 +2557,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)"
+  - name: "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
     type: wireguard
     server: 188.114.97.21
     port: 500
@@ -2687,7 +2687,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)"
+  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -2709,7 +2709,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)"
+  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -2731,7 +2731,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
+  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 4500
@@ -2753,7 +2753,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2763,7 +2763,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)"
+  - name: "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
     type: wireguard
     server: 8.39.214.11
     port: 2408
@@ -2807,7 +2807,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
+  - name: "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.214.31
     port: 4500
@@ -2883,7 +2883,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
+  - name: "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
     type: wireguard
     server: 8.35.211.31
     port: 4500
@@ -2905,7 +2905,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2915,7 +2915,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)"
+  - name: "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
     type: wireguard
     server: 8.47.69.11
     port: 2408
@@ -2937,7 +2937,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)"
+  - name: "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
     type: wireguard
     server: 8.47.69.21
     port: 500
@@ -2959,7 +2959,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
+  - name: "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
     type: wireguard
     server: 8.47.69.31
     port: 4500
@@ -2981,7 +2981,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -2991,7 +2991,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)"
+  - name: "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
     type: wireguard
     server: 8.6.112.11
     port: 2408
@@ -3013,7 +3013,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)"
+  - name: "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
     type: wireguard
     server: 8.6.112.21
     port: 500
@@ -3035,7 +3035,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)"
+  - name: "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
     type: wireguard
     server: 8.6.112.31
     port: 4500
@@ -3057,7 +3057,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3111,7 +3111,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)"
+  - name: "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.125.31
     port: 4500
@@ -3133,7 +3133,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3143,7 +3143,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)"
+  - name: "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -3209,7 +3209,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3263,7 +3263,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
+  - name: "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 4500
@@ -3371,7 +3371,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)"
+  - name: "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.96.11
     port: 2408
@@ -3415,7 +3415,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)"
+  - name: "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.96.31
     port: 4500
@@ -3437,7 +3437,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3447,7 +3447,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)"
+  - name: "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
     type: wireguard
     server: 188.114.99.11
     port: 2408
@@ -3469,7 +3469,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)"
+  - name: "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
     type: wireguard
     server: 188.114.99.21
     port: 500
@@ -3491,7 +3491,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
+  - name: "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.99.31
     port: 4500
@@ -3513,7 +3513,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3523,7 +3523,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)"
+  - name: "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
     type: wireguard
     server: 8.39.214.11
     port: 2408
@@ -3567,7 +3567,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
+  - name: "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.214.31
     port: 4500
@@ -3643,7 +3643,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
+  - name: "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
     type: wireguard
     server: 8.35.211.31
     port: 4500
@@ -3665,7 +3665,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3675,7 +3675,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)"
+  - name: "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
     type: wireguard
     server: 8.47.69.11
     port: 2408
@@ -3697,7 +3697,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)"
+  - name: "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
     type: wireguard
     server: 8.47.69.21
     port: 500
@@ -3719,7 +3719,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
+  - name: "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
     type: wireguard
     server: 8.47.69.31
     port: 4500
@@ -3741,7 +3741,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3751,7 +3751,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)"
+  - name: "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
     type: wireguard
     server: 8.6.112.11
     port: 2408
@@ -3773,7 +3773,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)"
+  - name: "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
     type: wireguard
     server: 8.6.112.21
     port: 500
@@ -3795,7 +3795,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)"
+  - name: "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
     type: wireguard
     server: 8.6.112.31
     port: 4500
@@ -3817,7 +3817,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3871,7 +3871,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)"
+  - name: "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
     type: wireguard
     server: 8.39.125.31
     port: 4500
@@ -3893,7 +3893,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
+  - name: "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -3903,7 +3903,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)"
+  - name: "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
     type: wireguard
     server: 162.159.192.11
     port: 2408
@@ -3969,7 +3969,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -4023,7 +4023,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
+  - name: "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
     type: wireguard
     server: 162.159.193.31
     port: 4500
@@ -4131,7 +4131,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)"
+  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.96.11
     port: 2408
@@ -4175,7 +4175,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)"
+  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.96.31
     port: 4500
@@ -4197,7 +4197,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
+  - name: "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -4207,7 +4207,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)"
+  - name: "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
     type: wireguard
     server: 188.114.97.11
     port: 2408
@@ -4229,7 +4229,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)"
+  - name: "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
     type: wireguard
     server: 188.114.97.21
     port: 500
@@ -4346,228 +4346,228 @@ proxy-groups:
       - "🇪🇬 埃及 WARP"
       - "🇿🇦 南非 WARP"
       - "🇳🇬 尼日利亚 WARP"
-      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)"
+      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)"
-      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)"
-      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
+      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
       - "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)"
       - "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
       - "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)"
-      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
+      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
       - "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)"
       - "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)"
       - "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
-      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
-      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
+      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
+      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)"
-      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)"
-      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
+      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
       - "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)"
       - "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
       - "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)"
-      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
+      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
       - "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)"
       - "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)"
       - "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
-      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
+      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
       - "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
       - "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
       - "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
       - "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)"
-      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
-      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
-      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)"
-      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
+      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
+      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
+      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)"
-      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)"
-      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
+      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)"
       - "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
-      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
+      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)"
-      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)"
-      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)"
-      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
+      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
+      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)"
-      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
-      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
-      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)"
-      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)"
+      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
+      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
+      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
+      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)"
-      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)"
-      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
+      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
       - "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)"
       - "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
       - "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
       - "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)"
-      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)"
-      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)"
+      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
+      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
       - "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)"
-      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
+      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
       - "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)"
       - "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)"
       - "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
-      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
+      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
       - "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
       - "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)"
-      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
-      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
-      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)"
-      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
+      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
+      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
+      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)"
-      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)"
-      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
-      - "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)"
+      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
+      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)"
-      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)"
-      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
+      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
       - "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)"
       - "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
       - "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)"
-      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
-      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
+      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
+      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
       - "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
       - "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)"
-      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
-      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
-      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)"
-      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
+      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
+      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
+      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)"
-      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)"
-      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
-      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)"
+      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
+      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)"
-      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)"
-      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
+      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
       - "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)"
       - "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
       - "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)"
-      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
+      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
       - "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)"
       - "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
       - DIRECT
@@ -4578,61 +4578,61 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
       - "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
       - "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)"
-      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
       - "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
       - "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)"
-      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
-      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
+      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
       - "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
       - "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)"
-      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
       - "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
       - "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)"
-      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
+      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
       - "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
       - "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
-      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
-      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
-      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
-      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
+      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
+      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
+      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
       - "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)"
-      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
-      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
-      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
-      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
-      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
-      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
-      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
+      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
+      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
+      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
+      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
       - "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
       - "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)"
       - "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
-      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
-      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
+      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
       - "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
       - "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)"
-      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
+      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
       - "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
-      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
-      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
-      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
-      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
-      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
+      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
+      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
+      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
       - "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
       - "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)"
-      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
-      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
+      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
+      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
       - "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
-      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
-      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
-      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
-      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
-      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
+      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
+      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
+      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
       - "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
       - "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)"
-      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
+      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
       - "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 全球 WARP 自动优选"
@@ -4641,228 +4641,228 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)"
+      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)"
-      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)"
-      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
+      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
       - "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)"
       - "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)"
       - "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
       - "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)"
-      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
+      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
       - "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)"
       - "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)"
       - "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)"
       - "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
-      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
-      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
+      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
+      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)"
-      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)"
-      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
+      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
       - "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)"
       - "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)"
       - "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
       - "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)"
-      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
+      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
       - "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)"
       - "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)"
       - "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)"
       - "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
-      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
+      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
       - "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
       - "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
       - "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
       - "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)"
-      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
-      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
-      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)"
-      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
+      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
+      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
+      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)"
-      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)"
-      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
+      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)"
       - "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)"
       - "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
-      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
+      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)"
-      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)"
-      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)"
-      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
+      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
+      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)"
-      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
-      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
-      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)"
-      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)"
+      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
+      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
+      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
+      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)"
-      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)"
-      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
+      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
       - "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)"
       - "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)"
       - "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
       - "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
       - "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)"
-      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)"
-      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)"
+      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
+      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
       - "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)"
-      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
+      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
       - "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)"
       - "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)"
       - "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)"
       - "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
-      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
+      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
       - "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
       - "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)"
-      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
-      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
-      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)"
-      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
+      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
+      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
+      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)"
-      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)"
-      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
-      - "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)"
+      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
+      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)"
-      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)"
-      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
+      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
       - "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)"
       - "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)"
       - "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
       - "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)"
-      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
-      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
+      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
+      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
       - "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
       - "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)"
-      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
-      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
-      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)"
-      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
+      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
+      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
+      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)"
-      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)"
-      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
-      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)"
+      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
+      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)"
-      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)"
-      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
+      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
       - "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)"
       - "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)"
       - "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
       - "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)"
-      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
+      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
       - "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)"
       - "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
 
@@ -4870,10 +4870,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇭🇰 香港 自动优选"
-      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)"
+      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)"
-      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇭🇰 香港 自动优选"
     type: url-test
@@ -4881,10 +4881,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)"
+      - "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)"
       - "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)"
-      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
 
   - name: "🇯🇵 日本 WARP"
     type: select
@@ -4892,7 +4892,7 @@ proxy-groups:
       - "⚡ 🇯🇵 日本 自动优选"
       - "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)"
-      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
+      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
       - "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇯🇵 日本 自动优选"
@@ -4903,7 +4903,7 @@ proxy-groups:
     proxies:
       - "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)"
       - "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)"
-      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
+      - "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
       - "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
 
   - name: "🇸🇬 新加坡 WARP"
@@ -4930,10 +4930,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇹🇼 台湾 自动优选"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
       - "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)"
-      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
+      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇹🇼 台湾 自动优选"
     type: url-test
@@ -4941,17 +4941,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
       - "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)"
-      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)"
-      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)"
+      - "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
+      - "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
 
   - name: "🇰🇷 韩国 WARP"
     type: select
     proxies:
       - "⚡ 🇰🇷 韩国 自动优选"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
       - "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)"
       - "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
 
@@ -4961,8 +4961,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)"
-      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
+      - "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
       - "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)"
       - "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
 
@@ -4990,10 +4990,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇹🇭 泰国 自动优选"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
-      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
+      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇹🇭 泰国 自动优选"
     type: url-test
@@ -5001,19 +5001,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)"
-      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
-      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
+      - "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
+      - "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
 
   - name: "🇻🇳 越南 WARP"
     type: select
     proxies:
       - "⚡ 🇻🇳 越南 自动优选"
-      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)"
+      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)"
-      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇻🇳 越南 自动优选"
     type: url-test
@@ -5021,10 +5021,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)"
+      - "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)"
       - "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)"
-      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)"
+      - "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
 
   - name: "🇵🇭 菲律宾 WARP"
     type: select
@@ -5032,7 +5032,7 @@ proxy-groups:
       - "⚡ 🇵🇭 菲律宾 自动优选"
       - "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)"
-      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
+      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
       - "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇵🇭 菲律宾 自动优选"
@@ -5043,7 +5043,7 @@ proxy-groups:
     proxies:
       - "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)"
       - "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)"
-      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
+      - "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
       - "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
 
   - name: "🇮🇩 印度尼西亚 WARP"
@@ -5070,10 +5070,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇮🇳 印度 自动优选"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
       - "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)"
-      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
+      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇮🇳 印度 自动优选"
     type: url-test
@@ -5081,17 +5081,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
       - "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)"
-      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)"
-      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)"
+      - "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
+      - "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
 
   - name: "🇲🇴 澳门 WARP"
     type: select
     proxies:
       - "⚡ 🇲🇴 澳门 自动优选"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
       - "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)"
       - "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
 
@@ -5101,8 +5101,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)"
-      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
+      - "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
       - "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)"
       - "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
 
@@ -5130,10 +5130,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇵🇰 巴基斯坦 自动优选"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
-      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
+      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇵🇰 巴基斯坦 自动优选"
     type: url-test
@@ -5141,18 +5141,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)"
-      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
-      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
+      - "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
+      - "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
 
   - name: "🇰🇿 哈萨克斯坦 WARP"
     type: select
     proxies:
       - "⚡ 🇰🇿 哈萨克斯坦 自动优选"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
       - "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
       - "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇰🇿 哈萨克斯坦 自动优选"
@@ -5161,18 +5161,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
       - "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)"
-      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
+      - "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
       - "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
 
   - name: "🇺🇸 美国 WARP"
     type: select
     proxies:
       - "⚡ 🇺🇸 美国 自动优选"
-      - "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
       - "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
       - "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇺🇸 美国 自动优选"
@@ -5181,9 +5181,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
       - "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)"
-      - "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
+      - "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
       - "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
 
   - name: "🇨🇦 加拿大 WARP"
@@ -5192,8 +5192,8 @@ proxy-groups:
       - "⚡ 🇨🇦 加拿大 自动优选"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)"
-      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
-      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
+      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
+      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇨🇦 加拿大 自动优选"
     type: url-test
@@ -5203,17 +5203,17 @@ proxy-groups:
     proxies:
       - "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)"
       - "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)"
-      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
-      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)"
+      - "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
+      - "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
 
   - name: "🇦🇺 澳大利亚 WARP"
     type: select
     proxies:
       - "⚡ 🇦🇺 澳大利亚 自动优选"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
-      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
+      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇦🇺 澳大利亚 自动优选"
     type: url-test
@@ -5221,19 +5221,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)"
-      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
-      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
+      - "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
+      - "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
 
   - name: "🇳🇿 新西兰 WARP"
     type: select
     proxies:
       - "⚡ 🇳🇿 新西兰 自动优选"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)"
-      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
+      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇳🇿 新西兰 自动优选"
     type: url-test
@@ -5241,10 +5241,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)"
-      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)"
-      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
+      - "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
+      - "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
 
   - name: "🇲🇽 墨西哥 WARP"
     type: select
@@ -5252,8 +5252,8 @@ proxy-groups:
       - "⚡ 🇲🇽 墨西哥 自动优选"
       - "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)"
-      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)"
-      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
+      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇲🇽 墨西哥 自动优选"
     type: url-test
@@ -5263,8 +5263,8 @@ proxy-groups:
     proxies:
       - "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)"
       - "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)"
-      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)"
-      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)"
+      - "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
+      - "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
 
   - name: "🇬🇧 英国 WARP"
     type: select
@@ -5290,10 +5290,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇩🇪 德国 自动优选"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
-      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
+      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇩🇪 德国 自动优选"
     type: url-test
@@ -5301,10 +5301,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)"
-      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
-      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
+      - "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
+      - "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
 
   - name: "🇫🇷 法国 WARP"
     type: select
@@ -5312,8 +5312,8 @@ proxy-groups:
       - "⚡ 🇫🇷 法国 自动优选"
       - "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)"
-      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)"
-      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
+      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
+      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇫🇷 法国 自动优选"
     type: url-test
@@ -5323,17 +5323,17 @@ proxy-groups:
     proxies:
       - "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)"
       - "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)"
-      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)"
-      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)"
+      - "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
+      - "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
 
   - name: "🇳🇱 荷兰 WARP"
     type: select
     proxies:
       - "⚡ 🇳🇱 荷兰 自动优选"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)"
-      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
+      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇳🇱 荷兰 自动优选"
     type: url-test
@@ -5341,10 +5341,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)"
-      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)"
-      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
+      - "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
+      - "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
 
   - name: "🇨🇭 瑞士 WARP"
     type: select
@@ -5352,8 +5352,8 @@ proxy-groups:
       - "⚡ 🇨🇭 瑞士 自动优选"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)"
-      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
-      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
+      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
+      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇨🇭 瑞士 自动优选"
     type: url-test
@@ -5363,17 +5363,17 @@ proxy-groups:
     proxies:
       - "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)"
       - "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)"
-      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
-      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)"
+      - "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
+      - "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
 
   - name: "🇸🇪 瑞典 WARP"
     type: select
     proxies:
       - "⚡ 🇸🇪 瑞典 自动优选"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
-      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
+      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇸🇪 瑞典 自动优选"
     type: url-test
@@ -5381,19 +5381,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)"
-      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
-      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
+      - "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
+      - "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
 
   - name: "🇳🇴 挪威 WARP"
     type: select
     proxies:
       - "⚡ 🇳🇴 挪威 自动优选"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)"
-      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
+      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇳🇴 挪威 自动优选"
     type: url-test
@@ -5401,19 +5401,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)"
-      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)"
-      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
+      - "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
+      - "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
 
   - name: "🇩🇰 丹麦 WARP"
     type: select
     proxies:
       - "⚡ 🇩🇰 丹麦 自动优选"
-      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)"
+      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)"
-      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇩🇰 丹麦 自动优选"
     type: url-test
@@ -5421,10 +5421,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)"
+      - "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)"
       - "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)"
-      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)"
+      - "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
 
   - name: "🇫🇮 芬兰 WARP"
     type: select
@@ -5432,7 +5432,7 @@ proxy-groups:
       - "⚡ 🇫🇮 芬兰 自动优选"
       - "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)"
-      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
+      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
       - "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇫🇮 芬兰 自动优选"
@@ -5443,7 +5443,7 @@ proxy-groups:
     proxies:
       - "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)"
       - "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)"
-      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
+      - "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
       - "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
 
   - name: "🇮🇪 爱尔兰 WARP"
@@ -5470,9 +5470,9 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇪🇸 西班牙 自动优选"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
       - "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
       - "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇪🇸 西班牙 自动优选"
@@ -5481,9 +5481,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
       - "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)"
-      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
+      - "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
       - "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
 
   - name: "🇮🇹 意大利 WARP"
@@ -5492,8 +5492,8 @@ proxy-groups:
       - "⚡ 🇮🇹 意大利 自动优选"
       - "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)"
-      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)"
-      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
+      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
+      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇮🇹 意大利 自动优选"
     type: url-test
@@ -5503,17 +5503,17 @@ proxy-groups:
     proxies:
       - "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)"
       - "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)"
-      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)"
-      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)"
+      - "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
+      - "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
 
   - name: "🇦🇹 奥地利 WARP"
     type: select
     proxies:
       - "⚡ 🇦🇹 奥地利 自动优选"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
       - "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)"
-      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
+      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇦🇹 奥地利 自动优选"
     type: url-test
@@ -5521,17 +5521,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
       - "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)"
-      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)"
-      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)"
+      - "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
+      - "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
 
   - name: "🇧🇪 比利时 WARP"
     type: select
     proxies:
       - "⚡ 🇧🇪 比利时 自动优选"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
       - "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)"
       - "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
 
@@ -5541,8 +5541,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)"
-      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
+      - "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
       - "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)"
       - "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
 
@@ -5570,10 +5570,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇨🇿 捷克 自动优选"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
-      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
+      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇨🇿 捷克 自动优选"
     type: url-test
@@ -5581,18 +5581,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)"
-      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
-      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
+      - "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
+      - "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
 
   - name: "🇭🇺 匈牙利 WARP"
     type: select
     proxies:
       - "⚡ 🇭🇺 匈牙利 自动优选"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
       - "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
       - "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇭🇺 匈牙利 自动优选"
@@ -5601,9 +5601,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
       - "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)"
-      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
+      - "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
       - "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
 
   - name: "🇷🇴 罗马尼亚 WARP"
@@ -5612,8 +5612,8 @@ proxy-groups:
       - "⚡ 🇷🇴 罗马尼亚 自动优选"
       - "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)"
-      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
-      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
+      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇷🇴 罗马尼亚 自动优选"
     type: url-test
@@ -5623,17 +5623,17 @@ proxy-groups:
     proxies:
       - "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)"
       - "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)"
-      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
-      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
+      - "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
 
   - name: "🇧🇬 保加利亚 WARP"
     type: select
     proxies:
       - "⚡ 🇧🇬 保加利亚 自动优选"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
-      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
+      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇧🇬 保加利亚 自动优选"
     type: url-test
@@ -5641,19 +5641,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)"
-      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
-      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
+      - "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
+      - "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
 
   - name: "🇬🇷 希腊 WARP"
     type: select
     proxies:
       - "⚡ 🇬🇷 希腊 自动优选"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)"
-      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
+      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇬🇷 希腊 自动优选"
     type: url-test
@@ -5661,10 +5661,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)"
-      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)"
-      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
+      - "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
+      - "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
 
   - name: "🇵🇹 葡萄牙 WARP"
     type: select
@@ -5672,8 +5672,8 @@ proxy-groups:
       - "⚡ 🇵🇹 葡萄牙 自动优选"
       - "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)"
-      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)"
-      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
+      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
+      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇵🇹 葡萄牙 自动优选"
     type: url-test
@@ -5683,17 +5683,17 @@ proxy-groups:
     proxies:
       - "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)"
       - "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)"
-      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)"
-      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)"
+      - "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
+      - "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
 
   - name: "🇹🇷 土耳其 WARP"
     type: select
     proxies:
       - "⚡ 🇹🇷 土耳其 自动优选"
-      - "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)"
+      - "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)"
-      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇹🇷 土耳其 自动优选"
     type: url-test
@@ -5701,10 +5701,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)"
+      - "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)"
       - "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)"
-      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)"
+      - "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
 
   - name: "🇺🇦 乌克兰 WARP"
     type: select
@@ -5712,7 +5712,7 @@ proxy-groups:
       - "⚡ 🇺🇦 乌克兰 自动优选"
       - "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)"
-      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
+      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
       - "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇺🇦 乌克兰 自动优选"
@@ -5723,7 +5723,7 @@ proxy-groups:
     proxies:
       - "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)"
       - "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)"
-      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
+      - "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
       - "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
 
   - name: "🇭🇷 克罗地亚 WARP"
@@ -5750,10 +5750,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇮🇸 冰岛 自动优选"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
       - "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)"
-      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
+      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇮🇸 冰岛 自动优选"
     type: url-test
@@ -5761,19 +5761,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
       - "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)"
-      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)"
-      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)"
+      - "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
+      - "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
 
   - name: "🇧🇷 巴西 WARP"
     type: select
     proxies:
       - "⚡ 🇧🇷 巴西 自动优选"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
-      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
+      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇧🇷 巴西 自动优选"
     type: url-test
@@ -5781,18 +5781,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)"
-      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
-      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
+      - "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
+      - "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
 
   - name: "🇦🇷 阿根廷 WARP"
     type: select
     proxies:
       - "⚡ 🇦🇷 阿根廷 自动优选"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
       - "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
       - "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇦🇷 阿根廷 自动优选"
@@ -5801,9 +5801,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
       - "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)"
-      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
+      - "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
       - "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
 
   - name: "🇨🇱 智利 WARP"
@@ -5812,8 +5812,8 @@ proxy-groups:
       - "⚡ 🇨🇱 智利 自动优选"
       - "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)"
-      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
-      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
+      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇨🇱 智利 自动优选"
     type: url-test
@@ -5823,17 +5823,17 @@ proxy-groups:
     proxies:
       - "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)"
       - "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)"
-      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
-      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)"
+      - "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
+      - "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
 
   - name: "🇨🇴 哥伦比亚 WARP"
     type: select
     proxies:
       - "⚡ 🇨🇴 哥伦比亚 自动优选"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
-      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
+      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇨🇴 哥伦比亚 自动优选"
     type: url-test
@@ -5841,19 +5841,19 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)"
-      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
-      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
+      - "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
+      - "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
 
   - name: "🇵🇪 秘鲁 WARP"
     type: select
     proxies:
       - "⚡ 🇵🇪 秘鲁 自动优选"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)"
-      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
+      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇵🇪 秘鲁 自动优选"
     type: url-test
@@ -5861,10 +5861,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)"
-      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)"
-      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
+      - "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
+      - "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
 
   - name: "🇮🇱 以色列 WARP"
     type: select
@@ -5872,8 +5872,8 @@ proxy-groups:
       - "⚡ 🇮🇱 以色列 自动优选"
       - "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)"
-      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)"
-      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
+      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
+      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
 
   - name: "⚡ 🇮🇱 以色列 自动优选"
     type: url-test
@@ -5883,17 +5883,17 @@ proxy-groups:
     proxies:
       - "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)"
       - "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)"
-      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)"
-      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)"
+      - "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
+      - "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
 
   - name: "🇦🇪 阿联酋 WARP"
     type: select
     proxies:
       - "⚡ 🇦🇪 阿联酋 自动优选"
-      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)"
+      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)"
-      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇦🇪 阿联酋 自动优选"
     type: url-test
@@ -5901,10 +5901,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)"
+      - "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)"
       - "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)"
-      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)"
+      - "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
 
   - name: "🇸🇦 沙特阿拉伯 WARP"
     type: select
@@ -5912,7 +5912,7 @@ proxy-groups:
       - "⚡ 🇸🇦 沙特阿拉伯 自动优选"
       - "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)"
-      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
+      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
       - "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇸🇦 沙特阿拉伯 自动优选"
@@ -5923,7 +5923,7 @@ proxy-groups:
     proxies:
       - "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)"
       - "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)"
-      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
+      - "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
       - "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
 
   - name: "🇪🇬 埃及 WARP"
@@ -5950,10 +5950,10 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 🇿🇦 南非 自动优选"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
       - "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)"
-      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
+      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
 
   - name: "⚡ 🇿🇦 南非 自动优选"
     type: url-test
@@ -5961,17 +5961,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
       - "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)"
-      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)"
-      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)"
+      - "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
+      - "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
 
   - name: "🇳🇬 尼日利亚 WARP"
     type: select
     proxies:
       - "⚡ 🇳🇬 尼日利亚 自动优选"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
       - "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)"
       - "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
 
@@ -5981,8 +5981,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)"
-      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
+      - "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
       - "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)"
       - "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
 
