@@ -1,0 +1,42 @@
+mixed-port: 19890
+external-controller: 127.0.0.1:19090
+mode: rule
+log-level: info
+
+proxies:
+  - name: "transit_de"
+    server: 194.28.226.45
+    port: 8443
+    type: vless
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    skip-cert-verify: false
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: l8.ccwu.cc
+
+  - name: "masque_h2_de"
+    type: masque
+    network: h2
+    server: 162.159.198.1
+    port: 443
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
+    remote-dns-resolve: true
+    dialer-proxy: "transit_de"
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "masque_h2_de"
+
+rules:
+  - MATCH,PROXY

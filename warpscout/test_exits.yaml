@@ -1,0 +1,148 @@
+mixed-port: 19896
+external-controller: 127.0.0.1:19096
+mode: rule
+log-level: warning
+
+proxies:
+  - {name: "US_01", server: 203.88.126.160, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "US_02", server: 142.248.219.37, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "US_03", server: 74.208.130.191, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "US_04", server: 216.126.224.61, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "US_05", server: 45.203.217.26, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_01", server: 138.68.142.165, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_02", server: 178.62.109.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_03", server: 91.186.217.148, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_04", server: 185.197.74.128, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_05", server: 147.45.79.77, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_01", server: 144.31.142.208, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_02", server: 195.201.21.127, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_03", server: 150.241.113.2, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_04", server: 89.127.198.10, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_05", server: 159.195.144.220, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_01", server: 88.218.77.37, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_02", server: 147.90.26.6, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_03", server: 31.57.109.126, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_04", server: 31.59.105.154, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_05", server: 45.39.255.211, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_01", server: 45.192.206.184, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_02", server: 166.88.2.14, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_03", server: 172.233.91.71, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_04", server: 131.186.41.103, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_05", server: 23.27.11.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_01", server: 64.235.43.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_02", server: 51.79.156.240, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_03", server: 5.223.51.84, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_04", server: 188.166.249.31, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_05", server: 188.166.236.153, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_01", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_02", server: 141.11.76.66, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_03", server: 43.230.9.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_04", server: 91.213.174.177, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_05", server: 207.57.131.171, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_01", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_02", server: 83.147.12.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_03", server: 60.249.101.167, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_04", server: 188.253.6.249, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_05", server: 151.242.188.209, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_01", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_02", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_03", server: 38.213.228.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_04", server: 216.238.79.83, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_05", server: 131.196.252.97, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_01", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_02", server: 40.233.71.238, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_03", server: 172.98.207.58, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_04", server: 158.69.201.4, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_05", server: 159.203.2.180, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_01", server: 157.85.105.126, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_02", server: 101.108.49.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_03", server: 45.150.131.246, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_04", server: 45.150.128.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_05", server: 118.27.150.97, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_01", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_02", server: 47.250.212.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_03", server: 202.184.53.82, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_04", server: 23.27.113.20, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_05", server: 216.173.67.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_01", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_02", server: 103.197.185.178, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_03", server: 160.30.50.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_04", server: 103.15.91.174, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_05", server: 160.25.74.227, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "PH_01", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "PH_02", server: 61.245.10.8, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "US_01"
+      - "US_02"
+      - "US_03"
+      - "US_04"
+      - "US_05"
+      - "GB_01"
+      - "GB_02"
+      - "GB_03"
+      - "GB_04"
+      - "GB_05"
+      - "DE_01"
+      - "DE_02"
+      - "DE_03"
+      - "DE_04"
+      - "DE_05"
+      - "FR_01"
+      - "FR_02"
+      - "FR_03"
+      - "FR_04"
+      - "FR_05"
+      - "JP_01"
+      - "JP_02"
+      - "JP_03"
+      - "JP_04"
+      - "JP_05"
+      - "SG_01"
+      - "SG_02"
+      - "SG_03"
+      - "SG_04"
+      - "SG_05"
+      - "HK_01"
+      - "HK_02"
+      - "HK_03"
+      - "HK_04"
+      - "HK_05"
+      - "TW_01"
+      - "TW_02"
+      - "TW_03"
+      - "TW_04"
+      - "TW_05"
+      - "MX_01"
+      - "MX_02"
+      - "MX_03"
+      - "MX_04"
+      - "MX_05"
+      - "CA_01"
+      - "CA_02"
+      - "CA_03"
+      - "CA_04"
+      - "CA_05"
+      - "TH_01"
+      - "TH_02"
+      - "TH_03"
+      - "TH_04"
+      - "TH_05"
+      - "MY_01"
+      - "MY_02"
+      - "MY_03"
+      - "MY_04"
+      - "MY_05"
+      - "VN_01"
+      - "VN_02"
+      - "VN_03"
+      - "VN_04"
+      - "VN_05"
+      - "PH_01"
+      - "PH_02"
+
+rules:
+  - MATCH,PROXY

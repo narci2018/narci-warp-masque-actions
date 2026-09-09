@@ -1,0 +1,2249 @@
+# ====================================================================
+# WARPSCOUT 前置中继纯正 WARP 官方订阅 (借鉴 Aether --upstream 架构)
+# 特性: 底层由优质节点抗封锁传输 | 上层 100% 纯净 WireGuard / MASQUE 原生出口
+# 保证所有出站流量端到端由 Cloudflare WARP 协议加密，彻底洗白为海外原生出口
+# ====================================================================
+
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.8.8
+
+proxies:
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 167.114.67.25:443 #1"
+    type: vless
+    server: 167.114.67.25
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #1)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 167.114.67.25:443 #1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YVR | 24.84.0.55:443 #2"
+    type: vless
+    server: 24.84.0.55
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #2)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YVR | 24.84.0.55:443 #2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YUL | 184.107.156.96:8443 #3"
+    type: vless
+    server: 184.107.156.96
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #3)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YUL | 184.107.156.96:8443 #3"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 147.182.144.228:443 #4"
+    type: vless
+    server: 147.182.144.228
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #4)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 147.182.144.228:443 #4"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 213.255.209.61:8443 #5"
+    type: vless
+    server: 213.255.209.61
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #5)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 213.255.209.61:8443 #5"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 155.138.128.135:443 #6"
+    type: vless
+    server: 155.138.128.135
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #6)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 155.138.128.135:443 #6"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 40.233.71.238:443 #7"
+    type: vless
+    server: 40.233.71.238
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #7)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 40.233.71.238:443 #7"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YUL | 144.217.12.20:8443 #8"
+    type: vless
+    server: 144.217.12.20
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #8)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YUL | 144.217.12.20:8443 #8"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YUL | 103.214.69.199:443 #9"
+    type: vless
+    server: 103.214.69.199
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #9)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YUL | 103.214.69.199:443 #9"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 加拿大 CA | YYZ | 178.128.237.86:443 #10"
+    type: vless
+    server: 178.128.237.86
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [GLOBAL] WARP 纯净出口 (中继 #10)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 加拿大 CA | YYZ | 178.128.237.86:443 #10"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 45.221.115.25:8443 #11"
+    type: vless
+    server: 45.221.115.25
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [HK] WARP 纯净出口 (中继 #11)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 香港 HK | HKG | 45.221.115.25:8443 #11"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 2.27.132.136:443 #12"
+    type: vless
+    server: 2.27.132.136
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [HK] WARP 纯净出口 (中继 #12)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 香港 HK | HKG | 2.27.132.136:443 #12"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 85.121.245.177:443 #13"
+    type: vless
+    server: 85.121.245.177
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [HK] WARP 纯净出口 (中继 #13)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 香港 HK | HKG | 85.121.245.177:443 #13"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 38.207.179.77:443 #14"
+    type: vless
+    server: 38.207.179.77
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [HK] WARP 纯净出口 (中继 #14)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 香港 HK | HKG | 38.207.179.77:443 #14"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 91.213.189.4:2087 #15"
+    type: vless
+    server: 91.213.189.4
+    port: 2087
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "⚡ [HK] WARP 纯净出口 (中继 #15)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    dialer-proxy: "[Transit] 地区随机 | 香港 HK | HKG | 91.213.189.4:2087 #15"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 23.156.153.40:443 #16"
+    type: vless
+    server: 23.156.153.40
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 85.121.51.14:2083 #17"
+    type: vless
+    server: 85.121.51.14
+    port: 2083
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 43.230.9.121:443 #18"
+    type: vless
+    server: 43.230.9.121
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 45.221.115.170:443 #19"
+    type: vless
+    server: 45.221.115.170
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 香港 HK | HKG | 68.64.182.74:443 #20"
+    type: vless
+    server: 68.64.182.74
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | FRA | 152.89.106.156:2087 #21"
+    type: vless
+    server: 152.89.106.156
+    port: 2087
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | FRA | 193.151.108.236:8443 #22"
+    type: vless
+    server: 193.151.108.236
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | PRG | 45.67.128.216:443 #23"
+    type: vless
+    server: 45.67.128.216
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | FRA | 216.126.229.60:8443 #24"
+    type: vless
+    server: 216.126.229.60
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | FRA | 104.194.159.48:443 #25"
+    type: vless
+    server: 104.194.159.48
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | PRG | 2.28.4.233:443 #26"
+    type: vless
+    server: 2.28.4.233
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | FRA | 194.35.13.195:443 #27"
+    type: vless
+    server: 194.35.13.195
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | HAM | 152.53.116.112:8443 #28"
+    type: vless
+    server: 152.53.116.112
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | CDG | 178.104.169.86:443 #29"
+    type: vless
+    server: 178.104.169.86
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 德国 DE | CDG | 167.233.36.169:443 #30"
+    type: vless
+    server: 167.233.36.169
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 克罗地亚 HR | ZAG | 5.181.2.41:443 #31"
+    type: vless
+    server: 5.181.2.41
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 147.90.26.18:443 #32"
+    type: vless
+    server: 147.90.26.18
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 95.182.97.6:8443 #33"
+    type: vless
+    server: 95.182.97.6
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | AMS | 152.228.191.232:443 #34"
+    type: vless
+    server: 152.228.191.232
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | FRA | 161.97.90.78:8443 #35"
+    type: vless
+    server: 161.97.90.78
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | FRA | 92.119.125.143:443 #36"
+    type: vless
+    server: 92.119.125.143
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 147.90.26.80:443 #37"
+    type: vless
+    server: 147.90.26.80
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | FRA | 45.95.175.181:443 #38"
+    type: vless
+    server: 45.95.175.181
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 217.60.39.195:8443 #39"
+    type: vless
+    server: 217.60.39.195
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 31.56.176.37:8443 #40"
+    type: vless
+    server: 31.56.176.37
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 法国 FR | CDG | 147.90.26.3:443 #41"
+    type: vless
+    server: 147.90.26.3
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | FRA | 185.197.74.128:443 #42"
+    type: vless
+    server: 185.197.74.128
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | LHR | 172.236.13.57:443 #43"
+    type: vless
+    server: 172.236.13.57
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | FRA | 138.124.127.144:443 #44"
+    type: vless
+    server: 138.124.127.144
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | LHR | 146.70.30.31:443 #45"
+    type: vless
+    server: 146.70.30.31
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | FRA | 176.124.202.108:8443 #46"
+    type: vless
+    server: 176.124.202.108
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | LHR | 104.194.144.212:443 #47"
+    type: vless
+    server: 104.194.144.212
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | FRA | 45.129.124.59:443 #48"
+    type: vless
+    server: 45.129.124.59
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | LHR | 134.209.176.127:443 #49"
+    type: vless
+    server: 134.209.176.127
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | LHR | 18.134.196.127:443 #50"
+    type: vless
+    server: 18.134.196.127
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 英国 GB | FRA | 87.106.65.110:443 #51"
+    type: vless
+    server: 87.106.65.110
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 202.182.108.246:8443 #52"
+    type: vless
+    server: 202.182.108.246
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 207.65.189.9:443 #53"
+    type: vless
+    server: 207.65.189.9
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | KIX | 64.176.34.130:443 #54"
+    type: vless
+    server: 64.176.34.130
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 167.179.117.9:443 #55"
+    type: vless
+    server: 167.179.117.9
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 3.112.219.69:443 #56"
+    type: vless
+    server: 3.112.219.69
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 172.104.86.229:443 #57"
+    type: vless
+    server: 172.104.86.229
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 45.202.254.4:2083 #58"
+    type: vless
+    server: 45.202.254.4
+    port: 2083
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | NRT | 161.33.141.218:8443 #59"
+    type: vless
+    server: 161.33.141.218
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | KIX | 45.14.106.250:443 #60"
+    type: vless
+    server: 45.14.106.250
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 日本 JP | KIX | 64.176.39.250:443 #61"
+    type: vless
+    server: 64.176.39.250
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 131.196.254.212:443 #62"
+    type: vless
+    server: 131.196.254.212
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 216.238.72.72:443 #63"
+    type: vless
+    server: 216.238.72.72
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 216.238.79.164:443 #64"
+    type: vless
+    server: 216.238.79.164
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 216.238.80.148:8443 #65"
+    type: vless
+    server: 216.238.80.148
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 131.196.252.97:443 #66"
+    type: vless
+    server: 131.196.252.97
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 131.196.253.141:443 #67"
+    type: vless
+    server: 131.196.253.141
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 216.238.78.167:443 #68"
+    type: vless
+    server: 216.238.78.167
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | DFW | 38.213.228.91:443 #69"
+    type: vless
+    server: 38.213.228.91
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 131.196.252.66:443 #70"
+    type: vless
+    server: 131.196.252.66
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 墨西哥 MX | QRO | 131.196.254.151:443 #71"
+    type: vless
+    server: 131.196.254.151
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 216.173.67.159:443 #72"
+    type: vless
+    server: 216.173.67.159
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 23.27.113.20:8443 #73"
+    type: vless
+    server: 23.27.113.20
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 45.194.27.181:443 #74"
+    type: vless
+    server: 45.194.27.181
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 47.250.212.59:443 #75"
+    type: vless
+    server: 47.250.212.59
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 47.250.81.46:2087 #76"
+    type: vless
+    server: 47.250.81.46
+    port: 2087
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 160.30.5.102:443 #77"
+    type: vless
+    server: 160.30.5.102
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 56.69.45.182:443 #78"
+    type: vless
+    server: 56.69.45.182
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | HKG | 149.118.144.163:443 #79"
+    type: vless
+    server: 149.118.144.163
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | SIN | 216.173.67.144:443 #80"
+    type: vless
+    server: 216.173.67.144
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 马来西亚 MY | KUL | 202.184.53.82:8443 #81"
+    type: vless
+    server: 202.184.53.82
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 菲律宾 PH | MNL | 61.245.11.45:443 #82"
+    type: vless
+    server: 61.245.11.45
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 菲律宾 PH | MNL | 61.245.10.8:443 #83"
+    type: vless
+    server: 61.245.10.8
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 13.250.39.15:443 #84"
+    type: vless
+    server: 13.250.39.15
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 146.190.87.188:443 #85"
+    type: vless
+    server: 146.190.87.188
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 152.42.232.4:443 #86"
+    type: vless
+    server: 152.42.232.4
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 152.42.174.66:443 #87"
+    type: vless
+    server: 152.42.174.66
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 50.7.21.174:443 #88"
+    type: vless
+    server: 50.7.21.174
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 167.71.195.238:443 #89"
+    type: vless
+    server: 167.71.195.238
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 167.99.77.156:443 #90"
+    type: vless
+    server: 167.99.77.156
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 116.251.216.12:8443 #91"
+    type: vless
+    server: 116.251.216.12
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 128.199.82.20:443 #92"
+    type: vless
+    server: 128.199.82.20
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 新加坡 SG | SIN | 18.139.143.168:443 #93"
+    type: vless
+    server: 18.139.143.168
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 193.46.56.147:443 #94"
+    type: vless
+    server: 193.46.56.147
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 203.202.232.110:443 #95"
+    type: vless
+    server: 203.202.232.110
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 37.221.79.194:443 #96"
+    type: vless
+    server: 37.221.79.194
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 212.102.107.40:443 #97"
+    type: vless
+    server: 212.102.107.40
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 78.135.77.27:443 #98"
+    type: vless
+    server: 78.135.77.27
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 103.83.86.172:443 #99"
+    type: vless
+    server: 103.83.86.172
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 193.57.136.201:443 #100"
+    type: vless
+    server: 193.57.136.201
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | IST | 212.192.6.66:443 #101"
+    type: vless
+    server: 212.192.6.66
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | FRA | 194.135.34.121:443 #102"
+    type: vless
+    server: 194.135.34.121
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 土耳其 TR | SOF | 185.39.204.17:443 #103"
+    type: vless
+    server: 185.39.204.17
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 140.235.38.206:443 #104"
+    type: vless
+    server: 140.235.38.206
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 82.152.90.178:443 #105"
+    type: vless
+    server: 82.152.90.178
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 141.11.87.48:443 #106"
+    type: vless
+    server: 141.11.87.48
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 207.56.137.174:443 #107"
+    type: vless
+    server: 207.56.137.174
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 83.147.12.252:443 #108"
+    type: vless
+    server: 83.147.12.252
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 220.135.105.32:2087 #109"
+    type: vless
+    server: 220.135.105.32
+    port: 2087
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 78.105.183.11:8443 #110"
+    type: vless
+    server: 78.105.183.11
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 43.213.230.249:443 #111"
+    type: vless
+    server: 43.213.230.249
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 142.249.60.51:443 #112"
+    type: vless
+    server: 142.249.60.51
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 台湾 TW | TPE | 83.147.15.253:443 #113"
+    type: vless
+    server: 83.147.15.253
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | SJC | 142.248.218.123:2053 #114"
+    type: vless
+    server: 142.248.218.123
+    port: 2053
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | LAX | 45.203.220.181:8443 #115"
+    type: vless
+    server: 45.203.220.181
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | LAX | 156.232.9.90:8443 #116"
+    type: vless
+    server: 156.232.9.90
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | SJC | 142.248.218.236:2053 #117"
+    type: vless
+    server: 142.248.218.236
+    port: 2053
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | STL | 144.126.139.22:8443 #118"
+    type: vless
+    server: 144.126.139.22
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | SJC | 142.248.218.73:2053 #119"
+    type: vless
+    server: 142.248.218.73
+    port: 2053
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | SJC | 23.80.83.219:8443 #120"
+    type: vless
+    server: 23.80.83.219
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | LAS | 142.248.218.16:2053 #121"
+    type: vless
+    server: 142.248.218.16
+    port: 2053
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | LAS | 72.18.81.141:8443 #122"
+    type: vless
+    server: 72.18.81.141
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 美国 US | SJC | 179.253.245.1:8443 #123"
+    type: vless
+    server: 179.253.245.1
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 157.66.26.194:443 #124"
+    type: vless
+    server: 157.66.26.194
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | SIN | 160.191.50.99:443 #125"
+    type: vless
+    server: 160.191.50.99
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 103.15.91.174:443 #126"
+    type: vless
+    server: 103.15.91.174
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 163.61.74.121:443 #127"
+    type: vless
+    server: 163.61.74.121
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 160.22.74.117:443 #128"
+    type: vless
+    server: 160.22.74.117
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 160.25.75.40:443 #129"
+    type: vless
+    server: 160.25.75.40
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | SIN | 160.30.50.48:443 #130"
+    type: vless
+    server: 160.30.50.48
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 160.187.1.101:443 #131"
+    type: vless
+    server: 160.187.1.101
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 103.186.64.182:443 #132"
+    type: vless
+    server: 103.186.64.182
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 越南 VN | HKG | 160.25.74.227:443 #133"
+    type: vless
+    server: 160.25.74.227
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | SIN | 45.150.131.246:443 #134"
+    type: vless
+    server: 45.150.131.246
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | SIN | 118.27.150.97:8443 #135"
+    type: vless
+    server: 118.27.150.97
+    port: 8443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | SIN | 45.150.128.159:443 #136"
+    type: vless
+    server: 45.150.128.159
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | BKK | 103.224.84.70:443 #137"
+    type: vless
+    server: 103.224.84.70
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | BKK | 43.133.110.81:443 #138"
+    type: vless
+    server: 43.133.110.81
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | BKK | 157.85.105.126:443 #139"
+    type: vless
+    server: 157.85.105.126
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+  - name: "[Transit] 地区随机 | 泰国 TH | BKK | 101.108.49.121:443 #140"
+    type: vless
+    server: 101.108.49.121
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "🚀 自动优选 WARP"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #1)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #2)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #3)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #4)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #5)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #6)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #7)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #8)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #9)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #10)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #11)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #12)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #13)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #14)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #15)"
+  - name: "🚀 自动优选 WARP"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #1)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #2)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #3)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #4)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #5)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #6)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #7)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #8)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #9)"
+      - "⚡ [GLOBAL] WARP 纯净出口 (中继 #10)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #11)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #12)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #13)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #14)"
+      - "⚡ [HK] WARP 纯净出口 (中继 #15)"
+
+rules:
+  - DOMAIN-SUFFIX,ping0.cc,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ip.sb,PROXY
+  - DOMAIN-SUFFIX,cip.cc,PROXY
+  - DOMAIN-SUFFIX,myip.la,PROXY
+  - DOMAIN-SUFFIX,ip138.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - GEOIP,CN,DIRECT
+  - GEOSITE,CN,DIRECT
+  - MATCH,PROXY

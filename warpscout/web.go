@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"net/netip"
+	"net/url"
 	"os"
 	"os/signal"
 	"sort"
@@ -135,6 +136,12 @@ func runWebCmd(ctx context.Context, opts options) error {
 	mux.HandleFunc("/api/sub/fetch", handleSubFetch)
 	mux.HandleFunc("/api/sub/list", handleSubList)
 	mux.HandleFunc("/api/sub/select", handleSubSelect)
+	mux.HandleFunc("/api/sub/warp-on-warp", handleSubWarpOnWarp(opts))
+	mux.HandleFunc("/api/sub/dialer-warp", handleSubDialerWarp(opts))
+	mux.HandleFunc("/api/sub/clash-local", handleSubClashLocal(opts))
+	mux.HandleFunc("/api/sub/singbox-local", handleSubSingboxLocal(opts))
+	mux.HandleFunc("/api/matrix/nodes", handleMatrixNodes)
+	mux.HandleFunc("/api/gateway/test", handleGatewayTest)
 
 	// Static Files from embed.FS
 	subFS, err := fs.Sub(webFS, "web")
@@ -171,13 +178,96 @@ func runWebCmd(ctx context.Context, opts options) error {
 	fmt.Printf("  -> Web Dashboard : http://%s\n", opts.listen)
 	fmt.Printf("  -> SOCKS5 Port   : %d\n", opts.port)
 	fmt.Println("==================================================================")
-	fmt.Println()
+	// 自动预加载本地订阅中继源 (full_sub.yaml)
+	go func() {
+		subPaths := []string{"/data/full_sub.yaml", "full_sub.yaml"}
+		for _, p := range subPaths {
+			if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+				nodes := parseSubscriptionContent(string(b))
+				if len(nodes) > 0 {
+					globalSubState.URL = "https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f"
+					globalSubState.UpdateTime = time.Now()
+					globalSubState.Nodes = nodes
+					fmt.Printf("[Sub] ✅ 自动加载本地中继源成功: 共 %d 个节点\n", len(nodes))
+					break
+				}
+			}
+		}
+	}()
+
+	// 自动启动本地 WARP-in-WARP 双层原生出海网关
+	go func() {
+		time.Sleep(1 * time.Second)
+		acct, err := loadAccount(opts.accountPath)
+		if err != nil || acct.PrivateKey == "" {
+			return
+		}
+		fmt.Println("[Gateway] 正在启动 WARP-in-WARP 双层原生出海网关 (洛杉矶出口)...")
+
+		throughCandidates := []string{
+			"188.114.97.226:1701",
+			"188.114.96.197:1701",
+			"162.159.195.253:1701",
+			"8.39.204.144:1701",
+			"8.35.211.248:1701",
+		}
+
+		for _, th := range throughCandidates {
+			readyCh := make(chan error, 1)
+			gatewayOpts := opts
+			gatewayOpts.endpoint = "162.159.192.1:2408"
+			gatewayOpts.through = th
+			gatewayOpts.proto = protoAWG
+			gatewayOpts.innerProto = protoWG
+			gatewayOpts.port = serverState.socksPort
+			gatewayOpts.listen = serverState.socksListen
+
+			run, err := parseProto(gatewayOpts.innerProto)
+			if err != nil {
+				continue
+			}
+
+			gwCtx, cancel := context.WithCancel(context.Background())
+			serverState.mu.Lock()
+			serverState.socksCancel = cancel
+			serverState.socksEndpoint = gatewayOpts.endpoint
+			serverState.socksProto = run.name
+			serverState.mu.Unlock()
+
+			go func() {
+				_ = runWebSOCKS(gwCtx, gatewayOpts, run, gatewayOpts.endpoint, readyCh)
+				serverState.mu.Lock()
+				serverState.socksActive = false
+				serverState.socksCancel = nil
+				serverState.mu.Unlock()
+			}()
+
+			select {
+			case err := <-readyCh:
+				if err == nil {
+					serverState.mu.Lock()
+					serverState.socksActive = true
+					serverState.mu.Unlock()
+					fmt.Printf("[Gateway] ✅ WARP-in-WARP 原生出海网关已就绪 (通过 %s): socks5://127.0.0.1:%d (出口: 🇺🇸 洛杉矶 LAX)\n", th, serverState.socksPort)
+					return
+				}
+				fmt.Printf("[Gateway] ⚠️ 尝试 %s 失败: %v，尝试下一个...\n", th, err)
+				cancel()
+			case <-time.After(12 * time.Second):
+				fmt.Printf("[Gateway] ⚠️ 尝试 %s 超时，尝试下一个...\n", th)
+				cancel()
+			}
+			time.Sleep(500 * time.Millisecond)
+		}
+	}()
+
 
 	if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		return fmt.Errorf("http server failed: %v", err)
 	}
 	return nil
 }
+
 
 func handleStatus(opts options) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -439,6 +529,10 @@ func handleScanStart(baseOpts options) http.HandlerFunc {
 		scanOpts.excludeCountry = req.ExcludeCountry
 		scanOpts.country = req.Country
 		scanOpts.node = req.Node
+		scanOpts.countries = splitList(req.Country, "-country")
+		scanOpts.colos = splitList(req.Node, "-node")
+		scanOpts.dropCountries = splitList(req.ExcludeCountry, "-exclude-country")
+		scanOpts.dropColos = splitList(req.ExcludeNode, "-exclude-node")
 		scanOpts.port = req.Port
 		scanOpts.ipv6 = req.IPv6
 		scanOpts.through = req.Through
@@ -553,6 +647,54 @@ func executeScan(ctx context.Context, opts options, run protoRun, ips []netip.Ad
 				"total": total.Load(),
 			})
 		case foundMsg:
+			if len(opts.countries) > 0 {
+				match := false
+				for _, c := range opts.countries {
+					if strings.EqualFold(c, m.exit) {
+						match = true
+						break
+					}
+				}
+				if !match {
+					return
+				}
+			}
+			if len(opts.dropCountries) > 0 {
+				drop := false
+				for _, c := range opts.dropCountries {
+					if strings.EqualFold(c, m.exit) {
+						drop = true
+						break
+					}
+				}
+				if drop {
+					return
+				}
+			}
+			if len(opts.colos) > 0 {
+				match := false
+				for _, c := range opts.colos {
+					if strings.EqualFold(c, m.colo) {
+						match = true
+						break
+					}
+				}
+				if !match {
+					return
+				}
+			}
+			if len(opts.dropColos) > 0 {
+				drop := false
+				for _, c := range opts.dropColos {
+					if strings.EqualFold(c, m.colo) {
+						drop = true
+						break
+					}
+				}
+				if drop {
+					return
+				}
+			}
 			serverState.broadcast("found", map[string]any{
 				"endpoint":      m.endpoint,
 				"ep_ping_ms":    m.epPing.Milliseconds(),
@@ -878,6 +1020,10 @@ func handleSocksStart(baseOpts options) http.HandlerFunc {
 		if serverState.socksActive && serverState.socksCancel != nil {
 			serverState.socksCancel()
 			serverState.socksActive = false
+			serverState.socksCancel = nil
+			serverState.mu.Unlock()
+			time.Sleep(500 * time.Millisecond)
+			serverState.mu.Lock()
 		}
 
 		opts := baseOpts
@@ -890,17 +1036,17 @@ func handleSocksStart(baseOpts options) http.HandlerFunc {
 		}
 		opts.endpoint = req.Endpoint
 		opts.through = req.Through
+		if opts.through == "" {
+			opts.through = "8.39.204.2:1701"
+		}
 		opts.innerProto = req.InnerProto
-		if opts.through != "" && opts.innerProto == "" {
+		if opts.innerProto == "" {
 			opts.innerProto = protoWG
 		}
 		opts.port = serverState.socksPort
 		opts.listen = serverState.socksListen
 
-		runProto := opts.proto
-		if opts.through != "" {
-			runProto = opts.innerProto
-		}
+		runProto := opts.innerProto
 		run, err := parseProto(runProto)
 		if err != nil {
 			serverState.mu.Unlock()
@@ -964,7 +1110,7 @@ func runWebSOCKS(ctx context.Context, opts options, run protoRun, endpoint strin
 		readyCh <- err
 		return err
 	}
-	timeout := 4 * time.Second
+	timeout := 10 * time.Second
 
 	if opts.through != "" {
 		n, err := dialOuter(ctx, opts, timeout)
@@ -1156,4 +1302,187 @@ func handleSubSelect(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNotFound)
 	_ = json.NewEncoder(w).Encode(map[string]any{"error": "未找到指定的节点"})
 }
+
+func handleSubWarpOnWarp(opts options) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		format := strings.ToLower(r.URL.Query().Get("format"))
+		if format == "singbox" || format == "sing-box" {
+			paths := []string{"/data/warpscout-75nodes-singbox.json", "warpscout-75nodes-singbox.json", "public/data/warpscout-75nodes-singbox.json"}
+			for _, p := range paths {
+				if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+					w.Header().Set("Content-Type", "application/json; charset=utf-8")
+					w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+					_, _ = w.Write(b)
+					return
+				}
+			}
+			conf, err := GenerateWarpOnWarpSingBox(opts)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+			_, _ = w.Write([]byte(conf))
+			return
+		}
+
+		paths := []string{"/data/warpscout-75nodes-clash.yaml", "warpscout-75nodes-clash.yaml", "public/data/warpscout-75nodes-clash.yaml"}
+		for _, p := range paths {
+			if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+				w.Header().Set("Content-Type", "text/yaml; charset=utf-8")
+				w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+				_, _ = w.Write(b)
+				return
+			}
+		}
+
+		conf, err := GenerateWarpOnWarpClash(opts)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "text/yaml; charset=utf-8")
+		w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+		_, _ = w.Write([]byte(conf))
+	}
+}
+
+func handleSubDialerWarp(opts options) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		format := strings.ToLower(r.URL.Query().Get("format"))
+		if format == "singbox" || format == "sing-box" {
+			paths := []string{"/data/warpscout-75nodes-singbox.json", "warpscout-75nodes-singbox.json", "public/data/warpscout-75nodes-singbox.json"}
+			for _, p := range paths {
+				if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+					w.Header().Set("Content-Type", "application/json; charset=utf-8")
+					w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+					_, _ = w.Write(b)
+					return
+				}
+			}
+			conf, err := GenerateWarpOnWarpSingBox(opts)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+			_, _ = w.Write([]byte(conf))
+			return
+		}
+
+		conf, err := GenerateDialerWarpClash(opts)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "text/yaml; charset=utf-8")
+		w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+		_, _ = w.Write([]byte(conf))
+	}
+}
+
+func handleSubClashLocal(opts options) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		paths := []string{"/data/warpscout-75nodes-clash.yaml", "warpscout-75nodes-clash.yaml", "public/data/warpscout-75nodes-clash.yaml"}
+		for _, p := range paths {
+			if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+				w.Header().Set("Content-Type", "text/yaml; charset=utf-8")
+				w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+				_, _ = w.Write(b)
+				return
+			}
+		}
+
+		serverState.mu.RLock()
+		port := serverState.socksPort
+		serverState.mu.RUnlock()
+		if port <= 0 {
+			port = 29881
+		}
+		conf := GenerateLocalGatewayClash(port)
+		w.Header().Set("Content-Type", "text/yaml; charset=utf-8")
+		w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+		_, _ = w.Write([]byte(conf))
+	}
+}
+
+func handleSubSingboxLocal(opts options) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		paths := []string{"/data/warpscout-75nodes-singbox.json", "warpscout-75nodes-singbox.json", "public/data/warpscout-75nodes-singbox.json"}
+		for _, p := range paths {
+			if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+				w.Header().Set("Content-Type", "application/json; charset=utf-8")
+				w.Header().Set("Subscription-Userinfo", "upload=0; download=0; total=1073741824000; expire=0")
+				_, _ = w.Write(b)
+				return
+			}
+		}
+		w.WriteHeader(http.StatusNotFound)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": "Sing-box subscription file not found"})
+	}
+}
+
+func handleMatrixNodes(w http.ResponseWriter, r *http.Request) {
+	paths := []string{"/data/matrix_nodes.json", "matrix_nodes.json", "public/data/matrix_nodes.json"}
+	for _, p := range paths {
+		if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			_, _ = w.Write(b)
+			return
+		}
+	}
+	w.WriteHeader(http.StatusNotFound)
+	_ = json.NewEncoder(w).Encode(map[string]any{"error": "Matrix data not found"})
+}
+
+func handleGatewayTest(w http.ResponseWriter, r *http.Request) {
+	serverState.mu.RLock()
+	port := serverState.socksPort
+	active := serverState.socksActive
+	serverState.mu.RUnlock()
+
+	if !active || port <= 0 {
+		w.WriteHeader(http.StatusServiceUnavailable)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": "本地出海网关尚未启动"})
+		return
+	}
+
+	proxyURL, err := url.Parse(fmt.Sprintf("socks5://127.0.0.1:%d", port))
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+		return
+	}
+
+	client := &http.Client{
+		Transport: &http.Transport{
+			Proxy: http.ProxyURL(proxyURL),
+		},
+		Timeout: 6 * time.Second,
+	}
+
+	start := time.Now()
+	resp, err := client.Get("http://ip-api.com/json")
+	if err != nil {
+		w.WriteHeader(http.StatusBadGateway)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": "网关连接测试失败: " + err.Error()})
+		return
+	}
+	defer resp.Body.Close()
+
+	var info map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&info); err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": "解析响应失败"})
+		return
+	}
+
+	info["latency_ms"] = time.Since(start).Milliseconds()
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	_ = json.NewEncoder(w).Encode(info)
+}
+
+
 

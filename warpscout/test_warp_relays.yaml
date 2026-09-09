@@ -1,0 +1,378 @@
+mixed-port: 19895
+external-controller: 127.0.0.1:19095
+mode: rule
+log-level: warning
+
+proxies:
+  - {name: "RELAY_HK_1", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [HK-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_HK_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_HK_2", server: 141.11.76.66, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [HK-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_HK_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_FR_1", server: 88.218.77.37, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [FR-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_FR_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_FR_2", server: 147.90.26.6, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [FR-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_FR_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_DE_1", server: 144.31.142.208, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [DE-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_DE_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_DE_2", server: 195.201.21.127, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [DE-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_DE_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_CA_1", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [CA-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_CA_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_CA_2", server: 40.233.71.238, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [CA-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_CA_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_GB_1", server: 138.68.142.165, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [GB-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_GB_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_GB_2", server: 178.62.109.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [GB-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_GB_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_JP_1", server: 45.192.206.184, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [JP-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_JP_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_JP_2", server: 166.88.2.14, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [JP-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_JP_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_MX_1", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [MX-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_MX_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_MX_2", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [MX-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_MX_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_PH_1", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [PH-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_PH_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_PH_2", server: 61.245.10.8, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [PH-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_PH_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_SG_1", server: 64.235.43.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [SG-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_SG_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_SG_2", server: 51.79.156.240, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [SG-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_SG_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_TH_1", server: 157.85.105.126, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [TH-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_TH_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_TH_2", server: 101.108.49.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [TH-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_TH_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_MY_1", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [MY-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_MY_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_MY_2", server: 47.250.212.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [MY-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_MY_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_TW_1", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [TW-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_TW_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_TW_2", server: 83.147.12.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [TW-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_TW_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_US_1", server: 203.88.126.160, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [US-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_US_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_US_2", server: 142.248.219.37, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [US-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_US_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_VN_1", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [VN-01] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_VN_1"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+  - {name: "RELAY_VN_2", server: 103.197.185.178, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [VN-02] WARP 落地"
+    type: wireguard
+    private-key: "YKzVtrImTCEaxHXD19Qdx7ugFIxaCAvocPk3wpnxBVw="
+    ip: "172.16.0.2"
+    dialer-proxy: "RELAY_VN_2"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+        allowed-ips: ["0.0.0.0/0"]
+    udp: true
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "⚡ [HK-01] WARP 落地"
+      - "⚡ [HK-02] WARP 落地"
+      - "⚡ [FR-01] WARP 落地"
+      - "⚡ [FR-02] WARP 落地"
+      - "⚡ [DE-01] WARP 落地"
+      - "⚡ [DE-02] WARP 落地"
+      - "⚡ [CA-01] WARP 落地"
+      - "⚡ [CA-02] WARP 落地"
+      - "⚡ [GB-01] WARP 落地"
+      - "⚡ [GB-02] WARP 落地"
+      - "⚡ [JP-01] WARP 落地"
+      - "⚡ [JP-02] WARP 落地"
+      - "⚡ [MX-01] WARP 落地"
+      - "⚡ [MX-02] WARP 落地"
+      - "⚡ [PH-01] WARP 落地"
+      - "⚡ [PH-02] WARP 落地"
+      - "⚡ [SG-01] WARP 落地"
+      - "⚡ [SG-02] WARP 落地"
+      - "⚡ [TH-01] WARP 落地"
+      - "⚡ [TH-02] WARP 落地"
+      - "⚡ [MY-01] WARP 落地"
+      - "⚡ [MY-02] WARP 落地"
+      - "⚡ [TW-01] WARP 落地"
+      - "⚡ [TW-02] WARP 落地"
+      - "⚡ [US-01] WARP 落地"
+      - "⚡ [US-02] WARP 落地"
+      - "⚡ [VN-01] WARP 落地"
+      - "⚡ [VN-02] WARP 落地"
+
+rules:
+  - MATCH,PROXY

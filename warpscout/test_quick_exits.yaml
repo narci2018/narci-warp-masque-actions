@@ -1,0 +1,42 @@
+mixed-port: 19897
+external-controller: 127.0.0.1:19097
+mode: rule
+log-level: warning
+
+proxies:
+  - {name: "US_01", server: 203.88.126.160, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "GB_01", server: 138.68.142.165, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "DE_01", server: 144.31.142.208, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "FR_01", server: 88.218.77.37, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "JP_01", server: 45.192.206.184, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "SG_01", server: 64.235.43.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "HK_01", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TW_01", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MX_01", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "CA_01", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TH_01", server: 157.85.105.126, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "MY_01", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "VN_01", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "TR_01", server: 93.180.134.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "US_01"
+      - "GB_01"
+      - "DE_01"
+      - "FR_01"
+      - "JP_01"
+      - "SG_01"
+      - "HK_01"
+      - "TW_01"
+      - "MX_01"
+      - "CA_01"
+      - "TH_01"
+      - "MY_01"
+      - "VN_01"
+      - "TR_01"
+
+rules:
+  - MATCH,PROXY

@@ -1,0 +1,1710 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": [
+        "auto-select",
+        "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)",
+        "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)",
+        "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)",
+        "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)",
+        "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)",
+        "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)",
+        "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)",
+        "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)",
+        "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)",
+        "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)",
+        "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)",
+        "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)",
+        "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)",
+        "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)",
+        "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)",
+        "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)",
+        "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)",
+        "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)",
+        "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)",
+        "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)",
+        "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)",
+        "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)",
+        "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)",
+        "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)",
+        "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)",
+        "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)",
+        "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)",
+        "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)",
+        "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)",
+        "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)",
+        "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)",
+        "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)",
+        "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)",
+        "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)",
+        "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)",
+        "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)",
+        "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)",
+        "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)",
+        "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)",
+        "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)",
+        "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)",
+        "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)",
+        "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)",
+        "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)",
+        "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)",
+        "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)",
+        "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)",
+        "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)",
+        "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)",
+        "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)",
+        "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)",
+        "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)",
+        "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)",
+        "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)",
+        "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)",
+        "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)",
+        "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)",
+        "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)",
+        "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)",
+        "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)",
+        "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)",
+        "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)",
+        "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)",
+        "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)",
+        "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)",
+        "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)",
+        "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)",
+        "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)",
+        "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)",
+        "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)",
+        "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)",
+        "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)",
+        "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)",
+        "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)",
+        "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+      ],
+      "default": "auto-select"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto-select",
+      "outbounds": [
+        "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)",
+        "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)",
+        "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)",
+        "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)",
+        "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)",
+        "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)",
+        "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)",
+        "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)",
+        "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)",
+        "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)",
+        "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)",
+        "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)",
+        "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)",
+        "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)",
+        "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)",
+        "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)",
+        "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)",
+        "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)",
+        "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)",
+        "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)",
+        "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)",
+        "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)",
+        "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)",
+        "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)",
+        "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)",
+        "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)",
+        "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)",
+        "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)",
+        "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)",
+        "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)",
+        "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)",
+        "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)",
+        "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)",
+        "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)",
+        "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)",
+        "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)",
+        "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)",
+        "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)",
+        "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)",
+        "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)",
+        "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)",
+        "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)",
+        "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)",
+        "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)",
+        "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)",
+        "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)",
+        "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)",
+        "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)",
+        "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)",
+        "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)",
+        "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)",
+        "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)",
+        "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)",
+        "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)",
+        "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)",
+        "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)",
+        "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)",
+        "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)",
+        "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)",
+        "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)",
+        "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)",
+        "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)",
+        "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)",
+        "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)",
+        "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)",
+        "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)",
+        "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)",
+        "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)",
+        "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)",
+        "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)",
+        "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)",
+        "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)",
+        "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)",
+        "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)",
+        "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+      ],
+      "url": "http://cp.cloudflare.com/generate_204",
+      "interval": "3m"
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)",
+      "server": "203.88.126.160",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)",
+      "server": "74.208.130.191",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)",
+      "server": "216.126.224.61",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)",
+      "server": "203.88.127.110",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)",
+      "server": "142.248.219.37",
+      "server_port": 2053,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)",
+      "server": "217.60.38.113",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)",
+      "server": "141.11.76.66",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)",
+      "server": "91.213.174.177",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)",
+      "server": "207.57.131.171",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)",
+      "server": "103.118.41.198",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)",
+      "server": "45.192.206.184",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)",
+      "server": "166.88.2.14",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)",
+      "server": "172.233.91.71",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)",
+      "server": "131.186.41.103",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)",
+      "server": "23.27.11.208",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)",
+      "server": "64.235.43.44",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)",
+      "server": "51.79.156.240",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)",
+      "server": "168.144.103.195",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)",
+      "server": "139.162.44.222",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)",
+      "server": "149.28.150.141",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)",
+      "server": "213.210.4.48",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)",
+      "server": "83.147.12.20",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)",
+      "server": "188.253.6.249",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)",
+      "server": "151.242.188.209",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)",
+      "server": "140.235.39.162",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)",
+      "server": "138.68.142.165",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)",
+      "server": "178.62.109.208",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)",
+      "server": "91.186.217.148",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)",
+      "server": "185.197.74.128",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)",
+      "server": "147.45.79.77",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)",
+      "server": "195.201.21.127",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)",
+      "server": "89.127.198.10",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)",
+      "server": "159.195.144.220",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)",
+      "server": "116.203.57.178",
+      "server_port": 2096,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)",
+      "server": "64.226.66.230",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)",
+      "server": "88.218.77.37",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)",
+      "server": "147.90.26.6",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)",
+      "server": "31.57.109.126",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)",
+      "server": "45.39.255.211",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)",
+      "server": "92.119.126.248",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)",
+      "server": "140.238.144.211",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)",
+      "server": "40.233.71.238",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)",
+      "server": "172.98.207.58",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)",
+      "server": "158.69.201.4",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)",
+      "server": "159.203.2.180",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)",
+      "server": "216.238.80.148",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)",
+      "server": "131.196.253.141",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)",
+      "server": "38.213.228.141",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)",
+      "server": "216.238.79.83",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)",
+      "server": "131.196.252.97",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)",
+      "server": "101.108.49.121",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)",
+      "server": "45.150.131.246",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)",
+      "server": "45.150.128.159",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)",
+      "server": "118.27.150.97",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)",
+      "server": "103.224.84.70",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)",
+      "server": "45.194.27.99",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)",
+      "server": "202.184.53.82",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)",
+      "server": "216.173.67.59",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)",
+      "server": "166.88.194.248",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)",
+      "server": "216.173.67.159",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)",
+      "server": "160.22.74.117",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)",
+      "server": "103.197.185.178",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)",
+      "server": "160.30.50.48",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)",
+      "server": "103.15.91.174",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)",
+      "server": "160.25.74.227",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)",
+      "server": "61.245.11.45",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)",
+      "server": "61.245.10.8",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)",
+      "server": "61.245.11.45",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)",
+      "server": "61.245.11.45",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)",
+      "server": "61.245.11.45",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)",
+      "server": "93.180.134.48",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)",
+      "server": "201.50.115.20",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)",
+      "server": "185.113.223.183",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)",
+      "server": "104.239.87.89",
+      "server_port": 8443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)",
+      "server": "91.228.227.214",
+      "server_port": 443,
+      "uuid": "e0249491-b63d-4e5d-8788-d3861553133f",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "l8.ccwu.cc",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "l8.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "geoip": "cn",
+        "outbound": "direct"
+      },
+      {
+        "geosite": "cn",
+        "outbound": "direct"
+      }
+    ],
+    "final": "proxy"
+  }
+}

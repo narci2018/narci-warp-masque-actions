@@ -1,0 +1,796 @@
+[
+  {
+    "code": "US",
+    "flag": "🇺🇸",
+    "name": "美国",
+    "nodes": [
+      {
+        "id": "US-01",
+        "name": "⚡ [US-01] 🇺🇸 美国 01",
+        "country_code": "US",
+        "country_name": "美国",
+        "flag": "🇺🇸",
+        "ip": "104.28.160.8",
+        "lat": 793,
+        "raw_yaml": "- {name: \"US_01\", server: 203.88.126.160, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "US-02",
+        "name": "⚡ [US-02] 🇺🇸 美国 02",
+        "country_code": "US",
+        "country_name": "美国",
+        "flag": "🇺🇸",
+        "ip": "104.28.162.64",
+        "lat": 1134,
+        "raw_yaml": "- {name: \"US_03\", server: 74.208.130.191, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "US-03",
+        "name": "⚡ [US-03] 🇺🇸 美国 03",
+        "country_code": "US",
+        "country_name": "美国",
+        "flag": "🇺🇸",
+        "ip": "104.28.158.228",
+        "lat": 797,
+        "raw_yaml": "- {name: \"US_04\", server: 216.126.224.61, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "US-04",
+        "name": "⚡ [US-04] 🇺🇸 美国 04",
+        "country_code": "US",
+        "country_name": "美国",
+        "flag": "🇺🇸",
+        "ip": "104.28.160.8",
+        "lat": 852,
+        "raw_yaml": "- {name: \"US_06\", server: 203.88.127.110, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "HK",
+    "flag": "🇭🇰",
+    "name": "香港",
+    "nodes": [
+      {
+        "id": "HK-01",
+        "name": "⚡ [HK-01] 🇭🇰 香港 01",
+        "country_code": "HK",
+        "country_name": "香港",
+        "flag": "🇭🇰",
+        "ip": "104.28.163.53",
+        "lat": 1279,
+        "raw_yaml": "- {name: \"HK_01\", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "HK-02",
+        "name": "⚡ [HK-02] 🇭🇰 香港 02",
+        "country_code": "HK",
+        "country_name": "香港",
+        "flag": "🇭🇰",
+        "ip": "104.28.166.52",
+        "lat": 1364,
+        "raw_yaml": "- {name: \"HK_02\", server: 141.11.76.66, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "HK-03",
+        "name": "⚡ [HK-03] 🇭🇰 香港 03",
+        "country_code": "HK",
+        "country_name": "香港",
+        "flag": "🇭🇰",
+        "ip": "104.28.156.217",
+        "lat": 423,
+        "raw_yaml": "- {name: \"HK_04\", server: 91.213.174.177, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "HK-04",
+        "name": "⚡ [HK-04] 🇭🇰 香港 04",
+        "country_code": "HK",
+        "country_name": "香港",
+        "flag": "🇭🇰",
+        "ip": "104.28.163.56",
+        "lat": 1302,
+        "raw_yaml": "- {name: \"HK_05\", server: 207.57.131.171, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "HK-05",
+        "name": "⚡ [HK-05] 🇭🇰 香港 05",
+        "country_code": "HK",
+        "country_name": "香港",
+        "flag": "🇭🇰",
+        "ip": "104.28.156.246",
+        "lat": 434,
+        "raw_yaml": "- {name: \"HK_06\", server: 103.118.41.198, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "JP",
+    "flag": "🇯🇵",
+    "name": "日本",
+    "nodes": [
+      {
+        "id": "JP-01",
+        "name": "⚡ [JP-01] 🇯🇵 日本 01",
+        "country_code": "JP",
+        "country_name": "日本",
+        "flag": "🇯🇵",
+        "ip": "104.28.162.78",
+        "lat": 505,
+        "raw_yaml": "- {name: \"JP_01\", server: 45.192.206.184, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "JP-02",
+        "name": "⚡ [JP-02] 🇯🇵 日本 02",
+        "country_code": "JP",
+        "country_name": "日本",
+        "flag": "🇯🇵",
+        "ip": "104.28.163.66",
+        "lat": 470,
+        "raw_yaml": "- {name: \"JP_02\", server: 166.88.2.14, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "JP-03",
+        "name": "⚡ [JP-03] 🇯🇵 日本 03",
+        "country_code": "JP",
+        "country_name": "日本",
+        "flag": "🇯🇵",
+        "ip": "104.28.162.54",
+        "lat": 633,
+        "raw_yaml": "- {name: \"JP_03\", server: 172.233.91.71, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "JP-04",
+        "name": "⚡ [JP-04] 🇯🇵 日本 04",
+        "country_code": "JP",
+        "country_name": "日本",
+        "flag": "🇯🇵",
+        "ip": "104.28.165.253",
+        "lat": 515,
+        "raw_yaml": "- {name: \"JP_04\", server: 131.186.41.103, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "JP-05",
+        "name": "⚡ [JP-05] 🇯🇵 日本 05",
+        "country_code": "JP",
+        "country_name": "日本",
+        "flag": "🇯🇵",
+        "ip": "104.28.158.94",
+        "lat": 445,
+        "raw_yaml": "- {name: \"JP_05\", server: 23.27.11.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "SG",
+    "flag": "🇸🇬",
+    "name": "新加坡",
+    "nodes": [
+      {
+        "id": "SG-01",
+        "name": "⚡ [SG-01] 🇸🇬 新加坡 01",
+        "country_code": "SG",
+        "country_name": "新加坡",
+        "flag": "🇸🇬",
+        "ip": "104.28.163.230",
+        "lat": 265,
+        "raw_yaml": "- {name: \"SG_01\", server: 64.235.43.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "SG-02",
+        "name": "⚡ [SG-02] 🇸🇬 新加坡 02",
+        "country_code": "SG",
+        "country_name": "新加坡",
+        "flag": "🇸🇬",
+        "ip": "104.28.163.34",
+        "lat": 752,
+        "raw_yaml": "- {name: \"SG_02\", server: 51.79.156.240, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "SG-03",
+        "name": "⚡ [SG-03] 🇸🇬 新加坡 03",
+        "country_code": "SG",
+        "country_name": "新加坡",
+        "flag": "🇸🇬",
+        "ip": "104.28.156.151",
+        "lat": 314,
+        "raw_yaml": "- {name: \"SG_06\", server: 168.144.103.195, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "SG-04",
+        "name": "⚡ [SG-04] 🇸🇬 新加坡 04",
+        "country_code": "SG",
+        "country_name": "新加坡",
+        "flag": "🇸🇬",
+        "ip": "104.28.163.26",
+        "lat": 231,
+        "raw_yaml": "- {name: \"SG_08\", server: 139.162.44.222, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "SG-05",
+        "name": "⚡ [SG-05] 🇸🇬 新加坡 05",
+        "country_code": "SG",
+        "country_name": "新加坡",
+        "flag": "🇸🇬",
+        "ip": "104.28.156.130",
+        "lat": 780,
+        "raw_yaml": "- {name: \"SG_09\", server: 149.28.150.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "TW",
+    "flag": "🇹🇼",
+    "name": "台湾",
+    "nodes": [
+      {
+        "id": "TW-01",
+        "name": "⚡ [TW-01] 🇹🇼 台湾 01",
+        "country_code": "TW",
+        "country_name": "台湾",
+        "flag": "🇹🇼",
+        "ip": "104.28.159.155",
+        "lat": 368,
+        "raw_yaml": "- {name: \"TW_01\", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TW-02",
+        "name": "⚡ [TW-02] 🇹🇼 台湾 02",
+        "country_code": "TW",
+        "country_name": "台湾",
+        "flag": "🇹🇼",
+        "ip": "104.28.156.246",
+        "lat": 336,
+        "raw_yaml": "- {name: \"TW_02\", server: 83.147.12.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TW-03",
+        "name": "⚡ [TW-03] 🇹🇼 台湾 03",
+        "country_code": "TW",
+        "country_name": "台湾",
+        "flag": "🇹🇼",
+        "ip": "104.28.159.155",
+        "lat": 391,
+        "raw_yaml": "- {name: \"TW_04\", server: 188.253.6.249, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TW-04",
+        "name": "⚡ [TW-04] 🇹🇼 台湾 04",
+        "country_code": "TW",
+        "country_name": "台湾",
+        "flag": "🇹🇼",
+        "ip": "104.28.159.154",
+        "lat": 542,
+        "raw_yaml": "- {name: \"TW_05\", server: 151.242.188.209, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TW-05",
+        "name": "⚡ [TW-05] 🇹🇼 台湾 05",
+        "country_code": "TW",
+        "country_name": "台湾",
+        "flag": "🇹🇼",
+        "ip": "104.28.156.244",
+        "lat": 814,
+        "raw_yaml": "- {name: \"TW_06\", server: 140.235.39.162, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "GB",
+    "flag": "🇬🇧",
+    "name": "英国",
+    "nodes": [
+      {
+        "id": "GB-01",
+        "name": "⚡ [GB-01] 🇬🇧 英国 01",
+        "country_code": "GB",
+        "country_name": "英国",
+        "flag": "🇬🇧",
+        "ip": "104.28.165.24",
+        "lat": 824,
+        "raw_yaml": "- {name: \"GB_01\", server: 138.68.142.165, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "GB-02",
+        "name": "⚡ [GB-02] 🇬🇧 英国 02",
+        "country_code": "GB",
+        "country_name": "英国",
+        "flag": "🇬🇧",
+        "ip": "104.28.163.110",
+        "lat": 816,
+        "raw_yaml": "- {name: \"GB_02\", server: 178.62.109.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "GB-03",
+        "name": "⚡ [GB-03] 🇬🇧 英国 03",
+        "country_code": "GB",
+        "country_name": "英国",
+        "flag": "🇬🇧",
+        "ip": "104.28.159.9",
+        "lat": 997,
+        "raw_yaml": "- {name: \"GB_03\", server: 91.186.217.148, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "GB-04",
+        "name": "⚡ [GB-04] 🇬🇧 英国 04",
+        "country_code": "GB",
+        "country_name": "英国",
+        "flag": "🇬🇧",
+        "ip": "104.28.163.91",
+        "lat": 1037,
+        "raw_yaml": "- {name: \"GB_04\", server: 185.197.74.128, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "GB-05",
+        "name": "⚡ [GB-05] 🇬🇧 英国 05",
+        "country_code": "GB",
+        "country_name": "英国",
+        "flag": "🇬🇧",
+        "ip": "104.28.163.91",
+        "lat": 929,
+        "raw_yaml": "- {name: \"GB_05\", server: 147.45.79.77, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "DE",
+    "flag": "🇩🇪",
+    "name": "德国",
+    "nodes": [
+      {
+        "id": "DE-01",
+        "name": "⚡ [DE-01] 🇩🇪 德国 01",
+        "country_code": "DE",
+        "country_name": "德国",
+        "flag": "🇩🇪",
+        "ip": "104.28.164.252",
+        "lat": 1563,
+        "raw_yaml": "- {name: \"DE_02\", server: 195.201.21.127, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "DE-02",
+        "name": "⚡ [DE-02] 🇩🇪 德国 02",
+        "country_code": "DE",
+        "country_name": "德国",
+        "flag": "🇩🇪",
+        "ip": "104.28.164.239",
+        "lat": 892,
+        "raw_yaml": "- {name: \"DE_04\", server: 89.127.198.10, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "DE-03",
+        "name": "⚡ [DE-03] 🇩🇪 德国 03",
+        "country_code": "DE",
+        "country_name": "德国",
+        "flag": "🇩🇪",
+        "ip": "104.28.164.70",
+        "lat": 1081,
+        "raw_yaml": "- {name: \"DE_05\", server: 159.195.144.220, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "DE-04",
+        "name": "⚡ [DE-04] 🇩🇪 德国 04",
+        "country_code": "DE",
+        "country_name": "德国",
+        "flag": "🇩🇪",
+        "ip": "104.28.159.181",
+        "lat": 844,
+        "raw_yaml": "- {name: \"DE_06\", server: 116.203.57.178, port: 2096, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "DE-05",
+        "name": "⚡ [DE-05] 🇩🇪 德国 05",
+        "country_code": "DE",
+        "country_name": "德国",
+        "flag": "🇩🇪",
+        "ip": "104.28.163.86",
+        "lat": 807,
+        "raw_yaml": "- {name: \"DE_07\", server: 64.226.66.230, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "FR",
+    "flag": "🇫🇷",
+    "name": "法国",
+    "nodes": [
+      {
+        "id": "FR-01",
+        "name": "⚡ [FR-01] 🇫🇷 法国 01",
+        "country_code": "FR",
+        "country_name": "法国",
+        "flag": "🇫🇷",
+        "ip": "104.28.164.225",
+        "lat": 882,
+        "raw_yaml": "- {name: \"FR_01\", server: 88.218.77.37, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "FR-02",
+        "name": "⚡ [FR-02] 🇫🇷 法国 02",
+        "country_code": "FR",
+        "country_name": "法国",
+        "flag": "🇫🇷",
+        "ip": "104.28.164.243",
+        "lat": 826,
+        "raw_yaml": "- {name: \"FR_02\", server: 147.90.26.6, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "FR-03",
+        "name": "⚡ [FR-03] 🇫🇷 法国 03",
+        "country_code": "FR",
+        "country_name": "法国",
+        "flag": "🇫🇷",
+        "ip": "104.28.164.243",
+        "lat": 745,
+        "raw_yaml": "- {name: \"FR_03\", server: 31.57.109.126, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "FR-04",
+        "name": "⚡ [FR-04] 🇫🇷 法国 04",
+        "country_code": "FR",
+        "country_name": "法国",
+        "flag": "🇫🇷",
+        "ip": "104.28.155.115",
+        "lat": 774,
+        "raw_yaml": "- {name: \"FR_05\", server: 45.39.255.211, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "FR-05",
+        "name": "⚡ [FR-05] 🇫🇷 法国 05",
+        "country_code": "FR",
+        "country_name": "法国",
+        "flag": "🇫🇷",
+        "ip": "104.28.164.226",
+        "lat": 1012,
+        "raw_yaml": "- {name: \"FR_06\", server: 92.119.126.248, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "CA",
+    "flag": "🇨🇦",
+    "name": "加拿大",
+    "nodes": [
+      {
+        "id": "CA-01",
+        "name": "⚡ [CA-01] 🇨🇦 加拿大 01",
+        "country_code": "CA",
+        "country_name": "加拿大",
+        "flag": "🇨🇦",
+        "ip": "104.28.164.23",
+        "lat": 958,
+        "raw_yaml": "- {name: \"CA_01\", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "CA-02",
+        "name": "⚡ [CA-02] 🇨🇦 加拿大 02",
+        "country_code": "CA",
+        "country_name": "加拿大",
+        "flag": "🇨🇦",
+        "ip": "104.28.153.172",
+        "lat": 917,
+        "raw_yaml": "- {name: \"CA_02\", server: 40.233.71.238, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "CA-03",
+        "name": "⚡ [CA-03] 🇨🇦 加拿大 03",
+        "country_code": "CA",
+        "country_name": "加拿大",
+        "flag": "🇨🇦",
+        "ip": "104.28.164.21",
+        "lat": 901,
+        "raw_yaml": "- {name: \"CA_03\", server: 172.98.207.58, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "CA-04",
+        "name": "⚡ [CA-04] 🇨🇦 加拿大 04",
+        "country_code": "CA",
+        "country_name": "加拿大",
+        "flag": "🇨🇦",
+        "ip": "104.28.154.64",
+        "lat": 994,
+        "raw_yaml": "- {name: \"CA_04\", server: 158.69.201.4, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "CA-05",
+        "name": "⚡ [CA-05] 🇨🇦 加拿大 05",
+        "country_code": "CA",
+        "country_name": "加拿大",
+        "flag": "🇨🇦",
+        "ip": "104.28.161.117",
+        "lat": 893,
+        "raw_yaml": "- {name: \"CA_05\", server: 159.203.2.180, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "MX",
+    "flag": "🇲🇽",
+    "name": "墨西哥",
+    "nodes": [
+      {
+        "id": "MX-01",
+        "name": "⚡ [MX-01] 🇲🇽 墨西哥 01",
+        "country_code": "MX",
+        "country_name": "墨西哥",
+        "flag": "🇲🇽",
+        "ip": "104.28.152.112",
+        "lat": 1136,
+        "raw_yaml": "- {name: \"MX_01\", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MX-02",
+        "name": "⚡ [MX-02] 🇲🇽 墨西哥 02",
+        "country_code": "MX",
+        "country_name": "墨西哥",
+        "flag": "🇲🇽",
+        "ip": "104.28.163.161",
+        "lat": 1125,
+        "raw_yaml": "- {name: \"MX_02\", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MX-03",
+        "name": "⚡ [MX-03] 🇲🇽 墨西哥 03",
+        "country_code": "MX",
+        "country_name": "墨西哥",
+        "flag": "🇲🇽",
+        "ip": "104.28.152.112",
+        "lat": 836,
+        "raw_yaml": "- {name: \"MX_03\", server: 38.213.228.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MX-04",
+        "name": "⚡ [MX-04] 🇲🇽 墨西哥 04",
+        "country_code": "MX",
+        "country_name": "墨西哥",
+        "flag": "🇲🇽",
+        "ip": "104.28.152.112",
+        "lat": 1155,
+        "raw_yaml": "- {name: \"MX_04\", server: 216.238.79.83, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MX-05",
+        "name": "⚡ [MX-05] 🇲🇽 墨西哥 05",
+        "country_code": "MX",
+        "country_name": "墨西哥",
+        "flag": "🇲🇽",
+        "ip": "104.28.152.112",
+        "lat": 1093,
+        "raw_yaml": "- {name: \"MX_05\", server: 131.196.252.97, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "TH",
+    "flag": "🇹🇭",
+    "name": "泰国",
+    "nodes": [
+      {
+        "id": "TH-01",
+        "name": "⚡ [TH-01] 🇹🇭 泰国 01",
+        "country_code": "TH",
+        "country_name": "泰国",
+        "flag": "🇹🇭",
+        "ip": "104.28.160.59",
+        "lat": 618,
+        "raw_yaml": "- {name: \"TH_02\", server: 101.108.49.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TH-02",
+        "name": "⚡ [TH-02] 🇹🇭 泰国 02",
+        "country_code": "TH",
+        "country_name": "泰国",
+        "flag": "🇹🇭",
+        "ip": "104.28.160.208",
+        "lat": 761,
+        "raw_yaml": "- {name: \"TH_03\", server: 45.150.131.246, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TH-03",
+        "name": "⚡ [TH-03] 🇹🇭 泰国 03",
+        "country_code": "TH",
+        "country_name": "泰国",
+        "flag": "🇹🇭",
+        "ip": "104.28.156.180",
+        "lat": 695,
+        "raw_yaml": "- {name: \"TH_04\", server: 45.150.128.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TH-04",
+        "name": "⚡ [TH-04] 🇹🇭 泰国 04",
+        "country_code": "TH",
+        "country_name": "泰国",
+        "flag": "🇹🇭",
+        "ip": "104.28.166.114",
+        "lat": 716,
+        "raw_yaml": "- {name: \"TH_05\", server: 118.27.150.97, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TH-05",
+        "name": "⚡ [TH-05] 🇹🇭 泰国 05",
+        "country_code": "TH",
+        "country_name": "泰国",
+        "flag": "🇹🇭",
+        "ip": "104.28.156.180",
+        "lat": 733,
+        "raw_yaml": "- {name: \"TH_06\", server: 103.224.84.70, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "MY",
+    "flag": "🇲🇾",
+    "name": "马来西亚",
+    "nodes": [
+      {
+        "id": "MY-01",
+        "name": "⚡ [MY-01] 🇲🇾 马来西亚 01",
+        "country_code": "MY",
+        "country_name": "马来西亚",
+        "flag": "🇲🇾",
+        "ip": "104.28.160.163",
+        "lat": 1161,
+        "raw_yaml": "- {name: \"MY_01\", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MY-02",
+        "name": "⚡ [MY-02] 🇲🇾 马来西亚 02",
+        "country_code": "MY",
+        "country_name": "马来西亚",
+        "flag": "🇲🇾",
+        "ip": "104.28.160.126",
+        "lat": 507,
+        "raw_yaml": "- {name: \"MY_03\", server: 202.184.53.82, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MY-03",
+        "name": "⚡ [MY-03] 🇲🇾 马来西亚 03",
+        "country_code": "MY",
+        "country_name": "马来西亚",
+        "flag": "🇲🇾",
+        "ip": "104.28.161.28",
+        "lat": 1401,
+        "raw_yaml": "- {name: \"MY_05\", server: 216.173.67.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MY-04",
+        "name": "⚡ [MY-04] 🇲🇾 马来西亚 04",
+        "country_code": "MY",
+        "country_name": "马来西亚",
+        "flag": "🇲🇾",
+        "ip": "104.28.163.26",
+        "lat": 1124,
+        "raw_yaml": "- {name: \"MY_07\", server: 166.88.194.248, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "MY-05",
+        "name": "⚡ [MY-05] 🇲🇾 马来西亚 05",
+        "country_code": "MY",
+        "country_name": "马来西亚",
+        "flag": "🇲🇾",
+        "ip": "104.28.156.131",
+        "lat": 1295,
+        "raw_yaml": "- {name: \"MY_08\", server: 216.173.67.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "VN",
+    "flag": "🇻🇳",
+    "name": "越南",
+    "nodes": [
+      {
+        "id": "VN-01",
+        "name": "⚡ [VN-01] 🇻🇳 越南 01",
+        "country_code": "VN",
+        "country_name": "越南",
+        "flag": "🇻🇳",
+        "ip": "104.28.156.209",
+        "lat": 472,
+        "raw_yaml": "- {name: \"VN_01\", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "VN-02",
+        "name": "⚡ [VN-02] 🇻🇳 越南 02",
+        "country_code": "VN",
+        "country_name": "越南",
+        "flag": "🇻🇳",
+        "ip": "104.28.163.52",
+        "lat": 793,
+        "raw_yaml": "- {name: \"VN_02\", server: 103.197.185.178, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "VN-03",
+        "name": "⚡ [VN-03] 🇻🇳 越南 03",
+        "country_code": "VN",
+        "country_name": "越南",
+        "flag": "🇻🇳",
+        "ip": "104.28.163.99",
+        "lat": 599,
+        "raw_yaml": "- {name: \"VN_03\", server: 160.30.50.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "VN-04",
+        "name": "⚡ [VN-04] 🇻🇳 越南 04",
+        "country_code": "VN",
+        "country_name": "越南",
+        "flag": "🇻🇳",
+        "ip": "104.28.157.199",
+        "lat": 706,
+        "raw_yaml": "- {name: \"VN_04\", server: 103.15.91.174, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "VN-05",
+        "name": "⚡ [VN-05] 🇻🇳 越南 05",
+        "country_code": "VN",
+        "country_name": "越南",
+        "flag": "🇻🇳",
+        "ip": "104.28.166.50",
+        "lat": 2139,
+        "raw_yaml": "- {name: \"VN_05\", server: 160.25.74.227, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  },
+  {
+    "code": "PH",
+    "flag": "🇵🇭",
+    "name": "菲律宾",
+    "nodes": []
+  },
+  {
+    "code": "TR",
+    "flag": "🇹🇷",
+    "name": "土耳其",
+    "nodes": [
+      {
+        "id": "TR-01",
+        "name": "⚡ [TR-01] 🇹🇷 土耳其 01",
+        "country_code": "TR",
+        "country_name": "土耳其",
+        "flag": "🇹🇷",
+        "ip": "104.28.167.70",
+        "lat": 1689,
+        "raw_yaml": "- {name: \"TR_01\", server: 93.180.134.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TR-02",
+        "name": "⚡ [TR-02] 🇹🇷 土耳其 02",
+        "country_code": "TR",
+        "country_name": "土耳其",
+        "flag": "🇹🇷",
+        "ip": "104.28.162.58",
+        "lat": 1107,
+        "raw_yaml": "- {name: \"TR_02\", server: 201.50.115.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TR-03",
+        "name": "⚡ [TR-03] 🇹🇷 土耳其 03",
+        "country_code": "TR",
+        "country_name": "土耳其",
+        "flag": "🇹🇷",
+        "ip": "104.28.164.103",
+        "lat": 1049,
+        "raw_yaml": "- {name: \"TR_03\", server: 185.113.223.183, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TR-04",
+        "name": "⚡ [TR-04] 🇹🇷 土耳其 04",
+        "country_code": "TR",
+        "country_name": "土耳其",
+        "flag": "🇹🇷",
+        "ip": "104.28.167.70",
+        "lat": 1113,
+        "raw_yaml": "- {name: \"TR_04\", server: 104.239.87.89, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      },
+      {
+        "id": "TR-05",
+        "name": "⚡ [TR-05] 🇹🇷 土耳其 05",
+        "country_code": "TR",
+        "country_name": "土耳其",
+        "flag": "🇹🇷",
+        "ip": "104.28.167.70",
+        "lat": 979,
+        "raw_yaml": "- {name: \"TR_05\", server: 91.228.227.214, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: \"/?ed=2560\", headers: {Host: l8.ccwu.cc}}}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+mixed-port: 19890
+external-controller: 127.0.0.1:19090
+mode: rule
+log-level: info
+
+proxies:
+  - name: "AWG_WARP_TEST"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.97.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "AWG_WARP_TEST"
+
+rules:
+  - MATCH,PROXY

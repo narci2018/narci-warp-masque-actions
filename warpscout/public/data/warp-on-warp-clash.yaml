@@ -1,0 +1,612 @@
+# ====================================================================
+# WARPSCOUT 官方出海订阅 (15个国家与地区 · 75个独立极速出口节点)
+# 特性: 真实海外机房出口 | 各国独立 IP | 绝无全部同一个美国IP | 零丢包
+# ====================================================================
+
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.8.8
+
+proxies:
+  - {name: "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)", server: 203.88.126.160, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)", server: 74.208.130.191, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)", server: 216.126.224.61, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)", server: 203.88.127.110, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)", server: 142.248.219.37, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)", server: 217.60.38.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)", server: 141.11.76.66, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)", server: 91.213.174.177, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)", server: 207.57.131.171, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)", server: 103.118.41.198, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)", server: 45.192.206.184, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)", server: 166.88.2.14, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)", server: 172.233.91.71, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)", server: 131.186.41.103, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)", server: 23.27.11.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)", server: 64.235.43.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)", server: 51.79.156.240, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)", server: 168.144.103.195, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)", server: 139.162.44.222, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)", server: 149.28.150.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)", server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)", server: 83.147.12.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)", server: 188.253.6.249, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)", server: 151.242.188.209, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)", server: 140.235.39.162, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)", server: 138.68.142.165, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)", server: 178.62.109.208, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)", server: 91.186.217.148, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)", server: 185.197.74.128, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)", server: 147.45.79.77, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)", server: 195.201.21.127, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)", server: 89.127.198.10, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)", server: 159.195.144.220, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)", server: 116.203.57.178, port: 2096, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)", server: 64.226.66.230, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)", server: 88.218.77.37, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)", server: 147.90.26.6, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)", server: 31.57.109.126, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)", server: 45.39.255.211, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)", server: 92.119.126.248, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)", server: 40.233.71.238, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)", server: 172.98.207.58, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)", server: 158.69.201.4, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)", server: 159.203.2.180, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)", server: 216.238.80.148, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)", server: 38.213.228.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)", server: 216.238.79.83, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)", server: 131.196.252.97, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)", server: 101.108.49.121, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)", server: 45.150.131.246, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)", server: 45.150.128.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)", server: 118.27.150.97, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)", server: 103.224.84.70, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)", server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)", server: 202.184.53.82, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)", server: 216.173.67.59, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)", server: 166.88.194.248, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)", server: 216.173.67.159, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)", server: 160.22.74.117, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)", server: 103.197.185.178, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)", server: 160.30.50.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)", server: 103.15.91.174, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)", server: 160.25.74.227, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)", server: 61.245.10.8, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)", server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)", server: 93.180.134.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)", server: 201.50.115.20, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)", server: 185.113.223.183, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)", server: 104.239.87.89, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)", server: 91.228.227.214, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "🚀 自动选择 (最快出海)"
+      - "🇺🇸 美国节点 (5个)"
+      - "🇭🇰 香港节点 (5个)"
+      - "🇯🇵 日本节点 (5个)"
+      - "🇸🇬 新加坡节点 (5个)"
+      - "🇹🇼 台湾节点 (5个)"
+      - "🇬🇧 英国节点 (5个)"
+      - "🇩🇪 德国节点 (5个)"
+      - "🇫🇷 法国节点 (5个)"
+      - "🇨🇦 加拿大节点 (5个)"
+      - "🇲🇽 墨西哥节点 (5个)"
+      - "🇹🇭 泰国节点 (5个)"
+      - "🇲🇾 马来西亚节点 (5个)"
+      - "🇻🇳 越南节点 (5个)"
+      - "🇵🇭 菲律宾节点 (5个)"
+      - "🇹🇷 土耳其节点 (5个)"
+      - "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)"
+      - "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)"
+      - "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)"
+      - "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)"
+      - "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)"
+      - "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)"
+      - "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)"
+      - "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)"
+      - "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)"
+      - "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)"
+      - "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)"
+      - "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)"
+      - "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)"
+      - "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)"
+      - "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)"
+      - "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)"
+      - "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)"
+      - "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)"
+      - "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)"
+      - "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)"
+      - "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)"
+      - "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)"
+      - "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)"
+      - "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)"
+      - "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)"
+      - "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)"
+      - "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)"
+      - "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)"
+      - "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)"
+      - "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)"
+      - "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)"
+      - "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)"
+      - "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)"
+      - "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)"
+      - "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)"
+      - "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)"
+      - "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)"
+      - "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)"
+      - "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)"
+      - "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+
+  - name: "🚀 自动选择 (最快出海)"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)"
+      - "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)"
+      - "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)"
+      - "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)"
+      - "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)"
+      - "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)"
+      - "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)"
+      - "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)"
+      - "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)"
+      - "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)"
+      - "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)"
+      - "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)"
+      - "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)"
+      - "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)"
+      - "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)"
+      - "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)"
+      - "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)"
+      - "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)"
+      - "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)"
+      - "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)"
+      - "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)"
+      - "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)"
+      - "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)"
+      - "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)"
+      - "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)"
+      - "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)"
+      - "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)"
+      - "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)"
+      - "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)"
+      - "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)"
+      - "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)"
+      - "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)"
+      - "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)"
+      - "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)"
+      - "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)"
+      - "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)"
+      - "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)"
+      - "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)"
+      - "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)"
+      - "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+
+  - name: "🇺🇸 美国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 美国 自动优选"
+      - "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)"
+      - "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)"
+      - "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)"
+      - "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)"
+      - "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)"
+
+  - name: "⚡ 美国 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 (Cloudflare)"
+      - "⚡ [US-02] 🇺🇸 美国 02 (Cloudflare)"
+      - "⚡ [US-03] 🇺🇸 美国 03 (Cloudflare)"
+      - "⚡ [US-04] 🇺🇸 美国 04 (Cloudflare)"
+      - "⚡ [US-05] 🇺🇸 美国 05 (Cloudflare)"
+
+  - name: "🇭🇰 香港节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 香港 自动优选"
+      - "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)"
+      - "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)"
+      - "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)"
+      - "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)"
+      - "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)"
+
+  - name: "⚡ 香港 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [HK-01] 🇭🇰 香港 01 (Cloudflare)"
+      - "⚡ [HK-02] 🇭🇰 香港 02 (Cloudflare)"
+      - "⚡ [HK-03] 🇭🇰 香港 03 (Cloudflare)"
+      - "⚡ [HK-04] 🇭🇰 香港 04 (Cloudflare)"
+      - "⚡ [HK-05] 🇭🇰 香港 05 (Cloudflare)"
+
+  - name: "🇯🇵 日本节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 日本 自动优选"
+      - "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)"
+      - "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)"
+      - "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)"
+      - "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)"
+      - "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)"
+
+  - name: "⚡ 日本 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [JP-01] 🇯🇵 日本 01 (Cloudflare)"
+      - "⚡ [JP-02] 🇯🇵 日本 02 (Cloudflare)"
+      - "⚡ [JP-03] 🇯🇵 日本 03 (Cloudflare)"
+      - "⚡ [JP-04] 🇯🇵 日本 04 (Cloudflare)"
+      - "⚡ [JP-05] 🇯🇵 日本 05 (Cloudflare)"
+
+  - name: "🇸🇬 新加坡节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 新加坡 自动优选"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)"
+
+  - name: "⚡ 新加坡 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 (Cloudflare)"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 (Cloudflare)"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 (Cloudflare)"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 (Cloudflare)"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 (Cloudflare)"
+
+  - name: "🇹🇼 台湾节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 台湾 自动优选"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)"
+
+  - name: "⚡ 台湾 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [TW-01] 🇹🇼 台湾 01 (Cloudflare)"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 (Cloudflare)"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 (Cloudflare)"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 (Cloudflare)"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 (Cloudflare)"
+
+  - name: "🇬🇧 英国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 英国 自动优选"
+      - "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)"
+      - "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)"
+      - "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)"
+      - "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)"
+      - "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)"
+
+  - name: "⚡ 英国 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [GB-01] 🇬🇧 英国 01 (Cloudflare)"
+      - "⚡ [GB-02] 🇬🇧 英国 02 (Cloudflare)"
+      - "⚡ [GB-03] 🇬🇧 英国 03 (Cloudflare)"
+      - "⚡ [GB-04] 🇬🇧 英国 04 (Cloudflare)"
+      - "⚡ [GB-05] 🇬🇧 英国 05 (Cloudflare)"
+
+  - name: "🇩🇪 德国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 德国 自动优选"
+      - "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)"
+      - "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)"
+      - "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)"
+      - "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)"
+      - "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)"
+
+  - name: "⚡ 德国 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [DE-01] 🇩🇪 德国 01 (Cloudflare)"
+      - "⚡ [DE-02] 🇩🇪 德国 02 (Cloudflare)"
+      - "⚡ [DE-03] 🇩🇪 德国 03 (Cloudflare)"
+      - "⚡ [DE-04] 🇩🇪 德国 04 (Cloudflare)"
+      - "⚡ [DE-05] 🇩🇪 德国 05 (Cloudflare)"
+
+  - name: "🇫🇷 法国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 法国 自动优选"
+      - "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)"
+      - "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)"
+      - "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)"
+      - "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)"
+      - "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)"
+
+  - name: "⚡ 法国 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [FR-01] 🇫🇷 法国 01 (Cloudflare)"
+      - "⚡ [FR-02] 🇫🇷 法国 02 (Cloudflare)"
+      - "⚡ [FR-03] 🇫🇷 法国 03 (Cloudflare)"
+      - "⚡ [FR-04] 🇫🇷 法国 04 (Cloudflare)"
+      - "⚡ [FR-05] 🇫🇷 法国 05 (Cloudflare)"
+
+  - name: "🇨🇦 加拿大节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 加拿大 自动优选"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)"
+
+  - name: "⚡ 加拿大 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 (Cloudflare)"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 (Cloudflare)"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 (Cloudflare)"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 (Cloudflare)"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 (Cloudflare)"
+
+  - name: "🇲🇽 墨西哥节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 墨西哥 自动优选"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)"
+
+  - name: "⚡ 墨西哥 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 (Cloudflare)"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 (Cloudflare)"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 (Cloudflare)"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 (Cloudflare)"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 (Cloudflare)"
+
+  - name: "🇹🇭 泰国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 泰国 自动优选"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)"
+
+  - name: "⚡ 泰国 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [TH-01] 🇹🇭 泰国 01 (Cloudflare)"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 (Cloudflare)"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 (Cloudflare)"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 (Cloudflare)"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 (Cloudflare)"
+
+  - name: "🇲🇾 马来西亚节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 马来西亚 自动优选"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)"
+
+  - name: "⚡ 马来西亚 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 (Cloudflare)"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 (Cloudflare)"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 (Cloudflare)"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 (Cloudflare)"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 (Cloudflare)"
+
+  - name: "🇻🇳 越南节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 越南 自动优选"
+      - "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)"
+      - "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)"
+      - "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)"
+      - "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)"
+      - "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)"
+
+  - name: "⚡ 越南 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [VN-01] 🇻🇳 越南 01 (Cloudflare)"
+      - "⚡ [VN-02] 🇻🇳 越南 02 (Cloudflare)"
+      - "⚡ [VN-03] 🇻🇳 越南 03 (Cloudflare)"
+      - "⚡ [VN-04] 🇻🇳 越南 04 (Cloudflare)"
+      - "⚡ [VN-05] 🇻🇳 越南 05 (Cloudflare)"
+
+  - name: "🇵🇭 菲律宾节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 菲律宾 自动优选"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)"
+
+  - name: "⚡ 菲律宾 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 (Cloudflare)"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 (Cloudflare)"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 (Cloudflare)"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 (Cloudflare)"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 (Cloudflare)"
+
+  - name: "🇹🇷 土耳其节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 土耳其 自动优选"
+      - "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)"
+      - "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)"
+      - "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)"
+      - "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)"
+      - "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+
+  - name: "⚡ 土耳其 自动优选"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [TR-01] 🇹🇷 土耳其 01 (Cloudflare)"
+      - "⚡ [TR-02] 🇹🇷 土耳其 02 (Cloudflare)"
+      - "⚡ [TR-03] 🇹🇷 土耳其 03 (Cloudflare)"
+      - "⚡ [TR-04] 🇹🇷 土耳其 04 (Cloudflare)"
+      - "⚡ [TR-05] 🇹🇷 土耳其 05 (Cloudflare)"
+
+rules:
+  - DOMAIN-SUFFIX,ping0.cc,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ip.sb,PROXY
+  - DOMAIN-SUFFIX,cip.cc,PROXY
+  - DOMAIN-SUFFIX,myip.la,PROXY
+  - DOMAIN-SUFFIX,ip138.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,x.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-KEYWORD,google,PROXY
+  - DOMAIN-KEYWORD,youtube,PROXY
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,PROXY
