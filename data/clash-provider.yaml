@@ -1,5 +1,5 @@
 # WARPSCOUT 全球多国 Cloudflare WARP 代理提供者 (Proxy Provider)
-# 生成时间: 2026-09-09 03:36:18 UTC | 端点总数: 224
+# 生成时间: 2026-09-09 03:50:28 UTC | 端点总数: 224
 proxies:
   - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 01 (2ms)"
     type: masque
@@ -11,7 +11,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H2 02 (纯TCP-2ms)"
     type: masque
     network: h2
     server: 162.159.192.21
@@ -87,7 +87,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
+  - name: "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 443
@@ -109,7 +109,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 04 (1ms)"
+  - name: "⚡ [JP-NRT] 🇯🇵 AWG 04 (2ms)"
     type: wireguard
     server: 162.159.193.41
     port: 2408
@@ -141,7 +141,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [SG-SIN] 🇸🇬 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [SG-SIN] 🇸🇬 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 162.159.195.21
@@ -326,7 +326,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.98.11
     port: 443
@@ -336,7 +336,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [MY-KUL] 🇲🇾 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [MY-KUL] 🇲🇾 MASQUE-H2 02 (纯TCP-4ms)"
     type: masque
     network: h2
     server: 188.114.98.21
@@ -347,7 +347,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)"
+  - name: "⚡ [MY-KUL] 🇲🇾 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.98.31
     port: 443
@@ -369,7 +369,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MY-KUL] 🇲🇾 AWG 04 (2ms)"
+  - name: "⚡ [MY-KUL] 🇲🇾 AWG 04 (1ms)"
     type: wireguard
     server: 188.114.98.41
     port: 2408
@@ -391,7 +391,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 01 (4ms)"
+  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.99.11
     port: 443
@@ -401,7 +401,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 188.114.99.21
@@ -412,7 +412,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 03 (3ms)"
+  - name: "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)"
     type: wireguard
     server: 188.114.99.31
     port: 443
@@ -434,7 +434,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 04 (2ms)"
+  - name: "⚡ [TH-BKK] 🇹🇭 AWG 04 (3ms)"
     type: wireguard
     server: 188.114.99.41
     port: 2408
@@ -466,7 +466,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [VN-SGN] 🇻🇳 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [VN-SGN] 🇻🇳 MASQUE-H2 02 (纯TCP-2ms)"
     type: masque
     network: h2
     server: 162.159.192.21
@@ -542,7 +542,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
+  - name: "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 443
@@ -564,7 +564,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 04 (1ms)"
+  - name: "⚡ [PH-MNL] 🇵🇭 AWG 04 (2ms)"
     type: wireguard
     server: 162.159.193.41
     port: 2408
@@ -596,7 +596,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [ID-CGK] 🇮🇩 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [ID-CGK] 🇮🇩 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 162.159.195.21
@@ -781,7 +781,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.98.11
     port: 443
@@ -791,7 +791,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [KH-PNH] 🇰🇭 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [KH-PNH] 🇰🇭 MASQUE-H2 02 (纯TCP-4ms)"
     type: masque
     network: h2
     server: 188.114.98.21
@@ -802,7 +802,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)"
+  - name: "⚡ [KH-PNH] 🇰🇭 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.98.31
     port: 443
@@ -824,7 +824,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KH-PNH] 🇰🇭 AWG 04 (2ms)"
+  - name: "⚡ [KH-PNH] 🇰🇭 AWG 04 (1ms)"
     type: wireguard
     server: 188.114.98.41
     port: 2408
@@ -846,7 +846,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 01 (4ms)"
+  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.99.11
     port: 443
@@ -856,7 +856,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 188.114.99.21
@@ -867,7 +867,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 03 (3ms)"
+  - name: "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)"
     type: wireguard
     server: 188.114.99.31
     port: 443
@@ -889,7 +889,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 04 (2ms)"
+  - name: "⚡ [PK-ISB] 🇵🇰 AWG 04 (3ms)"
     type: wireguard
     server: 188.114.99.41
     port: 2408
@@ -911,7 +911,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 01 (2ms)"
+  - name: "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 01 (1ms)"
     type: masque
     server: 8.39.214.11
     port: 443
@@ -921,7 +921,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H2 02 (纯TCP-3ms)"
+  - name: "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.214.21
@@ -932,7 +932,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 03 (4ms)"
+  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 443
@@ -954,7 +954,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 04 (2ms)"
+  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 2408
@@ -976,7 +976,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 01 (2ms)"
+  - name: "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 01 (1ms)"
     type: masque
     server: 8.39.214.11
     port: 443
@@ -986,7 +986,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [US-LAX] 🇺🇸 MASQUE-H2 02 (纯TCP-3ms)"
+  - name: "🛡️ [US-LAX] 🇺🇸 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.214.21
@@ -997,7 +997,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 03 (4ms)"
+  - name: "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 443
@@ -1019,7 +1019,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 04 (2ms)"
+  - name: "⚡ [US-LAX] 🇺🇸 AWG 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 2408
@@ -1051,7 +1051,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.35.211.21
@@ -1062,7 +1062,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
+  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)"
     type: wireguard
     server: 8.35.211.31
     port: 443
@@ -1084,7 +1084,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 04 (1ms)"
+  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 04 (3ms)"
     type: wireguard
     server: 8.35.211.41
     port: 2408
@@ -1106,7 +1106,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 01 (3ms)"
     type: masque
     server: 8.47.69.11
     port: 443
@@ -1116,7 +1116,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.47.69.21
@@ -1127,7 +1127,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)"
+  - name: "⚡ [AU-SYD] 🇦🇺 AWG 03 (3ms)"
     type: wireguard
     server: 8.47.69.31
     port: 443
@@ -1149,7 +1149,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 04 (2ms)"
+  - name: "⚡ [AU-SYD] 🇦🇺 AWG 04 (1ms)"
     type: wireguard
     server: 8.47.69.41
     port: 2408
@@ -1181,7 +1181,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 8.6.112.21
@@ -1214,7 +1214,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 04 (2ms)"
+  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 04 (3ms)"
     type: wireguard
     server: 8.6.112.41
     port: 2408
@@ -1246,7 +1246,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [MX-QRO] 🇲🇽 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [MX-QRO] 🇲🇽 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.125.21
@@ -1257,7 +1257,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
+  - name: "⚡ [MX-QRO] 🇲🇽 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 443
@@ -1301,7 +1301,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.98.11
     port: 443
@@ -1311,7 +1311,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [GB-LHR] 🇬🇧 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [GB-LHR] 🇬🇧 MASQUE-H2 02 (纯TCP-4ms)"
     type: masque
     network: h2
     server: 188.114.98.21
@@ -1322,7 +1322,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)"
+  - name: "⚡ [GB-LHR] 🇬🇧 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.98.31
     port: 443
@@ -1344,7 +1344,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [GB-LHR] 🇬🇧 AWG 04 (2ms)"
+  - name: "⚡ [GB-LHR] 🇬🇧 AWG 04 (1ms)"
     type: wireguard
     server: 188.114.98.41
     port: 2408
@@ -1366,7 +1366,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 01 (4ms)"
+  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.99.11
     port: 443
@@ -1376,7 +1376,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 188.114.99.21
@@ -1387,7 +1387,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 03 (3ms)"
+  - name: "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)"
     type: wireguard
     server: 188.114.99.31
     port: 443
@@ -1409,7 +1409,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 04 (2ms)"
+  - name: "⚡ [DE-FRA] 🇩🇪 AWG 04 (3ms)"
     type: wireguard
     server: 188.114.99.41
     port: 2408
@@ -1441,7 +1441,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [FR-CDG] 🇫🇷 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [FR-CDG] 🇫🇷 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.125.21
@@ -1452,7 +1452,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
+  - name: "⚡ [FR-CDG] 🇫🇷 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 443
@@ -1506,7 +1506,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [NL-AMS] 🇳🇱 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [NL-AMS] 🇳🇱 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 8.6.112.21
@@ -1539,7 +1539,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 04 (2ms)"
+  - name: "⚡ [NL-AMS] 🇳🇱 AWG 04 (3ms)"
     type: wireguard
     server: 8.6.112.41
     port: 2408
@@ -1571,7 +1571,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.35.211.21
@@ -1582,7 +1582,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
+  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)"
     type: wireguard
     server: 8.35.211.31
     port: 443
@@ -1604,7 +1604,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 04 (1ms)"
+  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 04 (3ms)"
     type: wireguard
     server: 8.35.211.41
     port: 2408
@@ -1626,7 +1626,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 01 (3ms)"
     type: masque
     server: 8.47.69.11
     port: 443
@@ -1636,7 +1636,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.47.69.21
@@ -1647,7 +1647,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)"
+  - name: "⚡ [SE-ARN] 🇸🇪 AWG 03 (3ms)"
     type: wireguard
     server: 8.47.69.31
     port: 443
@@ -1669,7 +1669,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 04 (2ms)"
+  - name: "⚡ [SE-ARN] 🇸🇪 AWG 04 (1ms)"
     type: wireguard
     server: 8.47.69.41
     port: 2408
@@ -1701,7 +1701,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [NO-OSL] 🇳🇴 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [NO-OSL] 🇳🇴 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 8.6.112.21
@@ -1734,7 +1734,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 04 (2ms)"
+  - name: "⚡ [NO-OSL] 🇳🇴 AWG 04 (3ms)"
     type: wireguard
     server: 8.6.112.41
     port: 2408
@@ -1766,7 +1766,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [DK-CPH] 🇩🇰 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [DK-CPH] 🇩🇰 MASQUE-H2 02 (纯TCP-2ms)"
     type: masque
     network: h2
     server: 162.159.192.21
@@ -1842,7 +1842,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
+  - name: "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 443
@@ -1864,7 +1864,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 04 (1ms)"
+  - name: "⚡ [FI-HEL] 🇫🇮 AWG 04 (2ms)"
     type: wireguard
     server: 162.159.193.41
     port: 2408
@@ -1896,7 +1896,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [IE-DUB] 🇮🇪 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [IE-DUB] 🇮🇪 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 162.159.195.21
@@ -1951,7 +1951,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 01 (2ms)"
+  - name: "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 01 (1ms)"
     type: masque
     server: 8.39.214.11
     port: 443
@@ -1961,7 +1961,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [ES-MAD] 🇪🇸 MASQUE-H2 02 (纯TCP-3ms)"
+  - name: "🛡️ [ES-MAD] 🇪🇸 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.214.21
@@ -1972,7 +1972,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 03 (4ms)"
+  - name: "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 443
@@ -1994,7 +1994,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 04 (2ms)"
+  - name: "⚡ [ES-MAD] 🇪🇸 AWG 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 2408
@@ -2026,7 +2026,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [IT-MXP] 🇮🇹 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [IT-MXP] 🇮🇹 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.125.21
@@ -2037,7 +2037,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
+  - name: "⚡ [IT-MXP] 🇮🇹 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 443
@@ -2211,7 +2211,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.98.11
     port: 443
@@ -2221,7 +2221,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [PL-WAW] 🇵🇱 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [PL-WAW] 🇵🇱 MASQUE-H2 02 (纯TCP-4ms)"
     type: masque
     network: h2
     server: 188.114.98.21
@@ -2232,7 +2232,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)"
+  - name: "⚡ [PL-WAW] 🇵🇱 AWG 03 (2ms)"
     type: wireguard
     server: 188.114.98.31
     port: 443
@@ -2254,7 +2254,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PL-WAW] 🇵🇱 AWG 04 (2ms)"
+  - name: "⚡ [PL-WAW] 🇵🇱 AWG 04 (1ms)"
     type: wireguard
     server: 188.114.98.41
     port: 2408
@@ -2276,7 +2276,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 01 (4ms)"
+  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.99.11
     port: 443
@@ -2286,7 +2286,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 188.114.99.21
@@ -2297,7 +2297,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 03 (3ms)"
+  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)"
     type: wireguard
     server: 188.114.99.31
     port: 443
@@ -2319,7 +2319,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 04 (2ms)"
+  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 04 (3ms)"
     type: wireguard
     server: 188.114.99.41
     port: 2408
@@ -2341,7 +2341,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 01 (2ms)"
+  - name: "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 01 (1ms)"
     type: masque
     server: 8.39.214.11
     port: 443
@@ -2351,7 +2351,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [HU-BUD] 🇭🇺 MASQUE-H2 02 (纯TCP-3ms)"
+  - name: "🛡️ [HU-BUD] 🇭🇺 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.214.21
@@ -2362,7 +2362,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 03 (4ms)"
+  - name: "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 443
@@ -2384,7 +2384,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 04 (2ms)"
+  - name: "⚡ [HU-BUD] 🇭🇺 AWG 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 2408
@@ -2416,7 +2416,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [RO-OTP] 🇷🇴 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [RO-OTP] 🇷🇴 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.35.211.21
@@ -2427,7 +2427,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
+  - name: "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)"
     type: wireguard
     server: 8.35.211.31
     port: 443
@@ -2449,7 +2449,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 04 (1ms)"
+  - name: "⚡ [RO-OTP] 🇷🇴 AWG 04 (3ms)"
     type: wireguard
     server: 8.35.211.41
     port: 2408
@@ -2471,7 +2471,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 01 (3ms)"
     type: masque
     server: 8.47.69.11
     port: 443
@@ -2481,7 +2481,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.47.69.21
@@ -2492,7 +2492,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)"
+  - name: "⚡ [BG-SOF] 🇧🇬 AWG 03 (3ms)"
     type: wireguard
     server: 8.47.69.31
     port: 443
@@ -2514,7 +2514,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 04 (2ms)"
+  - name: "⚡ [BG-SOF] 🇧🇬 AWG 04 (1ms)"
     type: wireguard
     server: 8.47.69.41
     port: 2408
@@ -2546,7 +2546,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [GR-ATH] 🇬🇷 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [GR-ATH] 🇬🇷 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 8.6.112.21
@@ -2579,7 +2579,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 04 (2ms)"
+  - name: "⚡ [GR-ATH] 🇬🇷 AWG 04 (3ms)"
     type: wireguard
     server: 8.6.112.41
     port: 2408
@@ -2611,7 +2611,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [PT-LIS] 🇵🇹 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [PT-LIS] 🇵🇹 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.125.21
@@ -2622,7 +2622,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
+  - name: "⚡ [PT-LIS] 🇵🇹 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 443
@@ -2676,7 +2676,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [TR-IST] 🇹🇷 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [TR-IST] 🇹🇷 MASQUE-H2 02 (纯TCP-2ms)"
     type: masque
     network: h2
     server: 162.159.192.21
@@ -2752,7 +2752,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
+  - name: "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 443
@@ -2774,7 +2774,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 04 (1ms)"
+  - name: "⚡ [UA-KBP] 🇺🇦 AWG 04 (2ms)"
     type: wireguard
     server: 162.159.193.41
     port: 2408
@@ -2806,7 +2806,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 162.159.195.21
@@ -2926,7 +2926,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 01 (4ms)"
+  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 01 (2ms)"
     type: masque
     server: 188.114.99.11
     port: 443
@@ -2936,7 +2936,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 188.114.99.21
@@ -2947,7 +2947,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 03 (3ms)"
+  - name: "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)"
     type: wireguard
     server: 188.114.99.31
     port: 443
@@ -2969,7 +2969,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 04 (2ms)"
+  - name: "⚡ [BR-GRU] 🇧🇷 AWG 04 (3ms)"
     type: wireguard
     server: 188.114.99.41
     port: 2408
@@ -2991,7 +2991,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 01 (2ms)"
+  - name: "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 01 (1ms)"
     type: masque
     server: 8.39.214.11
     port: 443
@@ -3001,7 +3001,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [AR-EZE] 🇦🇷 MASQUE-H2 02 (纯TCP-3ms)"
+  - name: "🛡️ [AR-EZE] 🇦🇷 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.214.21
@@ -3012,7 +3012,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 03 (4ms)"
+  - name: "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.214.31
     port: 443
@@ -3034,7 +3034,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 04 (2ms)"
+  - name: "⚡ [AR-EZE] 🇦🇷 AWG 04 (1ms)"
     type: wireguard
     server: 8.39.214.41
     port: 2408
@@ -3066,7 +3066,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [CL-SCL] 🇨🇱 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [CL-SCL] 🇨🇱 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.35.211.21
@@ -3077,7 +3077,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
+  - name: "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)"
     type: wireguard
     server: 8.35.211.31
     port: 443
@@ -3099,7 +3099,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 04 (1ms)"
+  - name: "⚡ [CL-SCL] 🇨🇱 AWG 04 (3ms)"
     type: wireguard
     server: 8.35.211.41
     port: 2408
@@ -3121,7 +3121,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 01 (1ms)"
+  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 01 (3ms)"
     type: masque
     server: 8.47.69.11
     port: 443
@@ -3131,7 +3131,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.47.69.21
@@ -3142,7 +3142,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)"
+  - name: "⚡ [CO-BOG] 🇨🇴 AWG 03 (3ms)"
     type: wireguard
     server: 8.47.69.31
     port: 443
@@ -3164,7 +3164,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 04 (2ms)"
+  - name: "⚡ [CO-BOG] 🇨🇴 AWG 04 (1ms)"
     type: wireguard
     server: 8.47.69.41
     port: 2408
@@ -3196,7 +3196,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [PE-LIM] 🇵🇪 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [PE-LIM] 🇵🇪 MASQUE-H2 02 (纯TCP-3ms)"
     type: masque
     network: h2
     server: 8.6.112.21
@@ -3229,7 +3229,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 04 (2ms)"
+  - name: "⚡ [PE-LIM] 🇵🇪 AWG 04 (3ms)"
     type: wireguard
     server: 8.6.112.41
     port: 2408
@@ -3261,7 +3261,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [IL-TLV] 🇮🇱 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [IL-TLV] 🇮🇱 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 8.39.125.21
@@ -3272,7 +3272,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
+  - name: "⚡ [IL-TLV] 🇮🇱 AWG 03 (1ms)"
     type: wireguard
     server: 8.39.125.31
     port: 443
@@ -3326,7 +3326,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [AE-DXB] 🇦🇪 MASQUE-H2 02 (纯TCP-1ms)"
+  - name: "🛡️ [AE-DXB] 🇦🇪 MASQUE-H2 02 (纯TCP-2ms)"
     type: masque
     network: h2
     server: 162.159.192.21
@@ -3402,7 +3402,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
+  - name: "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)"
     type: wireguard
     server: 162.159.193.31
     port: 443
@@ -3424,7 +3424,7 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 04 (1ms)"
+  - name: "⚡ [SA-RUH] 🇸🇦 AWG 04 (2ms)"
     type: wireguard
     server: 162.159.193.41
     port: 2408
@@ -3456,7 +3456,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "🛡️ [EG-CAI] 🇪🇬 MASQUE-H2 02 (纯TCP-2ms)"
+  - name: "🛡️ [EG-CAI] 🇪🇬 MASQUE-H2 02 (纯TCP-1ms)"
     type: masque
     network: h2
     server: 162.159.195.21
