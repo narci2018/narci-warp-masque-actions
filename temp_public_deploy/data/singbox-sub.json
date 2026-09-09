@@ -1,0 +1,3160 @@
+{
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🚀 节点选择",
+      "outbounds": [
+        "🛡️ MASQUE 防封优选 (推荐)",
+        "⚡ 全球 WARP 自动优选",
+        "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
+        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)",
+        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
+        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)",
+        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
+        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
+        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)",
+        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
+        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)",
+        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
+        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)",
+        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
+        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
+        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)",
+        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)",
+        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)",
+        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)",
+        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)",
+        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)",
+        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)",
+        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
+        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)",
+        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)",
+        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)",
+        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)",
+        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)",
+        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)",
+        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
+        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)",
+        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
+        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)",
+        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)",
+        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)",
+        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
+        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
+        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)",
+        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)",
+        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)",
+        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)",
+        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)",
+        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)",
+        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
+        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)",
+        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
+        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)",
+        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)",
+        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)",
+        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)",
+        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)",
+        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)",
+        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)",
+        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
+        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)",
+        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
+        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)",
+        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
+        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "⚡ 全球 WARP 自动优选",
+      "outbounds": [
+        "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
+        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)",
+        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
+        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)",
+        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
+        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
+        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)",
+        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
+        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)",
+        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
+        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)",
+        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
+        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
+        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)",
+        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)",
+        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)",
+        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)",
+        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)",
+        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)",
+        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)",
+        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
+        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)",
+        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)",
+        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)",
+        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)",
+        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)",
+        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)",
+        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
+        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)",
+        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
+        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)",
+        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)",
+        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)",
+        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
+        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
+        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)",
+        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)",
+        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)",
+        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)",
+        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)",
+        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)",
+        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
+        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)",
+        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
+        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)",
+        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)",
+        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)",
+        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)",
+        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)",
+        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)",
+        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)",
+        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
+        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)",
+        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
+        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)",
+        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
+        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m"
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)",
+      "server": "162.159.192.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
+      "server": "162.159.192.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
+      "server": "162.159.192.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)",
+      "server": "162.159.192.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
+      "server": "162.159.193.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
+      "server": "162.159.193.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)",
+      "server": "162.159.193.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
+      "server": "162.159.193.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
+      "server": "162.159.195.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
+      "server": "162.159.195.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
+      "server": "162.159.195.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
+      "server": "162.159.195.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)",
+      "server": "188.114.96.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
+      "server": "188.114.96.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)",
+      "server": "188.114.96.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)",
+      "server": "188.114.96.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)",
+      "server": "188.114.97.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)",
+      "server": "188.114.97.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
+      "server": "188.114.97.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
+      "server": "188.114.97.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
+      "server": "188.114.98.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
+      "server": "188.114.98.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
+      "server": "188.114.98.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
+      "server": "188.114.98.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)",
+      "server": "188.114.99.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)",
+      "server": "188.114.99.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)",
+      "server": "188.114.99.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)",
+      "server": "188.114.99.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)",
+      "server": "162.159.192.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
+      "server": "162.159.192.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
+      "server": "162.159.192.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)",
+      "server": "162.159.192.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
+      "server": "162.159.193.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
+      "server": "162.159.193.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)",
+      "server": "162.159.193.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
+      "server": "162.159.193.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
+      "server": "162.159.195.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
+      "server": "162.159.195.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
+      "server": "162.159.195.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
+      "server": "162.159.195.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)",
+      "server": "188.114.96.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
+      "server": "188.114.96.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)",
+      "server": "188.114.96.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)",
+      "server": "188.114.96.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)",
+      "server": "188.114.97.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)",
+      "server": "188.114.97.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
+      "server": "188.114.97.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
+      "server": "188.114.97.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
+      "server": "188.114.98.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
+      "server": "188.114.98.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
+      "server": "188.114.98.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
+      "server": "188.114.98.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)",
+      "server": "188.114.99.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)",
+      "server": "188.114.99.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)",
+      "server": "188.114.99.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)",
+      "server": "188.114.99.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)",
+      "server": "8.39.214.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
+      "server": "8.39.214.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)",
+      "server": "8.39.214.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
+      "server": "8.39.214.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)",
+      "server": "8.39.214.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
+      "server": "8.39.214.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)",
+      "server": "8.39.214.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
+      "server": "8.39.214.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
+      "server": "8.35.211.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
+      "server": "8.35.211.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)",
+      "server": "8.35.211.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)",
+      "server": "8.35.211.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)",
+      "server": "8.47.69.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)",
+      "server": "8.47.69.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)",
+      "server": "8.47.69.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)",
+      "server": "8.47.69.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)",
+      "server": "8.6.112.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)",
+      "server": "8.6.112.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)",
+      "server": "8.6.112.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)",
+      "server": "8.6.112.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
+      "server": "8.39.125.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
+      "server": "8.39.125.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)",
+      "server": "8.39.125.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)",
+      "server": "8.39.125.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
+      "server": "188.114.98.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
+      "server": "188.114.98.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
+      "server": "188.114.98.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
+      "server": "188.114.98.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)",
+      "server": "188.114.99.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)",
+      "server": "188.114.99.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)",
+      "server": "188.114.99.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)",
+      "server": "188.114.99.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
+      "server": "8.39.125.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
+      "server": "8.39.125.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)",
+      "server": "8.39.125.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)",
+      "server": "8.39.125.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)",
+      "server": "8.6.112.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)",
+      "server": "8.6.112.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)",
+      "server": "8.6.112.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)",
+      "server": "8.6.112.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
+      "server": "8.35.211.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
+      "server": "8.35.211.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)",
+      "server": "8.35.211.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)",
+      "server": "8.35.211.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)",
+      "server": "8.47.69.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)",
+      "server": "8.47.69.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)",
+      "server": "8.47.69.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)",
+      "server": "8.47.69.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)",
+      "server": "8.6.112.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)",
+      "server": "8.6.112.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)",
+      "server": "8.6.112.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)",
+      "server": "8.6.112.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)",
+      "server": "162.159.192.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
+      "server": "162.159.192.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
+      "server": "162.159.192.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)",
+      "server": "162.159.192.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
+      "server": "162.159.193.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
+      "server": "162.159.193.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)",
+      "server": "162.159.193.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
+      "server": "162.159.193.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
+      "server": "162.159.195.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
+      "server": "162.159.195.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
+      "server": "162.159.195.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
+      "server": "162.159.195.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)",
+      "server": "8.39.214.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
+      "server": "8.39.214.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)",
+      "server": "8.39.214.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
+      "server": "8.39.214.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
+      "server": "8.39.125.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
+      "server": "8.39.125.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)",
+      "server": "8.39.125.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)",
+      "server": "8.39.125.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)",
+      "server": "188.114.96.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
+      "server": "188.114.96.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)",
+      "server": "188.114.96.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)",
+      "server": "188.114.96.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)",
+      "server": "188.114.97.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)",
+      "server": "188.114.97.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
+      "server": "188.114.97.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
+      "server": "188.114.97.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
+      "server": "188.114.98.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
+      "server": "188.114.98.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
+      "server": "188.114.98.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
+      "server": "188.114.98.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)",
+      "server": "188.114.99.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)",
+      "server": "188.114.99.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)",
+      "server": "188.114.99.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)",
+      "server": "188.114.99.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)",
+      "server": "8.39.214.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
+      "server": "8.39.214.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)",
+      "server": "8.39.214.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
+      "server": "8.39.214.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
+      "server": "8.35.211.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
+      "server": "8.35.211.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)",
+      "server": "8.35.211.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)",
+      "server": "8.35.211.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)",
+      "server": "8.47.69.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)",
+      "server": "8.47.69.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)",
+      "server": "8.47.69.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)",
+      "server": "8.47.69.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)",
+      "server": "8.6.112.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)",
+      "server": "8.6.112.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)",
+      "server": "8.6.112.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)",
+      "server": "8.6.112.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
+      "server": "8.39.125.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
+      "server": "8.39.125.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)",
+      "server": "8.39.125.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)",
+      "server": "8.39.125.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)",
+      "server": "162.159.192.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
+      "server": "162.159.192.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
+      "server": "162.159.192.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)",
+      "server": "162.159.192.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
+      "server": "162.159.193.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
+      "server": "162.159.193.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)",
+      "server": "162.159.193.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
+      "server": "162.159.193.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
+      "server": "162.159.195.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
+      "server": "162.159.195.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
+      "server": "162.159.195.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
+      "server": "162.159.195.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)",
+      "server": "188.114.96.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
+      "server": "188.114.96.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)",
+      "server": "188.114.96.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)",
+      "server": "188.114.96.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)",
+      "server": "188.114.99.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)",
+      "server": "188.114.99.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)",
+      "server": "188.114.99.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)",
+      "server": "188.114.99.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)",
+      "server": "8.39.214.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
+      "server": "8.39.214.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)",
+      "server": "8.39.214.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
+      "server": "8.39.214.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
+      "server": "8.35.211.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
+      "server": "8.35.211.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)",
+      "server": "8.35.211.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)",
+      "server": "8.35.211.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)",
+      "server": "8.47.69.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)",
+      "server": "8.47.69.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)",
+      "server": "8.47.69.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)",
+      "server": "8.47.69.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)",
+      "server": "8.6.112.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)",
+      "server": "8.6.112.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)",
+      "server": "8.6.112.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)",
+      "server": "8.6.112.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
+      "server": "8.39.125.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
+      "server": "8.39.125.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)",
+      "server": "8.39.125.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)",
+      "server": "8.39.125.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)",
+      "server": "162.159.192.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
+      "server": "162.159.192.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
+      "server": "162.159.192.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)",
+      "server": "162.159.192.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
+      "server": "162.159.193.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
+      "server": "162.159.193.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)",
+      "server": "162.159.193.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
+      "server": "162.159.193.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
+      "server": "162.159.195.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
+      "server": "162.159.195.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
+      "server": "162.159.195.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
+      "server": "162.159.195.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)",
+      "server": "188.114.96.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
+      "server": "188.114.96.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)",
+      "server": "188.114.96.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)",
+      "server": "188.114.96.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)",
+      "server": "188.114.97.11",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)",
+      "server": "188.114.97.21",
+      "server_port": 500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
+      "server": "188.114.97.31",
+      "server_port": 4500,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "wireguard",
+      "tag": "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)",
+      "server": "188.114.97.41",
+      "server_port": 1701,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
+      ],
+      "private_key": "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}
