@@ -1,9 +1,26 @@
-# WARPSCOUT 全球多国 Cloudflare WARP 代理提供者 (Proxy Provider)
-# 生成时间: 2026-09-09 05:28:38 UTC | 端点总数: 224
+# WARPSCOUT 全球纯净 WARP 代理提供者
+# 更新时间: 2026-09-09 07:40:59 UTC | 节点数: 51
 proxies:
-  - name: "⚡ [HK-HKG] 🇭🇰 AWG 01 (2ms)"
+  - {name: _transit_DE_01, server: 194.28.226.45, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_DE_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_JP_01, server: 54.168.245.61, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_JP_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_US_01, server: 142.248.219.28, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_US_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_GB_01, server: 213.176.116.191, port: 2053, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_GB_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_FR_01, server: 82.70.232.70, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_FR_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_SG_01, server: 206.189.147.193, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_SG_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_MX_01, server: 216.238.72.72, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_MX_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_CA_01, server: 103.214.69.134, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_CA_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_TW_01, server: 213.210.4.48, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_TW_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_HK_01, server: 103.118.252.100, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_HK_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_MY_01, server: 45.194.27.99, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_MY_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_TH_01, server: 43.133.110.81, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_TH_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_PH_01, server: 61.245.11.45, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_PH_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_VN_01, server: 157.66.26.194, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_VN_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_TR_01, server: 103.83.87.133, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_TR_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_HR_01, server: 5.181.2.41, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_HR_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - {name: _transit_KR_01, server: 54.168.245.61, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: _transit_KR_01, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
+  - name: "⚡ [DE-FRA] 🇩🇪 德国 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.192.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -23,9 +40,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)"
+    dialer-proxy: "_transit_DE_01"
+  - name: "⚡ [DE-FRA] 🇩🇪 德国 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.192.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -45,29 +63,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.192.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_DE_01"
+  - name: "🛡️ [DE-FRA] 🇩🇪 德国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -77,9 +74,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)"
+    dialer-proxy: "_transit_DE_01"
+  - name: "⚡ [JP-NRT] 🇯🇵 日本 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.193.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -99,9 +97,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)"
+    dialer-proxy: "_transit_JP_01"
+  - name: "⚡ [JP-NRT] 🇯🇵 日本 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.193.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -121,29 +120,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [JP-NRT] 🇯🇵 AWG 03 (1ms)"
-    type: wireguard
-    server: 162.159.193.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_JP_01"
+  - name: "🛡️ [JP-NRT] 🇯🇵 日本 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -153,9 +131,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)"
+    dialer-proxy: "_transit_JP_01"
+  - name: "⚡ [US-LAX] 🇺🇸 美国 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.195.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -175,9 +154,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)"
+    dialer-proxy: "_transit_US_01"
+  - name: "⚡ [US-LAX] 🇺🇸 美国 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.195.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -197,29 +177,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.195.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_US_01"
+  - name: "🛡️ [US-LAX] 🇺🇸 美国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -229,9 +188,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TW-TPE] 🇹🇼 AWG 01 (2ms)"
+    dialer-proxy: "_transit_US_01"
+  - name: "⚡ [GB-LHR] 🇬🇧 英国 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.96.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -251,9 +211,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)"
+    dialer-proxy: "_transit_GB_01"
+  - name: "⚡ [GB-LHR] 🇬🇧 英国 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.96.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -273,29 +234,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TW-TPE] 🇹🇼 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.96.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_GB_01"
+  - name: "🛡️ [GB-LHR] 🇬🇧 英国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -305,9 +245,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KR-ICN] 🇰🇷 AWG 01 (2ms)"
+    dialer-proxy: "_transit_GB_01"
+  - name: "⚡ [FR-CDG] 🇫🇷 法国 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.97.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -327,9 +268,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KR-ICN] 🇰🇷 AWG 02 (2ms)"
+    dialer-proxy: "_transit_FR_01"
+  - name: "⚡ [FR-CDG] 🇫🇷 法国 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.97.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -349,29 +291,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.97.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)"
+    dialer-proxy: "_transit_FR_01"
+  - name: "🛡️ [FR-CDG] 🇫🇷 法国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -381,9 +302,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)"
+    dialer-proxy: "_transit_FR_01"
+  - name: "⚡ [SG-SIN] 🇸🇬 新加坡 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.98.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -403,9 +325,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)"
+    dialer-proxy: "_transit_SG_01"
+  - name: "⚡ [SG-SIN] 🇸🇬 新加坡 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.98.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -425,29 +348,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.98.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_SG_01"
+  - name: "🛡️ [SG-SIN] 🇸🇬 新加坡 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -457,9 +359,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 01 (3ms)"
+    dialer-proxy: "_transit_SG_01"
+  - name: "⚡ [MX-QRO] 🇲🇽 墨西哥 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.99.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -479,9 +382,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 02 (3ms)"
+    dialer-proxy: "_transit_MX_01"
+  - name: "⚡ [MX-QRO] 🇲🇽 墨西哥 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.99.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -501,29 +405,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [TH-BKK] 🇹🇭 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.99.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (1ms)"
+    dialer-proxy: "_transit_MX_01"
+  - name: "🛡️ [MX-QRO] 🇲🇽 墨西哥 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -533,9 +416,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [VN-SGN] 🇻🇳 AWG 01 (2ms)"
+    dialer-proxy: "_transit_MX_01"
+  - name: "⚡ [CA-YYZ] 🇨🇦 加拿大 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.192.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -555,9 +439,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)"
+    dialer-proxy: "_transit_CA_01"
+  - name: "⚡ [CA-YYZ] 🇨🇦 加拿大 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.192.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -577,29 +462,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.192.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_CA_01"
+  - name: "🛡️ [CA-YYZ] 🇨🇦 加拿大 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -609,9 +473,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)"
+    dialer-proxy: "_transit_CA_01"
+  - name: "⚡ [TW-TPE] 🇹🇼 台湾 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.193.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -631,9 +496,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)"
+    dialer-proxy: "_transit_TW_01"
+  - name: "⚡ [TW-TPE] 🇹🇼 台湾 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.193.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -653,29 +519,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PH-MNL] 🇵🇭 AWG 03 (1ms)"
-    type: wireguard
-    server: 162.159.193.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_TW_01"
+  - name: "🛡️ [TW-TPE] 🇹🇼 台湾 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -685,9 +530,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)"
+    dialer-proxy: "_transit_TW_01"
+  - name: "⚡ [HK-HKG] 🇭🇰 香港 AWG 01 (高速)"
     type: wireguard
-    server: 162.159.195.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -707,9 +553,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)"
+    dialer-proxy: "_transit_HK_01"
+  - name: "⚡ [HK-HKG] 🇭🇰 香港 AWG 02 (防封)"
     type: wireguard
-    server: 162.159.195.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -729,29 +576,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.195.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_HK_01"
+  - name: "🛡️ [HK-HKG] 🇭🇰 香港 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -761,9 +587,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [IN-BOM] 🇮🇳 AWG 01 (2ms)"
+    dialer-proxy: "_transit_HK_01"
+  - name: "⚡ [MY-KUL] 🇲🇾 马来西亚 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.96.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -783,9 +610,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)"
+    dialer-proxy: "_transit_MY_01"
+  - name: "⚡ [MY-KUL] 🇲🇾 马来西亚 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.96.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -805,29 +633,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [IN-BOM] 🇮🇳 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.96.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_MY_01"
+  - name: "🛡️ [MY-KUL] 🇲🇾 马来西亚 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -837,9 +644,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MO-MFM] 🇲🇴 AWG 01 (2ms)"
+    dialer-proxy: "_transit_MY_01"
+  - name: "⚡ [TH-BKK] 🇹🇭 泰国 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.97.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -859,9 +667,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MO-MFM] 🇲🇴 AWG 02 (2ms)"
+    dialer-proxy: "_transit_TH_01"
+  - name: "⚡ [TH-BKK] 🇹🇭 泰国 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.97.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -881,29 +690,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.97.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)"
+    dialer-proxy: "_transit_TH_01"
+  - name: "🛡️ [TH-BKK] 🇹🇭 泰国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -913,9 +701,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)"
+    dialer-proxy: "_transit_TH_01"
+  - name: "⚡ [PH-MNL] 🇵🇭 菲律宾 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.98.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -935,9 +724,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)"
+    dialer-proxy: "_transit_PH_01"
+  - name: "⚡ [PH-MNL] 🇵🇭 菲律宾 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.98.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -957,29 +747,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.98.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_PH_01"
+  - name: "🛡️ [PH-MNL] 🇵🇭 菲律宾 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -989,9 +758,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 01 (3ms)"
+    dialer-proxy: "_transit_PH_01"
+  - name: "⚡ [VN-SGN] 🇻🇳 越南 AWG 01 (高速)"
     type: wireguard
-    server: 188.114.99.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1011,9 +781,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 02 (3ms)"
+    dialer-proxy: "_transit_VN_01"
+  - name: "⚡ [VN-SGN] 🇻🇳 越南 AWG 02 (防封)"
     type: wireguard
-    server: 188.114.99.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1033,29 +804,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [PK-ISB] 🇵🇰 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.99.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (1ms)"
+    dialer-proxy: "_transit_VN_01"
+  - name: "🛡️ [VN-SGN] 🇻🇳 越南 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1065,9 +815,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 01 (3ms)"
+    dialer-proxy: "_transit_VN_01"
+  - name: "⚡ [TR-IST] 🇹🇷 土耳其 AWG 01 (高速)"
     type: wireguard
-    server: 8.39.214.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1087,9 +838,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)"
+    dialer-proxy: "_transit_TR_01"
+  - name: "⚡ [TR-IST] 🇹🇷 土耳其 AWG 02 (防封)"
     type: wireguard
-    server: 8.39.214.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1109,29 +861,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [KZ-ALA] 🇰🇿 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.214.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_TR_01"
+  - name: "🛡️ [TR-IST] 🇹🇷 土耳其 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1141,9 +872,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 01 (3ms)"
+    dialer-proxy: "_transit_TR_01"
+  - name: "⚡ [HR-ZAG] 🇭🇷 克罗地亚 AWG 01 (高速)"
     type: wireguard
-    server: 8.39.214.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1163,9 +895,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)"
+    dialer-proxy: "_transit_HR_01"
+  - name: "⚡ [HR-ZAG] 🇭🇷 克罗地亚 AWG 02 (防封)"
     type: wireguard
-    server: 8.39.214.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1185,29 +918,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [US-LAX] 🇺🇸 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.214.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_HR_01"
+  - name: "🛡️ [HR-ZAG] 🇭🇷 克罗地亚 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1217,9 +929,10 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)"
+    dialer-proxy: "_transit_HR_01"
+  - name: "⚡ [KR-ICN] 🇰🇷 韩国 AWG 01 (高速)"
     type: wireguard
-    server: 8.35.211.11
+    server: 162.159.192.1
     port: 2408
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1239,9 +952,10 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)"
+    dialer-proxy: "_transit_KR_01"
+  - name: "⚡ [KR-ICN] 🇰🇷 韩国 AWG 02 (防封)"
     type: wireguard
-    server: 8.35.211.21
+    server: 162.159.192.1
     port: 500
     ip: 172.16.0.2
     ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
@@ -1261,29 +975,8 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [CA-YYZ] 🇨🇦 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.35.211.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (2ms)"
+    dialer-proxy: "_transit_KR_01"
+  - name: "🛡️ [KR-ICN] 🇰🇷 韩国 MASQUE 03 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -1293,2967 +986,4 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.47.69.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.47.69.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AU-SYD] 🇦🇺 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.47.69.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.6.112.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 02 (3ms)"
-    type: wireguard
-    server: 8.6.112.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NZ-AKL] 🇳🇿 AWG 03 (3ms)"
-    type: wireguard
-    server: 8.6.112.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.39.125.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.39.125.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [MX-QRO] 🇲🇽 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.125.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.98.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)"
-    type: wireguard
-    server: 188.114.98.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.98.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 01 (3ms)"
-    type: wireguard
-    server: 188.114.99.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 02 (3ms)"
-    type: wireguard
-    server: 188.114.99.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [DE-FRA] 🇩🇪 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.99.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.39.125.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.39.125.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [FR-CDG] 🇫🇷 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.125.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.6.112.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 02 (3ms)"
-    type: wireguard
-    server: 8.6.112.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NL-AMS] 🇳🇱 AWG 03 (3ms)"
-    type: wireguard
-    server: 8.6.112.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.35.211.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.35.211.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CH-ZRH] 🇨🇭 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.35.211.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.47.69.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.47.69.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [SE-ARN] 🇸🇪 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.47.69.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.6.112.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 02 (3ms)"
-    type: wireguard
-    server: 8.6.112.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NO-OSL] 🇳🇴 AWG 03 (3ms)"
-    type: wireguard
-    server: 8.6.112.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [DK-CPH] 🇩🇰 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.192.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.192.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.192.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.193.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.193.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [FI-HEL] 🇫🇮 AWG 03 (1ms)"
-    type: wireguard
-    server: 162.159.193.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.195.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.195.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.195.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 01 (3ms)"
-    type: wireguard
-    server: 8.39.214.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)"
-    type: wireguard
-    server: 8.39.214.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [ES-MAD] 🇪🇸 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.214.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.39.125.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.39.125.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IT-MXP] 🇮🇹 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.125.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [AT-VIE] 🇦🇹 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.96.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)"
-    type: wireguard
-    server: 188.114.96.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AT-VIE] 🇦🇹 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.96.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [BE-BRU] 🇧🇪 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.97.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BE-BRU] 🇧🇪 AWG 02 (2ms)"
-    type: wireguard
-    server: 188.114.97.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.97.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.98.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)"
-    type: wireguard
-    server: 188.114.98.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.98.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 01 (3ms)"
-    type: wireguard
-    server: 188.114.99.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 02 (3ms)"
-    type: wireguard
-    server: 188.114.99.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CZ-PRG] 🇨🇿 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.99.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 01 (3ms)"
-    type: wireguard
-    server: 8.39.214.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)"
-    type: wireguard
-    server: 8.39.214.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [HU-BUD] 🇭🇺 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.214.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.35.211.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.35.211.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [RO-OTP] 🇷🇴 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.35.211.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.47.69.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.47.69.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BG-SOF] 🇧🇬 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.47.69.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.6.112.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 02 (3ms)"
-    type: wireguard
-    server: 8.6.112.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [GR-ATH] 🇬🇷 AWG 03 (3ms)"
-    type: wireguard
-    server: 8.6.112.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.39.125.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.39.125.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PT-LIS] 🇵🇹 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.125.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [TR-IST] 🇹🇷 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.192.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.192.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.192.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.193.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.193.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [UA-KBP] 🇺🇦 AWG 03 (1ms)"
-    type: wireguard
-    server: 162.159.193.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.195.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.195.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.195.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [IS-KEF] 🇮🇸 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.96.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)"
-    type: wireguard
-    server: 188.114.96.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IS-KEF] 🇮🇸 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.96.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 01 (3ms)"
-    type: wireguard
-    server: 188.114.99.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 02 (3ms)"
-    type: wireguard
-    server: 188.114.99.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [BR-GRU] 🇧🇷 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.99.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 01 (3ms)"
-    type: wireguard
-    server: 8.39.214.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)"
-    type: wireguard
-    server: 8.39.214.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AR-EZE] 🇦🇷 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.214.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.35.211.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.35.211.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CL-SCL] 🇨🇱 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.35.211.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.47.69.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.47.69.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [CO-BOG] 🇨🇴 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.47.69.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.6.112.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 02 (3ms)"
-    type: wireguard
-    server: 8.6.112.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [PE-LIM] 🇵🇪 AWG 03 (3ms)"
-    type: wireguard
-    server: 8.6.112.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)"
-    type: wireguard
-    server: 8.39.125.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)"
-    type: wireguard
-    server: 8.39.125.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [IL-TLV] 🇮🇱 AWG 03 (2ms)"
-    type: wireguard
-    server: 8.39.125.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [AE-DXB] 🇦🇪 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.192.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.192.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.192.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.193.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.193.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [SA-RUH] 🇸🇦 AWG 03 (1ms)"
-    type: wireguard
-    server: 162.159.193.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)"
-    type: wireguard
-    server: 162.159.195.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)"
-    type: wireguard
-    server: 162.159.195.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)"
-    type: wireguard
-    server: 162.159.195.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.96.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)"
-    type: wireguard
-    server: 188.114.96.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [ZA-JNB] 🇿🇦 AWG 03 (2ms)"
-    type: wireguard
-    server: 188.114.96.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (2ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
-  - name: "⚡ [NG-LOS] 🇳🇬 AWG 01 (2ms)"
-    type: wireguard
-    server: 188.114.97.11
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NG-LOS] 🇳🇬 AWG 02 (2ms)"
-    type: wireguard
-    server: 188.114.97.21
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)"
-    type: wireguard
-    server: 188.114.97.31
-    port: 4500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 6
-      jmin: 10
-      jmax: 50
-      s1: 0
-      s2: 0
-      h1: 1
-      h2: 2
-      h3: 3
-      h4: 4
-  - name: "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
-    type: masque
-    server: 162.159.198.1
-    port: 443
-    sni: consumer-masque.cloudflareclient.com
-    private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
-    remote-dns-resolve: true
+    dialer-proxy: "_transit_KR_01"
