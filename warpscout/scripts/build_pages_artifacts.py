@@ -33,7 +33,7 @@ WARP_PRIVKEY = "GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424="
 # Cloudflare MASQUE EC Credentials
 MASQUE_PRIVKEY = "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
 MASQUE_PUBKEY = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-MASQUE_SNI = "engage.cloudflareclient.com"
+MASQUE_SNI = "consumer-masque.cloudflareclient.com"
 MASQUE_IPV6 = "2606:4700:110:8975:2d6d:3de9:b626:bb82"
 
 # 50+ Global Countries and Edge Colos
@@ -142,9 +142,10 @@ def main():
     for reg in GLOBAL_WARP_REGIONS:
         code = reg["code"]
         region_ep_data[code] = []
+        wg_ports = [2408, 500, 4500, 1701]
         for i in range(1, endpoints_per_country + 1):
             ip = f"{reg['pool']}.{i * 10 + 1}"
-            port = 443 if (i % 2 == 1) else 2408
+            port = wg_ports[(i - 1) % len(wg_ports)]
             ep_str = f"{ip}:{port}"
             candidate_eps.append(ep_str)
             region_ep_data[code].append({
@@ -198,32 +199,15 @@ def main():
             # idx == 1: MASQUE over HTTP/3 (QUIC 443) - Latest DPI killer
             # idx == 2: MASQUE over HTTP/2 (TCP 443) - Defeats UDP QoS/blocking
             # idx >= 3: AmneziaWG (AWG 2408/500) - Obfuscated WireGuard
-            if idx == 1:
+            if idx == 4:
                 proto_label = "MASQUE-H3"
                 p_name = f"🛡️ [{code}-{reg['colo']}] {reg['flag']} {proto_label} {idx:02d} ({lat}ms)"
                 masque_names.append(p_name)
                 proxy_yaml = [
                     f"  - name: \"{p_name}\"",
                     f"    type: masque",
-                    f"    server: {ip}",
-                    f"    port: {port}",
-                    f"    sni: {MASQUE_SNI}",
-                    f"    private-key: \"{MASQUE_PRIVKEY}\"",
-                    f"    public-key: \"{MASQUE_PUBKEY}\"",
-                    f"    ip: {WARP_CLIENT_IPV4}",
-                    f"    ipv6: {MASQUE_IPV6}",
-                    f"    remote-dns-resolve: true"
-                ]
-            elif idx == 2:
-                proto_label = "MASQUE-H2"
-                p_name = f"🛡️ [{code}-{reg['colo']}] {reg['flag']} {proto_label} {idx:02d} (纯TCP-{lat}ms)"
-                masque_names.append(p_name)
-                proxy_yaml = [
-                    f"  - name: \"{p_name}\"",
-                    f"    type: masque",
-                    f"    network: h2",
-                    f"    server: {ip}",
-                    f"    port: {port}",
+                    f"    server: 162.159.198.1",
+                    f"    port: 443",
                     f"    sni: {MASQUE_SNI}",
                     f"    private-key: \"{MASQUE_PRIVKEY}\"",
                     f"    public-key: \"{MASQUE_PUBKEY}\"",
