@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARPSCOUT Pages | 全球优选端点面板</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --header-bg: rgba(13, 18, 30, 0.85);
+      --text: #f3f4f6;
+      --text-dim: #9ca3af;
+      --text-muted: #6b7280;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --primary-dim: rgba(56, 189, 248, 0.12);
+      --accent: #818cf8;
+      --accent-dim: rgba(129, 140, 248, 0.12);
+      --cf-orange: #f38020;
+      --cf-orange-dim: rgba(243, 128, 32, 0.15);
+      --success: #10b981;
+      --success-dim: rgba(16, 185, 129, 0.15);
+      --warn: #f59e0b;
+      --warn-dim: rgba(245, 158, 11, 0.15);
+      --danger: #ef4444;
+      --danger-dim: rgba(239, 68, 68, 0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.06) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--header-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.85rem 1.5rem;
+    }
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f38020, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+    }
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      background: linear-gradient(to right, #ffffff, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-badges {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .badge-cf {
+      background: var(--cf-orange-dim);
+      color: #fb923c;
+      border-color: rgba(251, 146, 60, 0.3);
+    }
+    .badge-pages {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .btn-refresh:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+    }
+
+    main {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+    }
+    .stat-card.orange::after {
+      background: linear-gradient(90deg, var(--cf-orange), transparent);
+    }
+    .stat-card.green::after {
+      background: linear-gradient(90deg, var(--success), transparent);
+    }
+    .stat-card.purple::after {
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .stat-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .stat-sub {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* Subscription Card */
+    .sub-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(30, 41, 59, 0.85));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .sub-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .sub-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .sub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sub-url-box {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 0.6rem 0.85rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .sub-url-text {
+      flex: 1;
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      color: #38bdf8;
+      word-break: break-all;
+      user-select: all;
+    }
+    .sub-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #090d16;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-outline-orange {
+      background: transparent;
+      color: #fb923c;
+      border: 1px solid rgba(251, 146, 60, 0.4);
+    }
+    .btn-outline-orange:hover {
+      background: var(--cf-orange-dim);
+    }
+
+    /* Filters & Controls */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .region-tabs {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      max-height: 140px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .region-tabs::-webkit-scrollbar {
+      width: 4px;
+    }
+    .region-tabs::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+    .region-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .region-tab:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+    }
+    .region-tab.active {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.4);
+      font-weight: 700;
+    }
+    .tab-badge {
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.85rem;
+      min-width: 240px;
+    }
+    .search-input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 100%;
+      outline: none;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+
+    /* Endpoints Table */
+    .table-container {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(13, 18, 30, 0.95);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+      user-select: none;
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    tr.selected td {
+      background: rgba(56, 189, 248, 0.06);
+    }
+
+    .endpoint-cell {
+      font-family: var(--mono);
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-icon-copy {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .btn-icon-copy:hover {
+      color: var(--primary);
+      background: var(--primary-dim);
+    }
+
+    .country-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .flag-icon { font-size: 1.1rem; }
+    .colo-badge {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ping-badge {
+      font-family: var(--mono);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .ping-fast { background: var(--success-dim); color: #34d399; }
+    .ping-medium { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .ping-slow { background: var(--warn-dim); color: #fbbf24; }
+    .ping-high { background: var(--danger-dim); color: #f87171; }
+
+    .loss-zero { color: #34d399; font-weight: 600; }
+    .loss-bad { color: #f87171; font-weight: 700; }
+
+    .action-btn-group {
+      display: flex;
+      gap: 0.35rem;
+    }
+    .btn-action-sm {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-dim);
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-action-sm:hover {
+      background: var(--primary-dim);
+      color: var(--primary);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* Floating Batch Action Bar */
+    .floating-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 999px;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.2);
+      z-index: 100;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .floating-bar.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    .floating-count {
+      font-size: 0.85rem;
+      color: #fff;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .floating-count span {
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .floating-btns {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-backdrop.show { display: flex; }
+    .modal {
+      background: #111827;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 800px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      animation: modalIn 0.2s ease-out;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-header {
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .btn-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .code-preview {
+      width: 100%;
+      height: 380px;
+      background: #090d16;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      color: #a5f3fc;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      padding: 1rem;
+      outline: none;
+      resize: none;
+      line-height: 1.45;
+    }
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 300;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    footer a { color: var(--text-dim); text-decoration: none; }
+    footer a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <div class="brand-title">WARPSCOUT Pages</div>
+          <div class="brand-badges">
+            <span class="badge badge-cf">Cloudflare Anycast</span>
+            <span class="badge badge-pages">Pages CDN</span>
+          </div>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button class="btn-refresh" onclick="loadData(true)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+          刷新数据
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Stats Banner -->
+    <div class="stats-grid">
+      <div class="stat-card green">
+        <div class="stat-label">
+          <span>🚀 优选端点总数</span>
+        </div>
+        <div class="stat-val" id="stat-total">--</div>
+        <div class="stat-sub" id="stat-total-sub">正在拉取探测数据...</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">
+          <span>⚡ 最低隧道延迟</span>
+        </div>
+        <div class="stat-val" id="stat-best-ping">--</div>
+        <div class="stat-sub" id="stat-proto">协议: --</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">
+          <span>🌐 覆盖出口地区</span>
+        </div>
+        <div class="stat-val" id="stat-regions">--</div>
+        <div class="stat-sub" id="stat-regions-sub">--</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">
+          <span>🕒 最后更新时间</span>
+        </div>
+        <div class="stat-val" style="font-size: 1.15rem; line-height: 1.8;" id="stat-updated">--</div>
+        <div class="stat-sub">定时自动化探测刷新</div>
+      </div>
+    </div>
+
+    <!-- Multi-Client Subscription Hub -->
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+      <!-- Clash Meta / Mihomo Subscription -->
+      <div class="sub-card" style="margin-bottom: 0;">
+        <div class="sub-card-header">
+          <div class="sub-title-group">
+            <span style="font-size: 1.4rem;">📡</span>
+            <div>
+              <div class="sub-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>Clash Meta / Mihomo 远程订阅</span>
+                <span class="badge badge-pages" style="font-size: 0.72rem;">智能分流策略组</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 3px;">
+                支持 <strong>Clash Verge Rev</strong>、<strong>Clash Nyanpasu</strong>、<strong>Mihomo Party</strong>、Flclash，内置 47 国分流与自动测速优选
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-url-box">
+          <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
+          <div class="sub-url-text" id="sub-url-display">https://.../data/clash-sub.yaml</div>
+        </div>
+
+        <div class="sub-actions">
+          <button class="btn btn-primary" onclick="copySubUrl()">
+            📋 复制 Clash 订阅链接
+          </button>
+          <a href="#" id="btn-import-clash" class="btn btn-secondary">
+            🚀 一键导入 Clash
+          </a>
+          <a href="data/clash-sub.yaml" download="warpscout-clash.yaml" class="btn btn-secondary">
+            📥 下载 clash-sub.yaml
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Dialer-Proxy Landing Section -->
+    <div class="sub-card" style="border-color: rgba(129, 140, 248, 0.4); background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(30, 27, 75, 0.45)); box-shadow: 0 8px 32px rgba(129, 140, 248, 0.1);">
+      <div class="sub-card-header">
+        <div class="sub-title-group">
+          <span style="font-size: 1.5rem;">🌍</span>
+          <div>
+            <div class="sub-title" style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <span>全球多国纯净出口 (Dialer-Proxy 链式代理)</span>
+              <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; font-weight: 600;">100% 原生多国 IP · 解锁 ChatGPT / Netflix</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 5px; line-height: 1.55;">
+              由于 Cloudflare WARP 采用 Anycast 任播，直连会自动分配到最近机房（国内常到美西，GitHub Actions 到芝加哥）。借助 <strong>Dialer-Proxy 链式代理</strong>，将您的现有节点（如机场香港、日本、新加坡）作为前置跳板，WARP 优选端点作为落地机：<strong>前置是香港 → 出口 100% 呈现为 Cloudflare 香港原生 IP</strong>！彻底消除机场脏 IP 带来的封号与人机验证困扰。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chain Country Tabs -->
+      <div style="margin-top: 1.1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;" id="chain-country-tabs">
+        <button class="region-tab active" onclick="switchChainCountry('HK')">🇭🇰 香港 HK</button>
+        <button class="region-tab" onclick="switchChainCountry('JP')">🇯🇵 日本 JP</button>
+        <button class="region-tab" onclick="switchChainCountry('SG')">🇸🇬 新加坡 SG</button>
+        <button class="region-tab" onclick="switchChainCountry('TW')">🇹🇼 台湾 TW</button>
+        <button class="region-tab" onclick="switchChainCountry('US')">🇺🇸 美国 US</button>
+        <button class="region-tab" onclick="switchChainCountry('GB')">🇬🇧 英国 GB</button>
+        <button class="region-tab" onclick="switchChainCountry('DE')">🇩🇪 德国 DE</button>
+        <button class="region-tab" onclick="switchChainCountry('FR')">🇫🇷 法国 FR</button>
+      </div>
+
+      <!-- Chain Config Generator Box -->
+      <div style="margin-top: 1rem; background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); padding: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 280px;">
+            <span style="font-size: 0.82rem; color: var(--text-dim); white-space: nowrap;">您的前置节点名/关键词:</span>
+            <input type="text" id="chain-front-input" class="search-input" style="flex: 1; padding: 0.35rem 0.75rem; font-size: 0.82rem;" value="香港 01" oninput="updateChainPreview()">
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" onclick="copyCurrentChain()">
+              📋 复制当前国家配置
+            </button>
+            <button class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" onclick="copyAllChains()">
+              📦 复制全区 (8国) 落地配置
+            </button>
+          </div>
+        </div>
+
+        <textarea id="chain-preview-yaml" class="code-preview" style="height: 180px; font-size: 0.78rem;" readonly></textarea>
+      </div>
+
+      <!-- Quick Usage Tip -->
+      <div style="margin-top: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: var(--text-dim);">
+        <div>
+          💡 <strong>极简用法</strong>：直接复制上方订阅链接导入 Clash Verge Rev / Mihomo Party，在策略组中将 <code>🇭🇰 香港前置</code> 等选中您的机场节点，即可一键享受全区落地！
+        </div>
+        <button class="btn-action-sm" onclick="toggleChainGuide()">
+          📖 查看详细教程
+        </button>
+      </div>
+
+      <!-- Collapsible Guide -->
+      <div id="chain-guide-box" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.35); border-radius: var(--radius-sm); border: 1px solid var(--card-border); font-size: 0.82rem; line-height: 1.65;">
+        <h4 style="color: var(--primary); margin-bottom: 0.6rem;">📖 Clash Verge Rev / Mihomo Party 链式代理食用指南</h4>
+        <ol style="margin-left: 1.25rem; color: var(--text-dim);">
+          <li><strong style="color: #fff;">方式一（最推荐）：直接使用订阅内置策略组</strong><br>
+            导入本项目提供的 <code>clash-sub.yaml</code> 订阅后，客户端中会自动出现 <code>🌐 全球WARP纯净落地</code> 和 <code>🇭🇰 香港前置</code>、<code>🇯🇵 日本前置</code> 等策略组。您只需将前置组选择为您现有的机场节点，落地组即刻生效！</li>
+          <li><strong style="color: #fff;">方式二：将配置合并到现有机场订阅中</strong><br>
+            在 Clash Verge 中新建一个 Merge（合并扩展配置），将上方复制的 YAML 代理节点粘贴到 <code>prepend-proxies</code>，并将节点名称添加到您现有的 <code>PROXY</code> 代理组中即可。</li>
+          <li><strong style="color: #fff;">核心优势</strong><br>
+            不仅保证 100% 得到目标国家的原生出口，而且由于国内段流量走的是您机场的优质专线，<strong>延迟和连接稳定性大幅优于直连 WARP</strong>！</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="region-tabs" id="region-tabs">
+        <button class="region-tab active" onclick="setRegionFilter('ALL')">
+          🌐 全部 <span class="tab-badge" id="tab-badge-all">0</span>
+        </button>
+      </div>
+
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" class="search-input" placeholder="搜索 IP、端口、Colo 机房..." oninput="handleSearch(this.value)">
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 40px; text-align: center;">
+              <input type="checkbox" id="check-all" onchange="toggleSelectAll(this.checked)">
+            </th>
+            <th style="width: 50px;">#</th>
+            <th>端点地址 (IP:Port)</th>
+            <th>出口国家/地区</th>
+            <th>边缘机房 (Colo)</th>
+            <th>隧道延迟 (Tun Ping)</th>
+            <th>丢包率</th>
+            <th>状态</th>
+            <th style="text-align: right;">快捷操作</th>
+          </tr>
+        </thead>
+        <tbody id="endpoints-tbody">
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+              正在加载优选端点列表...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Floating Batch Action Bar -->
+  <div class="floating-bar" id="floating-bar">
+    <div class="floating-count">
+      已勾选 <span id="selected-count">0</span> 个端点
+    </div>
+    <div class="floating-btns">
+      <button class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchExportClash()">
+        📦 批量导出 Clash 配置
+      </button>
+      <button class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchExportWireGuard()">
+        📦 批量导出 WireGuard
+      </button>
+      <button class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;" onclick="batchCopyIPs()">
+        📋 复制 IP 列表
+      </button>
+      <button class="btn btn-outline-orange" style="padding: 0.4rem 0.75rem; font-size: 0.8rem;" onclick="clearSelection()">
+        ✖ 取消
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal for Code / Config Output -->
+  <div class="modal-backdrop" id="export-modal" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">导出配置</div>
+        <button class="btn-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <textarea id="modal-code" class="code-preview" readonly></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="downloadModalContent()">
+          💾 保存为文件
+        </button>
+        <button class="btn btn-primary" onclick="copyModalContent()">
+          📋 复制全部内容
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span id="toast-icon">✓</span>
+    <span id="toast-text">已成功复制</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem;">
+      <div>WARPSCOUT Pages &copy; 2026 Powered by Cloudflare Pages &amp; GitHub Actions</div>
+      <div>
+        <a href="https://github.com/vernette/warpscout" target="_blank" rel="noopener">GitHub 项目主页</a>
+        &bull;
+        <a href="data/results.json" target="_blank">查看原始 JSON</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let globalData = null;
+    let selectedEndpoints = new Set();
+    let currentRegion = 'ALL';
+    let currentSearch = '';
+    let modalFilename = 'config.txt';
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set subscription URLs
+      const baseUrl = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+      const clashSubUrl = baseUrl + '/data/clash-sub.yaml';
+      const v2raySubUrl = baseUrl + '/data/v2ray-sub.txt';
+      
+      const subUrlElem = document.getElementById('sub-url-display');
+      if (subUrlElem) subUrlElem.textContent = clashSubUrl;
+      
+      const v2rayElem = document.getElementById('v2ray-sub-url-display');
+      if (v2rayElem) v2rayElem.textContent = v2raySubUrl;
+
+      const btnImport = document.getElementById('btn-import-clash');
+      if (btnImport) btnImport.href = `clash://install-config?url=${encodeURIComponent(clashSubUrl)}&name=WARPSCOUT`;
+
+      loadData();
+    });
+
+    async function loadData(showToastMsg = false) {
+      try {
+        const res = await fetch('data/results.json?t=' + Date.now());
+        if (!res.ok) throw new Error('无法拉取 data/results.json');
+        globalData = await res.json();
+        renderDashboard();
+        if (showToastMsg) showToast('✓ 数据刷新成功');
+      } catch (err) {
+        console.error(err);
+        document.getElementById('endpoints-tbody').innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 3rem; color: var(--danger);">
+              拉取数据失败: ${err.message}<br>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; display: inline-block;">
+                请确认 GitHub Actions 扫描任务已运行完毕并生成了 data/results.json
+              </span>
+            </td>
+          </tr>
+        `;
+      }
+    }
+
+    function renderDashboard() {
+      if (!globalData) return;
+
+      // Stats
+      const total = globalData.working_count || globalData.endpoints.length;
+      document.getElementById('stat-total').textContent = total + ' 个';
+      document.getElementById('stat-total-sub').textContent = `共扫描 ${globalData.total_scanned || total} 个端点`;
+
+      document.getElementById('stat-best-ping').textContent = (globalData.best_latency_ms || 0) + ' ms';
+      document.getElementById('stat-proto').textContent = `协议: ${globalData.protocol || 'awg'}`;
+
+      document.getElementById('stat-updated').textContent = globalData.updated_at || '--';
+
+      const regions = globalData.regions || [];
+      document.getElementById('stat-regions').textContent = regions.length + ' 个地区';
+      document.getElementById('stat-regions-sub').textContent = regions.map(r => `${r.flag} ${r.name} (${r.count})`).slice(0, 3).join(' ') + (regions.length > 3 ? ' ...' : '');
+
+      // Region tabs
+      renderRegionTabs(regions, total);
+
+      // Render table
+      renderTable();
+
+      // Render chain preview
+      updateChainPreview();
+    }
+
+    function renderRegionTabs(regions, total) {
+      const container = document.getElementById('region-tabs');
+      let html = `
+        <button class="region-tab ${currentRegion === 'ALL' ? 'active' : ''}" onclick="setRegionFilter('ALL')">
+          🌐 全部 <span class="tab-badge">${total}</span>
+        </button>
+      `;
+
+      regions.forEach(r => {
+        html += `
+          <button class="region-tab ${currentRegion === r.code ? 'active' : ''}" onclick="setRegionFilter('${r.code}')">
+            ${r.flag || '🌐'} ${r.name || r.code} <span class="tab-badge">${r.count}</span>
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function setRegionFilter(code) {
+      currentRegion = code;
+      const tabs = document.querySelectorAll('.region-tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      renderTable();
+    }
+
+    function handleSearch(val) {
+      currentSearch = val.trim().toLowerCase();
+      renderTable();
+    }
+
+    function renderTable() {
+      if (!globalData || !globalData.endpoints) return;
+
+      const tbody = document.getElementById('endpoints-tbody');
+      const filtered = globalData.endpoints.filter(ep => {
+        // Region filter
+        if (currentRegion !== 'ALL' && ep.country !== currentRegion) {
+          return false;
+        }
+        // Search filter
+        if (currentSearch) {
+          const text = `${ep.endpoint} ${ep.ip} ${ep.colo} ${ep.colo_city} ${ep.country} ${ep.country_name}`.toLowerCase();
+          if (!text.includes(currentSearch)) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+              没有符合当前筛选条件的优选端点
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      let rows = '';
+      filtered.forEach((ep, index) => {
+        const isChecked = selectedEndpoints.has(ep.id);
+        const ping = ep.tun_ping_ms || ep.ep_ping_ms || 0;
+        let pingClass = 'ping-fast';
+        if (ping > 180) pingClass = 'ping-high';
+        else if (ping > 130) pingClass = 'ping-slow';
+        else if (ping > 80) pingClass = 'ping-medium';
+
+        const loss = ep.loss_pct || 0;
+        const lossHtml = loss === 0 
+          ? `<span class="loss-zero">0%</span>` 
+          : `<span class="loss-bad">${loss.toFixed(0)}%</span>`;
+
+        rows += `
+          <tr class="${isChecked ? 'selected' : ''}">
+            <td style="text-align: center;">
+              <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelect(${ep.id}, this.checked)">
+            </td>
+            <td style="color: var(--text-muted); font-family: var(--mono);">${index + 1}</td>
+            <td>
+              <div class="endpoint-cell">
+                <span style="font-weight: 600;">${ep.endpoint}</span>
+                ${ep.transit_server ? `<span style="font-size: 0.72rem; color: var(--text-dim); display: block;">via ${ep.transit_server}</span>` : ''}
+                <button class="btn-icon-copy" title="复制端点" onclick="copyText('${ep.endpoint}')">📋</button>
+              </div>
+            </td>
+            <td>
+              <div class="country-cell">
+                <span class="flag-icon">${ep.flag || '🌐'}</span>
+                <span>${ep.country_name || ep.country || 'Anycast'}</span>
+              </div>
+            </td>
+            <td>
+              <span class="colo-badge">${ep.colo || 'WARP'}</span>
+              <span style="font-size: 0.78rem; color: var(--text-dim); margin-left: 4px;">${ep.colo_city || ''}</span>
+            </td>
+            <td>
+              <span class="ping-badge ${pingClass}">${ping} ms</span>
+            </td>
+            <td>${lossHtml}</td>
+            <td>
+              <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; color: ${ep.torn ? 'var(--danger)' : 'var(--success)'};">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: ${ep.torn ? 'var(--danger)' : 'var(--success)'};"></span>
+                ${ep.torn ? '阻断' : '正常'}
+              </span>
+            </td>
+            <td style="text-align: right;">
+              <div class="action-btn-group" style="justify-content: flex-end;">
+                ${ep.vless_uri ? `<button class="btn-action-sm" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);" onclick="copyVlessByIndex(${index})" title="复制单个 v2rayN / VLESS 节点链接">v2rayN</button>` : ''}
+                <button class="btn-action-sm" onclick="exportSingleClash(${ep.id})">Clash</button>
+                <button class="btn-action-sm" onclick="exportSingleWG(${ep.id})">WG</button>
+                <button class="btn-action-sm" onclick="copyText('${ep.endpoint}')">复制IP</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = rows;
+      updateFloatingBar();
+    }
+
+    // Selection Handlers
+    function toggleSelect(id, checked) {
+      if (checked) {
+        selectedEndpoints.add(id);
+      } else {
+        selectedEndpoints.delete(id);
+      }
+      renderTable();
+    }
+
+    function toggleSelectAll(checked) {
+      if (!globalData || !globalData.endpoints) return;
+      if (checked) {
+        globalData.endpoints.forEach(ep => selectedEndpoints.add(ep.id));
+      } else {
+        selectedEndpoints.clear();
+      }
+      renderTable();
+    }
+
+    function clearSelection() {
+      selectedEndpoints.clear();
+      document.getElementById('check-all').checked = false;
+      renderTable();
+    }
+
+    function updateFloatingBar() {
+      const bar = document.getElementById('floating-bar');
+      const count = selectedEndpoints.size;
+      document.getElementById('selected-count').textContent = count;
+      if (count > 0) {
+        bar.classList.add('show');
+      } else {
+        bar.classList.remove('show');
+      }
+    }
+
+    // Client-side Config Generation
+    function buildClashProxy(ep) {
+      const acct = globalData.account || {};
+      const flag = ep.flag || '🌐';
+      const cCode = ep.country || 'WARP';
+      const colo = ep.colo || 'ANY';
+      const warpName = ep.warp_name || `${flag} [${cCode}-${colo}] WARP 纯净出口`;
+
+      let lines = [];
+      if (ep.transit_raw) {
+        lines.push(ep.transit_raw);
+      }
+      lines.push(`  - name: "${warpName}"`);
+      lines.push(`    type: wireguard`);
+      lines.push(`    server: ${ep.ip || '162.159.192.1'}`);
+      lines.push(`    port: ${ep.port || 2408}`);
+      lines.push(`    ip: ${acct.ipv4 || '172.16.0.2'}`);
+      lines.push(`    ipv6: ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}`);
+      lines.push(`    public-key: ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`);
+      lines.push(`    private-key: ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`);
+      if (ep.transit_name) {
+        lines.push(`    dialer-proxy: "${ep.transit_name}"`);
+      }
+      lines.push(`    remote-dns-resolve: true`);
+      lines.push(`    dns: [1.1.1.1, 1.0.0.1]`);
+      lines.push(`    udp: true`);
+      lines.push(`    mtu: 1280`);
+
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        lines.push(`    amnezia-wg:`);
+        lines.push(`      jc: ${awg.jc || 6}`);
+        lines.push(`      jmin: ${awg.jmin || 40}`);
+        lines.push(`      jmax: ${awg.jmax || 70}`);
+        lines.push(`      s1: ${awg.s1 || 0}`);
+        lines.push(`      s2: ${awg.s2 || 0}`);
+        lines.push(`      h1: ${awg.h1 || 1}`);
+        lines.push(`      h2: ${awg.h2 || 2}`);
+        lines.push(`      h3: ${awg.h3 || 3}`);
+        lines.push(`      h4: ${awg.h4 || 4}`);
+      }
+      return lines.join('\n');
+    }
+
+    function buildWireGuardConf(ep) {
+      const acct = globalData.account || {};
+      let conf = [
+        `[Interface]`,
+        `PrivateKey = ${acct.private_key || 'GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424='}`,
+        `Address = ${acct.ipv4 || '172.16.0.2'}/32, ${acct.ipv6 || '2606:4700:110:81e9:447d:555d:f9eb:1786'}/128`,
+        `DNS = 1.1.1.1, 1.0.0.1`,
+        `MTU = 1280`
+      ];
+
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        conf.push(`Jc = ${awg.jc || 6}`);
+        conf.push(`Jmin = ${awg.jmin || 40}`);
+        conf.push(`Jmax = ${awg.jmax || 70}`);
+        conf.push(`S1 = ${awg.s1 || 0}`);
+        conf.push(`S2 = ${awg.s2 || 0}`);
+        conf.push(`H1 = ${awg.h1 || 1}`);
+        conf.push(`H2 = ${awg.h2 || 2}`);
+        conf.push(`H3 = ${awg.h3 || 3}`);
+        conf.push(`H4 = ${awg.h4 || 4}`);
+      }
+
+      conf.push(``);
+      conf.push(`[Peer]`);
+      conf.push(`PublicKey = ${acct.peer_public_key || 'bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo='}`);
+      conf.push(`Endpoint = ${ep.endpoint}`);
+      conf.push(`AllowedIPs = 0.0.0.0/0, ::/0`);
+      return conf.join('\n');
+    }
+
+    // Export Actions
+    function exportSingleClash(id) {
+      const ep = globalData.endpoints.find(e => e.id === id);
+      if (!ep) return;
+      const yaml = `proxies:\n${buildClashProxy(ep)}\n`;
+      showModal(`Clash 47国 WARP 纯净落地配置 (${ep.country_name} ${ep.colo})`, yaml, `warp-${ep.country}-${ep.colo}.yaml`);
+    }
+
+    function exportSingleWG(id) {
+      const ep = globalData.endpoints.find(e => e.id === id);
+      if (!ep) return;
+      const conf = buildWireGuardConf(ep);
+      showModal(`WireGuard 配置 (${ep.endpoint})`, conf, `warp-${ep.colo}-${ep.port}.conf`);
+    }
+
+    function batchExportClash() {
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.id));
+      if (selected.length === 0) return;
+
+      let proxyBlocks = selected.map(e => buildClashProxy(e)).join('\n');
+      let proxyNames = selected.map(e => `      - "${e.warp_name || `${e.flag || '🌐'} [${e.country || 'WARP'}-${e.colo || 'ANY'}] WARP ${e.endpoint}`}"`).join('\n');
+
+      let yaml = [
+        `# WARPSCOUT 批量优选节点配置 (已选 ${selected.length} 个节点)`,
+        `# 生成时间: ${new Date().toISOString()}`,
+        `port: 7890`,
+        `socks-port: 7891`,
+        `mode: rule`,
+        `log-level: info`,
+        ``,
+        `proxies:`,
+        proxyBlocks,
+        ``,
+        `proxy-groups:`,
+        `  - name: "⚡ 自动优选"`,
+        `    type: url-test`,
+        `    url: http://www.gstatic.com/generate_204`,
+        `    interval: 300`,
+        `    tolerance: 50`,
+        `    proxies:`,
+        proxyNames,
+        ``,
+        `  - name: "🚀 节点选择"`,
+        `    type: select`,
+        `    proxies:`,
+        `      - "⚡ 自动优选"`,
+        proxyNames,
+        ``,
+        `rules:`,
+        `  - MATCH,🚀 节点选择`
+      ].join('\n');
+
+      showModal(`批量导出 Clash 配置 (${selected.length} 个端点)`, yaml, `warpscout-batch-${selected.length}.yaml`);
+    }
+
+    function batchExportWireGuard() {
+      const selected = globalData.endpoints.filter(e => selectedEndpoints.has(e.id));
+      if (selected.length === 0) return;
+
+      let confs = selected.map((e, idx) => {
+        return `### -----------------------------------------------------\n### [${idx + 1}] ${e.endpoint} | ${e.flag} ${e.country_name} (${e.colo})\n### -----------------------------------------------------\n${buildWireGuardConf(e)}`;
+      }).join('\n\n');
+
+      showModal(`批量导出 WireGuard 配置 (${selected.length} 个端点)`, confs, `warpscout-batch-${selected.length}.conf`);
+    }
+
+    function batchCopyIPs() {
+      const list = Array.from(selectedEndpoints).join('\n');
+      copyText(list, `已复制 ${selectedEndpoints.size} 个端点 IP 地址`);
+    }
+
+    // Modal Helpers
+    function showModal(title, code, filename) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-code').value = code;
+      modalFilename = filename;
+      document.getElementById('export-modal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('export-modal').classList.remove('show');
+    }
+
+    function copyModalContent() {
+      const code = document.getElementById('modal-code').value;
+      copyText(code, '配置内容已成功复制到剪贴板');
+    }
+
+    function downloadModalContent() {
+      const code = document.getElementById('modal-code').value;
+      const blob = new Blob([code], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = modalFilename;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast(`已开始下载 ${modalFilename}`);
+    }
+
+    function copySubUrl() {
+      const url = document.getElementById('sub-url-display').textContent;
+      copyText(url, 'Clash 订阅链接已复制');
+    }
+
+
+
+    function copyText(text, msg = '已复制到剪贴板') {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(msg)).catch(() => fallbackCopy(text, msg));
+      } else {
+        fallbackCopy(text, msg);
+      }
+    }
+
+    function fallbackCopy(text, msg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(msg);
+      } catch (e) {
+        prompt('请手动复制内容:', text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    // Global Dialer-Proxy Landing Logic
+    let currentChainCountry = 'HK';
+    const chainDefs = {
+      'HK': { flag: '🇭🇰', country: 'HK', name: '香港', colo: 'HKG', defaultFront: '香港 01', desc: '解锁 Netflix HK / Viu / ChatGPT' },
+      'JP': { flag: '🇯🇵', country: 'JP', name: '日本', colo: 'NRT', defaultFront: '日本 01', desc: '解锁 Netflix JP / DMM / Abema / ChatGPT' },
+      'SG': { flag: '🇸🇬', country: 'SG', name: '新加坡', colo: 'SIN', defaultFront: '新加坡 01', desc: '解锁 Netflix SG / Disney+ / ChatGPT' },
+      'TW': { flag: '🇹🇼', country: 'TW', name: '台湾', colo: 'TPE', defaultFront: '台湾 01', desc: '解锁动画疯 / Netflix TW / ChatGPT' },
+      'US': { flag: '🇺🇸', country: 'US', name: '美国', colo: 'ORD', defaultFront: '美国 01', desc: '解锁 Netflix US / Hulu / ChatGPT' },
+      'GB': { flag: '🇬🇧', country: 'GB', name: '英国', colo: 'LHR', defaultFront: '英国 01', desc: '解锁 BBC iPlayer / 英国纯净出口' },
+      'DE': { flag: '🇩🇪', country: 'DE', name: '德国', colo: 'FRA', defaultFront: '德国 01', desc: '欧洲本土合规与纯净出口' },
+      'FR': { flag: '🇫🇷', country: 'FR', name: '法国', colo: 'CDG', defaultFront: '法国 01', desc: '法国本土纯净出口 / 欧洲流媒体' }
+    };
+
+    function switchChainCountry(code) {
+      currentChainCountry = code;
+      const tabs = document.querySelectorAll('#chain-country-tabs .region-tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.textContent.includes(code));
+      });
+      document.getElementById('chain-front-input').value = chainDefs[code].defaultFront;
+      updateChainPreview();
+    }
+
+    function updateChainPreview() {
+      if (!globalData || !globalData.endpoints || globalData.endpoints.length === 0) return;
+      const best = globalData.endpoints[0];
+      const acct = globalData.account || {};
+      const def = chainDefs[currentChainCountry] || chainDefs['HK'];
+      const frontName = (document.getElementById('chain-front-input').value || '').trim() || def.defaultFront;
+
+      let awgBlock = '';
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        awgBlock = `
+    reserved: [0, 0, 0]
+    remote-dns-resolve: true
+    amnezia-wg:
+      jc: ${awg.jc || 6}
+      jmin: ${awg.jmin || 10}
+      jmax: ${awg.jmax || 50}
+      s1: ${awg.s1 || 0}
+      s2: ${awg.s2 || 0}
+      h1: ${awg.h1 || 1}
+      h2: ${awg.h2 || 2}
+      h3: ${awg.h3 || 3}
+      h4: ${awg.h4 || 4}
+      i1: "${awg.i1 || ''}"`;
+      }
+
+      const yaml = `# ${def.flag} [${def.name}] WARP 链式纯净落地配置 (${def.desc})
+# 原理: 本地 -> 您的前置[${frontName}] -> Cloudflare WARP -> 目标网站 (呈现 100% ${def.name} 原生 IP)
+proxies:
+  - name: "${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口"
+    type: wireguard
+    server: ${best.ip}
+    port: ${best.port}
+    ip: ${acct.ipv4 || '172.16.0.2'}
+    ipv6: ${acct.ipv6 || ''}
+    public-key: ${acct.peer_public_key || ''}
+    private-key: ${acct.private_key || ''}
+    udp: true
+    remote-dns-resolve: true
+    dialer-proxy: "${frontName}"${awgBlock}
+
+# 搭配策略组示例
+proxy-groups:
+  - name: "🌐 ${def.name}纯净解锁"
+    type: select
+    proxies:
+      - "${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口"
+      - "${frontName}"
+      - DIRECT`;
+
+      const previewElem = document.getElementById('chain-preview-yaml');
+      if (previewElem) previewElem.value = yaml;
+    }
+
+    function copyCurrentChain() {
+      const yaml = document.getElementById('chain-preview-yaml').value;
+      copyText(yaml, `✓ 已复制 ${chainDefs[currentChainCountry].name} 链式代理配置`);
+    }
+
+    function copyAllChains() {
+      if (!globalData || !globalData.endpoints || globalData.endpoints.length === 0) return;
+      const best = globalData.endpoints[0];
+      const acct = globalData.account || {};
+
+      let awgBlock = '';
+      if (acct.amnezia_wg) {
+        const awg = acct.amnezia_wg;
+        awgBlock = `
+    reserved: [0, 0, 0]
+    remote-dns-resolve: true
+    amnezia-wg:
+      jc: ${awg.jc || 6}
+      jmin: ${awg.jmin || 10}
+      jmax: ${awg.jmax || 50}
+      s1: ${awg.s1 || 0}
+      s2: ${awg.s2 || 0}
+      h1: ${awg.h1 || 1}
+      h2: ${awg.h2 || 2}
+      h3: ${awg.h3 || 3}
+      h4: ${awg.h4 || 4}
+      i1: "${awg.i1 || ''}"`;
+      }
+
+      let proxiesYaml = 'proxies:\n';
+      let groupProxies = '';
+      let frontGroups = '';
+
+      Object.keys(chainDefs).forEach(code => {
+        const def = chainDefs[code];
+        const pName = `${def.flag} [${def.country}-落地] WARP ${def.name}纯净出口`;
+        const front = `${def.flag} ${def.name}-前置节点`;
+        proxiesYaml += `  - name: "${pName}"
+    type: wireguard
+    server: ${best.ip}
+    port: ${best.port}
+    ip: ${acct.ipv4 || '172.16.0.2'}
+    ipv6: ${acct.ipv6 || ''}
+    public-key: ${acct.peer_public_key || ''}
+    private-key: ${acct.private_key || ''}
+    udp: true
+    remote-dns-resolve: true
+    dialer-proxy: "${front}"${awgBlock}\n\n`;
+
+        groupProxies += `      - "${pName}"\n`;
+        frontGroups += `  - name: "${front}"\n    type: select\n    proxies:\n      - DIRECT\n\n`;
+      });
+
+      const fullYaml = `# ==========================================================\n# WARPSCOUT 全球 8 国 WARP 纯净落地链式代理配置\n# 适用于: Clash Verge Rev / Mihomo Party / Sing-box / Flclash\n# ==========================================================\n\n` +
+        proxiesYaml +
+        `proxy-groups:\n  - name: "🌐 全球WARP纯净落地"\n    type: select\n    proxies:\n` +
+        groupProxies +
+        `      - DIRECT\n\n` +
+        `  # 前置节点定义（在客户端策略组中选中您的机场对应地区节点即可）\n` +
+        frontGroups;
+
+      copyText(fullYaml, '✓ 已复制全球全区 (8国) 链式落地配置');
+    }
+
+    function toggleChainGuide() {
+      const box = document.getElementById('chain-guide-box');
+      if (box) box.style.display = box.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+  </script>
+</body>
+</html>
