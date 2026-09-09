@@ -1,325 +1,177 @@
 {
   "status": "success",
-  "generated_at": "2026-09-09 08:52:59 UTC",
-  "timestamp": 1788943979,
+  "generated_at": "2026-09-09 09:58:21 UTC",
+  "timestamp": 1788947901,
   "counts": {
-    "total": 38,
-    "green_countries": 11,
+    "total": 27,
+    "awg_count": 19,
+    "masque_count": 8,
     "protocols": [
       "WireGuard (AmneziaWG)",
-      "MASQUE (QUIC)",
-      "Cloudflare WARP Egress"
+      "MASQUE (QUIC)"
     ]
   },
-  "regions": [
-    {
-      "code": "DE",
-      "name": "德国",
-      "flag": "🇩🇪",
-      "colo": "FRA",
-      "city": "法兰克福",
-      "count": 2
-    },
-    {
-      "code": "JP",
-      "name": "日本",
-      "flag": "🇯🇵",
-      "colo": "NRT",
-      "city": "东京",
-      "count": 2
-    },
-    {
-      "code": "US",
-      "name": "美国",
-      "flag": "🇺🇸",
-      "colo": "LAX",
-      "city": "洛杉矶",
-      "count": 2
-    },
-    {
-      "code": "GB",
-      "name": "英国",
-      "flag": "🇬🇧",
-      "colo": "LHR",
-      "city": "伦敦",
-      "count": 2
-    },
-    {
-      "code": "FR",
-      "name": "法国",
-      "flag": "🇫🇷",
-      "colo": "CDG",
-      "city": "巴黎",
-      "count": 2
-    },
-    {
-      "code": "SG",
-      "name": "新加坡",
-      "flag": "🇸🇬",
-      "colo": "SIN",
-      "city": "新加坡",
-      "count": 2
-    },
-    {
-      "code": "MX",
-      "name": "墨西哥",
-      "flag": "🇲🇽",
-      "colo": "QRO",
-      "city": "克雷塔罗",
-      "count": 2
-    },
-    {
-      "code": "KR",
-      "name": "韩国",
-      "flag": "🇰🇷",
-      "colo": "ICN",
-      "city": "首尔",
-      "count": 2
-    },
-    {
-      "code": "CA",
-      "name": "加拿大",
-      "flag": "🇨🇦",
-      "colo": "YYZ",
-      "city": "多伦多",
-      "count": 2
-    },
-    {
-      "code": "HK",
-      "name": "香港",
-      "flag": "🇭🇰",
-      "colo": "HKG",
-      "city": "香港",
-      "count": 2
-    },
-    {
-      "code": "TW",
-      "name": "台湾",
-      "flag": "🇹🇼",
-      "colo": "TPE",
-      "city": "台北",
-      "count": 2
-    }
-  ],
   "endpoints": [
     {
       "id": 1,
-      "name": "⚡ [DE-CF] 🇩🇪 德国 WARP 01 (法兰克福)",
-      "country": "DE",
-      "country_name": "德国",
-      "flag": "🇩🇪",
-      "colo": "FRA",
-      "city": "法兰克福",
+      "name": "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 2,
-      "name": "⚡ [DE-CF] 🇩🇪 德国 WARP 02 (法兰克福)",
-      "country": "DE",
-      "country_name": "德国",
-      "flag": "🇩🇪",
-      "colo": "FRA",
-      "city": "法兰克福",
+      "name": "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 3,
-      "name": "⚡ [JP-CF] 🇯🇵 日本 WARP 01 (东京)",
-      "country": "JP",
-      "country_name": "日本",
-      "flag": "🇯🇵",
-      "colo": "NRT",
-      "city": "东京",
+      "name": "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 4,
-      "name": "⚡ [JP-CF] 🇯🇵 日本 WARP 02 (东京)",
-      "country": "JP",
-      "country_name": "日本",
-      "flag": "🇯🇵",
-      "colo": "NRT",
-      "city": "东京",
+      "name": "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 5,
-      "name": "⚡ [US-CF] 🇺🇸 美国 WARP 01 (洛杉矶)",
-      "country": "US",
-      "country_name": "美国",
-      "flag": "🇺🇸",
-      "colo": "LAX",
-      "city": "洛杉矶",
+      "name": "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 6,
-      "name": "⚡ [US-CF] 🇺🇸 美国 WARP 02 (洛杉矶)",
-      "country": "US",
-      "country_name": "美国",
-      "flag": "🇺🇸",
-      "colo": "LAX",
-      "city": "洛杉矶",
+      "name": "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 7,
-      "name": "⚡ [GB-CF] 🇬🇧 英国 WARP 01 (伦敦)",
-      "country": "GB",
-      "country_name": "英国",
-      "flag": "🇬🇧",
-      "colo": "LHR",
-      "city": "伦敦",
+      "name": "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 8,
-      "name": "⚡ [GB-CF] 🇬🇧 英国 WARP 02 (伦敦)",
-      "country": "GB",
-      "country_name": "英国",
-      "flag": "🇬🇧",
-      "colo": "LHR",
-      "city": "伦敦",
+      "name": "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 9,
-      "name": "⚡ [FR-CF] 🇫🇷 法国 WARP 01 (巴黎)",
-      "country": "FR",
-      "country_name": "法国",
-      "flag": "🇫🇷",
-      "colo": "CDG",
-      "city": "巴黎",
+      "name": "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 10,
-      "name": "⚡ [FR-CF] 🇫🇷 法国 WARP 02 (巴黎)",
-      "country": "FR",
-      "country_name": "法国",
-      "flag": "🇫🇷",
-      "colo": "CDG",
-      "city": "巴黎",
+      "name": "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 11,
-      "name": "⚡ [SG-CF] 🇸🇬 新加坡 WARP 01 (新加坡)",
-      "country": "SG",
-      "country_name": "新加坡",
-      "flag": "🇸🇬",
-      "colo": "SIN",
-      "city": "新加坡",
+      "name": "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 12,
-      "name": "⚡ [SG-CF] 🇸🇬 新加坡 WARP 02 (新加坡)",
-      "country": "SG",
-      "country_name": "新加坡",
-      "flag": "🇸🇬",
-      "colo": "SIN",
-      "city": "新加坡",
+      "name": "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 13,
-      "name": "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 01 (克雷塔罗)",
-      "country": "MX",
-      "country_name": "墨西哥",
-      "flag": "🇲🇽",
-      "colo": "QRO",
-      "city": "克雷塔罗",
+      "name": "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 14,
-      "name": "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 02 (克雷塔罗)",
-      "country": "MX",
-      "country_name": "墨西哥",
-      "flag": "🇲🇽",
-      "colo": "QRO",
-      "city": "克雷塔罗",
+      "name": "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 15,
-      "name": "⚡ [KR-CF] 🇰🇷 韩国 WARP 01 (首尔)",
-      "country": "KR",
-      "country_name": "韩国",
-      "flag": "🇰🇷",
-      "colo": "ICN",
-      "city": "首尔",
+      "name": "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 16,
-      "name": "⚡ [KR-CF] 🇰🇷 韩国 WARP 02 (首尔)",
-      "country": "KR",
-      "country_name": "韩国",
-      "flag": "🇰🇷",
-      "colo": "ICN",
-      "city": "首尔",
+      "name": "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 17,
-      "name": "⚡ [CA-CF] 🇨🇦 加拿大 WARP 01 (多伦多)",
-      "country": "CA",
-      "country_name": "加拿大",
-      "flag": "🇨🇦",
-      "colo": "YYZ",
-      "city": "多伦多",
+      "name": "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 18,
-      "name": "⚡ [CA-CF] 🇨🇦 加拿大 WARP 02 (多伦多)",
-      "country": "CA",
-      "country_name": "加拿大",
-      "flag": "🇨🇦",
-      "colo": "YYZ",
-      "city": "多伦多",
+      "name": "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 19,
-      "name": "⚡ [HK-CF] 🇭🇰 香港 WARP 01 (香港)",
-      "country": "HK",
-      "country_name": "香港",
-      "flag": "🇭🇰",
-      "colo": "HKG",
-      "city": "香港",
+      "name": "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)",
+      "protocol": "WireGuard/AWG",
       "status": "active"
     },
     {
       "id": 20,
-      "name": "⚡ [HK-CF] 🇭🇰 香港 WARP 02 (香港)",
-      "country": "HK",
-      "country_name": "香港",
-      "flag": "🇭🇰",
-      "colo": "HKG",
-      "city": "香港",
+      "name": "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)",
+      "protocol": "MASQUE",
       "status": "active"
     },
     {
       "id": 21,
-      "name": "⚡ [TW-CF] 🇹🇼 台湾 WARP 01 (台北)",
-      "country": "TW",
-      "country_name": "台湾",
-      "flag": "🇹🇼",
-      "colo": "TPE",
-      "city": "台北",
+      "name": "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)",
+      "protocol": "MASQUE",
       "status": "active"
     },
     {
       "id": 22,
-      "name": "⚡ [TW-CF] 🇹🇼 台湾 WARP 02 (台北)",
-      "country": "TW",
-      "country_name": "台湾",
-      "flag": "🇹🇼",
-      "colo": "TPE",
-      "city": "台北",
+      "name": "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)",
+      "protocol": "MASQUE",
+      "status": "active"
+    },
+    {
+      "id": 23,
+      "name": "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)",
+      "protocol": "MASQUE",
+      "status": "active"
+    },
+    {
+      "id": 24,
+      "name": "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)",
+      "protocol": "MASQUE",
+      "status": "active"
+    },
+    {
+      "id": 25,
+      "name": "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)",
+      "protocol": "MASQUE",
+      "status": "active"
+    },
+    {
+      "id": 26,
+      "name": "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)",
+      "protocol": "MASQUE",
+      "status": "active"
+    },
+    {
+      "id": 27,
+      "name": "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)",
+      "protocol": "MASQUE",
       "status": "active"
     }
   ]

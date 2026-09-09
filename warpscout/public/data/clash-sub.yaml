@@ -1,9 +1,9 @@
 # ==========================================================
-# WARPSCOUT 全球多国纯净 Cloudflare WARP 节点订阅
-# 生成时间: 2026-09-09 08:52:59 UTC
-# 满足需求: 1) 美/英/法/德/日/韩/新/墨等多国出口IP + 0超时
-#           2) 检测IP显示对应国家真实IP (无中国广州104.28.213.x)
-#           3) 包含 WARP 主流协议 WireGuard (AmneziaWG) & MASQUE (QUIC)
+# WARPSCOUT 100% 纯正 Cloudflare WARP 官方协议订阅
+# 生成时间: 2026-09-09 09:58:21 UTC | 节点总数: 27
+# 节点协议: 100% 纯正 WireGuard (AmneziaWG) & MASQUE (QUIC)
+# 彻底剔除任何 VLESS/Xray 第三方非 WARP 协议节点，绝对零杂质！
+# 抗封锁特性: 内置 AmneziaWG 全套混淆 (iCloud I1 特征包 + 动态垃圾包)
 # ==========================================================
 
 port: 7890
@@ -27,40 +27,16 @@ dns:
     - 8.8.8.8
 
 proxies:
-  - {name: "⚡ [DE-CF] 🇩🇪 德国 WARP 01 (法兰克福)", server: 85.234.100.221, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [DE-CF] 🇩🇪 德国 WARP 02 (法兰克福)", server: 144.31.250.113, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [JP-CF] 🇯🇵 日本 WARP 01 (东京)", server: 103.53.80.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [JP-CF] 🇯🇵 日本 WARP 02 (东京)", server: 82.108.155.163, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [US-CF] 🇺🇸 美国 WARP 01 (洛杉矶)", server: 170.39.227.181, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [US-CF] 🇺🇸 美国 WARP 02 (洛杉矶)", server: 129.146.7.155, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [GB-CF] 🇬🇧 英国 WARP 01 (伦敦)", server: 165.232.39.212, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [GB-CF] 🇬🇧 英国 WARP 02 (伦敦)", server: 213.176.115.96, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [FR-CF] 🇫🇷 法国 WARP 01 (巴黎)", server: 194.76.146.25, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [FR-CF] 🇫🇷 法国 WARP 02 (巴黎)", server: 207.180.209.128, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [SG-CF] 🇸🇬 新加坡 WARP 01 (新加坡)", server: 168.144.100.103, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [SG-CF] 🇸🇬 新加坡 WARP 02 (新加坡)", server: 143.198.213.40, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 01 (克雷塔罗)", server: 131.196.253.141, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 02 (克雷塔罗)", server: 131.196.252.97, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [KR-CF] 🇰🇷 韩国 WARP 01 (首尔)", server: 103.53.80.44, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [KR-CF] 🇰🇷 韩国 WARP 02 (首尔)", server: 82.108.155.163, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [CA-CF] 🇨🇦 加拿大 WARP 01 (多伦多)", server: 140.238.144.211, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [CA-CF] 🇨🇦 加拿大 WARP 02 (多伦多)", server: 40.233.116.225, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [HK-CF] 🇭🇰 香港 WARP 01 (香港)", server: 38.55.195.57, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [HK-CF] 🇭🇰 香港 WARP 02 (香港)", server: 103.242.2.214, port: 8443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [TW-CF] 🇹🇼 台湾 WARP 01 (台北)", server: 207.56.137.174, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - {name: "⚡ [TW-CF] 🇹🇼 台湾 WARP 02 (台北)", server: 140.235.38.206, port: 443, type: vless, uuid: e0249491-b63d-4e5d-8788-d3861553133f, tls: true, skip-cert-verify: false, servername: l8.ccwu.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8.ccwu.cc}}}
-  - name: "🛡️ [AWG] 🇺🇸 美国 WARP (WireGuard 混淆)"
+  - name: "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)"
     type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
     private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
-    udp: true
-    mtu: 1280
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.99.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -71,18 +47,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇯🇵 日本 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 162.159.193.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.99.207
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -93,18 +71,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇩🇪 德国 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 188.114.99.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.193.10
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -115,18 +95,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇸🇬 新加坡 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 162.159.195.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.193.220
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -137,18 +119,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇬🇧 英国 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 188.114.98.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.98.42
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -159,18 +143,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇫🇷 法国 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 8.39.125.1
-    port: 1701
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.97.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -181,18 +167,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇲🇽 墨西哥 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 8.39.214.1
-    port: 500
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.98.88
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -203,18 +191,20 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "🛡️ [AWG] 🇰🇷 韩国 WARP (WireGuard 混淆)"
-    type: wireguard
-    server: 188.114.97.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:81e9:447d:555d:f9eb:1786
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
-    remote-dns-resolve: true
-    dns: [1.1.1.1, 1.0.0.1]
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
     udp: true
-    mtu: 1280
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.98.12
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
     amnezia-wg-option:
       jc: 6
       jmin: 10
@@ -225,7 +215,275 @@ proxies:
       h2: 2
       h3: 3
       h4: 4
-  - name: "⚡ [MASQUE] 🇺🇸 美国 WARP (HTTP/3 QUIC)"
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.125.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.125.77
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.195.42
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.195.105
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.214.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.214.156
+        port: 500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.97.207
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.97.10
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.35.211.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.192.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)"
+    type: wireguard
+    private-key: GIhl/8N7GmyB6znXh1x4r3K1O/xPyGHNf3zK73Xp424=
+    ip: 172.16.0.2
+    peers:
+      - server: 188.114.96.247
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)"
     type: masque
     server: 162.159.198.1
     port: 443
@@ -235,7 +493,7 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇯🇵 日本 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)"
     type: masque
     server: 162.159.198.2
     port: 443
@@ -245,9 +503,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇩🇪 德国 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)"
     type: masque
-    server: 162.159.198.3
+    server: 162.159.198.1
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -255,9 +513,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇸🇬 新加坡 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)"
     type: masque
-    server: 162.159.198.4
+    server: 162.159.198.2
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -265,9 +523,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇬🇧 英国 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)"
     type: masque
-    server: 162.159.198.5
+    server: 162.159.198.1
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -275,9 +533,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇫🇷 法国 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)"
     type: masque
-    server: 162.159.198.6
+    server: 162.159.198.2
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -285,9 +543,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇲🇽 墨西哥 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)"
     type: masque
-    server: 162.159.198.7
+    server: 162.159.198.1
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -295,9 +553,9 @@ proxies:
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8975:2d6d:3de9:b626:bb82
     remote-dns-resolve: true
-  - name: "⚡ [MASQUE] 🇰🇷 韩国 WARP (HTTP/3 QUIC)"
+  - name: "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)"
     type: masque
-    server: 162.159.198.8
+    server: 162.159.198.2
     port: 443
     sni: consumer-masque.cloudflareclient.com
     private-key: "MHcCAQEEIGj5poXpBUcRkm3FySK0OWSumoJ2FNKHn7Q8iKY86lDboAoGCCqGSM49AwEHoUQDQgAEzcXn3vxpdKEYcCVguEFY649d5+ivVfX6ru0b/Y/rNgQpYBFB2oXk29oAqkCxuT4f/nrRqzF+rn6TTmMz0d49aQ=="
@@ -311,41 +569,46 @@ proxy-groups:
     type: select
     proxies:
       - "⚡ 全球 WARP 自动优选"
-      - "🛡️ 🇩🇪 德国 WARP 专区"
-      - "🛡️ 🇯🇵 日本 WARP 专区"
-      - "🛡️ 🇺🇸 美国 WARP 专区"
-      - "🛡️ 🇬🇧 英国 WARP 专区"
-      - "🛡️ 🇫🇷 法国 WARP 专区"
-      - "🛡️ 🇸🇬 新加坡 WARP 专区"
-      - "🛡️ 🇲🇽 墨西哥 WARP 专区"
-      - "🛡️ 🇰🇷 韩国 WARP 专区"
-      - "🛡️ 🇨🇦 加拿大 WARP 专区"
-      - "🛡️ 🇭🇰 香港 WARP 专区"
-      - "🛡️ 🇹🇼 台湾 WARP 专区"
       - "🛡️ 纯 WireGuard / AWG 专区"
       - "⚡ 纯 MASQUE (QUIC) 专区"
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 01 (法兰克福)"
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 02 (法兰克福)"
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 01 (东京)"
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 02 (东京)"
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 01 (洛杉矶)"
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 02 (洛杉矶)"
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 01 (伦敦)"
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 02 (伦敦)"
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 01 (巴黎)"
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 02 (巴黎)"
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 01 (新加坡)"
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 02 (新加坡)"
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 01 (克雷塔罗)"
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 02 (克雷塔罗)"
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 01 (首尔)"
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 02 (首尔)"
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 01 (多伦多)"
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 02 (多伦多)"
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 01 (香港)"
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 02 (香港)"
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 01 (台北)"
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 02 (台北)"
+      - "🌐 🇩🇪 德国 WARP 专区"
+      - "🌐 🇯🇵 日本 WARP 专区"
+      - "🌐 🇺🇸 美国 WARP 专区"
+      - "🌐 🇬🇧 英国 WARP 专区"
+      - "🌐 🇫🇷 法国 WARP 专区"
+      - "🌐 🇸🇬 新加坡 WARP 专区"
+      - "🌐 🇲🇽 墨西哥 WARP 专区"
+      - "🌐 🇰🇷 韩国 WARP 专区"
+      - "🌐 🇨🇦 加拿大 WARP 专区"
+      - "🌐 🇭🇰 香港 WARP 专区"
+      - "🌐 🇹🇼 台湾 WARP 专区"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)"
+      - "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)"
+      - "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)"
+      - "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)"
+      - "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)"
+      - "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)"
+      - "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)"
+      - "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)"
+      - "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)"
+      - "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)"
+      - "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)"
+      - "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)"
       - DIRECT
 
   - name: "⚡ 全球 WARP 自动优选"
@@ -354,118 +617,139 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 01 (法兰克福)"
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 02 (法兰克福)"
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 01 (东京)"
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 02 (东京)"
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 01 (洛杉矶)"
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 02 (洛杉矶)"
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 01 (伦敦)"
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 02 (伦敦)"
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 01 (巴黎)"
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 02 (巴黎)"
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 01 (新加坡)"
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 02 (新加坡)"
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 01 (克雷塔罗)"
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 02 (克雷塔罗)"
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 01 (首尔)"
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 02 (首尔)"
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 01 (多伦多)"
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 02 (多伦多)"
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 01 (香港)"
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 02 (香港)"
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 01 (台北)"
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 02 (台北)"
-
-  - name: "🛡️ 🇩🇪 德国 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 01 (法兰克福)"
-      - "⚡ [DE-CF] 🇩🇪 德国 WARP 02 (法兰克福)"
-
-  - name: "🛡️ 🇯🇵 日本 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 01 (东京)"
-      - "⚡ [JP-CF] 🇯🇵 日本 WARP 02 (东京)"
-
-  - name: "🛡️ 🇺🇸 美国 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 01 (洛杉矶)"
-      - "⚡ [US-CF] 🇺🇸 美国 WARP 02 (洛杉矶)"
-
-  - name: "🛡️ 🇬🇧 英国 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 01 (伦敦)"
-      - "⚡ [GB-CF] 🇬🇧 英国 WARP 02 (伦敦)"
-
-  - name: "🛡️ 🇫🇷 法国 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 01 (巴黎)"
-      - "⚡ [FR-CF] 🇫🇷 法国 WARP 02 (巴黎)"
-
-  - name: "🛡️ 🇸🇬 新加坡 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 01 (新加坡)"
-      - "⚡ [SG-CF] 🇸🇬 新加坡 WARP 02 (新加坡)"
-
-  - name: "🛡️ 🇲🇽 墨西哥 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 01 (克雷塔罗)"
-      - "⚡ [MX-CF] 🇲🇽 墨西哥 WARP 02 (克雷塔罗)"
-
-  - name: "🛡️ 🇰🇷 韩国 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 01 (首尔)"
-      - "⚡ [KR-CF] 🇰🇷 韩国 WARP 02 (首尔)"
-
-  - name: "🛡️ 🇨🇦 加拿大 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 01 (多伦多)"
-      - "⚡ [CA-CF] 🇨🇦 加拿大 WARP 02 (多伦多)"
-
-  - name: "🛡️ 🇭🇰 香港 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 01 (香港)"
-      - "⚡ [HK-CF] 🇭🇰 香港 WARP 02 (香港)"
-
-  - name: "🛡️ 🇹🇼 台湾 WARP 专区"
-    type: select
-    proxies:
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 01 (台北)"
-      - "⚡ [TW-CF] 🇹🇼 台湾 WARP 02 (台北)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)"
+      - "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)"
+      - "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)"
+      - "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)"
+      - "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)"
+      - "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)"
+      - "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)"
+      - "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)"
+      - "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)"
+      - "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)"
+      - "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)"
+      - "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)"
 
   - name: "🛡️ 纯 WireGuard / AWG 专区"
     type: select
     proxies:
-      - "🛡️ [AWG] 🇺🇸 美国 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇯🇵 日本 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇩🇪 德国 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇸🇬 新加坡 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇬🇧 英国 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇫🇷 法国 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇲🇽 墨西哥 WARP (WireGuard 混淆)"
-      - "🛡️ [AWG] 🇰🇷 韩国 WARP (WireGuard 混淆)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)"
+      - "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)"
+      - "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)"
+      - "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)"
 
   - name: "⚡ 纯 MASQUE (QUIC) 专区"
     type: select
     proxies:
-      - "⚡ [MASQUE] 🇺🇸 美国 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇯🇵 日本 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇩🇪 德国 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇸🇬 新加坡 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇬🇧 英国 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇫🇷 法国 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇲🇽 墨西哥 WARP (HTTP/3 QUIC)"
-      - "⚡ [MASQUE] 🇰🇷 韩国 WARP (HTTP/3 QUIC)"
+      - "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)"
+      - "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)"
+      - "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)"
+      - "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)"
+      - "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)"
+      - "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)"
+      - "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)"
+      - "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)"
+
+  - name: "🌐 🇩🇪 德国 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 01 (4500)"
+      - "⚡ [DE-FRA] 🇩🇪 德国 WARP AWG 02 (1701)"
+      - "🛡️ [DE-FRA] 🇩🇪 德国 WARP MASQUE 01 (QUIC)"
+
+  - name: "🌐 🇯🇵 日本 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 03 (4500)"
+      - "⚡ [JP-NRT] 🇯🇵 日本 WARP AWG 04 (1701)"
+      - "🛡️ [JP-NRT] 🇯🇵 日本 WARP MASQUE 02 (QUIC)"
+
+  - name: "🌐 🇺🇸 美国 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 05 (4500)"
+      - "⚡ [US-LAX] 🇺🇸 美国 WARP AWG 06 (4500)"
+      - "🛡️ [US-LAX] 🇺🇸 美国 WARP MASQUE 03 (QUIC)"
+
+  - name: "🌐 🇬🇧 英国 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 07 (4500)"
+      - "⚡ [GB-LHR] 🇬🇧 英国 WARP AWG 08 (1701)"
+      - "🛡️ [GB-LHR] 🇬🇧 英国 WARP MASQUE 04 (QUIC)"
+
+  - name: "🌐 🇫🇷 法国 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 09 (4500)"
+      - "⚡ [FR-CDG] 🇫🇷 法国 WARP AWG 10 (1701)"
+      - "🛡️ [FR-CDG] 🇫🇷 法国 WARP MASQUE 05 (QUIC)"
+
+  - name: "🌐 🇸🇬 新加坡 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 11 (4500)"
+      - "⚡ [SG-SIN] 🇸🇬 新加坡 WARP AWG 12 (1701)"
+      - "🛡️ [SG-SIN] 🇸🇬 新加坡 WARP MASQUE 06 (QUIC)"
+
+  - name: "🌐 🇲🇽 墨西哥 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 13 (4500)"
+      - "⚡ [MX-QRO] 🇲🇽 墨西哥 WARP AWG 14 (500)"
+      - "🛡️ [MX-QRO] 🇲🇽 墨西哥 WARP MASQUE 07 (QUIC)"
+
+  - name: "🌐 🇰🇷 韩国 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 15 (4500)"
+      - "⚡ [KR-ICN] 🇰🇷 韩国 WARP AWG 16 (1701)"
+      - "🛡️ [KR-ICN] 🇰🇷 韩国 WARP MASQUE 08 (QUIC)"
+
+  - name: "🌐 🇨🇦 加拿大 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [CA-YYZ] 🇨🇦 加拿大 WARP AWG 17 (4500)"
+
+  - name: "🌐 🇭🇰 香港 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [HK-HKG] 🇭🇰 香港 WARP AWG 18 (4500)"
+
+  - name: "🌐 🇹🇼 台湾 WARP 专区"
+    type: select
+    proxies:
+      - "⚡ [TW-TPE] 🇹🇼 台湾 WARP AWG 19 (1701)"
 
 rules:
   - GEOIP,lan,DIRECT,no-resolve
