@@ -1,6 +1,9 @@
 name: WARPSCOUT Pages - Scan & Deploy
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # 每 6 小时自动执行一次全球海外机房探测与更新
     - cron: '0 */6 * * *'
