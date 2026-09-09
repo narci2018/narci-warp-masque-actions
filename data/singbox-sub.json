@@ -6,469 +6,469 @@
       "outbounds": [
         "🛡️ MASQUE 防封优选 (推荐)",
         "⚡ 全球 WARP 自动优选",
-        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [HK-HKG] 🇭🇰 AWG 03 (1ms)",
-        "⚡ [HK-HKG] 🇭🇰 AWG 04 (1ms)",
-        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 01 (1ms)",
-        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H2 02 (纯TCP-1ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
+        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
         "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)",
-        "⚡ [JP-NRT] 🇯🇵 AWG 04 (2ms)",
-        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [SG-SIN] 🇸🇬 AWG 03 (1ms)",
-        "⚡ [SG-SIN] 🇸🇬 AWG 04 (1ms)",
-        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 01 (1ms)",
-        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
+        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
         "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)",
-        "⚡ [TW-TPE] 🇹🇼 AWG 04 (1ms)",
-        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)",
         "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
-        "⚡ [KR-ICN] 🇰🇷 AWG 04 (1ms)",
-        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 01 (2ms)",
-        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [MY-KUL] 🇲🇾 AWG 03 (2ms)",
-        "⚡ [MY-KUL] 🇲🇾 AWG 04 (1ms)",
-        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 01 (2ms)",
-        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
+        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)",
         "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)",
-        "⚡ [TH-BKK] 🇹🇭 AWG 04 (3ms)",
-        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 01 (2ms)",
-        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [VN-SGN] 🇻🇳 AWG 03 (1ms)",
-        "⚡ [VN-SGN] 🇻🇳 AWG 04 (1ms)",
-        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 01 (1ms)",
-        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
+        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
         "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)",
-        "⚡ [PH-MNL] 🇵🇭 AWG 04 (2ms)",
-        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 01 (1ms)",
-        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [ID-CGK] 🇮🇩 AWG 03 (1ms)",
-        "⚡ [ID-CGK] 🇮🇩 AWG 04 (1ms)",
-        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 01 (1ms)",
-        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
+        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
         "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)",
-        "⚡ [IN-BOM] 🇮🇳 AWG 04 (1ms)",
-        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 01 (1ms)",
-        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)",
         "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
-        "⚡ [MO-MFM] 🇲🇴 AWG 04 (1ms)",
-        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 01 (2ms)",
-        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [KH-PNH] 🇰🇭 AWG 03 (2ms)",
-        "⚡ [KH-PNH] 🇰🇭 AWG 04 (1ms)",
-        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
+        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)",
         "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)",
-        "⚡ [PK-ISB] 🇵🇰 AWG 04 (3ms)",
-        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 01 (1ms)",
-        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
         "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)",
-        "⚡ [KZ-ALA] 🇰🇿 AWG 04 (1ms)",
-        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [US-LAX] 🇺🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
         "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)",
-        "⚡ [US-LAX] 🇺🇸 AWG 04 (1ms)",
-        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 01 (3ms)",
-        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
         "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)",
-        "⚡ [CA-YYZ] 🇨🇦 AWG 04 (3ms)",
-        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 01 (3ms)",
-        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [AU-SYD] 🇦🇺 AWG 03 (3ms)",
-        "⚡ [AU-SYD] 🇦🇺 AWG 04 (1ms)",
-        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 01 (1ms)",
-        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)",
+        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)",
         "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)",
-        "⚡ [NZ-AKL] 🇳🇿 AWG 04 (3ms)",
-        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 01 (1ms)",
-        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [MX-QRO] 🇲🇽 AWG 03 (1ms)",
-        "⚡ [MX-QRO] 🇲🇽 AWG 04 (2ms)",
-        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 01 (2ms)",
-        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [GB-LHR] 🇬🇧 AWG 03 (2ms)",
-        "⚡ [GB-LHR] 🇬🇧 AWG 04 (1ms)",
-        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 01 (2ms)",
-        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)",
+        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
+        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)",
         "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)",
-        "⚡ [DE-FRA] 🇩🇪 AWG 04 (3ms)",
-        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [FR-CDG] 🇫🇷 AWG 03 (1ms)",
-        "⚡ [FR-CDG] 🇫🇷 AWG 04 (2ms)",
-        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 01 (1ms)",
-        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)",
+        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)",
         "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)",
-        "⚡ [NL-AMS] 🇳🇱 AWG 04 (3ms)",
-        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 01 (3ms)",
-        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
         "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)",
-        "⚡ [CH-ZRH] 🇨🇭 AWG 04 (3ms)",
-        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 01 (3ms)",
-        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [SE-ARN] 🇸🇪 AWG 03 (3ms)",
-        "⚡ [SE-ARN] 🇸🇪 AWG 04 (1ms)",
-        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 01 (1ms)",
-        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)",
+        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)",
         "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)",
-        "⚡ [NO-OSL] 🇳🇴 AWG 04 (3ms)",
-        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [DK-CPH] 🇩🇰 AWG 03 (1ms)",
-        "⚡ [DK-CPH] 🇩🇰 AWG 04 (1ms)",
-        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 01 (1ms)",
-        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
+        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
         "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)",
-        "⚡ [FI-HEL] 🇫🇮 AWG 04 (2ms)",
-        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IE-DUB] 🇮🇪 AWG 03 (1ms)",
-        "⚡ [IE-DUB] 🇮🇪 AWG 04 (1ms)",
-        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
+        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
         "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)",
-        "⚡ [ES-MAD] 🇪🇸 AWG 04 (1ms)",
-        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IT-MXP] 🇮🇹 AWG 03 (1ms)",
-        "⚡ [IT-MXP] 🇮🇹 AWG 04 (2ms)",
-        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)",
+        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
         "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)",
-        "⚡ [AT-VIE] 🇦🇹 AWG 04 (1ms)",
-        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)",
         "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
-        "⚡ [BE-BRU] 🇧🇪 AWG 04 (1ms)",
-        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 01 (2ms)",
-        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [PL-WAW] 🇵🇱 AWG 03 (2ms)",
-        "⚡ [PL-WAW] 🇵🇱 AWG 04 (1ms)",
-        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 01 (2ms)",
-        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
+        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)",
         "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)",
-        "⚡ [CZ-PRG] 🇨🇿 AWG 04 (3ms)",
-        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 01 (1ms)",
-        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
         "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)",
-        "⚡ [HU-BUD] 🇭🇺 AWG 04 (1ms)",
-        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 01 (3ms)",
-        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
         "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)",
-        "⚡ [RO-OTP] 🇷🇴 AWG 04 (3ms)",
-        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 01 (3ms)",
-        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [BG-SOF] 🇧🇬 AWG 03 (3ms)",
-        "⚡ [BG-SOF] 🇧🇬 AWG 04 (1ms)",
-        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)",
+        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)",
         "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)",
-        "⚡ [GR-ATH] 🇬🇷 AWG 04 (3ms)",
-        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [PT-LIS] 🇵🇹 AWG 03 (1ms)",
-        "⚡ [PT-LIS] 🇵🇹 AWG 04 (2ms)",
-        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 01 (2ms)",
-        "🛡️ [TR-IST] 🇹🇷 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [TR-IST] 🇹🇷 AWG 03 (1ms)",
-        "⚡ [TR-IST] 🇹🇷 AWG 04 (1ms)",
-        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)",
+        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
+        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
         "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)",
-        "⚡ [UA-KBP] 🇺🇦 AWG 04 (2ms)",
-        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (1ms)",
-        "⚡ [HR-ZAG] 🇭🇷 AWG 04 (1ms)",
-        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
+        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
         "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)",
-        "⚡ [IS-KEF] 🇮🇸 AWG 04 (1ms)",
-        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 01 (2ms)",
-        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)",
         "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)",
-        "⚡ [BR-GRU] 🇧🇷 AWG 04 (3ms)",
-        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
         "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)",
-        "⚡ [AR-EZE] 🇦🇷 AWG 04 (1ms)",
-        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 01 (3ms)",
-        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
         "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)",
-        "⚡ [CL-SCL] 🇨🇱 AWG 04 (3ms)",
-        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 01 (3ms)",
-        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [CO-BOG] 🇨🇴 AWG 03 (3ms)",
-        "⚡ [CO-BOG] 🇨🇴 AWG 04 (1ms)",
-        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)",
+        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)",
         "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)",
-        "⚡ [PE-LIM] 🇵🇪 AWG 04 (3ms)",
-        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 01 (1ms)",
-        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IL-TLV] 🇮🇱 AWG 03 (1ms)",
-        "⚡ [IL-TLV] 🇮🇱 AWG 04 (2ms)",
-        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 01 (2ms)",
-        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [AE-DXB] 🇦🇪 AWG 03 (1ms)",
-        "⚡ [AE-DXB] 🇦🇪 AWG 04 (1ms)",
-        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)",
+        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
+        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
         "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)",
-        "⚡ [SA-RUH] 🇸🇦 AWG 04 (2ms)",
-        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [EG-CAI] 🇪🇬 AWG 03 (1ms)",
-        "⚡ [EG-CAI] 🇪🇬 AWG 04 (1ms)",
-        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
+        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
         "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)",
-        "⚡ [ZA-JNB] 🇿🇦 AWG 04 (1ms)",
-        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)",
         "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
-        "⚡ [NG-LOS] 🇳🇬 AWG 04 (1ms)"
+        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
       ]
     },
     {
       "type": "urltest",
       "tag": "⚡ 全球 WARP 自动优选",
       "outbounds": [
-        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [HK-HKG] 🇭🇰 AWG 03 (1ms)",
-        "⚡ [HK-HKG] 🇭🇰 AWG 04 (1ms)",
-        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 01 (1ms)",
-        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H2 02 (纯TCP-1ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
+        "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
+        "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
+        "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
         "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)",
-        "⚡ [JP-NRT] 🇯🇵 AWG 04 (2ms)",
-        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [SG-SIN] 🇸🇬 AWG 03 (1ms)",
-        "⚡ [SG-SIN] 🇸🇬 AWG 04 (1ms)",
-        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 01 (1ms)",
-        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
+        "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
+        "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)",
+        "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
         "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)",
-        "⚡ [TW-TPE] 🇹🇼 AWG 04 (1ms)",
-        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)",
+        "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)",
         "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
-        "⚡ [KR-ICN] 🇰🇷 AWG 04 (1ms)",
-        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 01 (2ms)",
-        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [MY-KUL] 🇲🇾 AWG 03 (2ms)",
-        "⚡ [MY-KUL] 🇲🇾 AWG 04 (1ms)",
-        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 01 (2ms)",
-        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
+        "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
+        "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)",
+        "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)",
         "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)",
-        "⚡ [TH-BKK] 🇹🇭 AWG 04 (3ms)",
-        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 01 (2ms)",
-        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [VN-SGN] 🇻🇳 AWG 03 (1ms)",
-        "⚡ [VN-SGN] 🇻🇳 AWG 04 (1ms)",
-        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 01 (1ms)",
-        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
+        "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
+        "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
+        "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
         "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)",
-        "⚡ [PH-MNL] 🇵🇭 AWG 04 (2ms)",
-        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 01 (1ms)",
-        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [ID-CGK] 🇮🇩 AWG 03 (1ms)",
-        "⚡ [ID-CGK] 🇮🇩 AWG 04 (1ms)",
-        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 01 (1ms)",
-        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
+        "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
+        "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)",
+        "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
         "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)",
-        "⚡ [IN-BOM] 🇮🇳 AWG 04 (1ms)",
-        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 01 (1ms)",
-        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)",
+        "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)",
         "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
-        "⚡ [MO-MFM] 🇲🇴 AWG 04 (1ms)",
-        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 01 (2ms)",
-        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [KH-PNH] 🇰🇭 AWG 03 (2ms)",
-        "⚡ [KH-PNH] 🇰🇭 AWG 04 (1ms)",
-        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
+        "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
+        "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)",
+        "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)",
         "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)",
-        "⚡ [PK-ISB] 🇵🇰 AWG 04 (3ms)",
-        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 01 (1ms)",
-        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)",
+        "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
         "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)",
-        "⚡ [KZ-ALA] 🇰🇿 AWG 04 (1ms)",
-        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [US-LAX] 🇺🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)",
+        "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
         "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)",
-        "⚡ [US-LAX] 🇺🇸 AWG 04 (1ms)",
-        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 01 (3ms)",
-        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
+        "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
         "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)",
-        "⚡ [CA-YYZ] 🇨🇦 AWG 04 (3ms)",
-        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 01 (3ms)",
-        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [AU-SYD] 🇦🇺 AWG 03 (3ms)",
-        "⚡ [AU-SYD] 🇦🇺 AWG 04 (1ms)",
-        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 01 (1ms)",
-        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)",
+        "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)",
+        "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)",
+        "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)",
         "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)",
-        "⚡ [NZ-AKL] 🇳🇿 AWG 04 (3ms)",
-        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 01 (1ms)",
-        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [MX-QRO] 🇲🇽 AWG 03 (1ms)",
-        "⚡ [MX-QRO] 🇲🇽 AWG 04 (2ms)",
-        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 01 (2ms)",
-        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [GB-LHR] 🇬🇧 AWG 03 (2ms)",
-        "⚡ [GB-LHR] 🇬🇧 AWG 04 (1ms)",
-        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 01 (2ms)",
-        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
+        "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)",
+        "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
+        "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
+        "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)",
+        "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)",
         "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)",
-        "⚡ [DE-FRA] 🇩🇪 AWG 04 (3ms)",
-        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [FR-CDG] 🇫🇷 AWG 03 (1ms)",
-        "⚡ [FR-CDG] 🇫🇷 AWG 04 (2ms)",
-        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 01 (1ms)",
-        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
+        "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)",
+        "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)",
+        "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)",
         "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)",
-        "⚡ [NL-AMS] 🇳🇱 AWG 04 (3ms)",
-        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 01 (3ms)",
-        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
+        "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
         "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)",
-        "⚡ [CH-ZRH] 🇨🇭 AWG 04 (3ms)",
-        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 01 (3ms)",
-        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [SE-ARN] 🇸🇪 AWG 03 (3ms)",
-        "⚡ [SE-ARN] 🇸🇪 AWG 04 (1ms)",
-        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 01 (1ms)",
-        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)",
+        "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)",
+        "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)",
+        "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)",
         "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)",
-        "⚡ [NO-OSL] 🇳🇴 AWG 04 (3ms)",
-        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 01 (2ms)",
-        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [DK-CPH] 🇩🇰 AWG 03 (1ms)",
-        "⚡ [DK-CPH] 🇩🇰 AWG 04 (1ms)",
-        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 01 (1ms)",
-        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
+        "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
+        "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
+        "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
         "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)",
-        "⚡ [FI-HEL] 🇫🇮 AWG 04 (2ms)",
-        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IE-DUB] 🇮🇪 AWG 03 (1ms)",
-        "⚡ [IE-DUB] 🇮🇪 AWG 04 (1ms)",
-        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
+        "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
+        "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)",
+        "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
         "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)",
-        "⚡ [ES-MAD] 🇪🇸 AWG 04 (1ms)",
-        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IT-MXP] 🇮🇹 AWG 03 (1ms)",
-        "⚡ [IT-MXP] 🇮🇹 AWG 04 (2ms)",
-        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
+        "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)",
+        "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)",
+        "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
         "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)",
-        "⚡ [AT-VIE] 🇦🇹 AWG 04 (1ms)",
-        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)",
+        "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)",
         "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
-        "⚡ [BE-BRU] 🇧🇪 AWG 04 (1ms)",
-        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 01 (2ms)",
-        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H2 02 (纯TCP-4ms)",
-        "⚡ [PL-WAW] 🇵🇱 AWG 03 (2ms)",
-        "⚡ [PL-WAW] 🇵🇱 AWG 04 (1ms)",
-        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 01 (2ms)",
-        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
+        "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
+        "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)",
+        "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)",
         "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)",
-        "⚡ [CZ-PRG] 🇨🇿 AWG 04 (3ms)",
-        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 01 (1ms)",
-        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)",
+        "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
         "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)",
-        "⚡ [HU-BUD] 🇭🇺 AWG 04 (1ms)",
-        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 01 (3ms)",
-        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
+        "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
         "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)",
-        "⚡ [RO-OTP] 🇷🇴 AWG 04 (3ms)",
-        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 01 (3ms)",
-        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [BG-SOF] 🇧🇬 AWG 03 (3ms)",
-        "⚡ [BG-SOF] 🇧🇬 AWG 04 (1ms)",
-        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)",
+        "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)",
+        "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)",
+        "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)",
         "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)",
-        "⚡ [GR-ATH] 🇬🇷 AWG 04 (3ms)",
-        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 01 (1ms)",
-        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [PT-LIS] 🇵🇹 AWG 03 (1ms)",
-        "⚡ [PT-LIS] 🇵🇹 AWG 04 (2ms)",
-        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 01 (2ms)",
-        "🛡️ [TR-IST] 🇹🇷 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [TR-IST] 🇹🇷 AWG 03 (1ms)",
-        "⚡ [TR-IST] 🇹🇷 AWG 04 (1ms)",
-        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
+        "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)",
+        "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
+        "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
+        "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
+        "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
         "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)",
-        "⚡ [UA-KBP] 🇺🇦 AWG 04 (2ms)",
-        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (1ms)",
-        "⚡ [HR-ZAG] 🇭🇷 AWG 04 (1ms)",
-        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 01 (1ms)",
-        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
+        "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
+        "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)",
+        "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
         "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)",
-        "⚡ [IS-KEF] 🇮🇸 AWG 04 (1ms)",
-        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 01 (2ms)",
-        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)",
+        "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)",
         "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)",
-        "⚡ [BR-GRU] 🇧🇷 AWG 04 (3ms)",
-        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 01 (1ms)",
-        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)",
+        "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
         "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)",
-        "⚡ [AR-EZE] 🇦🇷 AWG 04 (1ms)",
-        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 01 (3ms)",
-        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
+        "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
         "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)",
-        "⚡ [CL-SCL] 🇨🇱 AWG 04 (3ms)",
-        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 01 (3ms)",
-        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [CO-BOG] 🇨🇴 AWG 03 (3ms)",
-        "⚡ [CO-BOG] 🇨🇴 AWG 04 (1ms)",
-        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 01 (1ms)",
-        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H2 02 (纯TCP-3ms)",
+        "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)",
+        "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)",
+        "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)",
+        "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)",
         "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)",
-        "⚡ [PE-LIM] 🇵🇪 AWG 04 (3ms)",
-        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 01 (1ms)",
-        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [IL-TLV] 🇮🇱 AWG 03 (1ms)",
-        "⚡ [IL-TLV] 🇮🇱 AWG 04 (2ms)",
-        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 01 (2ms)",
-        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H2 02 (纯TCP-2ms)",
-        "⚡ [AE-DXB] 🇦🇪 AWG 03 (1ms)",
-        "⚡ [AE-DXB] 🇦🇪 AWG 04 (1ms)",
-        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
+        "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)",
+        "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
+        "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
+        "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
+        "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
         "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)",
-        "⚡ [SA-RUH] 🇸🇦 AWG 04 (2ms)",
-        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H2 02 (纯TCP-1ms)",
-        "⚡ [EG-CAI] 🇪🇬 AWG 03 (1ms)",
-        "⚡ [EG-CAI] 🇪🇬 AWG 04 (1ms)",
-        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 01 (1ms)",
-        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
+        "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
+        "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)",
+        "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
         "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)",
-        "⚡ [ZA-JNB] 🇿🇦 AWG 04 (1ms)",
-        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 01 (1ms)",
-        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H2 02 (纯TCP-1ms)",
+        "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)",
+        "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)",
         "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
-        "⚡ [NG-LOS] 🇳🇬 AWG 04 (1ms)"
+        "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m"
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 01 (3ms)",
       "server": "162.159.192.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -478,9 +478,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HK-HKG] 🇭🇰 MASQUE-H2 02 (纯TCP-2ms)",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 02 (2ms)",
       "server": "162.159.192.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -490,9 +490,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 03 (1ms)",
+      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 03 (2ms)",
       "server": "162.159.192.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -502,9 +502,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [HK-HKG] 🇭🇰 AWG 04 (1ms)",
+      "tag": "🛡️ [HK-HKG] 🇭🇰 MASQUE-H3 04 (1ms)",
       "server": "162.159.192.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -514,9 +514,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 01 (2ms)",
       "server": "162.159.193.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -526,9 +526,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [JP-NRT] 🇯🇵 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 02 (2ms)",
       "server": "162.159.193.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -540,7 +540,7 @@
       "type": "wireguard",
       "tag": "⚡ [JP-NRT] 🇯🇵 AWG 03 (2ms)",
       "server": "162.159.193.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -550,9 +550,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [JP-NRT] 🇯🇵 AWG 04 (2ms)",
+      "tag": "🛡️ [JP-NRT] 🇯🇵 MASQUE-H3 04 (2ms)",
       "server": "162.159.193.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -562,9 +562,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 01 (2ms)",
       "server": "162.159.195.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -574,9 +574,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SG-SIN] 🇸🇬 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 02 (2ms)",
       "server": "162.159.195.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -586,9 +586,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 03 (1ms)",
+      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 03 (2ms)",
       "server": "162.159.195.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -598,9 +598,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [SG-SIN] 🇸🇬 AWG 04 (1ms)",
+      "tag": "🛡️ [SG-SIN] 🇸🇬 MASQUE-H3 04 (2ms)",
       "server": "162.159.195.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -610,9 +610,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 01 (1ms)",
       "server": "188.114.96.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -622,9 +622,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TW-TPE] 🇹🇼 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 02 (2ms)",
       "server": "188.114.96.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -636,7 +636,7 @@
       "type": "wireguard",
       "tag": "⚡ [TW-TPE] 🇹🇼 AWG 03 (1ms)",
       "server": "188.114.96.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -646,9 +646,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [TW-TPE] 🇹🇼 AWG 04 (1ms)",
+      "tag": "🛡️ [TW-TPE] 🇹🇼 MASQUE-H3 04 (1ms)",
       "server": "188.114.96.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -658,9 +658,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 01 (1ms)",
       "server": "188.114.97.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -670,9 +670,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KR-ICN] 🇰🇷 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 02 (1ms)",
       "server": "188.114.97.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -684,7 +684,7 @@
       "type": "wireguard",
       "tag": "⚡ [KR-ICN] 🇰🇷 AWG 03 (1ms)",
       "server": "188.114.97.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -694,9 +694,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [KR-ICN] 🇰🇷 AWG 04 (1ms)",
+      "tag": "🛡️ [KR-ICN] 🇰🇷 MASQUE-H3 04 (1ms)",
       "server": "188.114.97.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -706,9 +706,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 01 (2ms)",
       "server": "188.114.98.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -718,9 +718,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MY-KUL] 🇲🇾 MASQUE-H2 02 (纯TCP-4ms)",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 02 (1ms)",
       "server": "188.114.98.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -730,9 +730,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 03 (2ms)",
+      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 03 (1ms)",
       "server": "188.114.98.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -742,9 +742,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [MY-KUL] 🇲🇾 AWG 04 (1ms)",
+      "tag": "🛡️ [MY-KUL] 🇲🇾 MASQUE-H3 04 (2ms)",
       "server": "188.114.98.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -754,9 +754,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 01 (2ms)",
       "server": "188.114.99.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -766,9 +766,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TH-BKK] 🇹🇭 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 02 (4ms)",
       "server": "188.114.99.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -780,7 +780,7 @@
       "type": "wireguard",
       "tag": "⚡ [TH-BKK] 🇹🇭 AWG 03 (1ms)",
       "server": "188.114.99.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -790,9 +790,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [TH-BKK] 🇹🇭 AWG 04 (3ms)",
+      "tag": "🛡️ [TH-BKK] 🇹🇭 MASQUE-H3 04 (3ms)",
       "server": "188.114.99.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -802,9 +802,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 01 (3ms)",
       "server": "162.159.192.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -814,9 +814,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [VN-SGN] 🇻🇳 MASQUE-H2 02 (纯TCP-2ms)",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 02 (2ms)",
       "server": "162.159.192.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -826,9 +826,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 03 (1ms)",
+      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 03 (2ms)",
       "server": "162.159.192.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -838,9 +838,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [VN-SGN] 🇻🇳 AWG 04 (1ms)",
+      "tag": "🛡️ [VN-SGN] 🇻🇳 MASQUE-H3 04 (1ms)",
       "server": "162.159.192.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -850,9 +850,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 01 (2ms)",
       "server": "162.159.193.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -862,9 +862,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PH-MNL] 🇵🇭 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 02 (2ms)",
       "server": "162.159.193.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -876,7 +876,7 @@
       "type": "wireguard",
       "tag": "⚡ [PH-MNL] 🇵🇭 AWG 03 (2ms)",
       "server": "162.159.193.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -886,9 +886,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PH-MNL] 🇵🇭 AWG 04 (2ms)",
+      "tag": "🛡️ [PH-MNL] 🇵🇭 MASQUE-H3 04 (2ms)",
       "server": "162.159.193.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -898,9 +898,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 01 (2ms)",
       "server": "162.159.195.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -910,9 +910,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ID-CGK] 🇮🇩 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 02 (2ms)",
       "server": "162.159.195.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -922,9 +922,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 03 (1ms)",
+      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 03 (2ms)",
       "server": "162.159.195.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -934,9 +934,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [ID-CGK] 🇮🇩 AWG 04 (1ms)",
+      "tag": "🛡️ [ID-CGK] 🇮🇩 MASQUE-H3 04 (2ms)",
       "server": "162.159.195.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -946,9 +946,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 01 (1ms)",
       "server": "188.114.96.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -958,9 +958,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IN-BOM] 🇮🇳 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 02 (2ms)",
       "server": "188.114.96.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -972,7 +972,7 @@
       "type": "wireguard",
       "tag": "⚡ [IN-BOM] 🇮🇳 AWG 03 (1ms)",
       "server": "188.114.96.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -982,9 +982,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IN-BOM] 🇮🇳 AWG 04 (1ms)",
+      "tag": "🛡️ [IN-BOM] 🇮🇳 MASQUE-H3 04 (1ms)",
       "server": "188.114.96.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -994,9 +994,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 01 (1ms)",
       "server": "188.114.97.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1006,9 +1006,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MO-MFM] 🇲🇴 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 02 (1ms)",
       "server": "188.114.97.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1020,7 +1020,7 @@
       "type": "wireguard",
       "tag": "⚡ [MO-MFM] 🇲🇴 AWG 03 (1ms)",
       "server": "188.114.97.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1030,9 +1030,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [MO-MFM] 🇲🇴 AWG 04 (1ms)",
+      "tag": "🛡️ [MO-MFM] 🇲🇴 MASQUE-H3 04 (1ms)",
       "server": "188.114.97.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1042,9 +1042,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 01 (2ms)",
       "server": "188.114.98.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1054,9 +1054,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KH-PNH] 🇰🇭 MASQUE-H2 02 (纯TCP-4ms)",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 02 (1ms)",
       "server": "188.114.98.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1066,9 +1066,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 03 (2ms)",
+      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 03 (1ms)",
       "server": "188.114.98.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1078,9 +1078,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [KH-PNH] 🇰🇭 AWG 04 (1ms)",
+      "tag": "🛡️ [KH-PNH] 🇰🇭 MASQUE-H3 04 (2ms)",
       "server": "188.114.98.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1090,9 +1090,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 01 (2ms)",
       "server": "188.114.99.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1102,9 +1102,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PK-ISB] 🇵🇰 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 02 (4ms)",
       "server": "188.114.99.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1116,7 +1116,7 @@
       "type": "wireguard",
       "tag": "⚡ [PK-ISB] 🇵🇰 AWG 03 (1ms)",
       "server": "188.114.99.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1126,9 +1126,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PK-ISB] 🇵🇰 AWG 04 (3ms)",
+      "tag": "🛡️ [PK-ISB] 🇵🇰 MASQUE-H3 04 (3ms)",
       "server": "188.114.99.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1138,9 +1138,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 01 (1ms)",
       "server": "8.39.214.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1150,9 +1150,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 02 (1ms)",
       "server": "8.39.214.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1164,7 +1164,7 @@
       "type": "wireguard",
       "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 03 (1ms)",
       "server": "8.39.214.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1174,9 +1174,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [KZ-ALA] 🇰🇿 AWG 04 (1ms)",
+      "tag": "🛡️ [KZ-ALA] 🇰🇿 MASQUE-H3 04 (2ms)",
       "server": "8.39.214.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1186,9 +1186,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [US-LAX] 🇺🇸 AWG 01 (1ms)",
       "server": "8.39.214.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1198,9 +1198,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [US-LAX] 🇺🇸 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [US-LAX] 🇺🇸 AWG 02 (1ms)",
       "server": "8.39.214.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1212,7 +1212,7 @@
       "type": "wireguard",
       "tag": "⚡ [US-LAX] 🇺🇸 AWG 03 (1ms)",
       "server": "8.39.214.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1222,9 +1222,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [US-LAX] 🇺🇸 AWG 04 (1ms)",
+      "tag": "🛡️ [US-LAX] 🇺🇸 MASQUE-H3 04 (2ms)",
       "server": "8.39.214.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1234,9 +1234,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 01 (2ms)",
       "server": "8.35.211.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1246,9 +1246,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 02 (2ms)",
       "server": "8.35.211.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1260,7 +1260,7 @@
       "type": "wireguard",
       "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 03 (1ms)",
       "server": "8.35.211.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1270,9 +1270,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CA-YYZ] 🇨🇦 AWG 04 (3ms)",
+      "tag": "🛡️ [CA-YYZ] 🇨🇦 MASQUE-H3 04 (1ms)",
       "server": "8.35.211.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1282,9 +1282,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 01 (1ms)",
       "server": "8.47.69.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1294,9 +1294,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AU-SYD] 🇦🇺 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 02 (1ms)",
       "server": "8.47.69.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1306,9 +1306,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 03 (3ms)",
+      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 03 (1ms)",
       "server": "8.47.69.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1318,9 +1318,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AU-SYD] 🇦🇺 AWG 04 (1ms)",
+      "tag": "🛡️ [AU-SYD] 🇦🇺 MASQUE-H3 04 (1ms)",
       "server": "8.47.69.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1330,9 +1330,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 01 (4ms)",
       "server": "8.6.112.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1342,9 +1342,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 02 (2ms)",
       "server": "8.6.112.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1356,7 +1356,7 @@
       "type": "wireguard",
       "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 03 (2ms)",
       "server": "8.6.112.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1366,9 +1366,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [NZ-AKL] 🇳🇿 AWG 04 (3ms)",
+      "tag": "🛡️ [NZ-AKL] 🇳🇿 MASQUE-H3 04 (1ms)",
       "server": "8.6.112.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1378,9 +1378,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 01 (2ms)",
       "server": "8.39.125.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1390,9 +1390,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [MX-QRO] 🇲🇽 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 02 (2ms)",
       "server": "8.39.125.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1402,9 +1402,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 03 (1ms)",
+      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 03 (3ms)",
       "server": "8.39.125.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1414,9 +1414,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [MX-QRO] 🇲🇽 AWG 04 (2ms)",
+      "tag": "🛡️ [MX-QRO] 🇲🇽 MASQUE-H3 04 (3ms)",
       "server": "8.39.125.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1426,9 +1426,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 01 (2ms)",
       "server": "188.114.98.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1438,9 +1438,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [GB-LHR] 🇬🇧 MASQUE-H2 02 (纯TCP-4ms)",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 02 (1ms)",
       "server": "188.114.98.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1450,9 +1450,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 03 (2ms)",
+      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 03 (1ms)",
       "server": "188.114.98.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1462,9 +1462,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [GB-LHR] 🇬🇧 AWG 04 (1ms)",
+      "tag": "🛡️ [GB-LHR] 🇬🇧 MASQUE-H3 04 (2ms)",
       "server": "188.114.98.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1474,9 +1474,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 01 (2ms)",
       "server": "188.114.99.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1486,9 +1486,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [DE-FRA] 🇩🇪 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 02 (4ms)",
       "server": "188.114.99.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1500,7 +1500,7 @@
       "type": "wireguard",
       "tag": "⚡ [DE-FRA] 🇩🇪 AWG 03 (1ms)",
       "server": "188.114.99.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1510,9 +1510,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [DE-FRA] 🇩🇪 AWG 04 (3ms)",
+      "tag": "🛡️ [DE-FRA] 🇩🇪 MASQUE-H3 04 (3ms)",
       "server": "188.114.99.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1522,9 +1522,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 01 (2ms)",
       "server": "8.39.125.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1534,9 +1534,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [FR-CDG] 🇫🇷 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 02 (2ms)",
       "server": "8.39.125.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1546,9 +1546,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 03 (1ms)",
+      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 03 (3ms)",
       "server": "8.39.125.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1558,9 +1558,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [FR-CDG] 🇫🇷 AWG 04 (2ms)",
+      "tag": "🛡️ [FR-CDG] 🇫🇷 MASQUE-H3 04 (3ms)",
       "server": "8.39.125.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1570,9 +1570,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 01 (4ms)",
       "server": "8.6.112.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1582,9 +1582,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NL-AMS] 🇳🇱 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 02 (2ms)",
       "server": "8.6.112.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1596,7 +1596,7 @@
       "type": "wireguard",
       "tag": "⚡ [NL-AMS] 🇳🇱 AWG 03 (2ms)",
       "server": "8.6.112.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1606,9 +1606,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [NL-AMS] 🇳🇱 AWG 04 (3ms)",
+      "tag": "🛡️ [NL-AMS] 🇳🇱 MASQUE-H3 04 (1ms)",
       "server": "8.6.112.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1618,9 +1618,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 01 (2ms)",
       "server": "8.35.211.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1630,9 +1630,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 02 (2ms)",
       "server": "8.35.211.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1644,7 +1644,7 @@
       "type": "wireguard",
       "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 03 (1ms)",
       "server": "8.35.211.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1654,9 +1654,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CH-ZRH] 🇨🇭 AWG 04 (3ms)",
+      "tag": "🛡️ [CH-ZRH] 🇨🇭 MASQUE-H3 04 (1ms)",
       "server": "8.35.211.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1666,9 +1666,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 01 (1ms)",
       "server": "8.47.69.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1678,9 +1678,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SE-ARN] 🇸🇪 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 02 (1ms)",
       "server": "8.47.69.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1690,9 +1690,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 03 (3ms)",
+      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 03 (1ms)",
       "server": "8.47.69.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1702,9 +1702,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [SE-ARN] 🇸🇪 AWG 04 (1ms)",
+      "tag": "🛡️ [SE-ARN] 🇸🇪 MASQUE-H3 04 (1ms)",
       "server": "8.47.69.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1714,9 +1714,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 01 (4ms)",
       "server": "8.6.112.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1726,9 +1726,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NO-OSL] 🇳🇴 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 02 (2ms)",
       "server": "8.6.112.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1740,7 +1740,7 @@
       "type": "wireguard",
       "tag": "⚡ [NO-OSL] 🇳🇴 AWG 03 (2ms)",
       "server": "8.6.112.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1750,9 +1750,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [NO-OSL] 🇳🇴 AWG 04 (3ms)",
+      "tag": "🛡️ [NO-OSL] 🇳🇴 MASQUE-H3 04 (1ms)",
       "server": "8.6.112.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1762,9 +1762,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 01 (3ms)",
       "server": "162.159.192.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1774,9 +1774,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [DK-CPH] 🇩🇰 MASQUE-H2 02 (纯TCP-2ms)",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 02 (2ms)",
       "server": "162.159.192.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1786,9 +1786,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 03 (1ms)",
+      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 03 (2ms)",
       "server": "162.159.192.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1798,9 +1798,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [DK-CPH] 🇩🇰 AWG 04 (1ms)",
+      "tag": "🛡️ [DK-CPH] 🇩🇰 MASQUE-H3 04 (1ms)",
       "server": "162.159.192.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1810,9 +1810,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 01 (2ms)",
       "server": "162.159.193.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1822,9 +1822,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [FI-HEL] 🇫🇮 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 02 (2ms)",
       "server": "162.159.193.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1836,7 +1836,7 @@
       "type": "wireguard",
       "tag": "⚡ [FI-HEL] 🇫🇮 AWG 03 (2ms)",
       "server": "162.159.193.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1846,9 +1846,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [FI-HEL] 🇫🇮 AWG 04 (2ms)",
+      "tag": "🛡️ [FI-HEL] 🇫🇮 MASQUE-H3 04 (2ms)",
       "server": "162.159.193.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1858,9 +1858,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 01 (2ms)",
       "server": "162.159.195.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1870,9 +1870,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IE-DUB] 🇮🇪 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 02 (2ms)",
       "server": "162.159.195.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1882,9 +1882,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 03 (1ms)",
+      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 03 (2ms)",
       "server": "162.159.195.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1894,9 +1894,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IE-DUB] 🇮🇪 AWG 04 (1ms)",
+      "tag": "🛡️ [IE-DUB] 🇮🇪 MASQUE-H3 04 (2ms)",
       "server": "162.159.195.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1906,9 +1906,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 01 (1ms)",
       "server": "8.39.214.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1918,9 +1918,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ES-MAD] 🇪🇸 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 02 (1ms)",
       "server": "8.39.214.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1932,7 +1932,7 @@
       "type": "wireguard",
       "tag": "⚡ [ES-MAD] 🇪🇸 AWG 03 (1ms)",
       "server": "8.39.214.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1942,9 +1942,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [ES-MAD] 🇪🇸 AWG 04 (1ms)",
+      "tag": "🛡️ [ES-MAD] 🇪🇸 MASQUE-H3 04 (2ms)",
       "server": "8.39.214.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1954,9 +1954,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 01 (2ms)",
       "server": "8.39.125.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1966,9 +1966,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IT-MXP] 🇮🇹 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 02 (2ms)",
       "server": "8.39.125.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1978,9 +1978,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 03 (1ms)",
+      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 03 (3ms)",
       "server": "8.39.125.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -1990,9 +1990,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IT-MXP] 🇮🇹 AWG 04 (2ms)",
+      "tag": "🛡️ [IT-MXP] 🇮🇹 MASQUE-H3 04 (3ms)",
       "server": "8.39.125.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2002,9 +2002,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 01 (1ms)",
       "server": "188.114.96.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2014,9 +2014,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AT-VIE] 🇦🇹 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 02 (2ms)",
       "server": "188.114.96.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2028,7 +2028,7 @@
       "type": "wireguard",
       "tag": "⚡ [AT-VIE] 🇦🇹 AWG 03 (1ms)",
       "server": "188.114.96.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2038,9 +2038,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AT-VIE] 🇦🇹 AWG 04 (1ms)",
+      "tag": "🛡️ [AT-VIE] 🇦🇹 MASQUE-H3 04 (1ms)",
       "server": "188.114.96.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2050,9 +2050,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 01 (1ms)",
       "server": "188.114.97.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2062,9 +2062,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BE-BRU] 🇧🇪 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 02 (1ms)",
       "server": "188.114.97.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2076,7 +2076,7 @@
       "type": "wireguard",
       "tag": "⚡ [BE-BRU] 🇧🇪 AWG 03 (1ms)",
       "server": "188.114.97.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2086,9 +2086,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [BE-BRU] 🇧🇪 AWG 04 (1ms)",
+      "tag": "🛡️ [BE-BRU] 🇧🇪 MASQUE-H3 04 (1ms)",
       "server": "188.114.97.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2098,9 +2098,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 01 (2ms)",
       "server": "188.114.98.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2110,9 +2110,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PL-WAW] 🇵🇱 MASQUE-H2 02 (纯TCP-4ms)",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 02 (1ms)",
       "server": "188.114.98.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2122,9 +2122,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 03 (2ms)",
+      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 03 (1ms)",
       "server": "188.114.98.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2134,9 +2134,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PL-WAW] 🇵🇱 AWG 04 (1ms)",
+      "tag": "🛡️ [PL-WAW] 🇵🇱 MASQUE-H3 04 (2ms)",
       "server": "188.114.98.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2146,9 +2146,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 01 (2ms)",
       "server": "188.114.99.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2158,9 +2158,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 02 (4ms)",
       "server": "188.114.99.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2172,7 +2172,7 @@
       "type": "wireguard",
       "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 03 (1ms)",
       "server": "188.114.99.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2182,9 +2182,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CZ-PRG] 🇨🇿 AWG 04 (3ms)",
+      "tag": "🛡️ [CZ-PRG] 🇨🇿 MASQUE-H3 04 (3ms)",
       "server": "188.114.99.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2194,9 +2194,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 01 (1ms)",
       "server": "8.39.214.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2206,9 +2206,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HU-BUD] 🇭🇺 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 02 (1ms)",
       "server": "8.39.214.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2220,7 +2220,7 @@
       "type": "wireguard",
       "tag": "⚡ [HU-BUD] 🇭🇺 AWG 03 (1ms)",
       "server": "8.39.214.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2230,9 +2230,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [HU-BUD] 🇭🇺 AWG 04 (1ms)",
+      "tag": "🛡️ [HU-BUD] 🇭🇺 MASQUE-H3 04 (2ms)",
       "server": "8.39.214.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2242,9 +2242,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 01 (2ms)",
       "server": "8.35.211.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2254,9 +2254,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [RO-OTP] 🇷🇴 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 02 (2ms)",
       "server": "8.35.211.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2268,7 +2268,7 @@
       "type": "wireguard",
       "tag": "⚡ [RO-OTP] 🇷🇴 AWG 03 (1ms)",
       "server": "8.35.211.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2278,9 +2278,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [RO-OTP] 🇷🇴 AWG 04 (3ms)",
+      "tag": "🛡️ [RO-OTP] 🇷🇴 MASQUE-H3 04 (1ms)",
       "server": "8.35.211.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2290,9 +2290,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 01 (1ms)",
       "server": "8.47.69.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2302,9 +2302,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BG-SOF] 🇧🇬 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 02 (1ms)",
       "server": "8.47.69.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2314,9 +2314,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 03 (3ms)",
+      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 03 (1ms)",
       "server": "8.47.69.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2326,9 +2326,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [BG-SOF] 🇧🇬 AWG 04 (1ms)",
+      "tag": "🛡️ [BG-SOF] 🇧🇬 MASQUE-H3 04 (1ms)",
       "server": "8.47.69.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2338,9 +2338,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 01 (4ms)",
       "server": "8.6.112.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2350,9 +2350,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [GR-ATH] 🇬🇷 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 02 (2ms)",
       "server": "8.6.112.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2364,7 +2364,7 @@
       "type": "wireguard",
       "tag": "⚡ [GR-ATH] 🇬🇷 AWG 03 (2ms)",
       "server": "8.6.112.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2374,9 +2374,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [GR-ATH] 🇬🇷 AWG 04 (3ms)",
+      "tag": "🛡️ [GR-ATH] 🇬🇷 MASQUE-H3 04 (1ms)",
       "server": "8.6.112.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2386,9 +2386,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 01 (2ms)",
       "server": "8.39.125.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2398,9 +2398,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PT-LIS] 🇵🇹 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 02 (2ms)",
       "server": "8.39.125.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2410,9 +2410,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 03 (1ms)",
+      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 03 (3ms)",
       "server": "8.39.125.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2422,9 +2422,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PT-LIS] 🇵🇹 AWG 04 (2ms)",
+      "tag": "🛡️ [PT-LIS] 🇵🇹 MASQUE-H3 04 (3ms)",
       "server": "8.39.125.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2434,9 +2434,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 01 (3ms)",
       "server": "162.159.192.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2446,9 +2446,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [TR-IST] 🇹🇷 MASQUE-H2 02 (纯TCP-2ms)",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 02 (2ms)",
       "server": "162.159.192.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2458,9 +2458,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [TR-IST] 🇹🇷 AWG 03 (1ms)",
+      "tag": "⚡ [TR-IST] 🇹🇷 AWG 03 (2ms)",
       "server": "162.159.192.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2470,9 +2470,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [TR-IST] 🇹🇷 AWG 04 (1ms)",
+      "tag": "🛡️ [TR-IST] 🇹🇷 MASQUE-H3 04 (1ms)",
       "server": "162.159.192.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2482,9 +2482,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 01 (2ms)",
       "server": "162.159.193.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2494,9 +2494,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [UA-KBP] 🇺🇦 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 02 (2ms)",
       "server": "162.159.193.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2508,7 +2508,7 @@
       "type": "wireguard",
       "tag": "⚡ [UA-KBP] 🇺🇦 AWG 03 (2ms)",
       "server": "162.159.193.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2518,9 +2518,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [UA-KBP] 🇺🇦 AWG 04 (2ms)",
+      "tag": "🛡️ [UA-KBP] 🇺🇦 MASQUE-H3 04 (2ms)",
       "server": "162.159.193.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2530,9 +2530,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 01 (2ms)",
       "server": "162.159.195.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2542,9 +2542,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 02 (2ms)",
       "server": "162.159.195.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2554,9 +2554,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 03 (1ms)",
+      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 03 (2ms)",
       "server": "162.159.195.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2566,9 +2566,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [HR-ZAG] 🇭🇷 AWG 04 (1ms)",
+      "tag": "🛡️ [HR-ZAG] 🇭🇷 MASQUE-H3 04 (2ms)",
       "server": "162.159.195.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2578,9 +2578,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 01 (1ms)",
       "server": "188.114.96.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2590,9 +2590,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IS-KEF] 🇮🇸 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 02 (2ms)",
       "server": "188.114.96.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2604,7 +2604,7 @@
       "type": "wireguard",
       "tag": "⚡ [IS-KEF] 🇮🇸 AWG 03 (1ms)",
       "server": "188.114.96.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2614,9 +2614,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IS-KEF] 🇮🇸 AWG 04 (1ms)",
+      "tag": "🛡️ [IS-KEF] 🇮🇸 MASQUE-H3 04 (1ms)",
       "server": "188.114.96.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2626,9 +2626,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 01 (2ms)",
       "server": "188.114.99.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2638,9 +2638,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [BR-GRU] 🇧🇷 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 02 (4ms)",
       "server": "188.114.99.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2652,7 +2652,7 @@
       "type": "wireguard",
       "tag": "⚡ [BR-GRU] 🇧🇷 AWG 03 (1ms)",
       "server": "188.114.99.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2662,9 +2662,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [BR-GRU] 🇧🇷 AWG 04 (3ms)",
+      "tag": "🛡️ [BR-GRU] 🇧🇷 MASQUE-H3 04 (3ms)",
       "server": "188.114.99.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2674,9 +2674,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 01 (1ms)",
       "server": "8.39.214.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2686,9 +2686,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AR-EZE] 🇦🇷 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 02 (1ms)",
       "server": "8.39.214.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2700,7 +2700,7 @@
       "type": "wireguard",
       "tag": "⚡ [AR-EZE] 🇦🇷 AWG 03 (1ms)",
       "server": "8.39.214.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2710,9 +2710,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AR-EZE] 🇦🇷 AWG 04 (1ms)",
+      "tag": "🛡️ [AR-EZE] 🇦🇷 MASQUE-H3 04 (2ms)",
       "server": "8.39.214.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2722,9 +2722,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 01 (2ms)",
       "server": "8.35.211.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2734,9 +2734,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CL-SCL] 🇨🇱 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 02 (2ms)",
       "server": "8.35.211.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2748,7 +2748,7 @@
       "type": "wireguard",
       "tag": "⚡ [CL-SCL] 🇨🇱 AWG 03 (1ms)",
       "server": "8.35.211.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2758,9 +2758,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CL-SCL] 🇨🇱 AWG 04 (3ms)",
+      "tag": "🛡️ [CL-SCL] 🇨🇱 MASQUE-H3 04 (1ms)",
       "server": "8.35.211.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2770,9 +2770,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 01 (3ms)",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 01 (1ms)",
       "server": "8.47.69.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2782,9 +2782,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [CO-BOG] 🇨🇴 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 02 (1ms)",
       "server": "8.47.69.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2794,9 +2794,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 03 (3ms)",
+      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 03 (1ms)",
       "server": "8.47.69.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2806,9 +2806,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [CO-BOG] 🇨🇴 AWG 04 (1ms)",
+      "tag": "🛡️ [CO-BOG] 🇨🇴 MASQUE-H3 04 (1ms)",
       "server": "8.47.69.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2818,9 +2818,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 01 (4ms)",
       "server": "8.6.112.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2830,9 +2830,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [PE-LIM] 🇵🇪 MASQUE-H2 02 (纯TCP-3ms)",
+      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 02 (2ms)",
       "server": "8.6.112.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2844,7 +2844,7 @@
       "type": "wireguard",
       "tag": "⚡ [PE-LIM] 🇵🇪 AWG 03 (2ms)",
       "server": "8.6.112.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2854,9 +2854,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [PE-LIM] 🇵🇪 AWG 04 (3ms)",
+      "tag": "🛡️ [PE-LIM] 🇵🇪 MASQUE-H3 04 (1ms)",
       "server": "8.6.112.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2866,9 +2866,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 01 (2ms)",
       "server": "8.39.125.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2878,9 +2878,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [IL-TLV] 🇮🇱 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 02 (2ms)",
       "server": "8.39.125.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2890,9 +2890,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 03 (1ms)",
+      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 03 (3ms)",
       "server": "8.39.125.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2902,9 +2902,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [IL-TLV] 🇮🇱 AWG 04 (2ms)",
+      "tag": "🛡️ [IL-TLV] 🇮🇱 MASQUE-H3 04 (3ms)",
       "server": "8.39.125.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2914,9 +2914,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 01 (2ms)",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 01 (3ms)",
       "server": "162.159.192.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2926,9 +2926,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [AE-DXB] 🇦🇪 MASQUE-H2 02 (纯TCP-2ms)",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 02 (2ms)",
       "server": "162.159.192.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2938,9 +2938,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 03 (1ms)",
+      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 03 (2ms)",
       "server": "162.159.192.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2950,9 +2950,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [AE-DXB] 🇦🇪 AWG 04 (1ms)",
+      "tag": "🛡️ [AE-DXB] 🇦🇪 MASQUE-H3 04 (1ms)",
       "server": "162.159.192.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2962,9 +2962,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 01 (2ms)",
       "server": "162.159.193.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2974,9 +2974,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [SA-RUH] 🇸🇦 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 02 (2ms)",
       "server": "162.159.193.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2988,7 +2988,7 @@
       "type": "wireguard",
       "tag": "⚡ [SA-RUH] 🇸🇦 AWG 03 (2ms)",
       "server": "162.159.193.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -2998,9 +2998,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [SA-RUH] 🇸🇦 AWG 04 (2ms)",
+      "tag": "🛡️ [SA-RUH] 🇸🇦 MASQUE-H3 04 (2ms)",
       "server": "162.159.193.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3010,9 +3010,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 01 (2ms)",
       "server": "162.159.195.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3022,9 +3022,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [EG-CAI] 🇪🇬 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 02 (2ms)",
       "server": "162.159.195.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3034,9 +3034,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 03 (1ms)",
+      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 03 (2ms)",
       "server": "162.159.195.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3046,9 +3046,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [EG-CAI] 🇪🇬 AWG 04 (1ms)",
+      "tag": "🛡️ [EG-CAI] 🇪🇬 MASQUE-H3 04 (2ms)",
       "server": "162.159.195.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3058,9 +3058,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 01 (1ms)",
       "server": "188.114.96.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3070,9 +3070,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 02 (2ms)",
       "server": "188.114.96.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3084,7 +3084,7 @@
       "type": "wireguard",
       "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 03 (1ms)",
       "server": "188.114.96.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3094,9 +3094,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [ZA-JNB] 🇿🇦 AWG 04 (1ms)",
+      "tag": "🛡️ [ZA-JNB] 🇿🇦 MASQUE-H3 04 (1ms)",
       "server": "188.114.96.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3106,9 +3106,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 01 (1ms)",
+      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 01 (1ms)",
       "server": "188.114.97.11",
-      "server_port": 443,
+      "server_port": 2408,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3118,9 +3118,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "🛡️ [NG-LOS] 🇳🇬 MASQUE-H2 02 (纯TCP-1ms)",
+      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 02 (1ms)",
       "server": "188.114.97.21",
-      "server_port": 2408,
+      "server_port": 500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3132,7 +3132,7 @@
       "type": "wireguard",
       "tag": "⚡ [NG-LOS] 🇳🇬 AWG 03 (1ms)",
       "server": "188.114.97.31",
-      "server_port": 443,
+      "server_port": 4500,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
@@ -3142,9 +3142,9 @@
     },
     {
       "type": "wireguard",
-      "tag": "⚡ [NG-LOS] 🇳🇬 AWG 04 (1ms)",
+      "tag": "🛡️ [NG-LOS] 🇳🇬 MASQUE-H3 04 (1ms)",
       "server": "188.114.97.41",
-      "server_port": 2408,
+      "server_port": 1701,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:81e9:447d:555d:f9eb:1786/128"
