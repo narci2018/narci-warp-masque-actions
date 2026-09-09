@@ -692,42 +692,7 @@
     </div>
 
     <!-- Multi-Client Subscription Hub -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-      <!-- v2rayN / Shadowrocket / Universal Subscription -->
-      <div class="sub-card" style="margin-bottom: 0; border-color: rgba(52, 211, 153, 0.35); background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(6, 78, 59, 0.25));">
-        <div class="sub-card-header">
-          <div class="sub-title-group">
-            <span style="font-size: 1.4rem;">⚡</span>
-            <div>
-              <div class="sub-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                <span>v2rayN / 通用客户端订阅 (Base64)</span>
-                <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); font-size: 0.72rem;">全平台通用</span>
-              </div>
-              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 3px;">
-                支持 <strong>v2rayN (Win)</strong>、<strong>v2rayNG (Android)</strong>、<strong>Shadowrocket (小火箭/iOS)</strong>、Sing-box、NekoBox、Karing、Quantumult X 等全部主流客户端
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sub-url-box">
-          <span style="color: var(--text-muted); font-size: 0.8rem;">订阅 URL:</span>
-          <div class="sub-url-text" id="v2ray-sub-url-display">https://.../data/v2ray-sub.txt</div>
-        </div>
-
-        <div class="sub-actions">
-          <button class="btn btn-primary" style="background: #059669;" onclick="copyV2raySubUrl()">
-            📋 复制 v2rayN 订阅链接
-          </button>
-          <a href="data/v2ray-sub.txt" download="v2ray-sub.txt" class="btn btn-secondary">
-            📥 下载 Base64 订阅
-          </a>
-          <a href="data/v2ray-raw.txt" download="v2ray-raw.txt" class="btn btn-secondary">
-            📥 下载明文 VLESS 列表
-          </a>
-        </div>
-      </div>
-
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem;">
       <!-- Clash Meta / Mihomo Subscription -->
       <div class="sub-card" style="margin-bottom: 0;">
         <div class="sub-card-header">
@@ -1355,20 +1320,7 @@
       copyText(url, 'Clash 订阅链接已复制');
     }
 
-    function copyV2raySubUrl() {
-      const url = document.getElementById('v2ray-sub-url-display').textContent;
-      copyText(url, 'v2rayN / 通用订阅链接已复制');
-    }
 
-    function copyVlessByIndex(idx) {
-      if (!globalData || !globalData.endpoints) return;
-      const ep = globalData.endpoints[idx];
-      if (ep && ep.vless_uri) {
-        copyText(ep.vless_uri, '已复制该节点的 v2rayN / VLESS 链接');
-      } else if (ep) {
-        copyText(ep.endpoint, '已复制端点地址');
-      }
-    }
 
     function copyText(text, msg = '已复制到剪贴板') {
       if (navigator.clipboard && navigator.clipboard.writeText) {
