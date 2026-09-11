@@ -1,0 +1,84 @@
+# WARP endpoints: 70 working / 70 probed
+# sorted by in-tunnel loss, then in-tunnel ping
+# Scanned from inside a tunnel to 8.47.69.5:2408 (awg) - every endpoint here exits through that node's region
+# ENDPOINT PING = ICMP from inside that tunnel to the endpoint, so it carries the outer hop too
+# TUN PING / LOSS = RTT and packet loss measured inside the tunnel, to 1.1.1.1
+# SEEN AS = region external services see through the tunnel
+# NODE / NODE LOCATION = Cloudflare WARP edge node the tunnel landed on, and where it sits
+# One /24 pool can land on several different nodes - NODE is per endpoint, not per subnet
+
+ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE   NODE LOCATION
+8.34.70.151:500        158ms         160ms     0%     US         LAX    Los Angeles, US
+8.34.70.141:500        161ms         161ms     0%     US         LAX    Los Angeles, US
+8.39.204.133:1701      162ms         161ms     0%     US         LAX    Los Angeles, US
+8.35.211.0:500         161ms         161ms     0%     US         LAX    Los Angeles, US
+8.34.146.211:500       161ms         161ms     0%     US         LAX    Los Angeles, US
+8.39.204.93:500        161ms         162ms     0%     US         LAX    Los Angeles, US
+8.35.211.176:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.97.219:500     162ms         162ms     0%     US         LAX    Los Angeles, US
+8.35.211.192:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+8.39.125.247:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+8.6.112.85:4500        161ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.96.61:500      161ms         162ms     0%     US         LAX    Los Angeles, US
+8.47.69.77:500         162ms         162ms     0%     US         LAX    Los Angeles, US
+8.34.146.153:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+8.39.214.49:500        162ms         162ms     0%     US         LAX    Los Angeles, US
+8.6.112.58:500         162ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.99.179:500     162ms         162ms     0%     US         LAX    Los Angeles, US
+8.47.69.189:1701       162ms         162ms     0%     US         LAX    Los Angeles, US
+8.39.214.239:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+8.47.69.35:500         162ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.98.203:500     161ms         162ms     0%     US         LAX    Los Angeles, US
+8.6.112.80:500         162ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.97.89:500      162ms         162ms     0%     US         LAX    Los Angeles, US
+162.159.195.243:1701   162ms         162ms     0%     US         LAX    Los Angeles, US
+162.159.192.77:500     162ms         162ms     0%     US         LAX    Los Angeles, US
+162.159.192.35:500     162ms         162ms     0%     US         LAX    Los Angeles, US
+8.39.204.64:500        162ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.98.39:1701     161ms         162ms     0%     US         LAX    Los Angeles, US
+162.159.192.183:500    162ms         162ms     0%     US         LAX    Los Angeles, US
+188.114.98.1:500       161ms         162ms     0%     US         LAX    Los Angeles, US
+8.34.70.60:500         158ms         158ms     10%    US         LAX    Los Angeles, US
+8.34.146.34:500        161ms         160ms     10%    US         LAX    Los Angeles, US
+188.114.96.78:500      161ms         161ms     10%    US         LAX    Los Angeles, US
+8.34.146.29:500        162ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.96.45:500      161ms         161ms     10%    US         LAX    Los Angeles, US
+8.34.70.229:500        161ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.99.26:500      162ms         161ms     10%    US         LAX    Los Angeles, US
+162.159.195.59:500     161ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.99.63:500      161ms         161ms     10%    US         LAX    Los Angeles, US
+162.159.195.39:500     161ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.97.34:500      161ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.97.32:500      161ms         161ms     10%    US         LAX    Los Angeles, US
+162.159.192.167:500    161ms         161ms     10%    US         LAX    Los Angeles, US
+188.114.96.186:500     161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.125.175:500       161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.125.127:500       161ms         162ms     10%    US         LAX    Los Angeles, US
+162.159.195.61:500     162ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.97.194:1701    162ms         162ms     10%    US         LAX    Los Angeles, US
+8.34.146.167:500       161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.214.39:500        161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.204.36:500        162ms         162ms     10%    US         LAX    Los Angeles, US
+162.159.192.241:500    161ms         162ms     10%    US         LAX    Los Angeles, US
+8.35.211.37:500        161ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.99.113:500     161ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.99.61:500      161ms         162ms     10%    US         LAX    Los Angeles, US
+8.6.112.156:500        162ms         162ms     10%    US         LAX    Los Angeles, US
+8.47.69.234:500        161ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.98.114:500     163ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.98.245:500     162ms         162ms     10%    US         LAX    Los Angeles, US
+188.114.96.105:1701    161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.214.103:500       161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.204.212:500       161ms         162ms     10%    US         LAX    Los Angeles, US
+8.39.125.6:500         161ms         161ms     20%    US         LAX    Los Angeles, US
+8.39.125.25:500        161ms         162ms     20%    US         LAX    Los Angeles, US
+8.35.211.41:500        161ms         162ms     20%    US         LAX    Los Angeles, US
+162.159.195.120:500    161ms         162ms     20%    US         LAX    Los Angeles, US
+8.34.70.174:500        162ms         162ms     20%    US         LAX    Los Angeles, US
+8.47.69.203:500        162ms         162ms     20%    US         LAX    Los Angeles, US
+8.6.112.12:500         162ms         162ms     20%    US         LAX    Los Angeles, US
+8.39.214.24:500        161ms         163ms     30%    US         LAX    Los Angeles, US
+
+# Best endpoint per node (lowest in-tunnel loss, then in-tunnel ping)
+NODE   ENDPOINT               ENDPOINT PING TUN PING  LOSS   SEEN AS    NODE LOCATION
+LAX    8.34.70.151:500        158ms         160ms     0%     US         Los Angeles, US

@@ -1,0 +1,21 @@
+mixed-port: 19896
+external-controller: 127.0.0.1:19096
+secret: test
+allow-lan: false
+mode: rule
+log-level: debug
+
+proxies:
+  - name: 'warp-masque'
+    type: masque
+    server: 162.159.198.1
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: 'MHcCAQEEIFqJAxgNsSIkD8qdjB6A2p5JO5akwnIdIifJ/rstocxnoAoGCCqGSM49AwEHoUQDQgAE+mqMG9WfZRGVF2e0b+jwgEzD5nA8wQlBXIX27GsEntqG8UAFmJtGr+gEdx0ZNqekISMb4UuPx7jHiwGTUVVW2A=='
+    public-key: 'MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=='
+    ip: 172.16.0.2
+    udp: true
+
+rules:
+  - MATCH,warp-masque

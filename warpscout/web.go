@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/fs"
+	"math/rand"
 	"net"
 	"net/http"
 	"net/netip"
@@ -74,6 +75,31 @@ var serverState = &webState{
 	clients:     make(map[chan string]struct{}),
 }
 
+// multiAccountPool holds independently registered WARP accounts. Each account
+// has its own Cloudflare identity and therefore gets a different egress IP.
+// The primary account (from warpscout-account.json) is always index 0.
+var (
+	accountPoolMu sync.Mutex
+	accountPool   []account // loaded or registered accounts
+)
+
+func getPoolAccount(idx int) account {
+	accountPoolMu.Lock()
+	defer accountPoolMu.Unlock()
+	if len(accountPool) == 0 {
+		var a account
+		a.PrivateKey = warpPrivateKey
+		a.PeerPublicKey = warpPublicKey
+		a.IPv4 = warpAddress
+		a.IPv6 = warpAddressV6
+		if masqueAcct != nil {
+			a.Masque = masqueAcct
+		}
+		return a
+	}
+	return accountPool[idx%len(accountPool)]
+}
+
 func (s *webState) broadcast(event string, data any) {
 	bytes, err := json.Marshal(data)
 	if err != nil {
@@ -118,6 +144,71 @@ func runWebCmd(ctx context.Context, opts options) error {
 		}
 	}
 	serverState.socksPort = opts.port
+	_ = loadScanAccount(opts.accountPath)
+	initAccountManager("data")
+	initSubscriptionManager("data")
+
+	// Initialize account pool with the primary account
+	if a, err := loadAccount(opts.accountPath); err == nil {
+		accountPoolMu.Lock()
+		accountPool = []account{a}
+		// Load any extra accounts from pool files
+		for i := 1; i <= 20; i++ {
+			poolPath := fmt.Sprintf("%s.pool%d", opts.accountPath, i)
+			if pa, perr := loadAccount(poolPath); perr == nil {
+				accountPool = append(accountPool, pa)
+			} else {
+				break
+			}
+		}
+		accountPoolMu.Unlock()
+	}
+
+	// Auto-expand account pool in background to at least 5 accounts if needed
+	go func() {
+		time.Sleep(3 * time.Second)
+		accountPoolMu.Lock()
+		curCount := len(accountPool)
+		accountPoolMu.Unlock()
+		if curCount < 5 {
+			fmt.Printf("[AccountPool] 当前独立账号数(%d)较少，正在后台自动补充注册至 5 个独立 WARP 账户(保障出口IP多样化)...\n", curCount)
+			regOpts := opts
+			if regOpts.relay == "" {
+				regOpts.relay = defaultRelay
+			}
+			if regOpts.proto == "" {
+				regOpts.proto = protoWG
+			}
+			if regOpts.timeoutSec <= 0 {
+				regOpts.timeoutSec = 4
+			}
+			if regOpts.perSubnet <= 0 {
+				regOpts.perSubnet = 5
+			}
+			_ = applyRelay(&regOpts)
+			_, ips, _ := setupScan(regOpts)
+			timeout := time.Duration(regOpts.timeoutSec) * time.Second
+			for curCount < 5 {
+				ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+				a, err := obtainAccount(ctx, regOpts, ips, timeout, account{})
+				cancel()
+				if err != nil {
+					fmt.Printf("[AccountPool] 自动注册新账号失败: %v，稍后重试\n", err)
+					break
+				}
+				accountPoolMu.Lock()
+				poolIdx := len(accountPool)
+				accountPool = append(accountPool, a)
+				curCount = len(accountPool)
+				accountPoolMu.Unlock()
+
+				poolPath := fmt.Sprintf("%s.pool%d", opts.accountPath, poolIdx)
+				_ = saveAccount(poolPath, a)
+				fmt.Printf("[AccountPool] 成功自动扩容第 %d 个独立 WARP 账号 (IPv4: %s)\n", poolIdx+1, a.IPv4)
+				time.Sleep(1 * time.Second)
+			}
+		}
+	}()
 
 	mux := http.NewServeMux()
 
@@ -125,6 +216,7 @@ func runWebCmd(ctx context.Context, opts options) error {
 	mux.HandleFunc("/api/status", handleStatus(opts))
 	mux.HandleFunc("/api/account", handleAccount(opts))
 	mux.HandleFunc("/api/account/register", handleRegister(opts))
+	mux.HandleFunc("/api/account/pool", handleAccountPool(opts))
 	mux.HandleFunc("/api/scan/start", handleScanStart(opts))
 	mux.HandleFunc("/api/scan/stop", handleScanStop)
 	mux.HandleFunc("/api/scan/events", handleScanEvents)
@@ -141,7 +233,35 @@ func runWebCmd(ctx context.Context, opts options) error {
 	mux.HandleFunc("/api/sub/clash-local", handleSubClashLocal(opts))
 	mux.HandleFunc("/api/sub/singbox-local", handleSubSingboxLocal(opts))
 	mux.HandleFunc("/api/matrix/nodes", handleMatrixNodes)
-	mux.HandleFunc("/api/gateway/test", handleGatewayTest)
+
+	// WARP 账号管理 API
+	mux.HandleFunc("/api/accounts", handleAccounts)
+	mux.HandleFunc("/api/accounts/create", handleAccountCreate)
+	mux.HandleFunc("/api/accounts/update", handleAccountUpdate)
+	mux.HandleFunc("/api/accounts/delete", handleAccountDelete)
+	mux.HandleFunc("/api/accounts/bind", handleAccountBind)
+	mux.HandleFunc("/api/accounts/schedule", handleAccountSchedule)
+
+	// 多订阅底座管理 API
+	mux.HandleFunc("/api/subs/sources", handleSubsSources)
+	mux.HandleFunc("/api/subs/sources/delete", handleSubsSourcesDelete)
+	mux.HandleFunc("/api/subs/sources/update", handleSubsSourcesUpdate)
+	mux.HandleFunc("/api/subs/sources/refresh", handleSubsSourcesRefresh)
+	mux.HandleFunc("/api/subs/nodes", handleSubsNodes)
+	mux.HandleFunc("/api/subs/nodes/ping", handleSubsNodesPing)
+	mux.HandleFunc("/api/subs/nodes/speedtest", handleSubsNodesSpeedtest)
+
+	// 纯净多国 WARP API
+	mux.HandleFunc("/api/pure/status", handlePureStatus)
+	mux.HandleFunc("/api/pure/start", handlePureStart)
+	mux.HandleFunc("/api/pure/stop", handlePureStop)
+	mux.HandleFunc("/api/pure/countries", handlePureCountries)
+	mux.HandleFunc("/api/pure/clash", handlePureClash)
+	mux.HandleFunc("/api/pure/singbox", handlePureSingbox)
+	mux.HandleFunc("/api/pure/v2rayn", handlePureV2rayN)
+	mux.HandleFunc("/api/pure/ping", handlePurePing)
+	mux.HandleFunc("/api/pure/speedtest", handlePureSpeedtest)
+	mux.HandleFunc("/api/pure/refresh", handlePureRefresh)
 
 	// Static Files from embed.FS
 	subFS, err := fs.Sub(webFS, "web")
@@ -178,89 +298,12 @@ func runWebCmd(ctx context.Context, opts options) error {
 	fmt.Printf("  -> Web Dashboard : http://%s\n", opts.listen)
 	fmt.Printf("  -> SOCKS5 Port   : %d\n", opts.port)
 	fmt.Println("==================================================================")
-	// 自动预加载本地订阅中继源 (full_sub.yaml)
-	go func() {
-		subPaths := []string{"/data/full_sub.yaml", "full_sub.yaml"}
-		for _, p := range subPaths {
-			if b, err := os.ReadFile(p); err == nil && len(b) > 0 {
-				nodes := parseSubscriptionContent(string(b))
-				if len(nodes) > 0 {
-					globalSubState.URL = "https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f"
-					globalSubState.UpdateTime = time.Now()
-					globalSubState.Nodes = nodes
-					fmt.Printf("[Sub] ✅ 自动加载本地中继源成功: 共 %d 个节点\n", len(nodes))
-					break
-				}
-			}
-		}
-	}()
-
-	// 自动启动本地 WARP-in-WARP 双层原生出海网关
+	// 自动启动纯净 WARP 多国出海引擎 (默认法国 FR 出口)
 	go func() {
 		time.Sleep(1 * time.Second)
-		acct, err := loadAccount(opts.accountPath)
-		if err != nil || acct.PrivateKey == "" {
-			return
-		}
-		fmt.Println("[Gateway] 正在启动 WARP-in-WARP 双层原生出海网关 (洛杉矶出口)...")
-
-		throughCandidates := []string{
-			"188.114.97.226:1701",
-			"188.114.96.197:1701",
-			"162.159.195.253:1701",
-			"8.39.204.144:1701",
-			"8.35.211.248:1701",
-		}
-
-		for _, th := range throughCandidates {
-			readyCh := make(chan error, 1)
-			gatewayOpts := opts
-			gatewayOpts.endpoint = "162.159.192.1:2408"
-			gatewayOpts.through = th
-			gatewayOpts.proto = protoAWG
-			gatewayOpts.innerProto = protoWG
-			gatewayOpts.port = serverState.socksPort
-			gatewayOpts.listen = serverState.socksListen
-
-			run, err := parseProto(gatewayOpts.innerProto)
-			if err != nil {
-				continue
-			}
-
-			gwCtx, cancel := context.WithCancel(context.Background())
-			serverState.mu.Lock()
-			serverState.socksCancel = cancel
-			serverState.socksEndpoint = gatewayOpts.endpoint
-			serverState.socksProto = run.name
-			serverState.mu.Unlock()
-
-			go func() {
-				_ = runWebSOCKS(gwCtx, gatewayOpts, run, gatewayOpts.endpoint, readyCh)
-				serverState.mu.Lock()
-				serverState.socksActive = false
-				serverState.socksCancel = nil
-				serverState.mu.Unlock()
-			}()
-
-			select {
-			case err := <-readyCh:
-				if err == nil {
-					serverState.mu.Lock()
-					serverState.socksActive = true
-					serverState.mu.Unlock()
-					fmt.Printf("[Gateway] ✅ WARP-in-WARP 原生出海网关已就绪 (通过 %s): socks5://127.0.0.1:%d (出口: 🇺🇸 洛杉矶 LAX)\n", th, serverState.socksPort)
-					return
-				}
-				fmt.Printf("[Gateway] ⚠️ 尝试 %s 失败: %v，尝试下一个...\n", th, err)
-				cancel()
-			case <-time.After(12 * time.Second):
-				fmt.Printf("[Gateway] ⚠️ 尝试 %s 超时，尝试下一个...\n", th)
-				cancel()
-			}
-			time.Sleep(500 * time.Millisecond)
-		}
+		fmt.Println("[PureWARP] 正在自动拉起纯净出海引擎 (默认法国 FR 出口)...")
+		_ = globalPureMgr.start("FR")
 	}()
-
 
 	if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		return fmt.Errorf("http server failed: %v", err)
@@ -294,6 +337,11 @@ func handleStatus(opts options) http.HandlerFunc {
 			"results_count":  len(serverState.lastResults),
 			"active_proxy":   globalSubState.ActiveNode,
 		}
+		accountPoolMu.Lock()
+		poolSize := len(accountPool)
+		accountPoolMu.Unlock()
+		resp["account_pool_size"] = poolSize
+
 		if hasAcct {
 			resp["account_ipv4"] = acct.IPv4
 			resp["account_ipv6"] = acct.IPv6
@@ -410,6 +458,147 @@ func handleRegister(opts options) http.HandlerFunc {
 	}
 }
 
+// handleAccountPool batch-registers additional independent WARP accounts.
+// Each account gets a different Cloudflare egress IP.
+// GET: returns current pool status
+// POST {"count": N}: registers N additional accounts (max 10 total)
+func handleAccountPool(opts options) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+
+		if r.Method == http.MethodGet {
+			accountPoolMu.Lock()
+			poolSize := len(accountPool)
+			var poolInfo []map[string]string
+			for i, a := range accountPool {
+				label := fmt.Sprintf("账户 #%d", i+1)
+				if i == 0 {
+					label += " (主账户)"
+				}
+				poolInfo = append(poolInfo, map[string]string{
+					"label": label,
+					"ipv4":  a.IPv4,
+					"id":    a.ID,
+				})
+			}
+			accountPoolMu.Unlock()
+			_ = json.NewEncoder(w).Encode(map[string]any{
+				"pool_size": poolSize,
+				"accounts":  poolInfo,
+			})
+			return
+		}
+
+		if r.Method != http.MethodPost {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+
+		var req struct {
+			Count int    `json:"count"`
+			Proxy string `json:"proxy"`
+		}
+		_ = json.NewDecoder(r.Body).Decode(&req)
+		if req.Count <= 0 {
+			req.Count = 5
+		}
+
+		accountPoolMu.Lock()
+		currentSize := len(accountPool)
+		accountPoolMu.Unlock()
+
+		maxTotal := 10
+		needed := maxTotal - currentSize
+		if needed <= 0 {
+			_ = json.NewEncoder(w).Encode(map[string]any{
+				"status": "full",
+				"message": fmt.Sprintf("账户池已满 (%d 个)，无需追加注册", currentSize),
+				"pool_size": currentSize,
+			})
+			return
+		}
+		if req.Count > needed {
+			req.Count = needed
+		}
+
+		regOpts := opts
+		if regOpts.relay == "" {
+			regOpts.relay = defaultRelay
+		}
+		if regOpts.proto == "" {
+			regOpts.proto = protoWG
+		}
+		if regOpts.timeoutSec <= 0 {
+			regOpts.timeoutSec = 4
+		}
+		if regOpts.perSubnet <= 0 {
+			regOpts.perSubnet = 5
+		}
+		if req.Proxy != "" {
+			p := req.Proxy
+			if strings.Contains(p, "127.0.0.1") {
+				p = strings.ReplaceAll(p, "127.0.0.1", "host.docker.internal")
+			} else if strings.Contains(p, "localhost") {
+				p = strings.ReplaceAll(p, "localhost", "host.docker.internal")
+			}
+			regOpts.proxy = p
+		}
+
+		_ = applyRelay(&regOpts)
+		_, ips, _ := setupScan(regOpts)
+		timeout := time.Duration(regOpts.timeoutSec) * time.Second
+
+		serverState.broadcast("log", map[string]any{
+			"text": fmt.Sprintf("开始批量注册 %d 个独立 WARP 账户（用于不同出口 IP）...", req.Count),
+			"type": "info",
+		})
+
+		registered := 0
+		for i := 0; i < req.Count; i++ {
+			ctx, cancel := context.WithTimeout(context.Background(), 90*time.Second)
+			a, err := obtainAccount(ctx, regOpts, ips, timeout, account{})
+			cancel()
+			if err != nil {
+				serverState.broadcast("log", map[string]any{
+					"text": fmt.Sprintf("账户 #%d 注册失败: %v", currentSize+i+1, err),
+					"type": "error",
+				})
+				continue
+			}
+
+			// Save to pool file
+			accountPoolMu.Lock()
+			poolIdx := len(accountPool)
+			accountPool = append(accountPool, a)
+			accountPoolMu.Unlock()
+
+			poolPath := fmt.Sprintf("%s.pool%d", opts.accountPath, poolIdx)
+			_ = saveAccount(poolPath, a)
+
+			registered++
+			serverState.broadcast("log", map[string]any{
+				"text": fmt.Sprintf("账户 #%d 注册成功! IPv4: %s", poolIdx+1, a.IPv4),
+				"type": "success",
+			})
+		}
+
+		accountPoolMu.Lock()
+		finalSize := len(accountPool)
+		accountPoolMu.Unlock()
+
+		serverState.broadcast("log", map[string]any{
+			"text": fmt.Sprintf("批量注册完成: 成功 %d 个，账户池共 %d 个独立账户", registered, finalSize),
+			"type": "success",
+		})
+
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":     "done",
+			"registered": registered,
+			"pool_size":  finalSize,
+		})
+	}
+}
+
 func handleScanEvents(w http.ResponseWriter, r *http.Request) {
 	flusher, ok := w.(http.Flusher)
 	if !ok {
@@ -475,6 +664,7 @@ func handleScanStart(baseOpts options) http.HandlerFunc {
 			TunPing        bool   `json:"tun_ping"`
 			Sample         int    `json:"sample"`
 			Full           bool   `json:"full"`
+			TargetCount    int    `json:"target_count"`
 			GenI1          string `json:"gen_i1"`
 			ExcludeNode    string `json:"exclude_node"`
 			ExcludeCountry string `json:"exclude_country"`
@@ -571,6 +761,27 @@ func handleScanStart(baseOpts options) http.HandlerFunc {
 			w.WriteHeader(http.StatusBadRequest)
 			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
 			return
+		}
+
+		if !scanOpts.full && req.Target == "" {
+			targetCount := req.TargetCount
+			if targetCount <= 0 {
+				targetCount = 100
+			}
+			numPools := len(pools)
+			if numPools <= 0 {
+				numPools = 14
+			}
+			perSubnet := (targetCount + numPools - 1) / numPools
+			if perSubnet < 1 {
+				perSubnet = 1
+			}
+			scanOpts.perSubnet = perSubnet
+			ips = expandPools(perSubnet)
+			rand.Shuffle(len(ips), func(i, j int) { ips[i], ips[j] = ips[j], ips[i] })
+			if len(ips) > targetCount {
+				ips = ips[:targetCount]
+			}
 		}
 
 		if run.isAWG() && scanOpts.genI1 != "" {
@@ -953,34 +1164,325 @@ func handleConfigBatchExport(baseOpts options) http.HandlerFunc {
 		var sb strings.Builder
 
 		if req.ConfType == "mihomo" {
-			// 合并为包含 proxies: 的统一 Clash / Mihomo 配置
+			// 合并为包含完整规则与分组的 Clash / Mihomo 订阅文件
 			sb.WriteString("# Generated by WARPSCOUT WebUI Batch Export\n")
+			sb.WriteString("port: 7890\n")
+			sb.WriteString("socks-port: 7891\n")
+			sb.WriteString("allow-lan: true\n")
+			sb.WriteString("mode: rule\n")
+			sb.WriteString("log-level: info\n")
+			sb.WriteString("ipv6: false\n")
+			sb.WriteString("external-controller: 127.0.0.1:9090\n\n")
+
+			// 国内极速抗污染 DNS 配置 (彻底消除 1.1.1.1 带来的超时与测速挂起)
+			sb.WriteString("dns:\n")
+			sb.WriteString("  enable: true\n")
+			sb.WriteString("  ipv6: false\n")
+			sb.WriteString("  default-nameserver:\n")
+			sb.WriteString("    - 223.5.5.5\n")
+			sb.WriteString("    - 119.29.29.29\n")
+			sb.WriteString("    - 114.114.114.114\n")
+			sb.WriteString("  enhanced-mode: fake-ip\n")
+			sb.WriteString("  fake-ip-range: 198.18.0.1/16\n")
+			sb.WriteString("  use-hosts: true\n")
+			sb.WriteString("  nameserver:\n")
+			sb.WriteString("    - https://sm2.doh.pub/dns-query\n")
+			sb.WriteString("    - https://dns.alidns.com/dns-query\n")
+			sb.WriteString("    - 223.5.5.5\n")
+			sb.WriteString("    - 119.29.29.29\n")
+			sb.WriteString("  fallback:\n")
+			sb.WriteString("    - 1.1.1.1\n")
+			sb.WriteString("    - 8.8.8.8\n\n")
+
 			sb.WriteString("proxies:\n")
-			for i, ep := range req.Endpoints {
-				confBytes, err := renderConfFor(opts, ep, run)
-				if err != nil {
-					continue
-				}
-				confStr := strings.TrimSpace(string(confBytes))
-				lines := strings.Split(confStr, "\n")
-				for _, line := range lines {
-					if strings.HasPrefix(strings.TrimSpace(line), "proxies:") {
-						continue
+
+			var allNodeNames []string
+			var usNodeNames []string
+			var masqueNodeNames []string
+			var wgNodeNames []string
+			var dialerProxyName string // 前置代理节点名，非空表示通过代理转发
+
+			// 检查是否有订阅底座已选的前置代理节点
+			activeProxy := globalSubState.ActiveNode
+			if activeProxy != nil && activeProxy.ProxyURL != "" {
+				// 解析代理 URL 获取类型/地址/端口
+				pu, perr := url.Parse(activeProxy.ProxyURL)
+				if perr == nil {
+					proxyType := "socks5"
+					if pu.Scheme == "http" || pu.Scheme == "https" {
+						proxyType = "http"
 					}
-					// 保证每一项是 2 空格缩进
-					if strings.HasPrefix(line, "  - ") || strings.HasPrefix(line, "- ") {
-						if !strings.HasPrefix(line, "  ") {
-							line = "  " + line
-						}
-						// 自定义每个节点的名称，防止重名
-						if strings.Contains(line, "name:") {
-							line = fmt.Sprintf("  - name: \"WARP-%d (%s)\"", i+1, ep)
+					proxyHost := pu.Hostname()
+					proxyPort := pu.Port()
+					if proxyPort == "" {
+						if proxyType == "http" {
+							proxyPort = "80"
+						} else {
+							proxyPort = "1080"
 						}
 					}
-					sb.WriteString(line)
-					sb.WriteString("\n")
+					// 如果是容器内地址 127.0.0.1，需要替换为 host.docker.internal
+					// 但 Clash 运行在宿主机上，所以保持 127.0.0.1 即可
+					// sing-box 监听在 0.0.0.0:29891，端口已映射到宿主机
+					country := strings.ToUpper(activeProxy.Country)
+					if country == "" {
+						country = "XX"
+					}
+					dialerProxyName = fmt.Sprintf("🔗 [%s] 前置代理 %s", country, activeProxy.Name)
+					pPort, _ := strconv.Atoi(proxyPort)
+					proxyEntry := []kv{
+						{"name", quoted(dialerProxyName)},
+						{"type", proxyType},
+						{"server", proxyHost},
+						{"port", pPort},
+					}
+					// 如果有用户名密码
+					if pu.User != nil {
+						proxyEntry = append(proxyEntry, kv{"username", pu.User.Username()})
+						if pw, ok := pu.User.Password(); ok {
+							proxyEntry = append(proxyEntry, kv{"password", pw})
+						}
+					}
+					var b strings.Builder
+					writeYAML(&b, proxyEntry, "  ", "- ")
+					sb.WriteString(b.String())
+					allNodeNames = append(allNodeNames, dialerProxyName)
 				}
 			}
+
+			// 确保账户已载入
+			if masqueAcct == nil {
+				if opts.accountPath != "" {
+					_ = loadScanAccount(opts.accountPath)
+				}
+				if masqueAcct == nil && baseOpts.accountPath != "" {
+					_ = loadScanAccount(baseOpts.accountPath)
+				}
+			}
+
+			// 1. 🌐 MASQUE 官方防封节点群
+			if masqueAcct != nil {
+				// 1.1 MASQUE-H2 (TCP / HTTPS)
+				masqueRunH2 := protoRun{kindMASQUEH2, protoMASQUEH2}
+				h2Endpoints := []struct {
+					host string
+					port int
+				}{
+					{"162.159.199.188", 443},
+					{"162.159.199.188", 8443},
+					{"162.159.199.188", 2053},
+					{"162.159.199.188", 2083},
+					{"162.159.199.188", 2087},
+					{"162.159.199.188", 2096},
+					{"162.159.199.188", 8095},
+					{"162.159.199.188", 1701},
+					{"162.159.199.1", 443},
+					{"162.159.199.1", 8443},
+					{"162.159.199.1", 2053},
+					{"162.159.199.1", 2083},
+					{"162.159.199.1", 8095},
+					{"162.159.199.2", 443},
+					{"162.159.199.2", 8443},
+					{"162.159.199.2", 2053},
+					{"162.159.199.2", 2083},
+					{"162.159.199.2", 8095},
+					{"162.159.199.3", 443},
+					{"162.159.199.3", 8443},
+					{"162.159.198.1", 443},
+					{"162.159.198.2", 443},
+				}
+				for i, item := range h2Endpoints {
+					ep := fmt.Sprintf("%s:%d", item.host, item.port)
+					acct := getPoolAccount(i)
+					var nodeName string
+					if dialerProxyName != "" {
+						nodeName = fmt.Sprintf("🌐 [US-MASQUE] TCP %02d (%s)", i+1, ep)
+					} else {
+						nodeName = fmt.Sprintf("🌐 [MASQUE] TCP %02d (%s)", i+1, ep)
+					}
+					var mP []kv
+					var err error
+					if acct.Masque != nil && acct.Masque.PrivateKey != "" {
+						mP, err = mihomoProxyWithAccount(opts, nodeName, ep, masqueRunH2, 0, nil, acct)
+					} else {
+						mP, err = mihomoProxy(opts, nodeName, ep, masqueRunH2, 0, nil)
+					}
+					if err != nil {
+						continue
+					}
+					if dialerProxyName != "" {
+						mP = append(mP, kv{"dialer-proxy", dialerProxyName})
+						usNodeNames = append(usNodeNames, nodeName)
+					}
+					var b strings.Builder
+					writeYAML(&b, mP, "  ", "- ")
+					sb.WriteString(b.String())
+					masqueNodeNames = append(masqueNodeNames, nodeName)
+					allNodeNames = append(allNodeNames, nodeName)
+				}
+
+				// 1.2 MASQUE-H3 (QUIC)
+				masqueRunH3 := protoRun{kindMASQUE, protoMASQUE}
+				h3Endpoints := []struct {
+					host string
+					port int
+				}{
+					{"162.159.198.1", 443},
+					{"162.159.198.1", 8443},
+					{"162.159.198.1", 2053},
+					{"162.159.198.1", 2083},
+					{"162.159.198.1", 500},
+					{"162.159.198.1", 1701},
+					{"162.159.198.1", 4500},
+					{"162.159.198.1", 8095},
+					{"162.159.198.2", 443},
+					{"162.159.198.2", 8443},
+					{"162.159.198.2", 2053},
+					{"162.159.198.2", 2083},
+					{"162.159.198.2", 500},
+					{"162.159.198.2", 1701},
+					{"162.159.198.2", 4500},
+					{"162.159.198.2", 8095},
+				}
+				for i, item := range h3Endpoints {
+					ep := fmt.Sprintf("%s:%d", item.host, item.port)
+					acct := getPoolAccount(i + len(h2Endpoints))
+					var nodeName string
+					if dialerProxyName != "" {
+						nodeName = fmt.Sprintf("🛡️ [US-MASQUE] QUIC %02d (%s)", i+1, ep)
+					} else {
+						nodeName = fmt.Sprintf("🛡️ [MASQUE] QUIC %02d (%s)", i+1, ep)
+					}
+					var mP []kv
+					var err error
+					if acct.Masque != nil && acct.Masque.PrivateKey != "" {
+						mP, err = mihomoProxyWithAccount(opts, nodeName, ep, masqueRunH3, 0, nil, acct)
+					} else {
+						mP, err = mihomoProxy(opts, nodeName, ep, masqueRunH3, 0, nil)
+					}
+					if err != nil {
+						continue
+					}
+					if dialerProxyName != "" {
+						mP = append(mP, kv{"dialer-proxy", dialerProxyName})
+						usNodeNames = append(usNodeNames, nodeName)
+					}
+					var b strings.Builder
+					writeYAML(&b, mP, "  ", "- ")
+					sb.WriteString(b.String())
+					masqueNodeNames = append(masqueNodeNames, nodeName)
+					allNodeNames = append(allNodeNames, nodeName)
+				}
+			}
+
+			// 2. ⚡ WireGuard / AWG 优选直连节点
+			for i, ep := range req.Endpoints {
+				acct := getPoolAccount(i + len(masqueNodeNames))
+				var nodeName string
+				if dialerProxyName != "" {
+					// 通过代理出口，标注美国
+					nodeName = fmt.Sprintf("🇺🇸 [US-WG] 代理转发 %02d (%s)", i+1, ep)
+				} else {
+					// 直连中国出口，诚实标注
+					nodeName = fmt.Sprintf("⚡ [CN-WG] 直连 %02d (%s)", i+1, ep)
+				}
+				var dP []kv
+				var err error
+				if acct.PrivateKey != "" && acct.PeerPublicKey != "" {
+					dP, err = mihomoProxyWithAccount(opts, nodeName, ep, run, opts.mtu, nil, acct)
+				} else {
+					dP, err = mihomoProxy(opts, nodeName, ep, run, opts.mtu, nil)
+				}
+				if err == nil {
+					if dialerProxyName != "" {
+						dP = append(dP, kv{"dialer-proxy", dialerProxyName})
+						usNodeNames = append(usNodeNames, nodeName)
+					}
+					var b strings.Builder
+					writeYAML(&b, dP, "  ", "- ")
+					sb.WriteString(b.String())
+					wgNodeNames = append(wgNodeNames, nodeName)
+					allNodeNames = append(allNodeNames, nodeName)
+				}
+			}
+
+			sb.WriteString("\nproxy-groups:\n")
+
+			// 1. 🚀 手动选择 (客户端置顶主入口)
+			sb.WriteString("  - name: \"🚀 手动选择\"\n")
+			sb.WriteString("    type: select\n")
+			sb.WriteString("    proxies:\n")
+			if len(usNodeNames) > 0 {
+				sb.WriteString("      - \"🇺🇸 美国出口优选\"\n")
+			}
+			if len(masqueNodeNames) > 0 {
+				sb.WriteString("      - \"🌐 MASQUE 防封优选\"\n")
+			}
+			if len(wgNodeNames) > 0 {
+				sb.WriteString("      - \"⚡ WireGuard 优选\"\n")
+			}
+			sb.WriteString("      - \"♻️ 全协议自动优选\"\n")
+			for _, n := range allNodeNames {
+				sb.WriteString(fmt.Sprintf("      - %q\n", n))
+			}
+
+			// 2. 🇺🇸 美国出口优选
+			if len(usNodeNames) > 0 {
+				sb.WriteString("  - name: \"🇺🇸 美国出口优选\"\n")
+				sb.WriteString("    type: url-test\n")
+				sb.WriteString("    url: http://www.gstatic.com/generate_204\n")
+				sb.WriteString("    interval: 300\n")
+				sb.WriteString("    tolerance: 50\n")
+				sb.WriteString("    proxies:\n")
+				for _, n := range usNodeNames {
+					sb.WriteString(fmt.Sprintf("      - %q\n", n))
+				}
+			}
+
+			// 3. 🌐 MASQUE 防封优选
+			if len(masqueNodeNames) > 0 {
+				sb.WriteString("  - name: \"🌐 MASQUE 防封优选\"\n")
+				sb.WriteString("    type: url-test\n")
+				sb.WriteString("    url: http://www.gstatic.com/generate_204\n")
+				sb.WriteString("    interval: 300\n")
+				sb.WriteString("    tolerance: 50\n")
+				sb.WriteString("    proxies:\n")
+				for _, n := range masqueNodeNames {
+					sb.WriteString(fmt.Sprintf("      - %q\n", n))
+				}
+			}
+
+			// 4. ⚡ WireGuard 优选
+			if len(wgNodeNames) > 0 {
+				sb.WriteString("  - name: \"⚡ WireGuard 优选\"\n")
+				sb.WriteString("    type: url-test\n")
+				sb.WriteString("    url: http://www.gstatic.com/generate_204\n")
+				sb.WriteString("    interval: 300\n")
+				sb.WriteString("    tolerance: 50\n")
+				sb.WriteString("    proxies:\n")
+				for _, n := range wgNodeNames {
+					sb.WriteString(fmt.Sprintf("      - %q\n", n))
+				}
+			}
+
+			// 5. ♻️ 全协议自动优选
+			sb.WriteString("  - name: \"♻️ 全协议自动优选\"\n")
+			sb.WriteString("    type: url-test\n")
+			sb.WriteString("    url: http://www.gstatic.com/generate_204\n")
+			sb.WriteString("    interval: 300\n")
+			sb.WriteString("    tolerance: 50\n")
+			sb.WriteString("    proxies:\n")
+			for _, n := range allNodeNames {
+				sb.WriteString(fmt.Sprintf("      - %q\n", n))
+			}
+
+			sb.WriteString("\nrules:\n")
+			sb.WriteString("  - MATCH,🚀 手动选择\n")
+
+			w.Header().Set("Content-Type", "application/x-yaml; charset=utf-8")
+			w.Header().Set("Content-Disposition", "attachment; filename=\"warpscout-clash.yml\"")
+			_, _ = w.Write([]byte(sb.String()))
+			return
 		} else {
 			// Native / WireGuard 分段合并配置
 			sb.WriteString(fmt.Sprintf("### WARPSCOUT 批量导出配置 (共 %d 个端点) ###\n\n", len(req.Endpoints)))
@@ -1433,8 +1935,8 @@ func handleMatrixNodes(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	w.WriteHeader(http.StatusNotFound)
-	_ = json.NewEncoder(w).Encode(map[string]any{"error": "Matrix data not found"})
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	_, _ = w.Write([]byte("[]"))
 }
 
 func handleGatewayTest(w http.ResponseWriter, r *http.Request) {
@@ -1486,3 +1988,413 @@ func handleGatewayTest(w http.ResponseWriter, r *http.Request) {
 
 
 
+
+
+// -----------------------------------------------------------------------
+// Account Management API Handlers
+// -----------------------------------------------------------------------
+
+func handleAccounts(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+
+	if r.Method == http.MethodGet {
+		accounts := globalAccountMgr.List()
+		sched := globalAccountMgr.GetSchedulerStatus()
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":    "ok",
+			"accounts":  accounts,
+			"scheduler": sched,
+		})
+		return
+	}
+
+	if r.Method == http.MethodPost {
+		var req WarpAccount
+		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		if req.PrivateKey == "" {
+			http.Error(w, "私钥不能为空", http.StatusBadRequest)
+			return
+		}
+		if req.PeerPublicKey == "" {
+			req.PeerPublicKey = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+		}
+		if req.IPv4 == "" {
+			req.IPv4 = "172.16.0.2"
+		}
+		if err := globalAccountMgr.Add(req); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "账号已添加"})
+		return
+	}
+
+	http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+}
+
+func handleAccountCreate(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+	var req struct {
+		Country  string `json:"country"`
+		ProxyURL string `json:"proxy_url"`
+		ViaNote  string `json:"via_note"`
+	}
+	_ = json.NewDecoder(r.Body).Decode(&req)
+
+	ctx, cancel := context.WithTimeout(r.Context(), 35*time.Second)
+	defer cancel()
+
+	var acc *WarpAccount
+	var err error
+	if req.Country != "" && req.Country != "direct" {
+		acc, err = globalAccountMgr.RegisterWARPViaCountry(ctx, req.Country)
+	} else if req.ProxyURL != "" {
+		acc, err = globalAccountMgr.RegisterFreshWARP(ctx, req.ProxyURL, req.ViaNote)
+	} else if globalSubMgr != nil && globalSubMgr.GetActiveNode() != nil {
+		acc, err = globalAccountMgr.RegisterWARPViaCountry(ctx, globalSubMgr.GetActiveNode().Country)
+	} else {
+		acc, err = globalAccountMgr.RegisterFreshWARP(ctx, "", req.ViaNote)
+	}
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":  "ok",
+		"account": acc,
+		"message": "成功注册新 WARP 独立账号！",
+	})
+}
+
+func handleAccountUpdate(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+	var req WarpAccount
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil || req.ID == "" {
+		http.Error(w, "invalid request", http.StatusBadRequest)
+		return
+	}
+	if err := globalAccountMgr.Update(req); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "账号已更新"})
+}
+
+func handleAccountDelete(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+	var req struct {
+		ID string `json:"id"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil || req.ID == "" {
+		http.Error(w, "missing id", http.StatusBadRequest)
+		return
+	}
+	if err := globalAccountMgr.Delete(req.ID); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "账号已删除"})
+}
+
+func handleAccountBind(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+	var req struct {
+		AccountID string `json:"account_id"`
+		NodeID    string `json:"node_id"`
+		NodeName  string `json:"node_name"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil || req.AccountID == "" {
+		http.Error(w, "invalid request", http.StatusBadRequest)
+		return
+	}
+	if err := globalAccountMgr.BindNode(req.AccountID, req.NodeID, req.NodeName); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "绑定成功"})
+}
+
+func handleAccountSchedule(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if globalAccountMgr == nil {
+		initAccountManager("data")
+	}
+	if r.Method == http.MethodGet {
+		_ = json.NewEncoder(w).Encode(globalAccountMgr.GetSchedulerStatus())
+		return
+	}
+	if r.Method == http.MethodPost {
+		var req struct {
+			Action      string `json:"action"` // "start", "stop"
+			IntervalMin int    `json:"interval_min"`
+			TargetCount int    `json:"target_count"`
+			RelayMode   string `json:"relay_mode"`
+			CustomProxy string `json:"custom_proxy"`
+		}
+		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		if req.Action == "stop" {
+			globalAccountMgr.StopScheduler()
+			_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "定时任务已停止"})
+			return
+		}
+		if err := globalAccountMgr.StartScheduler(req.IntervalMin, req.TargetCount, req.RelayMode, req.CustomProxy); err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "定时注册任务已启动"})
+		return
+	}
+	http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+}
+
+// -----------------------------------------------------------------------
+// Multi-Subscription API Handlers
+// -----------------------------------------------------------------------
+
+func handleSubsSources(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	if r.Method == http.MethodGet {
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":  "ok",
+			"sources": globalSubMgr.GetSources(),
+			"total":   len(globalSubMgr.GetAllNodes()),
+		})
+		return
+	}
+	if r.Method == http.MethodPost {
+		var req struct {
+			Name string `json:"name"`
+			URL  string `json:"url"`
+		}
+		if err := json.NewDecoder(r.Body).Decode(&req); err != nil || strings.TrimSpace(req.URL) == "" {
+			http.Error(w, "请提供订阅 URL", http.StatusBadRequest)
+			return
+		}
+		src, err := globalSubMgr.AddSource(req.Name, req.URL)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":  "ok",
+			"source":  src,
+			"message": "订阅源添加成功，节点已更新",
+		})
+		return
+	}
+	http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+}
+
+func handleSubsSourcesDelete(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	var req struct {
+		ID string `json:"id"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil || req.ID == "" {
+		http.Error(w, "missing id", http.StatusBadRequest)
+		return
+	}
+	if err := globalSubMgr.DeleteSource(req.ID); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "订阅源已删除"})
+}
+
+func handleSubsSourcesUpdate(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	var req SubscriptionSource
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil || req.ID == "" {
+		http.Error(w, "invalid request", http.StatusBadRequest)
+		return
+	}
+	if err := globalSubMgr.UpdateSource(req); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{"status": "ok", "message": "订阅源已更新"})
+}
+
+func handleSubsSourcesRefresh(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	var req struct {
+		ID string `json:"id"`
+	}
+	_ = json.NewDecoder(r.Body).Decode(&req)
+
+	ctx, cancel := context.WithTimeout(r.Context(), 45*time.Second)
+	defer cancel()
+
+	if req.ID != "" {
+		if err := globalSubMgr.RefreshSource(ctx, req.ID); err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+			return
+		}
+	} else {
+		if err := globalSubMgr.RefreshAll(ctx); err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+			return
+		}
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":  "ok",
+		"sources": globalSubMgr.GetSources(),
+		"nodes":   globalSubMgr.GetAllNodes(),
+		"message": "订阅节点已全部刷新！",
+	})
+}
+
+func handleSubsNodes(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":      "ok",
+		"nodes":       globalSubMgr.GetAllNodes(),
+		"active_node": globalSubMgr.GetActiveNode(),
+	})
+}
+
+
+func handleSubsNodesPing(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	var req struct {
+		ID string `json:"id"`
+	}
+	_ = json.NewDecoder(r.Body).Decode(&req)
+
+	if req.ID == "" || req.ID == "all" {
+		results := globalSubMgr.TestAllNodesLatency()
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":  "ok",
+			"results": results,
+			"nodes":   globalSubMgr.GetAllNodes(),
+			"message": fmt.Sprintf("已完成全部 %d 个中继节点的延迟测活！", len(results)),
+		})
+		return
+	}
+
+	lat, err := globalSubMgr.TestNodeLatency(req.ID)
+	if err != nil {
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status":     "error",
+			"id":         req.ID,
+			"latency_ms": 0,
+			"error":      err.Error(),
+		})
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":     "ok",
+		"id":         req.ID,
+		"latency_ms": lat,
+		"message":    fmt.Sprintf("延迟测试完成: %d ms", lat),
+	})
+}
+
+func handleSubsNodesSpeedtest(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if globalSubMgr == nil {
+		initSubscriptionManager("data")
+	}
+	var req struct {
+		ID string `json:"id"`
+	}
+	_ = json.NewDecoder(r.Body).Decode(&req)
+	if req.ID == "" {
+		http.Error(w, "missing node id", http.StatusBadRequest)
+		return
+	}
+
+	speed, err := globalSubMgr.TestNodeSpeed(req.ID)
+	if err != nil {
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"status": "error",
+			"id":     req.ID,
+			"error":  err.Error(),
+		})
+		return
+	}
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":     "ok",
+		"id":         req.ID,
+		"speed_mbps": speed,
+		"message":    fmt.Sprintf("测速完成: %.1f Mbps", speed),
+	})
+}

@@ -1,0 +1,25 @@
+
+mixed-port: 29992
+external-controller: 127.0.0.1:29993
+mode: rule
+log-level: debug
+
+proxies:
+  - name: "us-local-transit"
+    type: socks5
+    server: 127.0.0.1
+    port: 29891
+
+  - name: "us-warp-wireguard"
+    type: wireguard
+    server: 162.159.192.1
+    port: 2408
+    ip: 172.16.0.2
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    private-key: ILU5YxGu7XAgFliq1VSJMM2h049P57g7PqHX05FCf04=
+    dialer-proxy: "us-local-transit"
+    udp: true
+    remote-dns-resolve: true
+
+rules:
+  - MATCH,us-warp-wireguard

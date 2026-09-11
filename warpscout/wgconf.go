@@ -484,3 +484,81 @@ func pemBody(key string) (string, error) {
 	}
 	return base64.StdEncoding.EncodeToString(block.Bytes), nil
 }
+
+// mihomoProxyWithAccount generates a mihomo proxy entry using explicit account
+// credentials instead of the global singletons. This enables generating nodes
+// for multiple independent WARP accounts (each with a different Cloudflare
+// egress IP).
+func mihomoProxyWithAccount(o options, name, endpoint string, run protoRun, mtu int, dns []string, acct account) ([]kv, error) {
+	host, portStr, err := net.SplitHostPort(endpoint)
+	if err != nil {
+		return nil, fmt.Errorf("endpoint %q: %w", endpoint, err)
+	}
+	port, err := strconv.Atoi(portStr)
+	if err != nil {
+		return nil, fmt.Errorf("endpoint %q: %w", endpoint, err)
+	}
+
+	p, err := mihomoPeerWithAccount(run, o.ipv6, host, port, acct)
+	if err != nil {
+		return nil, err
+	}
+	p = append([]kv{{"name", quoted(name)}}, p...)
+	if mtu > 0 {
+		p = append(p, kv{"mtu", mtu})
+	}
+	p = append(p, kv{"udp", true})
+	if len(dns) > 0 {
+		p = append(p, kv{"remote-dns-resolve", true}, kv{"dns", dns})
+	}
+	return p, nil
+}
+
+// mihomoPeerWithAccount is like mihomoPeer but uses account-specific keys.
+func mihomoPeerWithAccount(run protoRun, ipv6 bool, host string, port int, acct account) ([]kv, error) {
+	if run.isMASQUE() {
+		if acct.Masque == nil {
+			return nil, fmt.Errorf("no MASQUE device in the account")
+		}
+		pub, err := pemBody(acct.Masque.PeerPublicKey)
+		if err != nil {
+			return nil, err
+		}
+		p := []kv{{"type", "masque"}, {"server", host}, {"port", port}}
+		if run.isH2() {
+			p = append(p, kv{"network", "h2"})
+		}
+		return append(p,
+			kv{"sni", masqueSNI},
+			kv{"private-key", acct.Masque.PrivateKey},
+			kv{"public-key", pub},
+			mihomoAddr(acct.Masque.IPv4, acct.Masque.IPv6, ipv6),
+		), nil
+	}
+
+	peer := []kv{
+		{"server", host},
+		{"port", port},
+		{"public-key", acct.PeerPublicKey},
+		{"allowed-ips", []string{allowedIPs(ipv6)}},
+		{"persistent-keepalive", keepalive},
+	}
+	p := []kv{
+		{"type", "wireguard"},
+		{"private-key", acct.PrivateKey},
+		mihomoAddr(acct.IPv4, acct.IPv6, ipv6),
+		{"peers", [][]kv{peer}},
+	}
+	if !run.isAWG() {
+		return p, nil
+	}
+
+	awg := []kv{{"jc", awgJc}, {"jmin", awgJmin}, {"jmax", awgJmax}, {"s1", 0}, {"s2", 0}}
+	for i, h := range []int{1, 2, 3, 4} {
+		awg = append(awg, kv{fmt.Sprintf("h%d", i+1), h})
+	}
+	if awgI1 != "" {
+		awg = append(awg, kv{"i1", awgI1})
+	}
+	return append(p, kv{"amnezia-wg-option", awg}), nil
+}

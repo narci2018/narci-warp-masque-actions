@@ -1,0 +1,8 @@
+{
+  "DataStoreDirectory": "C:\\Tools2\\warp\\Aether-Desktop\\Aether\\data\\psiphon_nl",
+  "PropagationChannelId": "FFFFFFFFFFFFFFFF",
+  "SponsorId": "FFFFFFFFFFFFFFFF",
+  "EgressRegion": "NL",
+  "UpstreamProxyURL": "socks5://127.0.0.1:1819",
+  "LocalSocksProxyPort": 29900
+}

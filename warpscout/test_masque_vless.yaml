@@ -1,0 +1,34 @@
+
+mixed-port: 29996
+external-controller: 127.0.0.1:29997
+mode: rule
+log-level: info
+
+proxies:
+  - name: "vless-transit"
+    type: vless
+    server: 167.114.67.25
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+
+  - name: "warp-masque-over-vless"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: "vless-transit"
+
+rules:
+  - MATCH,warp-masque-over-vless

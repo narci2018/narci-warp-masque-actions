@@ -65,3 +65,23 @@
   - Phase 1 & Phase 2 探测正常执行；
   - 耗时约 13 秒；
   - 正确生成 `public/index.html` 以及 `public/data/` 下的所有配置文件。
+
+---
+
+## 4. 节点独立出口 IP 改造（多账户轮换池）
+
+### 4.1 背景与问题
+- **现象**：在 Clash 客户端中选择多个不同的 Cloudflare WARP / MASQUE 节点时，访问 ping0 测试出口 IP 全部显示相同的 IP（如 `104.28.201.73`）。
+- **根因**：Cloudflare 是按客户端绑定的 **WARP 账户私钥与 Device ID** 来分配 NAT 出口 IP 的。单个账号即使切换数十个不同 Anycast 端点，其出网身份也是单一固定的。
+
+### 4.2 解决方案与改动
+1. **多账号出口池 (`AccountPool`)**：
+   - 在 [web.go](file:///c:/Tools2/warp/warpscout/web.go) 中构建了 `accountPool` 独立账户管理器与持久化机制（`warpscout-account.json.pool*`）。
+   - 服务启动时自动检查并在后台平滑扩容独立 WARP 账号。
+   - 新增 `/api/account/pool` 接口支持按需扩展与监控。
+2. **账号级节点生成 (`mihomoProxyWithAccount`)**：
+   - 在 [wgconf.go](file:///c:/Tools2/warp/warpscout/wgconf.go) 中实现独立账号绑定的 `mihomoProxyWithAccount` 与 `mihomoPeerWithAccount`。
+   - 在批量导出 Clash 订阅（`/api/config/batch_export`）时，为每个 MASQUE TCP、MASQUE QUIC、WireGuard 节点轮流分配不同的独立 WARP 账户。
+3. **部署与验证**：
+   - 已完成容器编译并部署更新至 `warpscout-web` 容器。
+   - 导出的 Clash 订阅中，各节点配置了不同的独立私钥，实测不同节点分配不同 Cloudflare 出口 IP。

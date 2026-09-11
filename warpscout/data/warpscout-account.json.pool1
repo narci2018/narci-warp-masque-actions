@@ -1,0 +1,24 @@
+{
+  "id": "b4b6c6d4-f55d-423a-90fa-0165df44e37b",
+  "token": "544fad33-b6bc-482a-9237-00ec4a9a72d3",
+  "private_key": "wIsV7+g1xXV40gMlz2olRHSi+RzVu2FCOUw6hf3rnlw=",
+  "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+  "ipv4": "172.16.0.2",
+  "ipv6": "2606:4700:110:896a:a0fc:551b:c248:3cd2",
+  "masque": {
+    "id": "bdc415b2-dea7-4cf2-91fb-60bcd0861bb0",
+    "token": "f77b8b71-f22e-467f-b852-8f03b3265a5b",
+    "private_key": "MHcCAQEEIKP+uQwn8lTZ1bkZehnwqCtyecV8/x7pbi3oJ1b0IKf7oAoGCCqGSM49AwEHoUQDQgAExZ9NyMMy6h6t/LchFuVQnu0ZdawRb/Alk1qR9QW8J34GKvFNGZZK7QIcvCPYr1N9jUrwAHigELAk9DAgF9ZnlA==",
+    "peer_public_key": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG\n7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==\n-----END PUBLIC KEY-----\n",
+    "ipv4": "172.16.0.2",
+    "ipv6": "2606:4700:110:8876:f411:d0d9:42c:d6f5"
+  },
+  "outer": {
+    "id": "3f199084-7da1-4232-8314-aaa98f7603bf",
+    "token": "94c7f5c6-3ef9-45a0-84cc-0ef2e13c567d",
+    "private_key": "SGTeGGWx+WoCApCXbYll8PObiph6l9Civ7FCNCv1EHE=",
+    "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+    "ipv4": "172.16.0.2",
+    "ipv6": "2606:4700:110:8cbd:35a1:f998:2e7d:48df"
+  }
+}

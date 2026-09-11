@@ -1,0 +1,12 @@
+2026-09-11T16:23:48.472Z NetworkID {"ID":"UNKNOWN"}
+2026-09-11T16:23:48.476Z ListeningSocksProxyPort {"port":39891}
+2026-09-11T16:23:52.196Z NetworkID {"ID":"UNKNOWN"}
+2026-09-11T16:23:56.027Z AvailableEgressRegions {"regions":["AT","AU","BE","CA","CH","CZ","DE","DK","ES","FI","FR","GB","ID","IE","IN","IT","JP","NL","NO","PL","RO","RS","SE","SG","US"]}
+2026-09-11T16:24:00.437Z ClientRegion {"region":"CN"}
+2026-09-11T16:24:00.443Z Homepage {"url":"https://ipfounder.net/?sponsor_id=4BA4DEF917101460\u0026sponsor=psiphon_bbg\u0026client_region=CN\u0026client_asn=13335\u0026client_platform=windows\u0026secret=580EfjEI29xL3hoyU6dgP4vSEVxdcGI7JDFkxgjds7PHulSEF0wmORpvzbqxyTwYtpowsY4xMFnfWEnTghe6l8jiV9K5QSZoir2i6fDeKJD6EhL6DkoYTEMu2EE9YJvy3LdCUZ7ncdVC6ipgWx06wznvDLbY1ajfcfRGCpfsQJei2q6tb0GSFh1QK3x3qXKwyjmNPc5J"}
+2026-09-11T16:24:00.443Z ClientIsLatestVersion {"availableVersion":""}
+2026-09-11T16:24:00.444Z ServerTimestamp {"diagnosticID":"vvH14iH3","timestamp":"2026-09-11T16:24:00Z"}
+2026-09-11T16:24:00.444Z ActiveAuthorizationIDs {"IDs":[],"diagnosticID":"vvH14iH3"}
+2026-09-11T16:24:00.444Z TrafficRateLimits {"diagnosticID":"vvH14iH3","downstreamBytesPerSecond":0,"upstreamBytesPerSecond":0}
+2026-09-11T16:24:00.450Z ApplicationParameters {"parameters":{"DeviceLocationPrecision":4}}
+2026-09-11T16:24:00.451Z Tunnels {"count":1}

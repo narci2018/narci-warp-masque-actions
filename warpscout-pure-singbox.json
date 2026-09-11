@@ -1,0 +1,105 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "[纯净WARP] 美国 (US)",
+        "[纯净WARP] 日本 (JP)",
+        "[纯净WARP] 法国 (FR)",
+        "[纯净WARP] 德国 (DE)",
+        "[纯净WARP] 英国 (GB)",
+        "[纯净WARP] 新加坡 (SG)",
+        "[纯净WARP] 加拿大 (CA)",
+        "[纯净WARP] 荷兰 (NL)",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "[纯净WARP] 美国 (US)",
+        "[纯净WARP] 日本 (JP)",
+        "[纯净WARP] 法国 (FR)",
+        "[纯净WARP] 德国 (DE)",
+        "[纯净WARP] 英国 (GB)",
+        "[纯净WARP] 新加坡 (SG)",
+        "[纯净WARP] 加拿大 (CA)",
+        "[纯净WARP] 荷兰 (NL)"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m"
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 美国 (US)",
+      "server": "127.0.0.1",
+      "server_port": 29891
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 日本 (JP)",
+      "server": "127.0.0.1",
+      "server_port": 29892
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 法国 (FR)",
+      "server": "127.0.0.1",
+      "server_port": 29893
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 德国 (DE)",
+      "server": "127.0.0.1",
+      "server_port": 29894
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 英国 (GB)",
+      "server": "127.0.0.1",
+      "server_port": 29895
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 新加坡 (SG)",
+      "server": "127.0.0.1",
+      "server_port": 29896
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 加拿大 (CA)",
+      "server": "127.0.0.1",
+      "server_port": 29897
+    },
+    {
+      "type": "socks",
+      "tag": "[纯净WARP] 荷兰 (NL)",
+      "server": "127.0.0.1",
+      "server_port": 29898
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "outbound": "select"
+      }
+    ]
+  }
+}

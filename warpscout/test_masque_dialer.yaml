@@ -1,0 +1,25 @@
+
+mixed-port: 29994
+external-controller: 127.0.0.1:29995
+mode: rule
+log-level: debug
+
+proxies:
+  - name: "us-transit"
+    type: socks5
+    server: 127.0.0.1
+    port: 29891
+
+  - name: "warp-masque-us"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: "us-transit"
+
+rules:
+  - MATCH,warp-masque-us

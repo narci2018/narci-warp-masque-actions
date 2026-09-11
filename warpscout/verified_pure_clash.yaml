@@ -1,0 +1,1738 @@
+# ====================================================================
+# WARPSCOUT 100% 纯净 WARP 官方订阅 (零 Socks 协议 · 全程 WireGuard/MASQUE 加密)
+# 特性: 双层 WARP-on-WARP 矩阵架构 | 外层 AWG 混淆直连抗封锁 | 内层全球 Anycast 纯净出口
+# ====================================================================
+
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.8.8
+
+proxies:
+  - name: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    type: wireguard
+    private-key: QHJRFWlD3k7imKXD5ETGj7oM1bvY7wmh1k4e6SF2akE=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.204.89
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: "⚡ [US-01] 🇺🇸 美国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-02] 🇺🇸 美国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-03] 🇺🇸 美国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-04] 🇺🇸 美国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 8.39.204.2
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [US-05] 🇺🇸 美国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 8.35.211.248
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-01] 🇬🇧 英国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.10
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-02] 🇬🇧 英国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.11
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-03] 🇬🇧 英国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.10
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-04] 🇬🇧 英国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.11
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [GB-05] 🇬🇧 英国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.10
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-01] 🇩🇪 德国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-02] 🇩🇪 德国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.145
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-03] 🇩🇪 德国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.144
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-04] 🇩🇪 德国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.144
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [DE-05] 🇩🇪 德国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.144
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-01] 🇫🇷 法国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.50
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-02] 🇫🇷 法国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.51
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-03] 🇫🇷 法国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.50
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-04] 🇫🇷 法国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.50
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [FR-05] 🇫🇷 法国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.50
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-01] 🇯🇵 日本 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-02] 🇯🇵 日本 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.2
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-03] 🇯🇵 日本 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.10
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-04] 🇯🇵 日本 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.20
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [JP-05] 🇯🇵 日本 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.20
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-01] 🇰🇷 韩国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.80
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-02] 🇰🇷 韩国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.81
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-03] 🇰🇷 韩国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.80
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-04] 🇰🇷 韩国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.80
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [KR-05] 🇰🇷 韩国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.80
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-01] 🇸🇬 新加坡 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-02] 🇸🇬 新加坡 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.2
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-03] 🇸🇬 新加坡 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.10
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-04] 🇸🇬 新加坡 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.30
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [SG-05] 🇸🇬 新加坡 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.30
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-01] 🇭🇰 香港 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-02] 🇭🇰 香港 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.2
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-03] 🇭🇰 香港 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.10
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-04] 🇭🇰 香港 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.5
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [HK-05] 🇭🇰 香港 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.5
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-01] 🇹🇼 台湾 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.15
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-02] 🇹🇼 台湾 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.16
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-03] 🇹🇼 台湾 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.15
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-04] 🇹🇼 台湾 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.15
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TW-05] 🇹🇼 台湾 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.15
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-01] 🇲🇽 墨西哥 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.60
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-02] 🇲🇽 墨西哥 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.60
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-03] 🇲🇽 墨西哥 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.60
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-04] 🇲🇽 墨西哥 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.60
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MX-05] 🇲🇽 墨西哥 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 8.39.204.60
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-01] 🇨🇦 加拿大 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.20
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-02] 🇨🇦 加拿大 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.195.21
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-03] 🇨🇦 加拿大 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.25
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-04] 🇨🇦 加拿大 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.99.20
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [CA-05] 🇨🇦 加拿大 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 8.39.125.20
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TH-01] 🇹🇭 泰国 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.70
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TH-02] 🇹🇭 泰国 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.71
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TH-03] 🇹🇭 泰国 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.70
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TH-04] 🇹🇭 泰国 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.70
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [TH-05] 🇹🇭 泰国 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.70
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MY-01] 🇲🇾 马来西亚 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.85
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MY-02] 🇲🇾 马来西亚 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.86
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MY-03] 🇲🇾 马来西亚 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.85
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MY-04] 🇲🇾 马来西亚 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.85
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [MY-05] 🇲🇾 马来西亚 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.85
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [VN-01] 🇻🇳 越南 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.90
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [VN-02] 🇻🇳 越南 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.91
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [VN-03] 🇻🇳 越南 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.90
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [VN-04] 🇻🇳 越南 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.90
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [VN-05] 🇻🇳 越南 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.98.90
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [PH-01] 🇵🇭 菲律宾 01 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.110
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [PH-02] 🇵🇭 菲律宾 02 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.96.111
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [PH-03] 🇵🇭 菲律宾 03 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.110
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [PH-04] 🇵🇭 菲律宾 04 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.193.110
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "⚡ [PH-05] 🇵🇭 菲律宾 05 纯净出口"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 188.114.97.110
+        port: 4500
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-01] WARP 独立账号 #01 (独立出口)"
+    type: wireguard
+    private-key: 4IvbxtcWb4PnGOFkhu3i91LckkkC+oWfbNxrP3UOqUg=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-02] WARP 独立账号 #02 (独立出口)"
+    type: wireguard
+    private-key: QIOZ2l+/Nsi6oDAqBmQLsyHD5bvL8yZIePsGWSf7blU=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-03] WARP 独立账号 #03 (独立出口)"
+    type: wireguard
+    private-key: MNT3BqDOlwTACIXKKg13m6TU2+a88yicrYNCUzdozHw=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-04] WARP 独立账号 #04 (独立出口)"
+    type: wireguard
+    private-key: qIfxMGfO42xlrlXuQ679o10K00HktKGg/+GZPdhpAUE=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-05] WARP 独立账号 #05 (独立出口)"
+    type: wireguard
+    private-key: cAfIkbYmD9xl0iwdPKrI24/SNXtNL35e34pFYF+usFw=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-06] WARP 独立账号 #06 (独立出口)"
+    type: wireguard
+    private-key: EGW4leXl7j9akld9J7b065NzjTsLr3L1zhAZlNFtBEw=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-07] WARP 独立账号 #07 (独立出口)"
+    type: wireguard
+    private-key: UDUpxzCwa6W3eubd4WMpX75XTAKzmPRpXgJuWqN7wnM=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-08] WARP 独立账号 #08 (独立出口)"
+    type: wireguard
+    private-key: CFqZd0InXiNmR+gp6Z6LjdDLU5425FBQazbK4XAAjWs=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🔑 [ACCT-09] WARP 独立账号 #09 (独立出口)"
+    type: wireguard
+    private-key: mLDrPKcTYErViaNaey4cENtwP5+ur/B2F3YoHsLwt18=
+    ip: 172.16.0.2
+    dialer-proxy: "⚡ [Transit-Hop] 🚀 国内直连穿墙跳板 (AWG混淆)"
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+  - name: "🛡️ [GLOBAL] WARP MASQUE 原生直连"
+    type: masque
+    server: 162.159.198.1
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIFqJAxgNsSIkD8qdjB6A2p5JO5akwnIdIifJ/rstocxnoAoGCCqGSM49AwEHoUQDQgAE+mqMG9WfZRGVF2e0b+jwgEzD5nA8wQlBXIX27GsEntqG8UAFmJtGr+gEdx0ZNqekISMb4UuPx7jHiwGTUVVW2A=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    udp: true
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "🚀 自动选择 (最快出海)"
+      - "🇺🇸 美国节点 (5个)"
+      - "🇭🇰 香港节点 (5个)"
+      - "🇯🇵 日本节点 (5个)"
+      - "🇸🇬 新加坡节点 (5个)"
+      - "🇹🇼 台湾节点 (5个)"
+      - "🇰🇷 韩国节点 (5个)"
+      - "🇬🇧 英国节点 (5个)"
+      - "🇩🇪 德国节点 (5个)"
+      - "🇫🇷 法国节点 (5个)"
+      - "🇨🇦 加拿大节点 (5个)"
+      - "🇲🇽 墨西哥节点 (5个)"
+      - "🇹🇭 泰国节点 (5个)"
+      - "🇲🇾 马来西亚节点 (5个)"
+      - "🇻🇳 越南节点 (5个)"
+      - "🇵🇭 菲律宾节点 (5个)"
+      - "⚡ [US-01] 🇺🇸 美国 01 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 纯净出口"
+      - "⚡ [US-04] 🇺🇸 美国 04 纯净出口"
+      - "⚡ [US-05] 🇺🇸 美国 05 纯净出口"
+      - "⚡ [GB-01] 🇬🇧 英国 01 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 纯净出口"
+      - "⚡ [GB-04] 🇬🇧 英国 04 纯净出口"
+      - "⚡ [GB-05] 🇬🇧 英国 05 纯净出口"
+      - "⚡ [DE-01] 🇩🇪 德国 01 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 纯净出口"
+      - "⚡ [DE-04] 🇩🇪 德国 04 纯净出口"
+      - "⚡ [DE-05] 🇩🇪 德国 05 纯净出口"
+      - "⚡ [FR-01] 🇫🇷 法国 01 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 纯净出口"
+      - "⚡ [FR-04] 🇫🇷 法国 04 纯净出口"
+      - "⚡ [FR-05] 🇫🇷 法国 05 纯净出口"
+      - "⚡ [JP-01] 🇯🇵 日本 01 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 纯净出口"
+      - "⚡ [JP-04] 🇯🇵 日本 04 纯净出口"
+      - "⚡ [JP-05] 🇯🇵 日本 05 纯净出口"
+      - "⚡ [KR-01] 🇰🇷 韩国 01 纯净出口"
+      - "⚡ [KR-02] 🇰🇷 韩国 02 纯净出口"
+      - "⚡ [KR-03] 🇰🇷 韩国 03 纯净出口"
+      - "⚡ [KR-04] 🇰🇷 韩国 04 纯净出口"
+      - "⚡ [KR-05] 🇰🇷 韩国 05 纯净出口"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 纯净出口"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 纯净出口"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 纯净出口"
+      - "⚡ [HK-01] 🇭🇰 香港 01 纯净出口"
+      - "⚡ [HK-02] 🇭🇰 香港 02 纯净出口"
+      - "⚡ [HK-03] 🇭🇰 香港 03 纯净出口"
+      - "⚡ [HK-04] 🇭🇰 香港 04 纯净出口"
+      - "⚡ [HK-05] 🇭🇰 香港 05 纯净出口"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 纯净出口"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 纯净出口"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 纯净出口"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 纯净出口"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 纯净出口"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 纯净出口"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 纯净出口"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 纯净出口"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 纯净出口"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 纯净出口"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 纯净出口"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 纯净出口"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 纯净出口"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 纯净出口"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 纯净出口"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 纯净出口"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 纯净出口"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 纯净出口"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 纯净出口"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 纯净出口"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 纯净出口"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 纯净出口"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 纯净出口"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 纯净出口"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 纯净出口"
+      - "⚡ [VN-01] 🇻🇳 越南 01 纯净出口"
+      - "⚡ [VN-02] 🇻🇳 越南 02 纯净出口"
+      - "⚡ [VN-03] 🇻🇳 越南 03 纯净出口"
+      - "⚡ [VN-04] 🇻🇳 越南 04 纯净出口"
+      - "⚡ [VN-05] 🇻🇳 越南 05 纯净出口"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 纯净出口"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 纯净出口"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 纯净出口"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 纯净出口"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 纯净出口"
+      - "🔑 [ACCT-01] WARP 独立账号 #01 (独立出口)"
+      - "🔑 [ACCT-02] WARP 独立账号 #02 (独立出口)"
+      - "🔑 [ACCT-03] WARP 独立账号 #03 (独立出口)"
+      - "🔑 [ACCT-04] WARP 独立账号 #04 (独立出口)"
+      - "🔑 [ACCT-05] WARP 独立账号 #05 (独立出口)"
+      - "🔑 [ACCT-06] WARP 独立账号 #06 (独立出口)"
+      - "🔑 [ACCT-07] WARP 独立账号 #07 (独立出口)"
+      - "🔑 [ACCT-08] WARP 独立账号 #08 (独立出口)"
+      - "🔑 [ACCT-09] WARP 独立账号 #09 (独立出口)"
+      - "🛡️ [GLOBAL] WARP MASQUE 原生直连"
+  - name: "🚀 自动选择 (最快出海)"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 纯净出口"
+      - "⚡ [US-04] 🇺🇸 美国 04 纯净出口"
+      - "⚡ [US-05] 🇺🇸 美国 05 纯净出口"
+      - "⚡ [GB-01] 🇬🇧 英国 01 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 纯净出口"
+      - "⚡ [GB-04] 🇬🇧 英国 04 纯净出口"
+      - "⚡ [GB-05] 🇬🇧 英国 05 纯净出口"
+      - "⚡ [DE-01] 🇩🇪 德国 01 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 纯净出口"
+      - "⚡ [DE-04] 🇩🇪 德国 04 纯净出口"
+      - "⚡ [DE-05] 🇩🇪 德国 05 纯净出口"
+      - "⚡ [FR-01] 🇫🇷 法国 01 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 纯净出口"
+      - "⚡ [FR-04] 🇫🇷 法国 04 纯净出口"
+      - "⚡ [FR-05] 🇫🇷 法国 05 纯净出口"
+      - "⚡ [JP-01] 🇯🇵 日本 01 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 纯净出口"
+      - "⚡ [JP-04] 🇯🇵 日本 04 纯净出口"
+      - "⚡ [JP-05] 🇯🇵 日本 05 纯净出口"
+      - "⚡ [KR-01] 🇰🇷 韩国 01 纯净出口"
+      - "⚡ [KR-02] 🇰🇷 韩国 02 纯净出口"
+      - "⚡ [KR-03] 🇰🇷 韩国 03 纯净出口"
+      - "⚡ [KR-04] 🇰🇷 韩国 04 纯净出口"
+      - "⚡ [KR-05] 🇰🇷 韩国 05 纯净出口"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 纯净出口"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 纯净出口"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 纯净出口"
+      - "⚡ [HK-01] 🇭🇰 香港 01 纯净出口"
+      - "⚡ [HK-02] 🇭🇰 香港 02 纯净出口"
+      - "⚡ [HK-03] 🇭🇰 香港 03 纯净出口"
+      - "⚡ [HK-04] 🇭🇰 香港 04 纯净出口"
+      - "⚡ [HK-05] 🇭🇰 香港 05 纯净出口"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 纯净出口"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 纯净出口"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 纯净出口"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 纯净出口"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 纯净出口"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 纯净出口"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 纯净出口"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 纯净出口"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 纯净出口"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 纯净出口"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 纯净出口"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 纯净出口"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 纯净出口"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 纯净出口"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 纯净出口"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 纯净出口"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 纯净出口"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 纯净出口"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 纯净出口"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 纯净出口"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 纯净出口"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 纯净出口"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 纯净出口"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 纯净出口"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 纯净出口"
+      - "⚡ [VN-01] 🇻🇳 越南 01 纯净出口"
+      - "⚡ [VN-02] 🇻🇳 越南 02 纯净出口"
+      - "⚡ [VN-03] 🇻🇳 越南 03 纯净出口"
+      - "⚡ [VN-04] 🇻🇳 越南 04 纯净出口"
+      - "⚡ [VN-05] 🇻🇳 越南 05 纯净出口"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 纯净出口"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 纯净出口"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 纯净出口"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 纯净出口"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 纯净出口"
+      - "🔑 [ACCT-01] WARP 独立账号 #01 (独立出口)"
+      - "🔑 [ACCT-02] WARP 独立账号 #02 (独立出口)"
+      - "🔑 [ACCT-03] WARP 独立账号 #03 (独立出口)"
+      - "🔑 [ACCT-04] WARP 独立账号 #04 (独立出口)"
+      - "🔑 [ACCT-05] WARP 独立账号 #05 (独立出口)"
+      - "🔑 [ACCT-06] WARP 独立账号 #06 (独立出口)"
+      - "🔑 [ACCT-07] WARP 独立账号 #07 (独立出口)"
+      - "🔑 [ACCT-08] WARP 独立账号 #08 (独立出口)"
+      - "🔑 [ACCT-09] WARP 独立账号 #09 (独立出口)"
+      - "🛡️ [GLOBAL] WARP MASQUE 原生直连"
+  - name: "🇺🇸 美国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 美国 自动最优"
+      - "⚡ [US-01] 🇺🇸 美国 01 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 纯净出口"
+      - "⚡ [US-04] 🇺🇸 美国 04 纯净出口"
+      - "⚡ [US-05] 🇺🇸 美国 05 纯净出口"
+  - name: "⚡ 美国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 纯净出口"
+      - "⚡ [US-04] 🇺🇸 美国 04 纯净出口"
+      - "⚡ [US-05] 🇺🇸 美国 05 纯净出口"
+  - name: "🇭🇰 香港节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 香港 自动最优"
+      - "⚡ [HK-01] 🇭🇰 香港 01 纯净出口"
+      - "⚡ [HK-02] 🇭🇰 香港 02 纯净出口"
+      - "⚡ [HK-03] 🇭🇰 香港 03 纯净出口"
+      - "⚡ [HK-04] 🇭🇰 香港 04 纯净出口"
+      - "⚡ [HK-05] 🇭🇰 香港 05 纯净出口"
+  - name: "⚡ 香港 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [HK-01] 🇭🇰 香港 01 纯净出口"
+      - "⚡ [HK-02] 🇭🇰 香港 02 纯净出口"
+      - "⚡ [HK-03] 🇭🇰 香港 03 纯净出口"
+      - "⚡ [HK-04] 🇭🇰 香港 04 纯净出口"
+      - "⚡ [HK-05] 🇭🇰 香港 05 纯净出口"
+  - name: "🇯🇵 日本节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 日本 自动最优"
+      - "⚡ [JP-01] 🇯🇵 日本 01 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 纯净出口"
+      - "⚡ [JP-04] 🇯🇵 日本 04 纯净出口"
+      - "⚡ [JP-05] 🇯🇵 日本 05 纯净出口"
+  - name: "⚡ 日本 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [JP-01] 🇯🇵 日本 01 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 纯净出口"
+      - "⚡ [JP-04] 🇯🇵 日本 04 纯净出口"
+      - "⚡ [JP-05] 🇯🇵 日本 05 纯净出口"
+  - name: "🇸🇬 新加坡节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 新加坡 自动最优"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 纯净出口"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 纯净出口"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 纯净出口"
+  - name: "⚡ 新加坡 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 纯净出口"
+      - "⚡ [SG-04] 🇸🇬 新加坡 04 纯净出口"
+      - "⚡ [SG-05] 🇸🇬 新加坡 05 纯净出口"
+  - name: "🇹🇼 台湾节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 台湾 自动最优"
+      - "⚡ [TW-01] 🇹🇼 台湾 01 纯净出口"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 纯净出口"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 纯净出口"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 纯净出口"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 纯净出口"
+  - name: "⚡ 台湾 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [TW-01] 🇹🇼 台湾 01 纯净出口"
+      - "⚡ [TW-02] 🇹🇼 台湾 02 纯净出口"
+      - "⚡ [TW-03] 🇹🇼 台湾 03 纯净出口"
+      - "⚡ [TW-04] 🇹🇼 台湾 04 纯净出口"
+      - "⚡ [TW-05] 🇹🇼 台湾 05 纯净出口"
+  - name: "🇰🇷 韩国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 韩国 自动最优"
+      - "⚡ [KR-01] 🇰🇷 韩国 01 纯净出口"
+      - "⚡ [KR-02] 🇰🇷 韩国 02 纯净出口"
+      - "⚡ [KR-03] 🇰🇷 韩国 03 纯净出口"
+      - "⚡ [KR-04] 🇰🇷 韩国 04 纯净出口"
+      - "⚡ [KR-05] 🇰🇷 韩国 05 纯净出口"
+  - name: "⚡ 韩国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [KR-01] 🇰🇷 韩国 01 纯净出口"
+      - "⚡ [KR-02] 🇰🇷 韩国 02 纯净出口"
+      - "⚡ [KR-03] 🇰🇷 韩国 03 纯净出口"
+      - "⚡ [KR-04] 🇰🇷 韩国 04 纯净出口"
+      - "⚡ [KR-05] 🇰🇷 韩国 05 纯净出口"
+  - name: "🇬🇧 英国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 英国 自动最优"
+      - "⚡ [GB-01] 🇬🇧 英国 01 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 纯净出口"
+      - "⚡ [GB-04] 🇬🇧 英国 04 纯净出口"
+      - "⚡ [GB-05] 🇬🇧 英国 05 纯净出口"
+  - name: "⚡ 英国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [GB-01] 🇬🇧 英国 01 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 纯净出口"
+      - "⚡ [GB-04] 🇬🇧 英国 04 纯净出口"
+      - "⚡ [GB-05] 🇬🇧 英国 05 纯净出口"
+  - name: "🇩🇪 德国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 德国 自动最优"
+      - "⚡ [DE-01] 🇩🇪 德国 01 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 纯净出口"
+      - "⚡ [DE-04] 🇩🇪 德国 04 纯净出口"
+      - "⚡ [DE-05] 🇩🇪 德国 05 纯净出口"
+  - name: "⚡ 德国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [DE-01] 🇩🇪 德国 01 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 纯净出口"
+      - "⚡ [DE-04] 🇩🇪 德国 04 纯净出口"
+      - "⚡ [DE-05] 🇩🇪 德国 05 纯净出口"
+  - name: "🇫🇷 法国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 法国 自动最优"
+      - "⚡ [FR-01] 🇫🇷 法国 01 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 纯净出口"
+      - "⚡ [FR-04] 🇫🇷 法国 04 纯净出口"
+      - "⚡ [FR-05] 🇫🇷 法国 05 纯净出口"
+  - name: "⚡ 法国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [FR-01] 🇫🇷 法国 01 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 纯净出口"
+      - "⚡ [FR-04] 🇫🇷 法国 04 纯净出口"
+      - "⚡ [FR-05] 🇫🇷 法国 05 纯净出口"
+  - name: "🇨🇦 加拿大节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 加拿大 自动最优"
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 纯净出口"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 纯净出口"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 纯净出口"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 纯净出口"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 纯净出口"
+  - name: "⚡ 加拿大 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [CA-01] 🇨🇦 加拿大 01 纯净出口"
+      - "⚡ [CA-02] 🇨🇦 加拿大 02 纯净出口"
+      - "⚡ [CA-03] 🇨🇦 加拿大 03 纯净出口"
+      - "⚡ [CA-04] 🇨🇦 加拿大 04 纯净出口"
+      - "⚡ [CA-05] 🇨🇦 加拿大 05 纯净出口"
+  - name: "🇲🇽 墨西哥节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 墨西哥 自动最优"
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 纯净出口"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 纯净出口"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 纯净出口"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 纯净出口"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 纯净出口"
+  - name: "⚡ 墨西哥 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [MX-01] 🇲🇽 墨西哥 01 纯净出口"
+      - "⚡ [MX-02] 🇲🇽 墨西哥 02 纯净出口"
+      - "⚡ [MX-03] 🇲🇽 墨西哥 03 纯净出口"
+      - "⚡ [MX-04] 🇲🇽 墨西哥 04 纯净出口"
+      - "⚡ [MX-05] 🇲🇽 墨西哥 05 纯净出口"
+  - name: "🇹🇭 泰国节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 泰国 自动最优"
+      - "⚡ [TH-01] 🇹🇭 泰国 01 纯净出口"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 纯净出口"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 纯净出口"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 纯净出口"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 纯净出口"
+  - name: "⚡ 泰国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [TH-01] 🇹🇭 泰国 01 纯净出口"
+      - "⚡ [TH-02] 🇹🇭 泰国 02 纯净出口"
+      - "⚡ [TH-03] 🇹🇭 泰国 03 纯净出口"
+      - "⚡ [TH-04] 🇹🇭 泰国 04 纯净出口"
+      - "⚡ [TH-05] 🇹🇭 泰国 05 纯净出口"
+  - name: "🇲🇾 马来西亚节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 马来西亚 自动最优"
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 纯净出口"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 纯净出口"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 纯净出口"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 纯净出口"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 纯净出口"
+  - name: "⚡ 马来西亚 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [MY-01] 🇲🇾 马来西亚 01 纯净出口"
+      - "⚡ [MY-02] 🇲🇾 马来西亚 02 纯净出口"
+      - "⚡ [MY-03] 🇲🇾 马来西亚 03 纯净出口"
+      - "⚡ [MY-04] 🇲🇾 马来西亚 04 纯净出口"
+      - "⚡ [MY-05] 🇲🇾 马来西亚 05 纯净出口"
+  - name: "🇻🇳 越南节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 越南 自动最优"
+      - "⚡ [VN-01] 🇻🇳 越南 01 纯净出口"
+      - "⚡ [VN-02] 🇻🇳 越南 02 纯净出口"
+      - "⚡ [VN-03] 🇻🇳 越南 03 纯净出口"
+      - "⚡ [VN-04] 🇻🇳 越南 04 纯净出口"
+      - "⚡ [VN-05] 🇻🇳 越南 05 纯净出口"
+  - name: "⚡ 越南 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [VN-01] 🇻🇳 越南 01 纯净出口"
+      - "⚡ [VN-02] 🇻🇳 越南 02 纯净出口"
+      - "⚡ [VN-03] 🇻🇳 越南 03 纯净出口"
+      - "⚡ [VN-04] 🇻🇳 越南 04 纯净出口"
+      - "⚡ [VN-05] 🇻🇳 越南 05 纯净出口"
+  - name: "🇵🇭 菲律宾节点 (5个)"
+    type: select
+    proxies:
+      - "⚡ 菲律宾 自动最优"
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 纯净出口"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 纯净出口"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 纯净出口"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 纯净出口"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 纯净出口"
+  - name: "⚡ 菲律宾 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [PH-01] 🇵🇭 菲律宾 01 纯净出口"
+      - "⚡ [PH-02] 🇵🇭 菲律宾 02 纯净出口"
+      - "⚡ [PH-03] 🇵🇭 菲律宾 03 纯净出口"
+      - "⚡ [PH-04] 🇵🇭 菲律宾 04 纯净出口"
+      - "⚡ [PH-05] 🇵🇭 菲律宾 05 纯净出口"
+
+rules:
+  - DOMAIN-SUFFIX,ping0.cc,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ip.sb,PROXY
+  - DOMAIN-SUFFIX,cip.cc,PROXY
+  - DOMAIN-SUFFIX,myip.la,PROXY
+  - DOMAIN-SUFFIX,ip138.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,x.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-KEYWORD,google,PROXY
+  - DOMAIN-KEYWORD,youtube,PROXY
+  - GEOIP,CN,DIRECT
+  - GEOSITE,CN,DIRECT
+  - MATCH,PROXY

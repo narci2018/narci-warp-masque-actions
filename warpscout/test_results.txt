@@ -1,0 +1,37 @@
+FAIL: ⚡ WARP 自动优选 -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: ⚡ [US] WARP-in-WARP 官方双层 (直连洛杉矶) -> HTTP Error 504: Gateway Timeout {"message":"Timeout"}
+
+FAIL: 🇩🇪 [DE] WARP 原生节点 (德国) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🇫🇷 [FR] WARP 原生节点 (法国) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🇬🇧 [GB] WARP 原生节点 (英国) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🇯🇵 [JP] WARP 原生节点 (日本) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🇸🇬 [SG] WARP 原生节点 (新加坡) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🇺🇸 [US] WARP 原生节点 (美国) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🌐 [GLOBAL] WARP MASQUE 直连防封 -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+OK: 🔗 [DE] 中继通道 (端口 29893) -> {"delay":1079}
+
+OK: 🔗 [FR] 中继通道 (端口 29894) -> {"delay":1273}
+
+OK: 🔗 [GB] 中继通道 (端口 29892) -> {"delay":1488}
+
+FAIL: 🔗 [JP] 中继通道 (端口 29897) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+OK: 🔗 [SG] 中继通道 (端口 29901) -> {"delay":825}
+
+OK: 🔗 [Transit] 本地中继通道 (主端口 29881) -> {"delay":1272}
+
+OK: 🔗 [US] 中继通道 (端口 29891) -> {"delay":1018}
+
+FAIL: 🚀 WARP 节点选择 -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}
+
+FAIL: 🛡️ [AWG] 外层抗封锁跳板 (直连) -> HTTP Error 504: Gateway Timeout {"message":"Timeout"}
+
+FAIL: 🛡️ [WARP] 当前激活出口 - 法国 (FR) -> HTTP Error 503: Service Unavailable {"message":"An error occurred in the delay test"}

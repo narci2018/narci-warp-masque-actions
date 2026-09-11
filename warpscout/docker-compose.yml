@@ -10,6 +10,7 @@ services:
       # 宿主机端口:容器端口 (采用冷门高位端口)
       - "${PORT_WEB:-29880}:29880"
       - "${PORT_SOCKS:-29881}:29881"
+      - "29891-29915:29891-29915"
     volumes:
       # 持久化数据目录：保存 warpscout-account.json 和导出的配置
       - ./data:/data

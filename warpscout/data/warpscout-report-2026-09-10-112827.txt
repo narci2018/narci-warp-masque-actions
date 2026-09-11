@@ -1,0 +1,14 @@
+# WARP endpoints: 1 working / 1 probed
+# sorted by ping to the endpoint
+# Scanned from inside a tunnel to 8.47.69.5:2408 (awg) - every endpoint here exits through that node's region
+# ENDPOINT PING = ICMP from inside that tunnel to the endpoint, so it carries the outer hop too
+# SEEN AS = region external services see through the tunnel
+# NODE / NODE LOCATION = Cloudflare WARP edge node the tunnel landed on, and where it sits
+# One /24 pool can land on several different nodes - NODE is per endpoint, not per subnet
+
+ENDPOINT               ENDPOINT PING SEEN AS    NODE   NODE LOCATION
+162.159.192.1:2408     175ms         US         LAX    Los Angeles, US
+
+# Best endpoint per node (lowest ping to the endpoint)
+NODE   ENDPOINT               ENDPOINT PING SEEN AS    NODE LOCATION
+LAX    162.159.192.1:2408     175ms         US         Los Angeles, US

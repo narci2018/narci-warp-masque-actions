@@ -1,0 +1,40 @@
+mixed-port: 19899
+external-controller: 127.0.0.1:19099
+secret: test
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: '[Transit-HK] 香港优质中继'
+    type: vless
+    server: 157.66.26.194
+    port: 443
+    uuid: e0249491-b63d-4e5d-8788-d3861553133f
+    tls: true
+    servername: l8.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l8.ccwu.cc
+    udp: true
+
+  - name: '⚡ [HK] 香港 WARP 纯净出口'
+    type: wireguard
+    private-key: ILU5YxGu7XAgFliq1VSJMM2h049P57g7PqHX05FCf04=
+    ip: 172.16.0.2
+    dialer-proxy: '[Transit-HK] 香港优质中继'
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+rules:
+  - MATCH,⚡ [HK] 香港 WARP 纯净出口

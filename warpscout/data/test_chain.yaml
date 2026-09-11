@@ -1,0 +1,38 @@
+proxies:
+  - name: "AWG WARP OUTER"
+    type: wireguard
+    private-key: QHJRFWlD3k7imKXD5ETGj7oM1bvY7wmh1k4e6SF2akE=
+    ip: 172.16.0.2
+    peers:
+      - server: 8.39.204.89
+        port: 1701
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    amnezia-wg-option:
+      jc: 6
+      jmin: 10
+      jmax: 50
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+      i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+    udp: true
+  - name: "WG WARP-in-WARP"
+    type: wireguard
+    private-key: ILU5YxGu7XAgFliq1VSJMM2h049P57g7PqHX05FCf04=
+    ip: 172.16.0.2
+    peers:
+      - server: 162.159.192.195
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+        persistent-keepalive: 25
+    mtu: 1220
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+    dialer-proxy: "AWG WARP OUTER"

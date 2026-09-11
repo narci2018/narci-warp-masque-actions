@@ -1,0 +1,390 @@
+mixed-port: 29996
+external-controller: 127.0.0.1:29997
+mode: rule
+log-level: info
+
+dns:
+  enable: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.8.8
+
+proxies:
+  - name: ".hop-MAIN"
+    type: socks5
+    server: 127.0.0.1
+    port: 29881
+  - name: ".hop-US"
+    type: socks5
+    server: 127.0.0.1
+    port: 29891
+  - name: ".hop-GB"
+    type: socks5
+    server: 127.0.0.1
+    port: 29892
+  - name: ".hop-DE"
+    type: socks5
+    server: 127.0.0.1
+    port: 29893
+  - name: ".hop-FR"
+    type: socks5
+    server: 127.0.0.1
+    port: 29894
+  - name: ".hop-JP"
+    type: socks5
+    server: 127.0.0.1
+    port: 29897
+  - name: ".hop-SG"
+    type: socks5
+    server: 127.0.0.1
+    port: 29901
+  - name: "⚡ [US-01] 🇺🇸 美国 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-US"
+  - name: "⚡ [US-02] 🇺🇸 美国 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-US"
+  - name: "⚡ [US-03] 🇺🇸 美国 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-US"
+  - name: "⚡ [GB-01] 🇬🇧 英国 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-GB"
+  - name: "⚡ [GB-02] 🇬🇧 英国 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-GB"
+  - name: "⚡ [GB-03] 🇬🇧 英国 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-GB"
+  - name: "⚡ [DE-01] 🇩🇪 德国 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-DE"
+  - name: "⚡ [DE-02] 🇩🇪 德国 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-DE"
+  - name: "⚡ [DE-03] 🇩🇪 德国 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-DE"
+  - name: "⚡ [FR-01] 🇫🇷 法国 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-FR"
+  - name: "⚡ [FR-02] 🇫🇷 法国 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-FR"
+  - name: "⚡ [FR-03] 🇫🇷 法国 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-FR"
+  - name: "⚡ [JP-01] 🇯🇵 日本 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-JP"
+  - name: "⚡ [JP-02] 🇯🇵 日本 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-JP"
+  - name: "⚡ [JP-03] 🇯🇵 日本 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-JP"
+  - name: "⚡ [SG-01] 🇸🇬 新加坡 01 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-SG"
+  - name: "⚡ [SG-02] 🇸🇬 新加坡 02 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-SG"
+  - name: "⚡ [SG-03] 🇸🇬 新加坡 03 WARP 纯净出口"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: "MHcCAQEEIKmYFAcjePK1i0YY/BMikNRe+lEmI7TDUKAmp8d8L97SoAoGCCqGSM49AwEHoUQDQgAECW4liwKqtH2zPCZyj6MWxYPXPDmDwOIVQfsVsoXoJa2IkdPuttAb2Eq8YK5wHESGJGOby7Uy0mUFVR1x1JPwKA=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: 172.16.0.2
+    dialer-proxy: ".hop-SG"
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "🚀 自动选择 (最快出海)"
+      - "🇺🇸 美国 WARP 节点"
+      - "🇬🇧 英国 WARP 节点"
+      - "🇩🇪 德国 WARP 节点"
+      - "🇫🇷 法国 WARP 节点"
+      - "🇯🇵 日本 WARP 节点"
+      - "🇸🇬 新加坡 WARP 节点"
+      - "⚡ [US-01] 🇺🇸 美国 01 WARP 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 WARP 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 WARP 纯净出口"
+      - "⚡ [GB-01] 🇬🇧 英国 01 WARP 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 WARP 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 WARP 纯净出口"
+      - "⚡ [DE-01] 🇩🇪 德国 01 WARP 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 WARP 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 WARP 纯净出口"
+      - "⚡ [FR-01] 🇫🇷 法国 01 WARP 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 WARP 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 WARP 纯净出口"
+      - "⚡ [JP-01] 🇯🇵 日本 01 WARP 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 WARP 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 WARP 纯净出口"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 WARP 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 WARP 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 WARP 纯净出口"
+  - name: "🚀 自动选择 (最快出海)"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 WARP 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 WARP 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 WARP 纯净出口"
+      - "⚡ [GB-01] 🇬🇧 英国 01 WARP 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 WARP 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 WARP 纯净出口"
+      - "⚡ [DE-01] 🇩🇪 德国 01 WARP 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 WARP 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 WARP 纯净出口"
+      - "⚡ [FR-01] 🇫🇷 法国 01 WARP 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 WARP 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 WARP 纯净出口"
+      - "⚡ [JP-01] 🇯🇵 日本 01 WARP 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 WARP 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 WARP 纯净出口"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 WARP 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 WARP 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 WARP 纯净出口"
+  - name: "🇺🇸 美国 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 美国 自动最优"
+      - "⚡ [US-01] 🇺🇸 美国 01 WARP 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 WARP 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 WARP 纯净出口"
+  - name: "⚡ 美国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [US-01] 🇺🇸 美国 01 WARP 纯净出口"
+      - "⚡ [US-02] 🇺🇸 美国 02 WARP 纯净出口"
+      - "⚡ [US-03] 🇺🇸 美国 03 WARP 纯净出口"
+  - name: "🇬🇧 英国 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 英国 自动最优"
+      - "⚡ [GB-01] 🇬🇧 英国 01 WARP 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 WARP 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 WARP 纯净出口"
+  - name: "⚡ 英国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [GB-01] 🇬🇧 英国 01 WARP 纯净出口"
+      - "⚡ [GB-02] 🇬🇧 英国 02 WARP 纯净出口"
+      - "⚡ [GB-03] 🇬🇧 英国 03 WARP 纯净出口"
+  - name: "🇩🇪 德国 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 德国 自动最优"
+      - "⚡ [DE-01] 🇩🇪 德国 01 WARP 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 WARP 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 WARP 纯净出口"
+  - name: "⚡ 德国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [DE-01] 🇩🇪 德国 01 WARP 纯净出口"
+      - "⚡ [DE-02] 🇩🇪 德国 02 WARP 纯净出口"
+      - "⚡ [DE-03] 🇩🇪 德国 03 WARP 纯净出口"
+  - name: "🇫🇷 法国 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 法国 自动最优"
+      - "⚡ [FR-01] 🇫🇷 法国 01 WARP 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 WARP 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 WARP 纯净出口"
+  - name: "⚡ 法国 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [FR-01] 🇫🇷 法国 01 WARP 纯净出口"
+      - "⚡ [FR-02] 🇫🇷 法国 02 WARP 纯净出口"
+      - "⚡ [FR-03] 🇫🇷 法国 03 WARP 纯净出口"
+  - name: "🇯🇵 日本 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 日本 自动最优"
+      - "⚡ [JP-01] 🇯🇵 日本 01 WARP 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 WARP 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 WARP 纯净出口"
+  - name: "⚡ 日本 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [JP-01] 🇯🇵 日本 01 WARP 纯净出口"
+      - "⚡ [JP-02] 🇯🇵 日本 02 WARP 纯净出口"
+      - "⚡ [JP-03] 🇯🇵 日本 03 WARP 纯净出口"
+  - name: "🇸🇬 新加坡 WARP 节点"
+    type: select
+    proxies:
+      - "⚡ 新加坡 自动最优"
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 WARP 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 WARP 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 WARP 纯净出口"
+  - name: "⚡ 新加坡 自动最优"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - "⚡ [SG-01] 🇸🇬 新加坡 01 WARP 纯净出口"
+      - "⚡ [SG-02] 🇸🇬 新加坡 02 WARP 纯净出口"
+      - "⚡ [SG-03] 🇸🇬 新加坡 03 WARP 纯净出口"
+
+rules:
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - DOMAIN-SUFFIX,ping0.cc,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ip.sb,PROXY
+  - DOMAIN-SUFFIX,cip.cc,PROXY
+  - DOMAIN-SUFFIX,myip.la,PROXY
+  - DOMAIN-SUFFIX,ip138.com,PROXY
+  - DOMAIN-SUFFIX,ip-api.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,x.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - MATCH,PROXY

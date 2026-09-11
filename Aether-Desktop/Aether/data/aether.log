@@ -1,0 +1,25 @@
+[2026-09-09T17:09:53.984Z INFO  aether] Aether v1.8.0
+[2026-09-09T17:09:53.984Z INFO  aether::sysprofile] [*] performance profile: High (cpus=12 mem=32626MB); scan concurrency cap=unlimited, udp socket rcv/snd=7168KB/384KB (snd = uplink queue budget), netstack tcp tx/rx=384KB/1024KB (rx = advertised window), netstack udp=128KB, channel capacity=1024
+[2026-09-09T17:09:53.984Z INFO  aether::sysprofile] [*] h2 carrier profile: stream window=2048KB, connection window=4096KB, max frame=256KB, send buffer=512KB, packet batch=32
+[2026-09-09T17:09:53.984Z INFO  aether] [+] no masque identity found; provisioning dedicated masque account
+[2026-09-09T17:09:56.191Z INFO  aether::account] [+] enrolling MASQUE key for device 1d639a41-3460-45a0-92d9-771019f1b197
+[2026-09-09T17:09:57.580Z INFO  aether::account] [+] MASQUE key enrolled
+[2026-09-09T17:09:57.583Z INFO  aether] [+] provisioned and saved new masque identity to aether-masque.toml
+[2026-09-09T17:09:57.583Z INFO  aether] [+] identity ready: device=1d639a41-3460-45a0-92d9-771019f1b197 ipv4=172.16.0.2 ipv6=2606:4700:110:8c3a:fd68:e41:9572:4a6c
+[2026-09-09T17:09:57.583Z INFO  aether] [+] ECH disabled (warp masque endpoint does not accept ECH); SNI sent in cleartext
+[2026-09-09T17:09:57.583Z INFO  aether] [*] hunting for a working MASQUE gateway (deep connect-ip + data-plane verification)
+[2026-09-09T17:09:57.583Z INFO  aether] [+] obfuscation profile: firewall
+[2026-09-09T17:09:57.583Z INFO  aether::prober] [*] scan mode=turbo ip=ipv4 candidates=946 ports=[443, 500, 1701, 4500, 4443, 8443, 8095] concurrency=20 per_probe=6s budget=45s
+[2026-09-09T17:09:57.583Z INFO  aether::tls] tls verification: pin-based (2 pins loaded)
+[2026-09-09T17:10:00.231Z INFO  aether::prober] [+] candidate ok 162.159.198.2:443 rtt=2.6462793s
+[2026-09-09T17:10:00.233Z INFO  aether] [+] selected MASQUE gateway 162.159.198.2:443 (rtt 2.6462793s)
+[2026-09-09T17:10:00.233Z INFO  aether] [+] using cloudflare edge 162.159.198.2:443
+[2026-09-09T17:10:00.234Z INFO  aether] [+] obfuscation profile: firewall
+[2026-09-09T17:10:00.234Z INFO  aether] [+] MASQUE transport: HTTP/3 (QUIC) to 162.159.198.2:443
+[2026-09-09T17:10:00.659Z INFO  aether::quic] quic handshake established; alpn=h3
+[2026-09-09T17:10:00.659Z INFO  aether::quic] connect-ip request sent on stream 0
+[2026-09-09T17:10:00.659Z INFO  aether::quic] [*] validating masque data-plane before exposing socks5
+[2026-09-09T17:10:01.360Z INFO  aether::quic] connect-ip status: 200
+[2026-09-09T17:10:01.900Z INFO  aether::quic] [+] masque tunnel validated (end-to-end data confirmed); exposing socks5
+[2026-09-09T17:10:01.900Z INFO  aether] [+] socks5 server listening on 127.0.0.1:1819
+[2026-09-09T17:10:01.901Z INFO  aether::socks] socks5 listening on 127.0.0.1:1819

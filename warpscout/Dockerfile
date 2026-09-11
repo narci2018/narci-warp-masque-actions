@@ -6,7 +6,6 @@ ARG VERSION=dev
 
 WORKDIR /src
 
-# 配置国内 Go 模块代理，解决国内网络下 proxy.golang.org 连接超时问题
 ENV GOPROXY=https://goproxy.cn,direct
 
 COPY go.mod go.sum ./
@@ -15,18 +14,22 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w -X main.version=${VERSION#v}" -o /warpscout .
 
-FROM alpine:latest
+FROM python:3.11-slim
 
-# 配置国内 Alpine 源并安装必要证书
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
-    apk add --no-cache ca-certificates tzdata sing-box
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl tzdata && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data
 
 COPY --from=build /warpscout /usr/local/bin/warpscout
+COPY bin/aether /usr/local/bin/aether
+COPY bin/psiphon-tunnel-core /usr/local/bin/psiphon-tunnel-core
+COPY bin/sing-box /usr/local/bin/sing-box
+COPY bin/server_entries.txt /data/server_entries.txt
 
-# 开放冷门高位端口：WebUI (29880), SOCKS5 (29881)
-EXPOSE 29880 29881
+RUN chmod +x /usr/local/bin/warpscout /usr/local/bin/aether /usr/local/bin/psiphon-tunnel-core /usr/local/bin/sing-box
+
+# 开放冷门高位端口：WebUI (29880), SOCKS5 (29881), 以及25国多选专属端口 (29891-29915)
+EXPOSE 29880 29881 29891-29915
 
 ENTRYPOINT ["warpscout"]
 CMD ["web", "-l", "0.0.0.0:29880", "-P", "29881"]

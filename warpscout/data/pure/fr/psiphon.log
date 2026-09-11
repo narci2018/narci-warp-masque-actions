@@ -1,0 +1,13 @@
+2026-09-11T16:23:48.439Z NetworkID {"ID":"UNKNOWN"}
+2026-09-11T16:23:48.444Z ListeningSocksProxyPort {"port":39894}
+2026-09-11T16:23:52.052Z NetworkID {"ID":"UNKNOWN"}
+2026-09-11T16:23:55.980Z AvailableEgressRegions {"regions":["AT","AU","BE","CA","CH","CZ","DE","DK","ES","FI","FR","GB","ID","IE","IN","IT","JP","NL","NO","PL","RO","RS","SE","SG","US"]}
+2026-09-11T16:23:58.050Z ApplicationParameters {"parameters":{"DeviceLocationPrecision":4}}
+2026-09-11T16:24:00.170Z SkipServerEntry {"reason":"restricted provider ID: 66FA5AFE5F394DE1"}
+2026-09-11T16:24:01.169Z ClientRegion {"region":"CN"}
+2026-09-11T16:24:01.177Z Homepage {"url":"https://ipfounder.net/?sponsor_id=4BA4DEF917101460\u0026sponsor=psiphon_bbg\u0026client_region=CN\u0026client_asn=13335\u0026client_platform=windows\u0026secret=580EfjEI29xL3hoyU6dgP4vSEVxdcGI7JDFkxgjds7PHulSEF0wmORpvzbqxyTwYtpowsY4xMFnfWEnTghe6l8jiV9K5QSZoir2i6fDeKJD6EhL6DkoYTEMu2EE9YJvy3LdCUZ7ncdVC6ipgWx06wznvDLbY1ajfcfRGCpfsQJei2q6tb0GSFh1QK3x3qXKwyjmNPc5J"}
+2026-09-11T16:24:01.177Z ClientIsLatestVersion {"availableVersion":""}
+2026-09-11T16:24:01.177Z ServerTimestamp {"diagnosticID":"OQw8Y4o1","timestamp":"2026-09-11T16:24:00Z"}
+2026-09-11T16:24:01.178Z ActiveAuthorizationIDs {"IDs":[],"diagnosticID":"OQw8Y4o1"}
+2026-09-11T16:24:01.178Z TrafficRateLimits {"diagnosticID":"OQw8Y4o1","downstreamBytesPerSecond":0,"upstreamBytesPerSecond":0}
+2026-09-11T16:24:01.184Z Tunnels {"count":1}

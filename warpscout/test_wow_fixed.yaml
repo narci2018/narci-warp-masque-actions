@@ -1,0 +1,32 @@
+mixed-port: 19897
+external-controller: 127.0.0.1:19097
+secret: test
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: 'outer-awg'
+    type: wireguard
+    ip: 172.16.0.2
+    private-key: 'QHJRFWlD3k7imKXD5ETGj7oM1bvY7wmh1k4e6SF2akE='
+    peers:
+      - server: 162.159.192.1
+        port: 2408
+        public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+        allowed-ips: ['0.0.0.0/0']
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+    udp: true
+    remote-dns-resolve: true
+
+rules:
+  - MATCH,outer-awg

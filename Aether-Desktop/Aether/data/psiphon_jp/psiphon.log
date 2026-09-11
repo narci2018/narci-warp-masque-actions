@@ -1,0 +1,6 @@
+2026-09-09T17:19:48.636Z NetworkID {"ID":"VPN+[redacted]"}
+2026-09-09T17:19:48.639Z ApplicationParameters {"parameters":{"DeviceLocationPrecision":4}}
+2026-09-09T17:19:48.648Z ListeningSocksProxyPort {"port":29892}
+2026-09-09T17:19:48.652Z SkipServerEntry {"reason":"restricted provider ID: 66FA5AFE5F394DE1"}
+2026-09-09T17:19:48.696Z AvailableEgressRegions {"regions":["AT","AU","BE","CA","CH","CZ","DE","DK","ES","FI","FR","GB","ID","IE","IN","IT","JP","NL","NO","PL","RO","RS","SE","SG","US"]}
+2026-09-09T17:19:50.558Z NetworkID {"ID":"VPN+[redacted]"}

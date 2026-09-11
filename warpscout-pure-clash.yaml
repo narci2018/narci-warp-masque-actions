@@ -1,0 +1,80 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: "[纯净WARP] 美国 (US)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29891
+    udp: true
+  - name: "[纯净WARP] 日本 (JP)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29892
+    udp: true
+  - name: "[纯净WARP] 法国 (FR)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29893
+    udp: true
+  - name: "[纯净WARP] 德国 (DE)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29894
+    udp: true
+  - name: "[纯净WARP] 英国 (GB)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29895
+    udp: true
+  - name: "[纯净WARP] 新加坡 (SG)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29896
+    udp: true
+  - name: "[纯净WARP] 加拿大 (CA)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29897
+    udp: true
+  - name: "[纯净WARP] 荷兰 (NL)"
+    type: socks5
+    server: 127.0.0.1
+    port: 29898
+    udp: true
+
+proxy-groups:
+  - name: "节点选择"
+    type: select
+    proxies:
+      - "[纯净WARP] 美国 (US)"
+      - "[纯净WARP] 日本 (JP)"
+      - "[纯净WARP] 法国 (FR)"
+      - "[纯净WARP] 德国 (DE)"
+      - "[纯净WARP] 英国 (GB)"
+      - "[纯净WARP] 新加坡 (SG)"
+      - "[纯净WARP] 加拿大 (CA)"
+      - "[纯净WARP] 荷兰 (NL)"
+      - DIRECT
+
+  - name: "自动优选"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "[纯净WARP] 美国 (US)"
+      - "[纯净WARP] 日本 (JP)"
+      - "[纯净WARP] 法国 (FR)"
+      - "[纯净WARP] 德国 (DE)"
+      - "[纯净WARP] 英国 (GB)"
+      - "[纯净WARP] 新加坡 (SG)"
+      - "[纯净WARP] 加拿大 (CA)"
+      - "[纯净WARP] 荷兰 (NL)"
+
+rules:
+  - MATCH,节点选择

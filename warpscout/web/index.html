@@ -532,6 +532,48 @@
       to { transform: translateY(0); opacity: 1; }
     }
     .mono { font-family: var(--mono); }
+  
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.active {
+      display: flex !important;
+    }
+    .modal-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      width: 90%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 0.75rem;
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
@@ -548,22 +590,17 @@
       </div>
 
       <div class="header-status">
-        <div class="status-badge" id="socksBadge">
-          <span class="dot" id="socksDot"></span>
-          <span id="socksText">网关端口: 29881</span>
+        <div class="status-badge" id="acctCountBadge" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.3);">
+          <span class="dot active" id="acctCountDot"></span>
+          <span id="acctCountText" style="color:var(--primary); font-weight:600;">WARP 账号池: 加载中</span>
         </div>
         <div class="status-badge" id="acctBadge">
-          <span class="dot" id="acctDot"></span>
-          <span id="acctText">WARP 账号: 加载中</span>
+          <span class="dot active" id="acctDot"></span>
+          <span id="acctText">Aether 多国纯正 WARP 就绪</span>
         </div>
         <div style="display: flex; gap: 0.5rem;">
-          <button class="btn btn-outline btn-sm" id="btnRegister" onclick="showRegisterModal()">注册账号</button>
-          <button class="btn btn-danger btn-sm" id="btnStopSocks" style="display:none;" onclick="stopSocks()">
-            <span>⏹ 停止网关</span>
-          </button>
-          <button class="btn btn-primary btn-sm" onclick="runGatewayDiagnosis()">
-            <span>🚀 快速诊断网关</span>
-          </button>
+          <button class="btn btn-outline btn-sm" onclick="switchTab('accounts')">🔑 账号管理</button>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('subs')">🌐 订阅底座</button>
         </div>
       </div>
     </div>
@@ -572,18 +609,17 @@
   <!-- Nav Tabs -->
   <div class="tab-bar-wrap">
     <div class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab('matrix')">
-        <span>🌐 15国 75节点矩阵</span>
-        <span class="badge-pill badge-blue" id="tabNodeCountBadge">75</span>
+      <button class="tab-btn active" onclick="switchTab('pure')">
+        <span>🛡️ 纯净多国 WARP (Aether 原生协议)</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('accounts')">
+        <span>🔑 WARP 账号管理 (CRUD & 定时防风控)</span>
       </button>
       <button class="tab-btn" onclick="switchTab('subs')">
-        <span>🛡️ 纯正订阅中心</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab('gateway')">
-        <span>⚡ 本地出海网关</span>
+        <span>🌐 订阅底座同步 (多订阅持久化)</span>
       </button>
       <button class="tab-btn" onclick="switchTab('scanner')">
-        <span>⚙️ 底座同步与调优</span>
+        <span>⚙️ 官方底座扫描与测试</span>
       </button>
     </div>
   </div>
@@ -594,116 +630,238 @@
     <!-- ==================================================================== -->
     <!-- TAB 1: 15国 75节点矩阵                                                -->
     <!-- ==================================================================== -->
-    <div class="tab-pane active" id="pane-matrix">
-      <!-- Country Filters -->
-      <div class="filter-pills" id="matrixFilterPills">
-        <button class="filter-pill active" onclick="filterMatrix('ALL')">全部 (75)</button>
-        <button class="filter-pill" onclick="filterMatrix('NA')">北美洲 (US / CA / MX)</button>
-        <button class="filter-pill" onclick="filterMatrix('APAC')">亚太地区 (HK / JP / SG / TW / KR / TH / MY / VN / PH)</button>
-        <button class="filter-pill" onclick="filterMatrix('EU')">欧洲地区 (GB / DE / FR)</button>
-      </div>
-
-      <!-- Quick Action Bar -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.75rem;">
-        <div style="font-size: 0.85rem; color: var(--text-dim);">
-          已筛选展示 <b id="displayedCountryCount" style="color: var(--primary);">15</b> 个国家，共 <b id="displayedNodeCount" style="color: #fff;">75</b> 个纯正 Cloudflare 边缘节点。
-        </div>
-        <div style="display: flex; gap: 0.5rem;">
-          <button class="btn btn-outline btn-sm" onclick="loadMatrixNodes()">
-            <span>🔄 刷新节点延迟</span>
-          </button>
-          <button class="btn btn-primary btn-sm" onclick="switchTab('subs')">
-            <span>📥 导入客户端使用</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Country Matrix Grid -->
-      <div class="matrix-grid" id="matrixContainer">
-        <!-- Generated by JS -->
-      </div>
-    </div>
-
+        <!-- ==================================================================== -->
+    <!-- TAB 1: 纯净多国 WARP 出海 (Docker 容器内原生驱动)                      -->
     <!-- ==================================================================== -->
-    <!-- TAB 2: 纯正订阅中心                                                   -->
-    <!-- ==================================================================== -->
-    <div class="tab-pane" id="pane-subs">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.25rem;">
-        
-        <!-- Clash Verge Card -->
-        <div class="card" style="border-color: rgba(56, 189, 248, 0.4);">
-          <div class="card-title">
-            <span style="font-size:1.4rem;">🐱</span>
-            <span>Clash Verge / Mihomo 专属订阅</span>
-          </div>
-          <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;">
-            75 个精选节点，包含 15 个国家独立分组与 <code>url-test</code> 自动优选策略。已优化分流规则，秒级加载不卡死。
-          </p>
-
-          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem;">订阅直链 (本地服务)</div>
-            <div class="mono" style="font-size: 0.85rem; color: var(--primary); word-break: break-all;" id="subClashLink">
-              http://127.0.0.1:29880/api/sub/clash-local
+    <div class="tab-pane active" id="pane-pure">
+      <!-- Main Dashboard Card -->
+      <div class="card" style="border-color: rgba(56, 189, 248, 0.4); background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(17, 24, 39, 0.9));">
+        <div class="card-title" style="justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;">🛡️</span>
+            <div>
+              <div style="font-size: 1.1rem; font-weight: 700;">纯净多国 WARP 出海网关 (Docker 原生容器驱动)</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); font-weight: normal;">100% 运行在 Docker 容器内部，无第三方机场依赖，直达指定国家出口</div>
             </div>
           </div>
+          <span class="badge-pill" id="pureStatusBadge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">
+            🟢 加载中...
+          </span>
+        </div>
 
+        <!-- Country Selector Grid -->
+        <div style="margin: 1.25rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+            <label style="font-size: 0.85rem; color: var(--text-dim); margin: 0; font-weight: 600;">
+              👉 选择目标出口国家 / 地区 (点击立即切换当前激活出口)：
+            </label>
+            <div style="display: flex; gap: 0.35rem;">
+              <button class="btn btn-sm btn-primary" id="btnTopFilterPopular" onclick="switchTopCountryFilter('popular')" style="font-size:0.75rem; padding:0.25rem 0.6rem;">🌟 常用 11 国</button>
+              <button class="btn btn-sm btn-outline" id="btnTopFilterAll" onclick="switchTopCountryFilter('all')" style="font-size:0.75rem; padding:0.25rem 0.6rem;">🌍 Psiphon 全部国家</button>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.6rem;" id="pureCountryGrid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Real-time Status -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.85rem;">
+            <div style="font-size: 0.75rem; color: var(--text-muted);">当前激活国家出口</div>
+            <div style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-top: 0.2rem;" id="pureCurCountryText">🇫🇷 法国 (FR)</div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;" id="pureCurCityText">Europe/Paris</div>
+          </div>
+
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.85rem;">
+            <div style="font-size: 0.75rem; color: var(--text-muted);">真实出口 IP (ip-api 实时验证)</div>
+            <div class="mono" style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-top: 0.2rem;" id="pureCurIpText">正在获取...</div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;" id="pureCurIspText">Cloudflare / OVH</div>
+          </div>
+
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.85rem;">
+            <div style="font-size: 0.75rem; color: var(--text-muted);">宿主机 SOCKS5 代理端口</div>
+            <div class="mono" style="font-size: 1.15rem; font-weight: 700; color: var(--success); margin-top: 0.2rem;">127.0.0.1:29881</div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;">应用/浏览器设置此端口即走当前国家</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-sm" id="btnPureSwitch" onclick="triggerPureStart()">
+            <span>🚀 切换到所选国家出口</span>
+          </button>
+          <button class="btn btn-outline btn-sm" onclick="fetchPureStatus()">
+            <span>🔄 实时刷新状态与 IP</span>
+          </button>
+          <button class="btn btn-outline btn-sm" onclick="copyText('127.0.0.1:29881', 'SOCKS5 代理地址')">
+            <span>📋 复制 SOCKS5 地址 (29881)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Subscription Exporters for Pure Multi-Country -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div class="card">
+          <div class="card-title">
+            <span>🐱 Clash Verge / Mihomo 纯净多国订阅</span>
+          </div>
+          <p style="color: var(--text-dim); font-size: 0.82rem; margin-bottom: 0.8rem;">
+            包含法国、日本、美国、德国、英国、新加坡、加拿大、荷兰等独立国家出口，容器内 100% 原生支持。
+          </p>
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 6px; padding: 0.6rem; margin-bottom: 0.8rem;">
+            <div class="mono" style="font-size: 0.8rem; color: var(--primary); word-break: break-all;" id="pureClashSubLink">
+              http://127.0.0.1:29880/api/pure/clash
+            </div>
+          </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="btn btn-primary btn-sm" onclick="copySubUrl('/api/sub/clash-local', 'Clash Verge 订阅')">
-              <span>📋 复制订阅链接</span>
+            <button class="btn btn-primary btn-sm" onclick="copyPureSub('/api/pure/clash', 'Clash 纯净订阅')">
+              <span>📋 复制订阅直链</span>
             </button>
-            <a class="btn btn-outline btn-sm" href="/api/sub/clash-local" download="warpscout-75nodes-clash.yaml">
+            <a class="btn btn-outline btn-sm" href="/api/pure/clash" download="warpscout-pure-clash.yaml">
               <span>💾 下载 .yaml 文件</span>
             </a>
-            <button class="btn btn-outline btn-sm" onclick="viewConfigModal('/api/sub/clash-local')">
-              <span>👁️ 预览配置</span>
-            </button>
           </div>
         </div>
 
-        <!-- Sing-box Card -->
-        <div class="card" style="border-color: rgba(129, 140, 248, 0.4);">
+        <div class="card">
           <div class="card-title">
-            <span style="font-size:1.4rem;">📦</span>
-            <span>Sing-box (1.10+) 官方标准格式</span>
+            <span>📦 Sing-box 纯净多国订阅</span>
           </div>
-          <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;">
-            完整标准的 Sing-box Outbounds 数组与路由策略，适合 Sing-box 客户端、GUI.for.SingBox 及 Linux 守护进程。
+          <p style="color: var(--text-dim); font-size: 0.82rem; margin-bottom: 0.8rem;">
+            标准 Sing-box JSON 格式，导入客户端即可全自动分流。
           </p>
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 6px; padding: 0.6rem; margin-bottom: 0.8rem;">
+            <div class="mono" style="font-size: 0.8rem; color: var(--accent); word-break: break-all;" id="pureSingboxSubLink">
+              http://127.0.0.1:29880/api/pure/singbox
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" onclick="copyPureSub('/api/pure/singbox', 'Sing-box 纯净订阅')">
+              <span>📋 复制订阅直链</span>
+            </button>
+            <a class="btn btn-outline btn-sm" href="/api/pure/singbox" download="warpscout-pure-singbox.json">
+              <span>💾 下载 .json 文件</span>
+            </a>
+          </div>
+        </div>
 
-          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem;">订阅直链 (本地服务)</div>
-            <div class="mono" style="font-size: 0.85rem; color: var(--accent); word-break: break-all;" id="subSingboxLink">
-              http://127.0.0.1:29880/api/sub/singbox-local
+        <div class="card">
+          <div class="card-title">
+            <span>🚀 v2rayN / v2rayNG / SOCKS 纯净订阅</span>
+          </div>
+          <p style="color: var(--text-dim); font-size: 0.82rem; margin-bottom: 0.8rem;">
+            标准 Base64 编码的 socks5 节点列表，原生兼容 v2rayN、v2rayNG、Shadowrocket。
+          </p>
+          <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 6px; padding: 0.6rem; margin-bottom: 0.8rem;">
+            <div class="mono" style="font-size: 0.8rem; color: #f59e0b; word-break: break-all;" id="pureV2rayNSubLink">
+              http://127.0.0.1:29880/api/pure/v2rayn
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" onclick="copyPureSub('/api/pure/v2rayn', 'v2rayN 纯净订阅')">
+              <span>📋 复制订阅直链</span>
+            </button>
+            <a class="btn btn-outline btn-sm" href="/api/pure/v2rayn" download="warpscout-pure-v2rayn.txt">
+              <span>💾 下载 .txt 订阅</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 25国多选与定制订阅模块 -->
+        <div class="card" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <div class="card-title" style="margin-bottom: 0.25rem;">
+                <span>🌍 自定义出口国家列表 (多选定制订阅)</span>
+              </div>
+              <p style="color: var(--text-dim); font-size: 0.82rem; margin: 0;">
+                勾选您希望出现在订阅中的国家（各国家右侧已标注可用认证节点数）。保存后，订阅将即时生效。
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" id="btnRefreshPsiphon" onclick="refreshPsiphonPool()" style="color:#38bdf8; border-color:rgba(56,189,248,0.4); font-weight:600;">🔄 实时刷新国家与节点数</button>
+              <button class="btn btn-outline btn-sm" onclick="selectPresetCountries('POPULAR')">🌟 常用 11 国 (美/英/德/法/墨/巴/日/韩/港/台/新)</button>
+              <button class="btn btn-outline btn-sm" onclick="selectPresetCountries('PSIPHON')">🌍 全选 Psiphon 支持的全部国家</button>
+              <button class="btn btn-outline btn-sm" onclick="selectPresetCountries('ALL')">🔘 全选所有国家</button>
+              <button class="btn btn-outline btn-sm" onclick="selectPresetCountries('CLEAR')">清空</button>
+              <button class="btn btn-primary btn-sm" onclick="saveSelectedCountries()">
+                <span>💾 保存并更新订阅</span>
+              </button>
+            </div>
+          </div>
+          <div id="countryCheckboxGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.5rem; max-height: 280px; overflow-y: auto; padding: 0.75rem; background: #0b1120; border-radius: 6px; border: 1px solid #1e293b;">
+            <!-- Generated by JS -->
+          </div>
+        </div>
+
+        <!-- 节点测延迟测速面板 (电信 / 联通 / 移动 / 国际) -->
+        <div class="card" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+            <div>
+              <div class="card-title" style="margin-bottom: 0.25rem;">
+                <span>⚡ 多国节点性能测速与延迟评估</span>
+              </div>
+              <p style="color: var(--text-dim); font-size: 0.82rem; margin: 0;">
+                支持针对【国际全网 / 中国电信 / 中国联通 / 中国移动】测试出口节点的真实往返延迟与传输速率。
+              </p>
+              <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 0.35rem; background: rgba(56, 189, 248, 0.08); padding: 0.3rem 0.6rem; border-radius: 4px; border-left: 3px solid #38bdf8;">
+                💡 <b>测速原理提示</b>：出海翻墙（访问 YouTube / Google / OpenAI）的真实下载带宽请以 <b>【🌐 国际全网】</b> 为基准；【电信/联通/移动】测的是境外节点反向穿透跨国光缆访问国内机房的跨境带宽。
+              </div>
+            </div>
+            <!-- ISP Selection Radio Group -->
+            <div style="display: flex; gap: 0.6rem; align-items: center; background: #0b1120; padding: 0.4rem 0.75rem; border-radius: 6px; border: 1px solid #1e293b; flex-wrap: wrap;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">测速线路:</span>
+              <label style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; cursor: pointer; color: #38bdf8; font-weight: 500;">
+                <input type="radio" name="benchIsp" value="telecom" style="accent-color: #38bdf8;"> 🇨🇳 中国电信
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; cursor: pointer; color: #f59e0b; font-weight: 500;">
+                <input type="radio" name="benchIsp" value="unicom" style="accent-color: #f59e0b;"> 🇨🇳 中国联通
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; cursor: pointer; color: #10b981; font-weight: 500;">
+                <input type="radio" name="benchIsp" value="mobile" style="accent-color: #10b981;"> 🇨🇳 中国移动
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; cursor: pointer; color: #a78bfa; font-weight: 500;">
+                <input type="radio" name="benchIsp" value="global" checked style="accent-color: #a78bfa;"> 🌐 国际全网
+              </label>
             </div>
           </div>
 
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="btn btn-primary btn-sm" onclick="copySubUrl('/api/sub/singbox-local', 'Sing-box 订阅')">
-              <span>📋 复制订阅链接</span>
+          <div style="display: flex; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" id="btnBenchAllPing" onclick="benchAllPing()">
+              <span>⚡ 一键并发测全部延迟 (Ping)</span>
             </button>
-            <a class="btn btn-outline btn-sm" href="/api/sub/singbox-local" download="warpscout-75nodes-singbox.json">
-              <span>💾 下载 .json 文件</span>
-            </a>
-            <button class="btn btn-outline btn-sm" onclick="viewConfigModal('/api/sub/singbox-local')">
-              <span>👁️ 预览配置</span>
+            <button class="btn btn-outline btn-sm" id="btnBenchActiveSpeed" onclick="benchActiveSpeed()">
+              <span>🚀 测当前激活出口速度</span>
             </button>
           </div>
-        </div>
 
-      </div>
-
-      <!-- Quick Usage Guide -->
-      <div class="card" style="margin-top: 1rem;">
-        <div class="card-title">
-          <span>📖 快速使用说明 (Clash Verge)</span>
+          <!-- Benchmark Results Table -->
+          <div style="overflow-x: auto; background: #0b1120; border-radius: 6px; border: 1px solid #1e293b;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.83rem; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 1px solid #1e293b; color: var(--text-dim); background: rgba(30, 41, 59, 0.5);">
+                  <th style="padding: 0.65rem 0.8rem;">国家 / 地区</th>
+                  <th style="padding: 0.65rem 0.8rem;">SOCKS5 端口</th>
+                  <th style="padding: 0.65rem 0.8rem;">认证机房节点数</th>
+                  <th style="padding: 0.65rem 0.8rem;">往返延迟 (Latency)</th>
+                  <th style="padding: 0.65rem 0.8rem;">下行速率 (Speed)</th>
+                  <th style="padding: 0.65rem 0.8rem; text-align: right;">操作</th>
+                </tr>
+              </thead>
+              <tbody id="benchTbody">
+                <tr>
+                  <td colspan="6" style="padding: 1.5rem; text-align: center; color: var(--text-dim);">
+                    点击上方【⚡ 一键并发测全部延迟】或【🚀 测当前激活出口速度】开始评测
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <ol style="margin-left: 1.25rem; font-size: 0.88rem; color: var(--text-dim); line-height: 1.8;">
-          <li>打开 <b>Clash Verge</b>，进入「订阅 (Profiles)」界面。</li>
-          <li>点击「新建」，将链接填为：<code class="mono" style="color:var(--primary);">http://127.0.0.1:29880/api/sub/clash-local</code>，点击保存并右键选择「使用」。</li>
-          <li>进入「代理 (Proxies)」界面，即可看到 15 个独立国家分组（如 🇺🇸 美国节点、🇯🇵 日本节点、🇭🇰 香港节点等），随心切换！</li>
-        </ol>
       </div>
     </div>
+
+
 
     <!-- ==================================================================== -->
     <!-- TAB 3: 本地出海网关                                                   -->
@@ -747,7 +905,197 @@
     <!-- ==================================================================== -->
     <!-- TAB 4: 底座同步与调优 (Underlying Engine & Scanner)                   -->
     <!-- ==================================================================== -->
-    <div class="tab-pane" id="pane-scanner">
+    
+    <!-- ==================================================================== -->
+    <!-- TAB: WARP 账号管理 (CRUD & 定时防风控)                                 -->
+    <!-- ==================================================================== -->
+    <div class="tab-pane" id="pane-accounts">
+      <!-- Scheduler Card -->
+      <div class="card" style="border-color: rgba(245, 158, 11, 0.4); background: linear-gradient(180deg, rgba(30, 27, 75, 0.4), rgba(15, 23, 42, 0.9)); margin-bottom: 1.5rem;">
+        <div class="card-title" style="justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.4rem;">⏱️</span>
+            <div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #fbbf24;">WARP 账号防风控定时注册任务</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim);">通过拉大注册间隔（如每 5~10 分钟创建一个），彻底避免触发 Cloudflare HTTP 429 限流，稳定构建多出口账号池</div>
+            </div>
+          </div>
+          <div id="schedStatusBadge" style="display: flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; background: rgba(100,116,139,0.2); border: 1px solid rgba(100,116,139,0.3); color: #cbd5e1;">
+            <span class="dot" id="schedDot"></span>
+            <span id="schedStatusText">定时任务已暂停</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) 1.2fr; gap: 1rem; align-items: flex-end; margin-top: 1rem;">
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">创建间隔时间 (分钟，防 429 建议 ≥ 5)</label>
+            <input type="number" id="schedInterval" class="form-control" value="5" min="1" max="1440" style="background:#0f172a; border-color:#334155; color:#fff; padding:0.45rem 0.6rem;">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">目标账号总数 (达到后自动暂停)</label>
+            <input type="number" id="schedTarget" class="form-control" value="20" min="1" max="500" style="background:#0f172a; border-color:#334155; color:#fff; padding:0.45rem 0.6rem;">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">注册代理通道 (防 429 与被墙)</label>
+            <select id="schedRelayMode" class="form-control" style="background:#0f172a; border-color:#334155; color:#fff; padding:0.45rem 0.6rem;">
+              <option value="auto">🌐 多国智能轮询 (美->日->港->新->德 自动交替注册，出口多样化)</option>
+              <option value="US">🇺🇸 优先美国节点 (生成美区 WARP 凭据)</option>
+              <option value="HK">🇭🇰 优先香港节点 (生成港区 WARP 凭据)</option>
+              <option value="JP">🇯🇵 优先日本节点 (生成日区 WARP 凭据)</option>
+              <option value="SG">🇸🇬 优先新加坡节点 (生成新区 WARP 凭据)</option>
+              <option value="DE">🇩🇪 优先德国节点 (生成德区 WARP 凭据)</option>
+              <option value="GB">🇬🇧 优先英国节点 (生成英区 WARP 凭据)</option>
+              <option value="active">⚡ 始终使用当前激活的底层 Transit</option>
+              <option value="direct">🌐 直连 Cloudflare 官方 API (无代理)</option>
+            </select>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; border-radius: 6px; padding: 0.45rem 0.75rem; font-size: 0.8rem;">
+            <div style="color: var(--text-dim); font-size: 0.72rem;">下次注册倒计时:</div>
+            <div id="schedCountdown" style="font-family: monospace; font-size: 1.1rem; color: #fbbf24; font-weight: 700;">-</div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+            <button class="btn btn-primary" id="btnToggleSched" onclick="toggleScheduler()" style="padding: 0.5rem 1.2rem;">
+              <span>▶️ 启动防风控注册</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accounts Table Card -->
+      <div class="card">
+        <div class="card-title" style="justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.4rem;">🔑</span>
+            <div>
+              <div style="font-size: 1.05rem; font-weight: 700;">WARP 账号池与出口绑定管理</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim);">支持手工录入凭证或官方接口直连注册；不同账号可绑定不同订阅节点，提升多出口价值</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <select id="directCreateCountry" class="form-control" style="width: 165px; padding: 3px 6px; font-size: 0.78rem; background: #0f172a; border-color: #334155; color: #fff;">
+              <option value="auto">🌐 多国智能轮询</option>
+              <option value="US">🇺🇸 美区 WARP (US)</option>
+              <option value="HK">🇭🇰 港区 WARP (HK)</option>
+              <option value="JP">🇯🇵 日区 WARP (JP)</option>
+              <option value="SG">🇸🇬 新区 WARP (SG)</option>
+              <option value="DE">🇩🇪 德区 WARP (DE)</option>
+              <option value="GB">🇬🇧 英区 WARP (GB)</option>
+              <option value="active">⚡ 经由当前底座</option>
+              <option value="direct">🌐 直连官方 API</option>
+            </select>
+            <button class="btn btn-primary btn-sm" onclick="createAccountDirect()">⚡ 立即注册账号</button>
+            <button class="btn btn-outline btn-sm" onclick="showAddAccountModal()">➕ 手工录入账号</button>
+            <button class="btn btn-outline btn-sm" onclick="loadAccounts()">🔄 刷新</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 1rem;">
+          <table class="table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 50px;">#</th>
+                <th>账号别名 / 备注</th>
+                <th>设备 ID / Token</th>
+                <th>公钥指纹 / 内网 IP</th>
+                <th>注册通道</th>
+                <th>MASQUE 支持</th>
+                <th>绑定的出海节点</th>
+                <th style="text-align: right; width: 180px;">操作</th>
+              </tr>
+            </thead>
+            <tbody id="accountsTbody">
+              <tr>
+                <td colspan="7" style="text-align: center; color: var(--text-dim); padding: 2rem;">加载账号列表中...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- TAB: 订阅底座同步 (多订阅持久化)                                      -->
+    <!-- ==================================================================== -->
+    <div class="tab-pane" id="pane-subs">
+      <!-- Add Subscription Source Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-title" style="justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.4rem;">📥</span>
+            <div>
+              <div style="font-size: 1.05rem; font-weight: 700;">添加外部中继订阅源 (持久化管理)</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim);">支持 Clash YAML 订阅、Base64 V2Ray/Vless/SS 订阅，永久保存在磁盘 (data/subscriptions.json)</div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="refreshAllSubs()">🔄 一键刷新所有订阅</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 240px 1fr auto; gap: 0.75rem; align-items: flex-end; margin-top: 1rem;">
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">订阅名称 / 备注</label>
+            <input type="text" id="newSubName" class="form-control" placeholder="例: 优质多国中继池" style="background:#0f172a; border-color:#334155; color:#fff; padding:0.45rem 0.6rem;">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">订阅地址 (URL)</label>
+            <input type="text" id="newSubUrl" class="form-control" placeholder="https://..." style="background:#0f172a; border-color:#334155; color:#fff; padding:0.45rem 0.6rem;">
+          </div>
+          <button class="btn btn-primary" onclick="addNewSubSource()" style="padding: 0.45rem 1.2rem;">➕ 添加并立即拉取</button>
+        </div>
+      </div>
+
+      <!-- Sources List -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-title">
+          <span>📚 已管理的订阅源列表</span>
+        </div>
+        <div id="subsSourcesList" style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.75rem;">
+          <div style="color: var(--text-dim); font-size: 0.85rem;">加载中...</div>
+        </div>
+      </div>
+
+      <!-- Aggregated Nodes Table -->
+      <div class="card">
+        <div class="card-title" style="justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.4rem;">🌐</span>
+            <div>
+              <div style="font-size: 1.05rem; font-weight: 700;">汇聚中继节点池 (可激活为底层 Transit)</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim);">支持单节点/一键全测延迟与测速，测试数据持久化保存；可随时激活为底层中继底座</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button class="btn btn-outline btn-sm" id="btnTestAllNodesPing" onclick="testAllNodesPing()">⚡ 一键全测延迟</button>
+            <div id="activeTransitBadge" style="padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">
+              当前底座: 直连模式
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 1rem; max-height: 480px; overflow-y: auto;">
+          <table class="table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>国家/地区</th>
+                <th>节点名称</th>
+                <th>协议类型</th>
+                <th>目标服务器</th>
+                <th>延迟 (ms)</th>
+                <th>测速 (Mbps)</th>
+                <th>归属订阅源</th>
+                <th style="text-align: right; width: 230px;">操作</th>
+              </tr>
+            </thead>
+            <tbody id="subNodesTbody">
+              <tr>
+                <td colspan="6" style="text-align: center; color: var(--text-dim); padding: 2rem;">暂无订阅节点，请在上方添加订阅源</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<div class="tab-pane" id="pane-scanner">
       <!-- 1. Subscription Source Importer -->
       <div class="card" style="border: 1px solid rgba(59, 130, 246, 0.3); background: rgba(30, 58, 138, 0.08);">
         <div class="card-title" style="justify-content: space-between; flex-wrap: wrap;">
@@ -758,7 +1106,7 @@
           </div>
         </div>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.6rem;">
-          <input type="text" class="form-control mono" id="subUrlInput" value="https://l8.ccwu.cc/sub?token=7c4f06f4ef0dccbacee2dfe4eadeac9f" placeholder="输入节点订阅链接..." style="flex: 1; min-width: 260px;">
+          <input type="text" class="form-control mono" id="subUrlInput" value="" placeholder="输入节点订阅链接..." style="flex: 1; min-width: 260px;">
           <button class="btn btn-primary btn-sm" id="btnFetchSub" onclick="fetchSubscriptionNodes()">
             <span>🔄 拉取 / 更新中继源</span>
           </button>
@@ -794,7 +1142,11 @@
             </select>
           </div>
 
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem; margin-bottom: 0.75rem;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:0.6rem; margin-bottom: 0.75rem;">
+            <div>
+              <label style="font-size:0.8rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">扫描节点数量 (默认100)</label>
+              <input type="number" class="form-control" id="cfgTargetCount" value="100" min="10" max="2000" step="10" placeholder="默认 100">
+            </div>
             <div>
               <label style="font-size:0.8rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">伪装首包</label>
               <select class="form-select" id="cfgI1">
@@ -807,11 +1159,12 @@
               </select>
             </div>
             <div>
-              <label style="font-size:0.8rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">抽样深度</label>
+              <label style="font-size:0.8rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">网段抽样模式</label>
               <select class="form-select" id="cfgSample">
-                <option value="5" selected>极速抽样 (5个/网段)</option>
-                <option value="15">深入抽样 (15个/网段)</option>
-                <option value="30">大范围抽样 (30个/网段)</option>
+                <option value="auto" selected>自动按总数均衡</option>
+                <option value="5">固定 5个/网段</option>
+                <option value="15">深入 15个/网段</option>
+                <option value="30">大范围 30个/网段</option>
                 <option value="full">全量深度 (全部 256个)</option>
               </select>
             </div>
@@ -828,16 +1181,22 @@
             </div>
           </div>
 
-          <!-- 双层外层跳板设置 -->
+          <!-- 双层外层跳板设置 (US出口) -->
           <div style="background: rgba(129, 140, 248, 0.08); border: 1px solid rgba(129, 140, 248, 0.25); border-radius: var(--radius-sm); padding: 0.6rem; margin-bottom: 0.75rem;">
             <div style="display:flex; align-items:center; gap:0.4rem;">
               <input type="checkbox" id="cfgThroughToggle" onchange="toggleThroughInput()">
-              <label for="cfgThroughToggle" style="font-weight:600; color:#a5b4fc; font-size:0.82rem; cursor:pointer;">🔗 启用 WARP-in-WARP 双层链式模式 (外层跳板)</label>
+              <label for="cfgThroughToggle" style="font-weight:600; color:#a5b4fc; font-size:0.82rem; cursor:pointer;">🔗 启用 WARP-in-WARP 双层链式 (强制美国出口 IP)</label>
             </div>
             <div id="throughSettings" style="display:none; margin-top:0.5rem;">
-              <input type="text" class="form-control mono" id="cfgThrough" value="188.114.97.226:1701" placeholder="填入外层跳板端点 IP:Port">
-              <div style="font-size:0.75rem; color:#f59e0b; margin-top:0.3rem; line-height:1.4;">
-                ⚠️ 提示：双层链式跳板会将出口强制收敛为美国 (LAX) 原生 IP，请勿与非美国（如 FR、JP）的国家过滤同时使用。
+              <div style="display:flex; gap:0.4rem; margin-bottom:0.4rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="padding:1px 8px; font-size:0.75rem;" onclick="setThroughPreset('8.47.69.5:2408')">🇺🇸 美国 LAX-1 (极速)</button>
+                <button type="button" class="btn btn-outline btn-sm" style="padding:1px 8px; font-size:0.75rem;" onclick="setThroughPreset('162.159.195.85:1701')">🇺🇸 美国 LAX-2 (防封)</button>
+                <button type="button" class="btn btn-outline btn-sm" style="padding:1px 8px; font-size:0.75rem;" onclick="setThroughPreset('188.114.96.5:1701')">🇺🇸 美国 LAX-3 (备用)</button>
+              </div>
+              <input type="text" class="form-control mono" id="cfgThrough" value="8.47.69.5:2408" placeholder="填入外层跳板端点 IP:Port">
+              <div style="font-size:0.75rem; color:#f59e0b; margin-top:0.3rem; line-height:1.5;">
+                ⚠️ <strong>说明：</strong>启用后，扫描流量先穿越此跳板（美国 LAX），再探测内层节点。扫描结果出口 IP 将显示为美国 IP，而非中国 IP。<br>
+                💡 <strong>用途：</strong>若要导出节点在美国视角下可用的节点，先在此模式下扫描，再导出 Clash 订阅。
               </div>
             </div>
           </div>
@@ -908,6 +1267,12 @@
             <span style="font-size:0.8rem; color:var(--text-dim); margin-left:0.5rem;">已选 <b id="selectedCountText" style="color:#60a5fa;">0</b> 个</span>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <button class="btn btn-primary btn-sm" onclick="exportClashYaml()" title="将优选节点导出为标准 Clash 订阅文件 (纯 WARP 协议)">
+              <span>📥 导出 Clash 订阅 (.yml)</span>
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="exportIpList()" title="复制选中的或全部有效端点 IP 列表">
+              <span>📋 复制 IP 列表</span>
+            </button>
             <input type="text" class="form-control" id="tableFilterInput" placeholder="快速筛选 IP/机房..." style="width: 160px; padding: 0.3rem 0.6rem; font-size: 0.8rem;" oninput="filterResultsTable()">
           </div>
         </div>
@@ -1036,13 +1401,14 @@
     async function loadMatrixNodes() {
       try {
         const res = await fetch('/api/matrix/nodes');
-        if (!res.ok) throw new Error('未能获取矩阵数据');
+        if (!res.ok) return;
         matrixData = await res.json();
-        renderFilterPills();
-        renderMatrixGrid(currentFilter);
+        if (Array.isArray(matrixData) && matrixData.length > 0) {
+          renderFilterPills();
+          renderMatrixGrid(currentFilter);
+        }
       } catch (e) {
-        console.error('载入矩阵失败:', e);
-        showToast('载入矩阵节点失败: ' + e.message, 'error');
+        console.warn('矩阵数据未配置:', e);
       }
     }
 
@@ -1438,6 +1804,19 @@
       }
     }
 
+    function setThroughPreset(endpoint) {
+      const input = document.getElementById('cfgThrough');
+      if (input) {
+        input.value = endpoint;
+        const toggle = document.getElementById('cfgThroughToggle');
+        if (toggle && !toggle.checked) {
+          toggle.checked = true;
+          toggleThroughInput();
+        }
+        showToast(`已选择美国跳板端点: ${endpoint}`, 'info');
+      }
+    }
+
     function setAsThrough(endpoint) {
       const toggle = document.getElementById('cfgThroughToggle');
       const input = document.getElementById('cfgThrough');
@@ -1554,7 +1933,9 @@
     }
 
     async function startScan() {
-      const sampleVal = document.getElementById('cfgSample') ? document.getElementById('cfgSample').value : "5";
+      const sampleVal = document.getElementById('cfgSample') ? document.getElementById('cfgSample').value : "auto";
+      const targetCountInput = document.getElementById('cfgTargetCount');
+      const targetCountVal = targetCountInput ? parseInt(targetCountInput.value, 10) : 100;
       const throughToggle = document.getElementById('cfgThroughToggle');
       const throughEnabled = throughToggle ? throughToggle.checked : false;
       const throughInput = document.getElementById('cfgThrough');
@@ -1569,11 +1950,17 @@
       const countryVal = document.getElementById('cfgCountry') ? document.getElementById('cfgCountry').value.trim() : "";
       const nodeVal = document.getElementById('cfgNode') ? document.getElementById('cfgNode').value.trim() : "";
 
+      let sampleNum = 5;
+      if (sampleVal !== 'auto') {
+        sampleNum = sampleVal === 'full' ? 0 : parseInt(sampleVal, 10);
+      }
+
       const payload = {
         proto: protoVal,
         tun_ping: tunPingVal,
-        sample: sampleVal === 'full' ? 0 : parseInt(sampleVal),
+        sample: sampleNum,
         full: sampleVal === 'full',
+        target_count: targetCountVal || 100,
         gen_i1: i1Val,
         exclude_node: excludeNodeVal,
         country: countryVal,
@@ -1729,6 +2116,70 @@
       renderResultsTable(filtered);
     }
 
+    async function exportClashYaml() {
+      let eps = [];
+      if (selectedEndpoints && selectedEndpoints.size > 0) {
+        eps = Array.from(selectedEndpoints);
+      } else if (currentResults && currentResults.length > 0) {
+        // 自动优先挑选 0丢包/低延迟优质端点，杜绝超时失效节点
+        const zeroLoss = currentResults.filter(r => !r.torn && (r.loss_pct === 0 || r.loss_pct <= 10));
+        zeroLoss.sort((a, b) => {
+          const pA = (a.tun_ping_ms && a.tun_ping_ms > 0) ? a.tun_ping_ms : a.ep_ping_ms;
+          const pB = (b.tun_ping_ms && b.tun_ping_ms > 0) ? b.tun_ping_ms : b.ep_ping_ms;
+          return pA - pB;
+        });
+        // 选取前 18 个最佳端点，配合 38 个 MASQUE 节点实现 MASQUE 占比 68% 以上
+        eps = zeroLoss.slice(0, 18).map(r => r.endpoint);
+        if (eps.length === 0) {
+          eps = currentResults.filter(r => !r.torn).slice(0, 18).map(r => r.endpoint);
+        }
+      }
+      if (eps.length === 0) {
+        showToast('暂无可用端点，请先进行扫描或勾选端点', 'warning');
+        return;
+      }
+      const proto = document.getElementById('cfgProto') ? document.getElementById('cfgProto').value : 'awg';
+      showToast(`正在导出包含 38 个官方 MASQUE 节点与 ${eps.length} 个 WG 优选节点的 Clash 订阅（自动分配独立 WARP 账户，确保出口 IP 不重复）...`, 'info');
+      try {
+        const res = await fetch('/api/config/batch_export', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            endpoints: eps,
+            proto: proto,
+            conf_type: 'mihomo'
+          })
+        });
+        if (!res.ok) throw new Error('导出失败: ' + res.statusText);
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'warpscout-clash.yml';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast(`✅ 已下载 warpscout-clash.yml（多账户轮换出口，各节点出口 IP 相互独立，杜绝同一 IP）`, 'success');
+      } catch (e) {
+        showToast('导出 Clash 订阅失败: ' + e.message, 'error');
+      }
+    }
+
+    function exportIpList() {
+      let eps = [];
+      if (selectedEndpoints && selectedEndpoints.size > 0) {
+        eps = Array.from(selectedEndpoints);
+      } else if (currentResults && currentResults.length > 0) {
+        eps = currentResults.map(r => r.endpoint);
+      }
+      if (eps.length === 0) {
+        showToast('暂无可用端点', 'warning');
+        return;
+      }
+      copyText(eps.join('\n'), `已复制 ${eps.length} 个端点 IP`);
+    }
+
     async function startSocksFor(endpoint) {
       const proto = document.getElementById('cfgProto') ? document.getElementById('cfgProto').value : 'awg';
       const throughToggle = document.getElementById('cfgThroughToggle');
@@ -1806,11 +2257,1022 @@
     // Initialize on page load
     window.addEventListener('DOMContentLoaded', () => {
       fetchStatus();
-      loadMatrixNodes();
       loadSubscriptionNodesOnStart();
       connectSSE();
       setInterval(fetchStatus, 5000);
+      loadAllCountries();
+      renderPureCountries();
+      fetchPureStatus();
     });
+  
+    // ========================================================================
+    // PURE MULTI-COUNTRY WARP MODULE
+    // ========================================================================
+    const POPULAR_11_CODES = ['US', 'GB', 'DE', 'FR', 'MX', 'BR', 'JP', 'KR', 'HK', 'TW', 'SG'];
+    const PSIPHON_25_CODES = [
+      'US', 'GB', 'DE', 'FR', 'JP', 'SG', 'CA', 'NL', 'AU', 'IN',
+      'IT', 'ES', 'CH', 'SE', 'NO', 'PL', 'FI', 'BE', 'AT', 'DK',
+      'IE', 'CZ', 'RO', 'ID', 'RS'
+    ];
+    let topCountryFilter = 'popular'; // 'popular' or 'all'
+
+    let selectedPureCountry = 'FR';
+    let pureCountries = [
+      { code: 'US', name: '美国', port: 29891, flag: '🇺🇸', node_count: 65 },
+      { code: 'GB', name: '英国', port: 29892, flag: '🇬🇧', node_count: 31 },
+      { code: 'DE', name: '德国', port: 29893, flag: '🇩🇪', node_count: 60 },
+      { code: 'FR', name: '法国', port: 29894, flag: '🇫🇷', node_count: 26 },
+      { code: 'MX', name: '墨西哥', port: 29895, flag: '🇲🇽', node_count: 0 },
+      { code: 'BR', name: '巴西', port: 29896, flag: '🇧🇷', node_count: 0 },
+      { code: 'JP', name: '日本', port: 29897, flag: '🇯🇵', node_count: 13 },
+      { code: 'KR', name: '韩国', port: 29898, flag: '🇰🇷', node_count: 0 },
+      { code: 'HK', name: '香港', port: 29899, flag: '🇭🇰', node_count: 0 },
+      { code: 'TW', name: '台湾', port: 29900, flag: '🇹🇼', node_count: 0 },
+      { code: 'SG', name: '新加坡', port: 29901, flag: '🇸🇬', node_count: 12 }
+    ];
+
+    function switchTopCountryFilter(mode) {
+      topCountryFilter = mode;
+      const btnPop = document.getElementById('btnTopFilterPopular');
+      const btnAll = document.getElementById('btnTopFilterAll');
+      if (mode === 'popular') {
+        if (btnPop) { btnPop.className = 'btn btn-sm btn-primary'; }
+        if (btnAll) { btnAll.className = 'btn btn-sm btn-outline'; }
+      } else {
+        if (btnPop) { btnPop.className = 'btn btn-sm btn-outline'; }
+        if (btnAll) { btnAll.className = 'btn btn-sm btn-primary'; }
+      }
+      renderPureCountries();
+    }
+
+    function renderPureCountries() {
+      const grid = document.getElementById('pureCountryGrid');
+      if (!grid) return;
+      let list = allCountriesList.length > 0 ? allCountriesList : pureCountries;
+      if (topCountryFilter === 'popular') {
+        list = list.filter(c => POPULAR_11_CODES.includes(c.code));
+      }
+      grid.innerHTML = list.map(c => {
+        const isSel = (c.code === selectedPureCountry);
+        const nodeStr = (c.node_count && c.node_count > 0)
+          ? `<span style="font-size:0.68rem; opacity:0.85; margin-left:0.15rem; background:rgba(56,189,248,0.15); color:var(--primary); padding:0.05rem 0.25rem; border-radius:3px;">${c.node_count}</span>` 
+          : `<span style="font-size:0.65rem; opacity:0.5; margin-left:0.15rem;">0</span>`;
+        return `
+          <button class="btn btn-sm ${isSel ? 'btn-primary' : 'btn-outline'}" style="display:flex; align-items:center; justify-content:center; gap:0.35rem; padding:0.55rem 0.4rem;" onclick="selectPureCountry('${c.code}')">
+            <span style="font-size:1.15rem;">${c.flag}</span>
+            <span style="font-weight:600;">${c.name}</span>
+            <span style="font-size:0.75rem; opacity:0.7;">(${c.code})</span>
+            ${nodeStr}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectPureCountry(code) {
+      selectedPureCountry = code;
+      renderPureCountries();
+      triggerPureStart();
+    }
+
+    async function fetchPureStatus() {
+      try {
+        const res = await fetch('/api/pure/status');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.supported_countries && data.supported_countries.length > 0) {
+          pureCountries = data.supported_countries;
+        }
+
+        const badge = document.getElementById('pureStatusBadge');
+        if (badge) {
+          if (data.status === 'ready') {
+            badge.style.background = 'rgba(16, 185, 129, 0.2)';
+            badge.style.color = '#10b981';
+            badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+            badge.innerText = `🟢 出口就绪 (${data.flag} ${data.country_name})`;
+          } else if (data.status === 'connecting') {
+            badge.style.background = 'rgba(245, 158, 11, 0.2)';
+            badge.style.color = '#f59e0b';
+            badge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+            badge.innerText = `🟡 正在破墙握手 (${data.country_name})...`;
+          } else {
+            badge.style.background = 'rgba(156, 163, 175, 0.2)';
+            badge.style.color = '#9ca3af';
+            badge.style.borderColor = 'rgba(156, 163, 175, 0.4)';
+            badge.innerText = '⚪ 未启动';
+          }
+        }
+
+        if (data.country) {
+          selectedPureCountry = data.country;
+          renderPureCountries();
+        }
+
+        const curCountryEl = document.getElementById('pureCurCountryText');
+        if (curCountryEl) curCountryEl.innerText = `${data.flag || '🇫🇷'} ${data.country_name || '法国'} (${data.country || 'FR'})`;
+
+        const curCityEl = document.getElementById('pureCurCityText');
+        if (curCityEl) curCityEl.innerText = data.exit_city ? `${data.exit_country}, ${data.exit_city}` : (data.message || '运行中');
+
+        const curIpEl = document.getElementById('pureCurIpText');
+        if (curIpEl) curIpEl.innerText = data.exit_ip ? data.exit_ip : (data.active ? '获取 IP 中...' : '未连接');
+
+        const curIspEl = document.getElementById('pureCurIspText');
+        if (curIspEl) curIspEl.innerText = data.exit_isp ? data.exit_isp : 'Cloudflare WARP / Psiphon';
+
+      } catch (e) {
+        console.error('fetchPureStatus error:', e);
+      }
+    }
+
+    async function triggerPureStart() {
+      const btn = document.getElementById('btnPureSwitch');
+      if (btn) { btn.disabled = true; btn.innerText = '⏳ 正在建立连接...'; }
+      try {
+        const res = await fetch('/api/pure/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ country: selectedPureCountry })
+        });
+        const data = await res.json();
+        showToast(`已请求切换到 ${data.country_name || selectedPureCountry} 出口`, 'info');
+        fetchPureStatus();
+      } catch (e) {
+        showToast('切换失败: ' + e.message, 'error');
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerText = '🚀 切换到所选国家出口'; }
+      }
+    }
+
+    function copyPureSub(path, label) {
+      const fullUrl = window.location.origin + path;
+      copyText(fullUrl, label);
+    }
+
+    // Auto-poll pure status every 3 seconds
+    setInterval(fetchPureStatus, 3000);
+
+    let allCountriesList = [];
+
+    async function loadAllCountries() {
+      try {
+        const res = await fetch('/api/pure/countries');
+        if (!res.ok) return;
+        allCountriesList = await res.json();
+        renderCountryCheckboxes();
+        renderPureCountries();
+      } catch (e) {
+        console.error('loadAllCountries error:', e);
+      }
+    }
+
+    function renderCountryCheckboxes() {
+      const grid = document.getElementById('countryCheckboxGrid');
+      if (!grid) return;
+      grid.innerHTML = allCountriesList.map(c => {
+        const isPop = POPULAR_11_CODES.includes(c.code);
+        const nodeBadge = (c.node_count && c.node_count > 0)
+          ? `<span style="background:rgba(56,189,248,0.15); color:var(--primary); font-size:0.7rem; padding:0.1rem 0.35rem; border-radius:3px; font-weight:600; margin-left:auto;">${c.node_count}节点</span>` 
+          : `<span style="background:rgba(156,163,175,0.1); color:var(--text-muted); font-size:0.68rem; padding:0.1rem 0.35rem; border-radius:3px; margin-left:auto;">0节点</span>`;
+        const popBadge = isPop ? `<span style="font-size:0.65rem; color:#f59e0b; border:1px solid rgba(245,158,11,0.3); border-radius:2px; padding:0 0.2rem;">常用</span>` : '';
+        return `
+          <label style="display:flex; align-items:center; gap:0.45rem; padding:0.45rem 0.6rem; background:#1e293b; border-radius:4px; cursor:pointer; user-select:none; font-size:0.83rem;">
+            <input type="checkbox" id="chk_country_${c.code}" value="${c.code}" ${c.enabled ? 'checked' : ''} style="cursor:pointer; accent-color:var(--primary);">
+            <span style="font-size:1.1rem;">${c.flag}</span>
+            <span style="font-weight:600;">${c.name}</span>
+            <span style="color:var(--text-dim); font-size:0.75rem;">(${c.code})</span>
+            ${popBadge}
+            ${nodeBadge}
+          </label>
+        `;
+      }).join('');
+    }
+
+    function selectPresetCountries(type) {
+      allCountriesList.forEach(c => {
+        const el = document.getElementById(`chk_country_${c.code}`);
+        if (!el) return;
+        if (type === 'POPULAR') {
+          el.checked = POPULAR_11_CODES.includes(c.code);
+        } else if (type === 'PSIPHON') {
+          el.checked = PSIPHON_25_CODES.includes(c.code);
+        } else if (type === 'ALL') {
+          el.checked = true;
+        } else if (type === 'CLEAR') {
+          el.checked = false;
+        }
+      });
+    }
+
+    async function saveSelectedCountries() {
+      const selected = [];
+      allCountriesList.forEach(c => {
+        const el = document.getElementById(`chk_country_${c.code}`);
+        if (el && el.checked) {
+          selected.push(c.code);
+        }
+      });
+      if (selected.length === 0) {
+        showToast('请至少勾选一个出口国家！', 'warning');
+        return;
+      }
+      try {
+        const res = await fetch('/api/pure/countries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ selected: selected })
+        });
+        if (!res.ok) throw new Error('保存失败');
+        allCountriesList = await res.json();
+        renderCountryCheckboxes();
+        fetchPureStatus();
+        showToast(`✅ 成功配置 ${selected.length} 个国家！Clash / Sing-box / v2rayN 订阅已同步更新`, 'success');
+      } catch (e) {
+        showToast('保存失败: ' + e.message, 'error');
+      }
+    }
+
+    async function refreshPsiphonPool() {
+      const btn = document.getElementById('btnRefreshPsiphon');
+      if (btn) { btn.disabled = true; btn.innerHTML = '⏳ 正在动态刷新节点池...'; }
+      showToast('🔄 正在向 Psiphon 核心与机房池查询最新可用节点...', 'info');
+      try {
+        const res = await fetch('/api/pure/refresh', { method: 'POST' });
+        if (!res.ok) throw new Error('刷新失败');
+        const data = await res.json();
+        if (data.countries) {
+          allCountriesList = data.countries;
+          renderCountryCheckboxes();
+          renderPureCountries();
+        }
+        showToast(`✅ 节点池刷新成功！Psiphon 认证机房: ${data.active_countries} 国共 ${data.total_nodes} 个节点 (${data.timestamp})`, 'success');
+      } catch (e) {
+        showToast('刷新失败: ' + e.message, 'error');
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerHTML = '🔄 实时刷新国家与节点数'; }
+      }
+    }
+
+    // ========================================================================
+    // BENCHMARK & SPEEDTEST MODULE
+    // ========================================================================
+    function getSelectedBenchIsp() {
+      const r = document.querySelector('input[name="benchIsp"]:checked');
+      return r ? r.value : 'global';
+    }
+
+    function getIspName(isp) {
+      switch (isp) {
+        case 'telecom': return '🇨🇳 中国电信';
+        case 'unicom': return '🇨🇳 中国联通';
+        case 'mobile': return '🇨🇳 中国移动';
+        default: return '🌐 国际全网';
+      }
+    }
+
+    async function benchSinglePing(port, rowId) {
+      const isp = getSelectedBenchIsp();
+      const latEl = document.getElementById(`lat_${rowId}`);
+      if (latEl) latEl.innerHTML = '<span style="color:var(--text-dim);">⏳ 探测中...</span>';
+      try {
+        const res = await fetch(`/api/pure/ping?port=${port}&isp=${isp}`);
+        const data = await res.json();
+        if (data.status === 'ok' && data.latency_ms >= 0) {
+          let badgeColor = '#10b981';
+          let badgeBg = 'rgba(16,185,129,0.15)';
+          if (data.latency_ms > 350) {
+            badgeColor = '#ef4444';
+            badgeBg = 'rgba(239,68,68,0.15)';
+          } else if (data.latency_ms > 200) {
+            badgeColor = '#f59e0b';
+            badgeBg = 'rgba(245,158,11,0.15)';
+          }
+          if (latEl) latEl.innerHTML = `<span style="display:inline-block; padding:0.15rem 0.45rem; border-radius:4px; font-weight:700; font-size:0.8rem; background:${badgeBg}; color:${badgeColor};">${data.latency_ms} ms</span>`;
+        } else {
+          if (latEl) latEl.innerHTML = `<span style="color:#ef4444; font-size:0.78rem;">❌ 超时/断开</span>`;
+        }
+      } catch (e) {
+        if (latEl) latEl.innerHTML = `<span style="color:#ef4444; font-size:0.78rem;">❌ ${e.message}</span>`;
+      }
+    }
+
+    async function benchSingleSpeed(port, rowId) {
+      const isp = getSelectedBenchIsp();
+      const spdEl = document.getElementById(`spd_${rowId}`);
+      if (spdEl) spdEl.innerHTML = '<span style="color:var(--warning);">⏳ 测速中(8s)...</span>';
+      try {
+        const res = await fetch(`/api/pure/speedtest?port=${port}&isp=${isp}`);
+        const data = await res.json();
+        if (data.status === 'ok' && data.speed_mbps > 0) {
+          let col = '#10b981';
+          if (data.speed_mbps < 5) col = '#f59e0b';
+          if (spdEl) spdEl.innerHTML = `<span style="color:${col}; font-weight:700;">${data.speed_mbps} Mbps</span> <span style="color:var(--text-dim); font-size:0.72rem;">(${data.speed_mb_s} MB/s)</span>`;
+        } else {
+          if (spdEl) spdEl.innerHTML = `<span style="color:var(--text-dim); font-size:0.78rem;">0 Mbps (未就绪)</span>`;
+        }
+      } catch (e) {
+        if (spdEl) spdEl.innerHTML = `<span style="color:#ef4444; font-size:0.78rem;">❌ ${e.message}</span>`;
+      }
+    }
+
+    async function benchAllPing() {
+      const isp = getSelectedBenchIsp();
+      const ispLabel = getIspName(isp);
+      const btn = document.getElementById('btnBenchAllPing');
+      if (btn) { btn.disabled = true; btn.innerText = `⏳ 正在探测 ${ispLabel}...`; }
+
+      const enabledCountries = allCountriesList.filter(c => c.enabled);
+      const rows = [
+        { code: 'ACTIVE', flag: '🛡️', name: '当前激活出口', port: 29881, node_count: '-' },
+        ...enabledCountries
+      ];
+
+      const tbody = document.getElementById('benchTbody');
+      if (!tbody) return;
+
+      tbody.innerHTML = rows.map((r, i) => {
+        const rowId = `node_${r.code}_${r.port}`;
+        return `
+          <tr style="border-bottom: 1px solid #1e293b;">
+            <td style="padding:0.6rem 0.8rem; font-weight:600;">
+              <span style="font-size:1.1rem; margin-right:0.3rem;">${r.flag}</span>
+              <span>${r.name}</span>
+              ${r.code !== 'ACTIVE' ? `<span style="color:var(--text-dim); font-size:0.75rem;"> (${r.code})</span>` : ''}
+            </td>
+            <td style="padding:0.6rem 0.8rem; font-family:monospace; color:var(--primary); font-weight:600;">127.0.0.1:${r.port}</td>
+            <td style="padding:0.6rem 0.8rem; color:var(--text-muted);">${r.node_count ? `${r.node_count} 节点` : '-'}</td>
+            <td style="padding:0.6rem 0.8rem;" id="lat_${rowId}">
+              <span style="color:var(--text-dim);">⏳ 排队中...</span>
+            </td>
+            <td style="padding:0.6rem 0.8rem;" id="spd_${rowId}">
+              <span style="color:var(--text-dim); font-size:0.78rem;">未测试</span>
+            </td>
+            <td style="padding:0.6rem 0.8rem; text-align:right;">
+              <div style="display:flex; gap:0.3rem; justify-content:flex-end;">
+                <button class="btn btn-outline btn-sm" style="padding:0.2rem 0.45rem; font-size:0.75rem;" onclick="benchSinglePing(${r.port}, '${rowId}')">测延迟</button>
+                <button class="btn btn-primary btn-sm" style="padding:0.2rem 0.45rem; font-size:0.75rem;" onclick="benchSingleSpeed(${r.port}, '${rowId}')">测速</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      showToast(`🚀 已发起针对【${ispLabel}】的多国延迟并发探测...`, 'info');
+
+      // Execute ping tests
+      for (const r of rows) {
+        const rowId = `node_${r.code}_${r.port}`;
+        benchSinglePing(r.port, rowId);
+      }
+
+      if (btn) { btn.disabled = false; btn.innerText = '⚡ 一键并发测全部延迟 (Ping)'; }
+    }
+
+    async function benchActiveSpeed() {
+      const btn = document.getElementById('btnBenchActiveSpeed');
+      if (btn) { btn.disabled = true; btn.innerText = '⏳ 正在测速 (8s)...'; }
+      showToast('🚀 正在对当前激活出口 (127.0.0.1:29881) 进行下行带宽测速...', 'info');
+      
+      const isp = getSelectedBenchIsp();
+      try {
+        const res = await fetch(`/api/pure/speedtest?port=29881&isp=${isp}`);
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast(`✅ 当前激活出口下行带宽: ${data.speed_mbps} Mbps (${data.speed_mb_s} MB/s)`, 'success');
+          // Update active row if exists
+          const spdEl = document.getElementById('spd_node_ACTIVE_29881');
+          if (spdEl) {
+            spdEl.innerHTML = `<span style="color:var(--success); font-weight:700;">${data.speed_mbps} Mbps</span> <span style="color:var(--text-dim); font-size:0.72rem;">(${data.speed_mb_s} MB/s)</span>`;
+          }
+        } else {
+          showToast('测速异常: ' + (data.error || '未能获得有效响应'), 'warning');
+        }
+      } catch (e) {
+        showToast('测速错误: ' + e.message, 'error');
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerText = '🚀 测当前激活出口速度'; }
+      }
+    }
+
+    loadAllCountries();
+    renderPureCountries();
+    fetchPureStatus();
+  
+    // =======================================================================
+    // WARP 账号管理与定时调度引擎
+    // =======================================================================
+    let accountsData = [];
+    let schedIntervalTimer = null;
+
+    async function loadAccounts() {
+      try {
+        const res = await fetch('/api/accounts');
+        const data = await res.json();
+        if (data.status === 'ok') {
+          accountsData = data.accounts || [];
+          renderAccountsTable(accountsData);
+          updateSchedulerUI(data.scheduler);
+
+          // Update header badge
+          const countBadge = document.getElementById('acctCountText');
+          if (countBadge) {
+            countBadge.innerText = `WARP 账号池: ${accountsData.length} 个可用`;
+          }
+        }
+      } catch (e) {
+        console.error('加载账号列表失败:', e);
+      }
+    }
+
+    function renderAccountsTable(list) {
+      const tbody = document.getElementById('accountsTbody');
+      if (!tbody) return;
+      if (!list || list.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; color:var(--text-dim); padding:2rem;">暂无 WARP 账号，请点击上方“立即新建”或“防风控定时注册”</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = list.map((a, i) => {
+        const hasMasque = (a.masque_private_key && a.masque_private_key.length > 20);
+        const masqueBadge = hasMasque 
+          ? `<span style="background:rgba(16,185,129,0.15); color:var(--success); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.72rem; font-weight:600;">✅ 支持</span>`
+          : `<span style="background:rgba(100,116,139,0.15); color:var(--text-dim); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.72rem;">仅 WG</span>`;
+        
+        const boundText = a.bound_node_name 
+          ? `<span style="color:#38bdf8; font-weight:600;">${a.bound_node_name}</span>`
+          : `<span style="color:var(--text-dim); font-size:0.75rem;">轮询全节点</span>`;
+
+        const countryBadge = a.country 
+          ? `<span style="background:rgba(56,189,248,0.15); color:#38bdf8; padding:0.1rem 0.35rem; border-radius:3px; font-size:0.72rem; font-weight:700; margin-right:4px;">[${a.country}]</span>` 
+          : '';
+
+        const regViaText = a.registered_via 
+          ? `<span style="color:#cbd5e1; font-size:0.75rem; max-width:130px; display:inline-block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${a.registered_via}">${a.registered_via}</span>` 
+          : `<span style="color:var(--text-dim); font-size:0.75rem;">直连官方</span>`;
+
+        return `
+          <tr style="border-bottom: 1px solid #1e293b;">
+            <td style="color:var(--text-dim); font-size:0.8rem;">${i+1}</td>
+            <td style="font-weight:600; color:#fff;">
+              ${countryBadge}${a.name}
+              <div style="font-size:0.7rem; color:var(--text-dim);">${a.created_at ? a.created_at.substring(0,10) : ''}</div>
+            </td>
+            <td style="font-family:monospace; font-size:0.75rem; color:var(--text-muted);">${a.id || '-'}</td>
+            <td>
+              <div style="font-family:monospace; font-size:0.75rem; color:var(--primary);">${a.ipv4 || '172.16.0.2'}</div>
+              <div style="font-family:monospace; font-size:0.7rem; color:var(--text-dim); max-width:140px; overflow:hidden; text-overflow:ellipsis;">${a.peer_public_key || ''}</div>
+            </td>
+            <td>${regViaText}</td>
+            <td>${masqueBadge}</td>
+            <td>${boundText}</td>
+            <td style="text-align:right;">
+              <div style="display:flex; gap:0.3rem; justify-content:flex-end;">
+                <button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.72rem;" onclick="promptBindNode('${a.id}')">绑定节点</button>
+                <button class="btn btn-danger btn-sm" style="padding:2px 6px; font-size:0.72rem;" onclick="deleteAccount('${a.id}')">删除</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+
+
+    async function createAccountDirect() {
+      const cEl = document.getElementById('directCreateCountry');
+      const country = cEl ? cEl.value : 'auto';
+      showToast(`⚡ 正在通过 [${country === 'auto' ? '多国轮询' : country}] 向 Cloudflare 注册全新 WARP 账号...`, 'info');
+      try {
+        const res = await fetch('/api/accounts/create', { 
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ country: country })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast(`🎉 成功创建账号: ${data.account.name} (IP: ${data.account.ipv4})`, 'success');
+          loadAccounts();
+        } else {
+          showToast('注册异常: ' + (data.error || '可能触发了 Cloudflare 429 限流'), 'warning');
+        }
+      } catch (e) {
+        showToast('创建失败: ' + e.message, 'error');
+      }
+    }
+
+    async function deleteAccount(id) {
+      if (!confirm('确定要删除此 WARP 账号吗？')) return;
+      try {
+        const res = await fetch('/api/accounts/delete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id })
+        });
+        if (!res.ok) throw new Error(await res.text());
+        showToast('账号已成功删除', 'info');
+        loadAccounts();
+      } catch (e) {
+        showToast('删除失败: ' + e.message, 'error');
+      }
+    }
+
+    async function promptBindNode(accId) {
+      const allNodes = globalSubNodesList || [];
+      if (allNodes.length === 0) {
+        const target = prompt('请输入要绑定的国家代码或节点标签 (如 US / JP / FR / ALL 清除):', 'US');
+        if (!target) return;
+        if (target.toUpperCase() === 'ALL') {
+          bindNodeAction(accId, '', '');
+        } else {
+          bindNodeAction(accId, target.toUpperCase(), `指定 ${target.toUpperCase()} 出口`);
+        }
+        return;
+      }
+      const opts = allNodes.slice(0, 15).map((n, idx) => `${idx+1}. [${n.country}] ${n.name}`).join('\n');
+      const pick = prompt(`请选择要绑定的节点序号 (输入 0 清除绑定):\n${opts}`);
+      if (pick === null) return;
+      const pIdx = parseInt(pick);
+      if (pIdx === 0) {
+        bindNodeAction(accId, '', '');
+      } else if (pIdx > 0 && pIdx <= allNodes.length) {
+        const n = allNodes[pIdx - 1];
+        bindNodeAction(accId, n.id, `[${n.country}] ${n.name}`);
+      }
+    }
+
+    async function bindNodeAction(accId, nodeId, nodeName) {
+      try {
+        const res = await fetch('/api/accounts/bind', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ account_id: accId, node_id: nodeId, node_name: nodeName })
+        });
+        if (!res.ok) throw new Error(await res.text());
+        showToast('✅ 节点绑定关系已更新！', 'success');
+        loadAccounts();
+      } catch (e) {
+        showToast('绑定失败: ' + e.message, 'error');
+      }
+    }
+
+    function updateSchedulerUI(sched) {
+      if (!sched) return;
+      const dot = document.getElementById('schedDot');
+      const txt = document.getElementById('schedStatusText');
+      const cd = document.getElementById('schedCountdown');
+      const btn = document.getElementById('btnToggleSched');
+
+      if (sched.running) {
+        dot.className = 'dot active';
+        txt.innerHTML = `<span style="color:var(--success); font-weight:700;">🟢 防风控定时运行中</span> (每 ${sched.interval_min} 分钟注册 1 个)`;
+        cd.innerText = `${sched.countdown_sec || 0} 秒后触发注册 (已建 ${sched.created_count}/${sched.target_count})`;
+        btn.innerHTML = `<span>⏹ 停止定时任务</span>`;
+        btn.className = 'btn btn-danger';
+      } else {
+        dot.className = 'dot';
+        txt.innerHTML = `<span>定时任务已就绪</span>`;
+        cd.innerText = sched.last_error ? `上次提示: ${sched.last_error}` : `已就绪`;
+        btn.innerHTML = `<span>▶️ 启动防风控注册</span>`;
+        btn.className = 'btn btn-primary';
+      }
+    }
+
+    async function toggleScheduler() {
+      const btn = document.getElementById('btnToggleSched');
+      const isStopping = btn.innerText.includes('停止');
+      const interval = parseInt(document.getElementById('schedInterval').value) || 5;
+      const target = parseInt(document.getElementById('schedTarget').value) || 20;
+
+      try {
+        const res = await fetch('/api/accounts/schedule', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: isStopping ? 'stop' : 'start',
+            interval_min: interval,
+            target_count: target
+          })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast(data.message, 'success');
+          loadAccounts();
+        } else {
+          showToast('操作失败: ' + (data.error || '未知错误'), 'warning');
+        }
+      } catch (e) {
+        showToast('请求异常: ' + e.message, 'error');
+      }
+    }
+
+    // =======================================================================
+    // 多订阅源管理与持久化
+    // =======================================================================
+    let globalSubSourcesList = [];
+    let globalSubNodesList = [];
+
+    async function loadSubsSources() {
+      try {
+        const res = await fetch('/api/subs/sources');
+        const data = await res.json();
+        if (data.status === 'ok') {
+          globalSubSourcesList = data.sources || [];
+          renderSubsSources(globalSubSourcesList);
+        }
+      } catch (e) {
+        console.error('加载订阅源失败:', e);
+      }
+      loadSubsNodes();
+    }
+
+    function renderSubsSources(sources) {
+      const c = document.getElementById('subsSourcesList');
+      if (!c) return;
+      if (!sources || sources.length === 0) {
+        c.innerHTML = `<div style="color:var(--text-dim); font-size:0.85rem; padding:0.5rem 0;">暂无持久化订阅源，请在上方录入订阅地址。</div>`;
+        return;
+      }
+
+      c.innerHTML = sources.map(s => {
+        return `
+          <div style="background:#0f172a; border:1px solid #1e293b; border-radius:6px; padding:0.75rem 1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:0.95rem;">${s.name} <span style="background:rgba(56,189,248,0.15); color:#38bdf8; font-size:0.7rem; padding:0.1rem 0.35rem; border-radius:3px;">${s.node_count || 0} 节点</span></div>
+              <div style="color:var(--text-dim); font-size:0.75rem; margin-top:0.2rem; font-family:monospace; max-width:500px; overflow:hidden; text-overflow:ellipsis;">${s.url}</div>
+              <div style="color:var(--text-muted); font-size:0.7rem; margin-top:0.15rem;">更新时间: ${s.updated_at ? s.updated_at.substring(0,19).replace('T',' ') : '-'} ${s.last_error ? `<span style="color:#ef4444;">(${s.last_error})</span>` : ''}</div>
+            </div>
+            <div style="display:flex; gap:0.4rem;">
+              <button class="btn btn-outline btn-sm" onclick="refreshSingleSub('${s.id}')">🔄 刷新节点</button>
+              <button class="btn btn-danger btn-sm" onclick="deleteSubSource('${s.id}')">🗑️ 删除</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function loadSubsNodes() {
+      try {
+        const res = await fetch('/api/subs/nodes');
+        const data = await res.json();
+        if (data.status === 'ok') {
+          globalSubNodesList = data.nodes || [];
+          renderSubNodesTable(globalSubNodesList, data.active_node);
+        }
+      } catch (e) {
+        console.error('加载节点失败:', e);
+      }
+    }
+
+    function renderSubNodesTable(nodes, activeNode) {
+      const tbody = document.getElementById('subNodesTbody');
+      const badge = document.getElementById('activeTransitBadge');
+      if (!tbody) return;
+
+      if (activeNode) {
+        badge.innerHTML = `当前底座: <b style="color:#38bdf8;">[${activeNode.country}] ${activeNode.name}</b> (本地 ${activeNode.proxy_url || '29891'})`;
+      } else {
+        badge.innerHTML = `当前底座: <span style="color:var(--text-dim);">未设置 (直连模式)</span>`;
+      }
+
+      if (!nodes || nodes.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; color:var(--text-dim); padding:2rem;">暂无已解析节点，请在上方添加订阅源后点击拉取</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = nodes.map(n => {
+        const isActive = activeNode && activeNode.id === n.id;
+        let latencyBadge = `<span style="color:var(--text-dim); font-size:0.78rem;">-</span>`;
+        if (n.latency_ms > 0) {
+          const color = n.latency_ms < 100 ? '#4ade80' : (n.latency_ms < 250 ? '#facc15' : '#fb923c');
+          latencyBadge = `<span style="color:${color}; font-weight:700; font-size:0.82rem;">⚡ ${n.latency_ms} ms</span>`;
+        } else if (n.latency_ms === -1) {
+          latencyBadge = `<span style="color:#ef4444; font-size:0.78rem;">❌ 超时</span>`;
+        }
+
+        let speedBadge = `<span style="color:var(--text-dim); font-size:0.78rem;">-</span>`;
+        if (n.speed_mbps > 0) {
+          speedBadge = `<span style="color:#38bdf8; font-weight:700; font-size:0.82rem;">🚀 ${n.speed_mbps.toFixed(1)} M</span>`;
+        }
+
+        return `
+          <tr style="border-bottom: 1px solid #1e293b; background: ${isActive ? 'rgba(56,189,248,0.06)' : 'transparent'};">
+            <td style="font-weight:700; color:#38bdf8;">[${n.country || 'UN'}]</td>
+            <td style="font-weight:600; color:#fff; max-width:200px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${n.name}">${n.name}</td>
+            <td><span style="background:#1e293b; padding:0.15rem 0.35rem; border-radius:3px; font-size:0.75rem; text-transform:uppercase;">${n.type}</span></td>
+            <td style="font-family:monospace; font-size:0.8rem; color:var(--text-dim);">${n.server}:${n.port}</td>
+            <td>${latencyBadge}</td>
+            <td>${speedBadge}</td>
+            <td style="font-size:0.75rem; color:var(--text-muted);">${n.source_id || '默认'}</td>
+            <td style="text-align:right;">
+              <div style="display:flex; gap:0.25rem; justify-content:flex-end;">
+                <button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.72rem;" onclick="testNodePing('${n.id}')" title="测试该节点延迟">⚡测延迟</button>
+                <button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.72rem;" onclick="testNodeSpeed('${n.id}')" title="测试该节点下行速度">🚀测速</button>
+                ${isActive 
+                  ? `<button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.72rem; color:var(--warning); border-color:rgba(245,158,11,0.4);" onclick="clearTransitNode()">⏹ 取消底座</button>`
+                  : `<button class="btn btn-primary btn-sm" style="padding:2px 6px; font-size:0.72rem;" onclick="activateTransitNode('${n.id}')">⚡ 设为底座</button>`
+                }
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    async function addNewSubSource() {
+      const name = document.getElementById('newSubName').value.trim();
+      const url = document.getElementById('newSubUrl').value.trim();
+      if (!url) {
+        showToast('请输入订阅 URL 地址！', 'warning');
+        return;
+      }
+      showToast('正在添加订阅源并拉取节点...', 'info');
+      try {
+        const res = await fetch('/api/subs/sources', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, url: url })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast('✅ 订阅源已成功添加并解析！', 'success');
+          document.getElementById('newSubName').value = '';
+          document.getElementById('newSubUrl').value = '';
+          loadSubsSources();
+        } else {
+          showToast('添加异常: ' + (data.error || '解析失败'), 'warning');
+        }
+      } catch (e) {
+        showToast('添加失败: ' + e.message, 'error');
+      }
+    }
+
+    async function deleteSubSource(id) {
+      if (!confirm('确定要删除此订阅源及旗下所有节点吗？')) return;
+      try {
+        const res = await fetch('/api/subs/sources/delete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id })
+        });
+        showToast('订阅源已移除', 'info');
+        loadSubsSources();
+      } catch (e) {
+        showToast('删除失败: ' + e.message, 'error');
+      }
+    }
+
+    async function refreshSingleSub(id) {
+      showToast('正在重新拉取订阅节点...', 'info');
+      try {
+        const res = await fetch('/api/subs/sources/refresh', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast('✅ 节点已成功刷新！', 'success');
+          loadSubsSources();
+        } else {
+          showToast('刷新异常: ' + data.error, 'warning');
+        }
+      } catch (e) {
+        showToast('刷新失败: ' + e.message, 'error');
+      }
+    }
+
+    async function refreshAllSubs() {
+      showToast('正在刷新全部订阅源节点...', 'info');
+      try {
+        const res = await fetch('/api/subs/sources/refresh', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({})
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast('✅ 全部订阅源已同步更新！', 'success');
+          loadSubsSources();
+        }
+      } catch (e) {
+        showToast('刷新失败: ' + e.message, 'error');
+      }
+    }
+
+    async function activateTransitNode(id) {
+      showToast('正在激活该节点作为底层 Transit 中继...', 'info');
+      try {
+        const res = await fetch('/api/sub/select', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ node_id: id })
+        });
+        const data = await res.json();
+        if (data.status === 'selected') {
+          showToast(`🎉 成功激活底层中继！节点: [${data.node.country}] ${data.node.name}`, 'success');
+          loadSubsNodes();
+        }
+      } catch (e) {
+        showToast('激活失败: ' + e.message, 'error');
+      }
+    }
+
+    async function clearTransitNode() {
+      try {
+        await fetch('/api/sub/select', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ node_id: '' })
+        });
+        showToast('已取消底层中继，恢复直连模式', 'info');
+        loadSubsNodes();
+      } catch (e) {
+        showToast('清除失败: ' + e.message, 'error');
+      }
+    }
+
+    // Auto-polling for accounts & scheduler
+    loadAccounts();
+    loadSubsSources();
+    setInterval(loadAccounts, 10000);
+
+
+    // -------------------------------------------------------------
+    // Modal & Manual Account Functions
+    // -------------------------------------------------------------
+    function showAddAccountModal() {
+      const m = document.getElementById('addAcctModal');
+      if (m) {
+        m.classList.add('active');
+        m.style.display = 'flex';
+      }
+    }
+
+    function closeAddAcctModal() {
+      const m = document.getElementById('addAcctModal');
+      if (m) {
+        m.classList.remove('active');
+        m.style.display = 'none';
+      }
+    }
+
+    async function submitManualAcct() {
+      const name = document.getElementById('manualAcctName').value.trim() || '手工录入账号';
+      const priv = document.getElementById('manualAcctPrivKey').value.trim();
+      const ipv4 = document.getElementById('manualAcctIPv4').value.trim() || '172.16.0.2';
+      const ipv6 = document.getElementById('manualAcctIPv6').value.trim();
+      const mPriv = document.getElementById('manualAcctMasquePriv').value.trim();
+      const mPub = document.getElementById('manualAcctMasquePub').value.trim();
+
+      if (!priv) {
+        showToast('请填写 WireGuard 私钥', 'warning');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/accounts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            private_key: priv,
+            ipv4: ipv4,
+            ipv6: ipv6,
+            masque_private_key: mPriv,
+            masque_peer_public_key: mPub,
+            registered_via: '手工录入'
+          })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          showToast('✅ 账号录入成功！', 'success');
+          closeAddAcctModal();
+          loadAccounts();
+        } else {
+          showToast('录入失败: ' + data.error, 'error');
+        }
+      } catch (e) {
+        showToast('请求失败: ' + e.message, 'error');
+      }
+    }
+
+    // -------------------------------------------------------------
+    // Node Latency & Speedtest Functions
+    // -------------------------------------------------------------
+    async function testNodePing(id) {
+      showToast('正在测活节点延迟...', 'info');
+      try {
+        const res = await fetch('/api/subs/nodes/ping', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id })
+        });
+        const d = await res.json();
+        if (d.status === 'ok') {
+          showToast(`⚡ 延迟测试完成: ${d.latency_ms} ms`, 'success');
+          loadSubsNodes();
+        } else {
+          showToast(`测试失败: ${d.error || '超时'}`, 'warning');
+          loadSubsNodes();
+        }
+      } catch (e) {
+        showToast('测试出错: ' + e.message, 'error');
+      }
+    }
+
+    async function testAllNodesPing() {
+      const btn = document.getElementById('btnTestAllNodesPing');
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '⏳ 正在并发测活全部节点...';
+      }
+      showToast('🚀 正在高并发测试全部中继节点延迟，测试完成将自动刷新列表...', 'info');
+      try {
+        const res = await fetch('/api/subs/nodes/ping', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: 'all' })
+        });
+        const d = await res.json();
+        if (d.status === 'ok') {
+          showToast(`🎉 ${d.message}`, 'success');
+          loadSubsNodes();
+        } else {
+          showToast('测试失败: ' + (d.error || '未知错误'), 'warning');
+        }
+      } catch (e) {
+        showToast('全测请求失败: ' + e.message, 'error');
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '⚡ 一键全测延迟';
+        }
+      }
+    }
+
+    async function testNodeSpeed(id) {
+      showToast('正在测速节点下行带宽...', 'info');
+      try {
+        const res = await fetch('/api/subs/nodes/speedtest', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id })
+        });
+        const d = await res.json();
+        if (d.status === 'ok') {
+          showToast(`🚀 测速结果: ${d.speed_mbps} Mbps`, 'success');
+          loadSubsNodes();
+        } else {
+          showToast('测速失败: ' + (d.error || '超时'), 'warning');
+        }
+      } catch (e) {
+        showToast('测速出错: ' + e.message, 'error');
+      }
+    }
+
   </script>
+
+  <!-- Add Account Manual Modal -->
+  <div class="modal" id="addAcctModal">
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3>🔑 手工录入 WARP 账号凭据</h3>
+        <button class="modal-close" onclick="closeAddAcctModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 0.85rem;">
+        <div>
+          <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">账号备注名称</label>
+          <input type="text" id="manualAcctName" class="form-control" placeholder="例: 美区优质账号-01" style="background:#0f172a; border-color:#334155; color:#fff;">
+        </div>
+        <div>
+          <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">WireGuard 私钥 (Private Key) *</label>
+          <input type="text" id="manualAcctPrivKey" class="form-control" placeholder="44位 Base64 字符串" style="background:#0f172a; border-color:#334155; color:#fff; font-family:monospace;">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div>
+            <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">分配的 IPv4 地址</label>
+            <input type="text" id="manualAcctIPv4" class="form-control" value="172.16.0.2" style="background:#0f172a; border-color:#334155; color:#fff;">
+          </div>
+          <div>
+            <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">分配的 IPv6 地址 (可选)</label>
+            <input type="text" id="manualAcctIPv6" class="form-control" placeholder="2606:4700:..." style="background:#0f172a; border-color:#334155; color:#fff;">
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">MASQUE 私钥 (ECDSA PEM，若有请粘贴，没有可留空)</label>
+          <textarea id="manualAcctMasquePriv" class="form-control" rows="2" placeholder="-----BEGIN PRIVATE KEY-----..." style="background:#0f172a; border-color:#334155; color:#fff; font-family:monospace; font-size:0.75rem;"></textarea>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; color:var(--text-dim); display:block; margin-bottom:0.25rem;">MASQUE 公钥 (ECDSA PEM，若有请粘贴)</label>
+          <textarea id="manualAcctMasquePub" class="form-control" rows="2" placeholder="-----BEGIN PUBLIC KEY-----..." style="background:#0f172a; border-color:#334155; color:#fff; font-family:monospace; font-size:0.75rem;"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:flex-end; gap:0.5rem;">
+        <button class="btn btn-outline btn-sm" onclick="closeAddAcctModal()">取消</button>
+        <button class="btn btn-primary btn-sm" onclick="submitManualAcct()">保存账号</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

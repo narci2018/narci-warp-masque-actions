@@ -1,0 +1,43 @@
+mixed-port: 19896
+external-controller: 127.0.0.1:19096
+secret: test
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: 'outer-awg'
+    type: wireguard
+    server: 8.39.204.2
+    port: 1701
+    ip: 172.16.0.2
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    private-key: 'QHJRFWlD3k7imKXD5ETGj7oM1bvY7wmh1k4e6SF2akE='
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 70
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h3: 3
+      h4: 4
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: 'inner-warp'
+    type: wireguard
+    server: 162.159.192.1
+    port: 2408
+    ip: 172.16.0.2
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    private-key: 'ILU5YxGu7XAgFliq1VSJMM2h049P57g7PqHX05FCf04='
+    dialer-proxy: 'outer-awg'
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+rules:
+  - MATCH,inner-warp
